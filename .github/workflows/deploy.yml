@@ -27,4 +27,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist # укажите вашу папку со сборкой
-          publish_branch: gh-pages # ветка, в которую будут коммититься собранные файлы
+          publish_branch: main # ветка, в которую будут коммититься собранные файлы
