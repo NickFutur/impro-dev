@@ -1,0 +1,95 @@
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+}
+
+.tag-item {
+  font-weight: 450;
+  font-size: 0.8125rem;
+  color: #fff;
+  border-radius: 0.625rem;
+  display: flex;
+  z-index: 2;
+  align-items: center;
+  gap: 0.375rem;
+  background: rgb(28, 28, 28);
+  position: relative;
+}
+@media (max-width: 870px) {
+  .tag-item {
+    font-size: 0.75rem;
+  }
+}
+@media (max-width: 550px) {
+  .tag-item {
+    font-size: 0.6875rem;
+  }
+}
+.tag-item-inner {
+  background: rgb(28, 28, 28);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  position: relative;
+  z-index: 2;
+  border-radius: inherit;
+  padding: 0.625rem 0.875rem;
+  transition: all 0.5s;
+}
+.tag-item::before {
+  content: "";
+  border-radius: inherit;
+  position: absolute;
+  top: -1px;
+  z-index: -1;
+  left: -1px;
+  height: calc(100% + 2px);
+  width: calc(100% + 2px);
+  background: linear-gradient(240deg, rgb(92, 120, 250) 0%, rgb(58, 45, 222) 15%, rgb(116, 19, 189) 33%, rgb(167, 37, 121) 50%, rgb(201, 84, 83) 67%, rgb(177, 110, 92) 83%, rgb(224, 150, 109) 100%);
+}
+.tag-item:hover .tag-item-inner {
+  background: rgb(45, 45, 45);
+}
+
+.glass-button {
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(48px);
+  -webkit-backdrop-filter: blur(48px);
+  /* color: white; */
+  font-weight: 500;
+  /* padding: 15px 30px; */
+  /* border: none; */
+  border-radius: 0.625rem;
+  /* cursor: pointer; */
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+.glass-button .tag-item-inner {
+  background: none;
+  border-radius: 0.625rem;
+}
+
+.glass-button::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  background: linear-gradient(240deg, #5c78fa 0%, #3a2dde 15%, #7413bd 33%, #a72579 50%, #c95453 67%, #b16e5c 83%, #e0966d 100%);
+  height: 100%;
+  width: 100%;
+  border-radius: 0.625rem;
+  z-index: -1;
+  -webkit-mask: linear-gradient(black, black) content-box, linear-gradient(black, black);
+          mask: linear-gradient(black, black) content-box, linear-gradient(black, black);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  -webkit-mask: linear-gradient(black, black) content-box, linear-gradient(black, black);
+  -webkit-mask-composite: xor;
+  padding: 1px;
+}/*# sourceMappingURL=tags.css.map */

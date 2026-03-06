@@ -1,0 +1,187 @@
+.long{
+    /* А еще, мы нацелены на долгосрочное сотрудничество */
+padding-top: 170rem * 0.0625;
+padding-bottom: 80rem * 0.0625;
+
+@media (max-width: 550px) {
+    padding-top: 5rem;
+}
+&__title{
+    font-weight: 400;
+    font-size: 42rem * 0.0625;
+    line-height: 54rem * 0.0625;
+    text-align: center;
+    letter-spacing: -0.02em;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(191.88deg, #F9F7F7 8.69%, rgba(243, 243, 243, 0.3) 181.04%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    max-width: 740rem * 0.0625;
+    margin-right: auto;
+    margin-left: auto;
+    @media (max-width: 870px) {
+        font-size: 36rem * 0.0625;
+        line-height: 120%;
+        max-width: 590rem * 0.0625;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    @media (max-width: 550px) {
+        font-size: 22rem * 0.0625;
+        line-height: 115%;
+    }
+}
+&__text{
+    font-weight: 400;
+font-size: 18rem * 0.0625;
+line-height: 133%;
+letter-spacing: 0em;
+text-align: center;
+margin-top: 1.5rem;
+@media (max-width: 870px) {
+    font-size: 16rem * 0.0625;
+    line-height: 120%;
+    max-width: 322rem * 0.0625;
+    margin-right: auto;
+    margin-left: auto;
+}
+@media (max-width: 550px) {
+    font-size: 13rem * 0.0625;
+    line-height: 115%;
+}
+span{
+    background: linear-gradient(323deg, #5c42f4 0%, #6163ef 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+}
+&__circle{
+    width: 305rem * 0.0625;
+    height: 305rem * 0.0625;
+    position: relative;
+    @media (max-width: 870px) {
+        height: 231rem * 0.0625;
+        width: 231rem * 0.0625;
+    }
+    @media (max-width: 550px) {
+        height: 188rem * 0.0625;
+        width: 188rem * 0.0625;
+    }
+    &::before{
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='306' height='306' viewBox='0 0 306 306' fill='none'%3E%3Cpath d='M246.754 252.771C226.344 271.843 199.926 284.859 170.078 288.524C95.0641 297.735 26.7883 244.392 17.5778 169.378C8.36738 94.3656 61.7101 26.0887 136.724 16.8781C211.736 7.66776 280.013 61.0116 289.224 136.024C292.662 164.029 287.383 191.095 275.511 214.499' stroke='url(%23paint0_linear_1877_6384)' stroke-width='3.44199'/%3E%3Cpath d='M256.748 256.307C250.216 257.109 244.272 252.464 243.47 245.932C242.668 239.401 247.312 233.456 253.844 232.654C260.375 231.852 266.32 236.497 267.122 243.028C267.924 249.56 263.279 255.505 256.748 256.307Z' stroke='url(%23paint1_linear_1877_6384)' stroke-width='3.44199'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_1877_6384' x1='431.182' y1='189.286' x2='296.647' y2='-85.5017' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%235C78FA'/%3E%3Cstop offset='0.15' stop-color='%233A2DDE'/%3E%3Cstop offset='0.33' stop-color='%237413BD'/%3E%3Cstop offset='0.5' stop-color='%23A72579'/%3E%3Cstop offset='0.67' stop-color='%23C95453'/%3E%3Cstop offset='0.83' stop-color='%23B16E5C'/%3E%3Cstop offset='1' stop-color='%23E0966D'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear_1877_6384' x1='279.482' y1='247.666' x2='267.768' y2='223.74' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0.105769' stop-color='%235C78FA'/%3E%3Cstop offset='0.528846' stop-color='%233A2DDE'/%3E%3Cstop offset='0.841346' stop-color='%237413BD'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
+        content: '';
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation: long-circle 10s linear infinite;
+    }
+    margin-top: 5rem;
+    margin-right: auto;
+    margin-left: auto;
+    @include flex-center();
+    flex-direction: column;
+    @media (max-width: 550px) {
+    padding-top: 1rem;
+}
+@media (max-width: 550px) {
+    margin-top: 2rem;
+   }
+
+   &__count{
+    font-weight: 400;
+    font-size: 81rem * 0.0625;
+    line-height: 81%;
+    text-align: center;
+    @media (max-width: 870px) {
+        font-size: 61rem * 0.0625;
+   
+    }
+    @media (max-width: 550px) {
+        font-size: 52rem * 0.0625;
+    }
+}
+&__text{
+    font-weight: 400;
+    font-size: 24rem * 0.0625;
+    line-height: 162%;
+    letter-spacing: -0.01em;
+    text-align: center;
+    margin-top: .25em;
+    @media (max-width: 870px) {
+        font-size: 18rem * 0.0625;
+        line-height: 120%;
+    }
+    @media (max-width: 550px) {
+        font-size: 13rem * 0.0625;
+        line-height: 115%;
+    }
+   }
+}
+
+&__timeline{
+    margin-top: 6.3rem;
+    position: relative;
+    box-shadow: inset 0 0 1rem * 0.0625 0 #a4a4a4;
+background: rgba(255, 255, 255, 0.02);
+@media (max-width: 550px) {
+    margin-top: 2rem;
+}
+    &::before{
+        content: '';
+        width: 74.5%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: linear-gradient(277.2deg, #3325CD -83.34%, #6768FB 58.79%);
+
+    }
+    &__c{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 5rem;
+        height: 58rem * 0.0625;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+        @media (max-width: 870px) {
+            height: 45rem * 0.0625;
+  
+        }
+        @media (max-width: 550px) {
+            height: 45rem * 0.0625;
+   
+        }
+        }
+    &-item{
+        font-weight: 400;
+        font-size: 18rem * 0.0625;
+        text-align: center;
+        color: #fff;
+        @media (max-width: 870px) {
+            
+            font-size: 16rem * 0.0625;
+        }
+        @media (max-width: 550px) {
+          
+            font-size:13rem * 0.0625;
+        }
+   }
+}
+}
+
+
+@keyframes long-circle {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

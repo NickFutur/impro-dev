@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico">
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ meta_description }}">
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/slick.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/suggestions.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/app.min.css?v=1.55">
+    <meta name="robots" content="noindex">
+</head>
+<body {% if bodyClass %}class="{{ bodyClass }}"{% endif %}>
+    <div>
+
+        {% include "_html/_base/_includes/_header.html" %}
+        
+        {% block content %}{% endblock %}
+
+        {% include "_html/_base/_includes/_footer.html" %}
+        {% include "_html/_base/_includes/_popup.html" %}
+
+
+
+        <script src="assets/js/jquery-1.11.0.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.10.2/lottie.min.js"></script>
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@1/dist/lottie-player.js"></script>
+        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js" integrity="sha512-d4KkQohk+HswGs6A1d6Gak6Bb9rMWtxjOa0IiY49Q3TeFd5xAzjWXDCBW9RS7m86FQ4RzM2BdHmdJnnKRYknxw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+
+
+        <script
+  src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js"
+  type="module"
+></script>
+        <script src="assets/js/app.min.js"></script>        
+        {% block add_scripts %}{% endblock %}
+    </div>
+</body>
+</html>

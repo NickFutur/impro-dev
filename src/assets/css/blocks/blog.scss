@@ -1,0 +1,97 @@
+.blog{
+    padding-top: 150rem * 0.0625;
+    padding-bottom: 155rem * 0.0625;
+    width: 100%;
+    overflow: hidden;
+    @media (max-width: 550px) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+    .slick-list{
+        overflow: visible;
+    }
+    &__title{
+        font-weight: 400;
+        font-size: 42rem * 0.0625;
+        line-height: 125%;
+        letter-spacing: -0.01em;
+        span{
+            opacity: .6;
+        }
+        @media (max-width: 870px) {
+            font-size: 28rem * 0.0625;
+            line-height: 120%;
+        }
+        @media (max-width: 550px) {
+            font-size: 22rem * 0.0625;
+            line-height: 115%;
+        }
+    }
+    &__list{
+        display: flex;
+        margin-top: 53rem * 0.0625;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10rem * 0.0625;
+        @media (max-width: 870px) {
+            gap: 2rem 10rem * 0.0625;
+        }
+        @media (max-width: 550px) {
+            display: block;
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+    }
+    &-card-wrapper{
+        width: calc(25% - 10rem * 0.0625);
+        @media (max-width: 870px) {
+            width: calc(50% - .5rem );
+        }
+        @media (max-width: 550px) {
+            width: 300px !important;
+            margin-right: 15px;
+            margin-left: 15px;
+        }
+    }
+    &-card{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        &-preview{
+            border: 0.70rem * 0.0625 solid rgba(255, 255, 255, 0.3);
+            width: 100%;
+            height: 333rem * 0.0625;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &-date{
+            font-size: 14rem * 0.0625;
+            line-height: 135%;
+            letter-spacing: -0.01em;
+            color: rgba(255, 255, 255, 0.6);
+            margin-top: 1rem;
+        }
+        &-title{
+            font-weight: 500;
+font-size: 18rem * 0.0625;
+line-height: 135%;
+letter-spacing: -0.01em;
+margin-top: .5rem;
+        }
+    }
+    &__btn{
+        margin-top: 53rem * 0.0625;
+        margin-top: 3rem;
+        margin-right: auto;
+        margin-left: auto;
+        @media (max-width: 550px) {
+            margin-left: 0;
+            margin-top: 2rem;
+        }
+        width: max-content;
+    }
+
+}

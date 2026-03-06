@@ -1,0 +1,269 @@
+.container{
+  max-width: 1798rem * 0.0625;
+  width: calc(100% - 128px);
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+
+  @media (max-width: $desktop_md_res) {
+    max-width: calc(100% - 80rem * 0.0625);
+    width: 100%;
+  }
+  @media (max-width: $tablet_res) {
+    max-width: calc(100% - 36rem * 0.0625);
+  }
+  @media (max-width: $mobile_res) {
+    max-width: 100%;
+    padding-left: 18rem * 0.0625;
+    padding-right: 18rem * 0.0625;
+  }
+}
+
+.container-min{
+  max-width: 1080px;
+  width: calc(100% - 128px);
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+
+  @media (max-width: $desktop_md_res) {
+    max-width: 720px;
+    width: 100%;
+  }
+  @media (max-width: $tablet_res) {
+    max-width: calc(100vw - 72px);
+  }
+  @media (max-width: $mobile_res) {
+    max-width: calc(100vw - 48px);
+  }
+}
+
+:root{
+  --info-banner-h: 0px;
+  --app-height: 100%;
+}
+
+
+body{
+  margin: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  width: 100%;
+  color: #fff;
+  background-color: #0F0F0F;
+  font-family: 'Suisse Intl';
+  &.fixed{
+    overflow: hidden;
+  }
+}
+
+html{
+  font-size: 29px;
+  @media (max-width: 2220px) {
+    font-size: 24px;    
+  }
+  @media (max-width: 1920px) {
+    font-size: 20px;    
+  }
+  @media (max-width: 1600px) {
+    font-size: 16px;    
+  }
+  @media (max-width: 1250px) {
+    font-size: 12px;
+  }
+
+  @media (max-width: 870px) {
+    font-size: 16px;
+  }
+  @media (max-width: 720px) {
+    font-size: 14px;
+  }
+  @media (max-width: 640px) {
+    font-size: 12px;
+  }
+  @media (max-width: 550px) {
+    font-size: 16px;
+  }
+}
+
+li{
+  list-style: none;
+}
+ul{
+  margin: 0;
+  padding: 0;
+}
+p{
+  margin: 0;
+}
+
+a{
+  text-decoration: none;
+  outline: none;
+  color: inherit;
+}
+
+img{
+  user-select: none;
+}
+
+button, input{
+  border: none;
+  outline: none;
+  background: none;
+  padding: 0;
+  font-family: inherit;
+}
+
+button{
+  cursor: pointer;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6{
+  margin: 0;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.text-left{
+  text-align: left;
+}
+
+.fw-bold{
+  font-weight: bold;
+}
+
+.fw-black{
+  font-weight: 900;
+}
+
+.fw-normal{
+  font-weight: normal;
+}
+
+
+.crossed{
+  text-decoration: line-through;
+}
+
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important; 
+	width: 1px !important; 
+	overflow: hidden;
+}
+
+.decor{
+  position: absolute;
+}
+
+picture{
+  display: block;
+  img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+
+.slick-initialized .slick-slide {
+  display: block;
+  height: max-content;
+}
+
+.slick-track {
+  height: max-content;
+}
+
+section{
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  // overflow: hidden;
+}
+
+header, footer{
+  z-index: 2;
+}
+
+
+.m-hidden{
+  @media (max-width: $mobile_res){
+    display: none;
+  }
+}
+
+.pc-hidden{
+
+  @media (min-width: $mobile_res + 1){
+    display: none;
+  }
+}
+
+input:not([type=checkbox]):not([type=radio]),
+textarea, 
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.page-wrapper{
+  padding-top: 135rem * 0.0625;
+  @media (max-width: 870px) {
+    padding-top: 9.5rem; 
+  }
+  @media (max-width: 550px) {
+
+      padding-top: 7.5rem;
+  
+  }
+}
+
+.page-content{
+  position: relative;
+  z-index: 2; 
+}
+
+body, html{
+  scroll-behavior: smooth
+}
+
+
+@keyframes an_7 {
+  from{
+      opacity: 0;
+      transform: perspective(1000rem * 0.0625) translate3d(0px, 300rem * 0.0625, 0px) rotate3d(-100, 0, 50, 45deg);
+  }
+  to{
+      opacity: 1;
+      transform: perspective(500rem * 0.0625) translate3d(0, 0, 0);
+  }
+}
+
+.animate-custom-7 {
+  animation-name: an_7;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@media (max-width: 550px) {
+  section:not(.digital){
+    width: 100%;
+    overflow: hidden;
+  }
+}

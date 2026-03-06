@@ -1,0 +1,194 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?ct2o2c');
+  src:  url('fonts/icomoon.eot?ct2o2c#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?ct2o2c') format('truetype'),
+    url('fonts/icomoon.woff?ct2o2c') format('woff'),
+    url('fonts/icomoon.svg?ct2o2c#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-Alert:before {
+  content: "\e900";
+  color: #427e66;
+}
+.icon-Basket:before {
+  content: "\e901";
+  color: #427e66;
+}
+.icon-Book:before {
+  content: "\e902";
+  color: #427e66;
+}
+.icon-Calendar:before {
+  content: "\e903";
+  color: #427e66;
+}
+.icon-Cancel:before {
+  content: "\e904";
+  color: #427e66;
+}
+.icon-Chevron-Down:before {
+  content: "\e905";
+  color: #427e66;
+}
+.icon-Chevron-Left:before {
+  content: "\e906";
+  color: #427e66;
+}
+.icon-Chevron-Right:before {
+  content: "\e907";
+  color: #427e66;
+}
+.icon-Chevron-Up:before {
+  content: "\e908";
+  color: #427e66;
+}
+.icon-Close:before {
+  content: "\e909";
+  color: #427e66;
+}
+.icon-Copy:before {
+  content: "\e90a";
+  color: #427e66;
+}
+.icon-Dzen:before {
+  content: "\e90b";
+}
+.icon-Edit:before {
+  content: "\e90c";
+  color: #427e66;
+}
+.icon-Favourires:before {
+  content: "\e90d";
+  color: #427e66;
+}
+.icon-Filters:before {
+  content: "\e90e";
+  color: #427e66;
+}
+.icon-Google .path1:before {
+  content: "\e90f";
+  color: rgb(66, 133, 244);
+}
+.icon-Google .path2:before {
+  content: "\e910";
+  margin-left: -1em;
+  color: rgb(52, 168, 83);
+}
+.icon-Google .path3:before {
+  content: "\e911";
+  margin-left: -1em;
+  color: rgb(251, 188, 5);
+}
+.icon-Google .path4:before {
+  content: "\e912";
+  margin-left: -1em;
+  color: rgb(235, 67, 53);
+}
+.icon-Hide:before {
+  content: "\e913";
+  color: #427e66;
+}
+.icon-Home:before {
+  content: "\e914";
+  color: #427e66;
+}
+.icon-Import:before {
+  content: "\e915";
+  color: #427e66;
+}
+.icon-Location:before {
+  content: "\e916";
+  color: #427e66;
+}
+.icon-Logout:before {
+  content: "\e917";
+  color: #427e66;
+}
+.icon-Mail:before {
+  content: "\e918";
+  color: #427e66;
+}
+.icon-Map:before {
+  content: "\e919";
+  color: #427e66;
+}
+.icon-Menu:before {
+  content: "\e91a";
+  color: #427e66;
+}
+.icon-PDF:before {
+  content: "\e91b";
+  color: #427e66;
+}
+.icon-Phone:before {
+  content: "\e91c";
+  color: #427e66;
+}
+.icon-Profile:before {
+  content: "\e91d";
+  color: #427e66;
+}
+.icon-Search:before {
+  content: "\e91e";
+  color: #427e66;
+}
+.icon-Share:before {
+  content: "\e91f";
+  color: #427e66;
+}
+.icon-SmileHappy:before {
+  content: "\e920";
+  color: #427e66;
+}
+.icon-Telegram:before {
+  content: "\e921";
+  color: #34aadf;
+}
+.icon-Thumbs-down:before {
+  content: "\e922";
+  color: #427e66;
+}
+.icon-Thumbs-up:before {
+  content: "\e923";
+  color: #427e66;
+}
+.icon-Time:before {
+  content: "\e924";
+  color: #427e66;
+}
+.icon-View:before {
+  content: "\e925";
+  color: #427e66;
+}
+.icon-VK:before {
+  content: "\e926";
+  color: #2787f5;
+}
+.icon-Yandex .path1:before {
+  content: "\e927";
+  color: rgb(252, 63, 29);
+}
+.icon-Yandex .path2:before {
+  content: "\e928";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
