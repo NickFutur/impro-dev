@@ -21,7 +21,7 @@
   line-height: 129%;
   letter-spacing: -0.02em;
   text-align: center;
-  max-width: 45.3125rem;
+  max-width: 46.5625rem;
   margin-right: auto;
   margin-left: auto;
 }
@@ -76,7 +76,7 @@
   }
 }
 .digital__sub span {
-  background: var(--Linear, linear-gradient(281deg, #3824B0 -19.07%, #6163EF 138.2%));
+  background: var(--Linear, linear-gradient(281deg, #3824b0 -19.07%, #6163ef 138.2%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -132,7 +132,6 @@
 
 .digital-t {
   position: absolute;
-  animation: rotating 15s infinite linear;
   mix-blend-mode: hard-light;
   z-index: 1;
 }
@@ -206,4 +205,15 @@
     top: 5%;
     left: 0;
   }
+}
+.digital-t.--img {
+  animation: rotating 15s infinite linear;
+}
+
+#btn-menu-bottom_id {
+  display: none;
+}
+
+#btn-menu-bottom_id.visible {
+  display: flex;
 }/*# sourceMappingURL=digital.css.map */

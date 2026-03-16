@@ -222,6 +222,11 @@
     border-right: none;
   }
 }
+@media (min-width: 1250px) {
+  .dev-vars-item:nth-child(5) .dev-vars-item-desc, .dev-vars-item:last-child .dev-vars-item-desc {
+    max-width: 440px;
+  }
+}
 .dev-vars-item {
   display: flex;
   height: 21.875rem;
@@ -283,6 +288,12 @@
   max-width: 23.125rem;
   margin-top: 1.25rem;
   transition: color 0.3s ease;
+}
+@media (min-width: 1250px) {
+  .dev-vars-item-desc {
+    font-size: 16px;
+    max-width: 378px;
+  }
 }
 @media (max-width: 870px) {
   .dev-vars-item-desc {
@@ -426,7 +437,7 @@
 }
 
 .how {
-  padding-top: 10rem;
+  padding-top: 7.6rem;
 }
 @media (max-width: 550px) {
   .how {
@@ -547,7 +558,7 @@
 
 .stages {
   padding-top: 9rem;
-  padding-bottom: 9rem;
+  padding-bottom: 6rem;
   margin-bottom: -9rem;
   position: relative;
   overflow: hidden;
@@ -571,7 +582,7 @@
   }
 }
 .stages-title {
-  padding-left: 24%;
+  padding-left: 23%;
   font-family: "Suisse Intl";
   font-size: 2.625rem;
   font-style: normal;
@@ -583,6 +594,16 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: relative;
+}
+@media (max-width: 1600px) {
+  .stages-title {
+    padding-left: 23.5%;
+  }
+}
+@media (max-width: 1250px) {
+  .stages-title {
+    padding-left: 24%;
+  }
 }
 @media (max-width: 870px) {
   .stages-title {

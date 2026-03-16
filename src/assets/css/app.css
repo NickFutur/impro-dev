@@ -865,8 +865,8 @@ body, html {
 @media (max-width: 34.375rem) {
   .hero__zag-2 {
     width: 60.375rem;
-    top: -14rem;
-    right: -28rem;
+    top: -15rem;
+    right: -31rem;
   }
 }
 .hero::after {
@@ -1503,7 +1503,7 @@ body, html {
   }
 }
 .digital__sub span {
-  background: var(--Linear, linear-gradient(281deg, #3824B0 -19.07%, #6163EF 138.2%));
+  background: var(--Linear, linear-gradient(281deg, #3824b0 -19.07%, #6163ef 138.2%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1559,7 +1559,6 @@ body, html {
 
 .digital-t {
   position: absolute;
-  animation: rotating 15s infinite linear;
   mix-blend-mode: hard-light;
   z-index: 1;
 }
@@ -1633,6 +1632,17 @@ body, html {
     top: 5%;
     left: 0;
   }
+}
+.digital-t.--img {
+  animation: rotating 15s infinite linear;
+}
+
+#btn-menu-bottom_id {
+  display: none;
+}
+
+#btn-menu-bottom_id.visible {
+  display: flex;
 }
 
 .features__list {
@@ -3176,6 +3186,10 @@ body, html {
 @media (max-width: 550px) {
   .reviews-slider {
     width: 100%;
+    border-top: 0.7px solid rgba(255, 255, 255, 0.3);
+    border-left: none;
+    border-right: none;
+    border-bottom: 0.7px solid rgba(255, 255, 255, 0.3);
   }
 }
 .reviews-slider-item {
@@ -4658,6 +4672,11 @@ body, html {
     border-right: none;
   }
 }
+@media (min-width: 1250px) {
+  .dev-vars-item:nth-child(5) .dev-vars-item-desc, .dev-vars-item:last-child .dev-vars-item-desc {
+    max-width: 440px;
+  }
+}
 .dev-vars-item {
   display: flex;
   height: 21.875rem;
@@ -4719,6 +4738,12 @@ body, html {
   max-width: 23.125rem;
   margin-top: 1.25rem;
   transition: color 0.3s ease;
+}
+@media (min-width: 1250px) {
+  .dev-vars-item-desc {
+    font-size: 16px;
+    max-width: 378px;
+  }
 }
 @media (max-width: 870px) {
   .dev-vars-item-desc {
@@ -4863,6 +4888,11 @@ body, html {
 
 .how {
   padding-top: 10rem;
+}
+@media (max-width: 550px) {
+  .how {
+    padding-top: 6rem;
+  }
 }
 .how-title {
   background: var(--linear-2-paints, linear-gradient(146deg, #f9f7f7 20.35%, rgba(243, 243, 243, 0.3) 128.73%));
@@ -5129,6 +5159,26 @@ body, html {
   .how-item-lottie dotlottie-wc {
     width: 160px !important;
     height: 160px !important;
+  }
+}
+
+@media (max-width: 870px) {
+  .how-content .how-item:first-child .how-item-lottie dotlottie-wc {
+    margin-left: -30px;
+  }
+}
+@media (max-width: 870px) {
+  .how-content .how-item:nth-child(2) .how-item-lottie dotlottie-wc {
+    margin-left: -40px;
+  }
+}
+@media (max-width: 870px) {
+  .how-content .how-item:nth-child(3) .how-item-lottie dotlottie-wc {
+    margin-left: -25px;
+  }
+}
+@media (max-width: 870px) {
+  .how-content .how-item:last-child .how-item-lottie dotlottie-wc {
     margin-left: -20px;
   }
 }
@@ -5177,6 +5227,17 @@ body, html {
 }
 .more-service-item .container {
   display: flex;
+}
+@media (max-width: 550px) {
+  .more-service-item .container {
+    padding-right: 1.125rem;
+    padding-left: 0;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    position: relative;
+  }
 }
 .more-service-item::after {
   position: absolute;
@@ -5249,7 +5310,7 @@ body, html {
 @media (max-width: 550px) {
   .more-service-item-btn {
     position: absolute;
-    top: 32px;
+    top: 5px;
     right: 0px;
     width: 15px;
     height: 18px;

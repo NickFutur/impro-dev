@@ -208,6 +208,12 @@
         border-right: none;
       }
     }
+    &:nth-child(5) &-desc,
+    &:last-child &-desc {
+      @media (min-width: 1250px) {
+        max-width: 440px;
+      }
+    }
     display: flex;
     height: 350rem * 0.0625;
     padding: 40rem * 0.0625 48rem * 0.0625;
@@ -269,6 +275,10 @@
       max-width: 370rem * 0.0625;
       margin-top: 20rem * 0.0625;
       transition: color 0.3s ease;
+      @media (min-width: 1250px) {
+        font-size: 16px;
+        max-width: 378px;
+      }
       @media (max-width: 870px) {
         font-size: 14px;
         max-width: 285px;
@@ -423,7 +433,7 @@
 }
 
 .how {
-  padding-top: 10rem;
+  padding-top: 7.6rem;
   @media (max-width: 550px) {
     padding-top: 6rem;
   }
@@ -526,7 +536,7 @@
 
 .stages {
   padding-top: 9rem;
-  padding-bottom: 9rem;
+  padding-bottom: 6rem;
   margin-bottom: -9rem;
   position: relative;
   overflow: hidden;
@@ -547,7 +557,7 @@
     }
   }
   &-title {
-    padding-left: 24%;
+    padding-left: 23%;
     font-family: "Suisse Intl";
     font-size: 42rem * 0.0625;
     font-style: normal;
@@ -562,6 +572,12 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     position: relative;
+    @media (max-width: 1600px) {
+      padding-left: 23.5%;
+    }
+    @media (max-width: 1250px) {
+      padding-left: 24%;
+    }
     @media (max-width: 870px) {
       padding-left: 1.125rem;
     }

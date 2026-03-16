@@ -4,7 +4,7 @@
   "description": "Разработка и продвижение сайтов",
   "main": "index.js",
   "scripts": {
-    "build": "gulp build",
+    "build": "set NODE_OPTIONS=--openssl-legacy-provider && gulp",
     "deploy": "npm run build && gh-pages -d dist"
   },
   "author": "fcs-dev",
