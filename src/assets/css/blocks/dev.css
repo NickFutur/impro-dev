@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .dev {
   padding-top: 6.25rem;
 }
@@ -79,6 +80,7 @@
 }
 @media (max-width: 870px) {
   .dev-sticky-container {
+    position: relative;
     height: auto;
   }
 }
@@ -149,6 +151,13 @@
 @media (max-width: 870px) {
   .dev-content-wrapper {
     height: auto;
+    overflow: auto;
+    overflow-x: auto;
+  }
+  .dev-content-wrapper::-webkit-scrollbar {
+    display: block;
+    width: 100%;
+    height: 200px;
   }
 }
 .dev-content-item {
@@ -197,6 +206,21 @@
     width: 332px;
     height: 207px;
   }
+}
+
+/* Класс для мобильного горизонтального скролла */
+#animated.mobile-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* плавный скролл на iOS */
+  scroll-behavior: smooth; /* плавность при прокрутке колесом (опционально) */
+  /* Если дочерние элементы должны быть в ряд */
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px; /* по желанию */
+}
+
+#animated.mobile-scroll > .dev-content-item {
+  flex-shrink: 0; /* чтобы элементы не сжимались */
 }
 
 .dev-scroll-spacer {
@@ -248,6 +272,8 @@
     padding: 20px;
     width: 100%;
     border-right: none;
+    height: auto;
+    gap: 65px;
   }
 }
 .dev-vars-item::after {
@@ -363,36 +389,50 @@
 }
 
 .dev-features {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 колонки на десктопе */
+}
+@media (max-width: 870px) {
+  .dev-features {
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки на планшетах */
+  }
+}
+@media (max-width: 550px) {
+  .dev-features {
+    grid-template-columns: 1fr; /* 1 колонка на мобильных */
+  }
+}
+.dev-features {
   position: relative;
-  flex-wrap: wrap;
   z-index: 2;
 }
 .dev-features-item {
   display: flex;
-  width: 25%;
+  flex-direction: column;
   height: 22.5rem;
   padding: 1.875rem;
-  flex-direction: column;
-  justify-content: space-between;
   align-items: flex-start;
   gap: 5.5625rem;
   border-top: 0.04375rem solid rgba(255, 255, 255, 0.3);
   border-right: 0.04375rem solid rgba(255, 255, 255, 0.3);
   border-bottom: 0.04375rem solid rgba(255, 255, 255, 0.3);
 }
+@media (max-width: 970px) {
+  .dev-features-item {
+    height: auto;
+  }
+}
 @media (max-width: 870px) {
   .dev-features-item {
-    width: 50%;
-    height: auto;
-    aspect-ratio: 1/1;
     padding: 30px;
     margin-top: -1px;
+  }
+  .dev-features-item:nth-child(2) {
+    border-right: none;
   }
 }
 @media (max-width: 550px) {
   .dev-features-item {
-    width: 100%;
     height: auto;
     aspect-ratio: auto;
     padding: 20px;
@@ -419,6 +459,9 @@
   }
 }
 .dev-features-desc {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   color: rgba(255, 255, 255, 0.8);
   font-family: "Suisse Intl";
   font-size: 0.875rem;

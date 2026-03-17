@@ -67,6 +67,7 @@
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
   @media (max-width: 870px) {
+    position: relative;
     height: auto;
   }
   .dec {
@@ -146,6 +147,13 @@
 
     @media (max-width: 870px) {
       height: auto;
+      overflow: auto;
+      overflow-x: auto;
+      &::-webkit-scrollbar {
+        display: block;
+        width: 100%;
+        height: 200px;
+      }
     }
   }
   &-item {
@@ -188,7 +196,19 @@
     }
   }
 }
-
+/* Класс для мобильного горизонтального скролла */
+#animated.mobile-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* плавный скролл на iOS */
+  scroll-behavior: smooth; /* плавность при прокрутке колесом (опционально) */
+  /* Если дочерние элементы должны быть в ряд */
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px; /* по желанию */
+}
+#animated.mobile-scroll > .dev-content-item {
+  flex-shrink: 0; /* чтобы элементы не сжимались */
+}
 .dev-scroll-spacer {
   height: 0; // Высота будет вычисляться динамически через JS
 }
@@ -230,6 +250,8 @@
       padding: 20px;
       width: 100%;
       border-right: none;
+      height: auto;
+      gap: 65px;
     }
     &::after {
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='424' height='350' viewBox='0 0 424 350' fill='none'%3E%3Cg filter='url(%23filter0_f_2311_3855)'%3E%3Cellipse cx='331.205' cy='139.046' rx='88.0329' ry='93.4008' transform='rotate(-137.494 331.205 139.046)' fill='url(%23paint0_linear_2311_3855)'/%3E%3C/g%3E%3Cg opacity='0.8' filter='url(%23filter1_f_2311_3855)'%3E%3Cellipse cx='88.0329' cy='93.4008' rx='88.0329' ry='93.4008' transform='matrix(0.144729 0.989471 0.989471 -0.144729 265.168 -12.5645)' fill='url(%23paint1_linear_2311_3855)'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_f_2311_3855' x='0.683578' y='-191.945' width='661.043' height='661.982' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='120' result='effect1_foregroundBlur_2311_3855'/%3E%3C/filter%3E%3Cfilter id='filter1_f_2311_3855' x='181.023' y='-123.138' width='378.605' height='368.323' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='48' result='effect1_foregroundBlur_2311_3855'/%3E%3C/filter%3E%3ClinearGradient id='paint0_linear_2311_3855' x1='376.344' y1='-46.0937' x2='188.092' y2='15.2993' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23A72579'/%3E%3Cstop offset='0.41' stop-color='%23574DE5'/%3E%3Cstop offset='1' stop-color='%233A2DDE'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear_2311_3855' x1='133.171' y1='-91.7391' x2='-55.0804' y2='-30.3461' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23A72579'/%3E%3Cstop offset='0.41' stop-color='%23574DE5'/%3E%3Cstop offset='1' stop-color='%233A2DDE'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
@@ -367,31 +389,45 @@
 }
 
 .dev-features {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 колонки на десктопе */
+
+  @media (max-width: 870px) {
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки на планшетах */
+  }
+
+  @media (max-width: 550px) {
+    grid-template-columns: 1fr; /* 1 колонка на мобильных */
+  }
   position: relative;
-  flex-wrap: wrap;
   z-index: 2;
   &-item {
     display: flex;
-    width: 25%;
-    height: 360rem * 0.0625;
-    padding: 30rem * 0.0625;
     flex-direction: column;
-    justify-content: space-between;
+    height: 360rem * 0.0625; // при необходимости можно убрать фикс. высоту
+    padding: 30rem * 0.0625;
     align-items: flex-start;
-    gap: 89rem * 0.0625;
+    gap: 89rem * 0.0625; // отступ между иконкой и текстом
     border-top: 0.7rem * 0.0625 solid rgba(255, 255, 255, 0.3);
     border-right: 0.7rem * 0.0625 solid rgba(255, 255, 255, 0.3);
     border-bottom: 0.7rem * 0.0625 solid rgba(255, 255, 255, 0.3);
-    @media (max-width: 870px) {
-      width: 50%;
+    @media (max-width: 970px) {
       height: auto;
-      aspect-ratio: 1/1;
+    }
+    @media (max-width: 870px) {
+      // width: 50%; /* Убрано */
+      // height: auto;
+      // aspect-ratio: 1/1;
       padding: 30px;
       margin-top: -1px;
+
+      &:nth-child(2) {
+        border-right: none;
+      }
     }
+
     @media (max-width: 550px) {
-      width: 100%;
+      // width: 100%; /* Убрано */
       height: auto;
       aspect-ratio: auto;
       padding: 20px;
@@ -399,6 +435,7 @@
       gap: 50px;
       border-right: none;
     }
+
     &:last-child {
       border-right: none;
     }
@@ -416,6 +453,9 @@
     }
   }
   &-desc {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
     color: rgba(255, 255, 255, 0.8);
     font-family: "Suisse Intl";
     font-size: 14rem * 0.0625;

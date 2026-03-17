@@ -1448,7 +1448,7 @@ body, html {
   line-height: 129%;
   letter-spacing: -0.02em;
   text-align: center;
-  max-width: 45.3125rem;
+  max-width: 46.5625rem;
   margin-right: auto;
   margin-left: auto;
 }
@@ -4887,7 +4887,7 @@ body, html {
 }
 
 .how {
-  padding-top: 10rem;
+  padding-top: 7.6rem;
 }
 @media (max-width: 550px) {
   .how {
@@ -5008,7 +5008,7 @@ body, html {
 
 .stages {
   padding-top: 9rem;
-  padding-bottom: 9rem;
+  padding-bottom: 6rem;
   margin-bottom: -9rem;
   position: relative;
   overflow: hidden;
@@ -5032,7 +5032,7 @@ body, html {
   }
 }
 .stages-title {
-  padding-left: 24%;
+  padding-left: 23%;
   font-family: "Suisse Intl";
   font-size: 2.625rem;
   font-style: normal;
@@ -5044,6 +5044,16 @@ body, html {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: relative;
+}
+@media (max-width: 1600px) {
+  .stages-title {
+    padding-left: 23.5%;
+  }
+}
+@media (max-width: 1250px) {
+  .stages-title {
+    padding-left: 24%;
+  }
 }
 @media (max-width: 870px) {
   .stages-title {

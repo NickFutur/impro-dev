@@ -88,7 +88,8 @@
         </div>
         <div class="hero__runline">
             <div class="hero__runline-wrap">
-
+                <div class="hero__runline-item"><img src="assets/img/logo/8.svg" alt=""></div>
+                <div class="hero__runline-item"><img src="assets/img/logo/9.svg" alt=""></div>
                 <div class="hero__runline-item"><img src="assets/img/logo/1.svg" alt=""></div>
                 <div class="hero__runline-item"><img src="assets/img/logo/2.svg" alt=""></div>
                 <div class="hero__runline-item"><img src="assets/img/logo/3.svg" alt=""></div>
@@ -96,12 +97,12 @@
                 <div class="hero__runline-item"><img src="assets/img/logo/5.svg" alt=""></div>
                 <div class="hero__runline-item"><img src="assets/img/logo/6.svg" alt=""></div>
                 <div class="hero__runline-item"><img src="assets/img/logo/7.svg" alt=""></div>
-                <div class="hero__runline-item"><img src="assets/img/logo/8.svg" alt=""></div>
-                <div class="hero__runline-item"><img src="assets/img/logo/9.svg" alt=""></div>
                 <div class="hero__runline-item"><img src="assets/img/logo/10.svg" alt=""></div>
                 <div class="hero__runline-item"><img src="assets/img/logo/11.svg" alt=""></div>
                 <div class="hero__runline-item"><img src="assets/img/logo/12.svg" alt=""></div>
 
+                <div class="hero__runline-item"><img src="assets/img/logo/8.svg" alt=""></div>
+                <div class="hero__runline-item"><img src="assets/img/logo/9.svg" alt=""></div>
                 <div class="hero__runline-item"><img src="assets/img/logo/1.svg" alt=""></div>
                 <div class="hero__runline-item"><img src="assets/img/logo/2.svg" alt=""></div>
                 <div class="hero__runline-item"><img src="assets/img/logo/3.svg" alt=""></div>
@@ -109,8 +110,6 @@
                 <div class="hero__runline-item"><img src="assets/img/logo/5.svg" alt=""></div>
                 <div class="hero__runline-item"><img src="assets/img/logo/6.svg" alt=""></div>
                 <div class="hero__runline-item"><img src="assets/img/logo/7.svg" alt=""></div>
-                <div class="hero__runline-item"><img src="assets/img/logo/8.svg" alt=""></div>
-                <div class="hero__runline-item"><img src="assets/img/logo/9.svg" alt=""></div>
                 <div class="hero__runline-item"><img src="assets/img/logo/10.svg" alt=""></div>
                 <div class="hero__runline-item"><img src="assets/img/logo/11.svg" alt=""></div>
                 <div class="hero__runline-item"><img src="assets/img/logo/12.svg" alt=""></div>
@@ -129,11 +128,11 @@
 <section class="dev" id="block-2">
     <div class="dev__c" id="pinned">
         <div class="dev-head container">
-            <div class="dev-text wow fadeInUp">
+            <div class="dev-text animate-custom-7 wow">
                 Решаем задачи от продажи одного небольшого продукта&nbsp;или услуги, до разработки сложных порталов
                 и&nbsp;e‑commerce
             </div>
-            <div class="dev-icons wow fadeInUp">
+            <div class="dev-icons wow fadeInRight">
                 <div class="services__item-method icon --min">
                     <div class="icon-inner"><img src="assets/img/icon/method-1.svg" alt=""></div>
                 </div>
@@ -191,10 +190,12 @@
                 </div>
             </div>
         </div>
-        <!-- Spacer для обеспечения достаточной высоты скролла -->
-        <div class="dev-scroll-spacer"></div>
+    </div>
+    <!-- Spacer для обеспечения достаточной высоты скролла -->
+    <div class="dev-scroll-spacer"></div>
     </div>
 </section>
+
 <!-- dev BLOCK END -->
 
 <div class="dev-vars">
@@ -1236,38 +1237,128 @@
 
 
 <script>
-    // Инициализация контроллера ScrollMagic
-    const controller = new ScrollMagic.Controller();
-    const elementWidth = document.getElementById("animated").offsetWidth;
-    const screenWidth = window.innerWidth;
-    // Создаем анимацию GSAP
-    const animation = gsap.to("#animated", {
-        x: -(elementWidth - screenWidth),
-        ease: "power1.out",
-        duration: 1
-    });
+    (function () {
+        // Контроллер ScrollMagic
+        const controller = new ScrollMagic.Controller();
+        let scene = null;              // текущая сцена ScrollMagic
+        let isActive = false;          // активен ли десктопный режим
+        let wheelHandler = null;       // обработчик колесика для мобильных
 
-    // Создаем сцену
-    const scene = new ScrollMagic.Scene({
-        triggerElement: "#pinned",
-        duration: (elementWidth - screenWidth), // 3000px продолжительности
-        triggerHook: 0 // Триггер в верхней части viewport
-    })
-        .setPin("#pinned") // Закрепляем элемент
-        .setTween(animation) // Применяем анимацию
-        .addTo(controller)
+        // Элементы
+        const wrapper = document.querySelector('.dev-content-wrapper'); // обёртка для скролла
+        const pinned = document.getElementById("pinned");
+        const animated = document.getElementById("animated");
 
-    // Обновляем анимацию при изменении размера окна
-    window.addEventListener('resize', () => {
-        scene.update(true);
-    });
+        if (!wrapper || !pinned || !animated) {
+            console.warn('Не найдены необходимые элементы');
+            return;
+        }
 
-    // Отладочная информация
-    controller.scrollTo(function (newScrollPos) {
-        console.log("Позиция прокрутки:", newScrollPos);
-    });
+        // Вспомогательные функции размеров
+        const getElementWidth = () => animated.offsetWidth || 0;
+        const getScreenWidth = () => window.innerWidth;
+
+        // --- Мобильный режим: горизонтальный скролл колесом ---
+        function enableMobileScroll() {
+            // Убеждаемся, что обёртка готова к скроллу (стили CSS уже должны это делать)
+            // Добавляем обработчик колесика
+            if (!wheelHandler) {
+                wheelHandler = (e) => {
+                    // Предотвращаем вертикальную прокрутку страницы
+                    e.preventDefault();
+                    // Прокручиваем обёртку горизонтально
+                    wrapper.scrollLeft += e.deltaY;
+                };
+                wrapper.addEventListener('wheel', wheelHandler, { passive: false });
+            }
+            // Сбрасываем трансформацию GSAP, если она была
+            gsap.set(animated, { x: 0 });
+        }
+
+        function disableMobileScroll() {
+            if (wheelHandler) {
+                wrapper.removeEventListener('wheel', wheelHandler);
+                wheelHandler = null;
+            }
+            // Сбрасываем позицию прокрутки (опционально)
+            wrapper.scrollLeft = 0;
+        }
+
+        // --- Десктопный режим: ScrollMagic + GSAP ---
+        function createScene() {
+            const elementWidth = getElementWidth();
+            const screenWidth = getScreenWidth();
+            // Если элемент уже помещается на экране – анимация не нужна
+            if (elementWidth <= screenWidth) return null;
+
+            const animation = gsap.to(animated, {
+                x: -(elementWidth - screenWidth),
+                ease: "power1.out",
+                duration: 1
+            });
+
+            return new ScrollMagic.Scene({
+                triggerElement: pinned,
+                duration: elementWidth - screenWidth,
+                triggerHook: 0
+            })
+                .setPin(pinned)
+                .setTween(animation)
+                .addTo(controller);
+        }
+
+        function destroyScene() {
+            if (scene) {
+                scene.destroy(true); // true – удаляет и пины
+                scene = null;
+            }
+            gsap.set(animated, { x: 0 });
+            // Сбрасываем возможные лишние стили на закреплённом контейнере
+            pinned.style.position = "";
+            pinned.style.top = "";
+            pinned.style.left = "";
+            pinned.style.width = "";
+            pinned.style.zIndex = "";
+        }
+
+        // --- Переключение режимов в зависимости от ширины ---
+        function updateState() {
+            const isDesktop = window.innerWidth > 870;
+
+            if (isDesktop && !isActive) {
+                // Переход с мобильного на десктоп
+                disableMobileScroll();
+                destroyScene();
+                scene = createScene();
+                isActive = true;
+            } else if (!isDesktop && isActive) {
+                // Переход с десктопа на мобильный
+                destroyScene();
+                enableMobileScroll();
+                isActive = false;
+            } else if (!isDesktop && !isActive) {
+                // Уже на мобильном – проверяем, включён ли скролл (например, после ресайза)
+                enableMobileScroll();
+            } else if (isDesktop && isActive) {
+                // Остаёмся на десктопе, но ширина изменилась – пересоздаём сцену
+                disableMobileScroll(); // на всякий случай
+                destroyScene();
+                scene = createScene();
+                // isActive остаётся true
+            }
+        }
+
+        // Инициализация
+        updateState();
+
+        // Отслеживание ресайза с debounce
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(updateState, 100);
+        });
+    })();
 </script>
-
 <!-- Скрипт для отправки формы (заменить на реальную логику отправки формы) -->
 <script>
 

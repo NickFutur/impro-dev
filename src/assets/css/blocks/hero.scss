@@ -189,6 +189,9 @@
       min-width: max-content;
       align-items: center;
       animation: runline 50s linear infinite;
+      @media (max-width: 550rem * 0.0625) {
+        animation: runline 20s linear infinite;
+      }
     }
     &-item {
       margin-left: 40rem * 0.0625;
@@ -200,8 +203,8 @@
     @media (max-width: 550rem * 0.0625) {
       margin-top: 1.5rem;
       &-item {
-        margin-left: 30rem * 0.0625;
-        margin-right: 30rem * 0.0625;
+        margin-left: 1.2rem;
+        margin-right: 1.2rem;
         img {
           height: 36rem * 0.0625;
         }

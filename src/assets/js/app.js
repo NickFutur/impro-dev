@@ -31,6 +31,7 @@ $(document).ready(function () {
     infinite: true,
     autoplay: false,
     adaptiveHeight: true,
+    speed: 2000,
   });
 });
 
