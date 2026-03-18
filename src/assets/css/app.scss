@@ -1,37 +1,37 @@
-
-
-@import 'fonts.scss';
-@import 'mixins.scss';
-@import 'variables.scss';
-@import 'functions.scss';
-@import 'globals.scss';
-@import 'util.scss';
+@import "fonts.scss";
+@import "mixins.scss";
+@import "variables.scss";
+@import "functions.scss";
+@import "globals.scss";
+@import "util.scss";
 //text
 
-@import 'text/index';
+@import "text/index";
 
 //elements
-@import 'elements/tags.scss';
-@import 'elements/btn.scss';
-@import 'elements/icon.scss';
-@import 'elements/breadcrumbs.scss';
+@import "elements/tags.scss";
+@import "elements/btn.scss";
+@import "elements/icon.scss";
+@import "elements/breadcrumbs.scss";
 // blocks
-@import 'blocks/hero';
-@import 'blocks/page-header';
-@import 'blocks/cases';
-@import 'blocks/digital';
-@import 'blocks/features';
-@import 'blocks/services';
-@import 'blocks/agency';
-@import 'blocks/team';
-@import 'blocks/work';
-@import 'blocks/telegram';
-@import 'blocks/long';
-@import 'blocks/review';
-@import 'blocks/blog';
-@import 'blocks/footer';
-@import 'blocks/header';
-@import 'blocks/popup';
-@import 'blocks/dev';
+@import "blocks/hero";
+@import "blocks/page-header";
+@import "blocks/cases";
+@import "blocks/digital";
+@import "blocks/features";
+@import "blocks/services";
+@import "blocks/agency";
+@import "blocks/team";
+@import "blocks/work";
+@import "blocks/telegram";
+@import "blocks/long";
+@import "blocks/review";
+@import "blocks/blog";
+@import "blocks/footer";
+@import "blocks/header";
+@import "blocks/popup";
+@import "blocks/dev";
+@import "blocks/blogs";
+@import "blocks/nav-blog";
 
-@import 'keyframes.scss';
+@import "keyframes.scss";

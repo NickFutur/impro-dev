@@ -1,0 +1,16 @@
+.blogs .cases-item::after {
+  content: none;
+}
+.blogs .cases-item__bottom {
+  opacity: 1;
+  transform: none;
+}
+.blogs .cases-item__bottom .cases-item__desc {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 118%;
+  letter-spacing: -0.01em;
+  color: #fff;
+  width: 100%;
+  max-width: 350px;
+}/*# sourceMappingURL=blogs.css.map */

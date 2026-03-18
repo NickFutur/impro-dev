@@ -762,6 +762,11 @@ body, html {
   align-items: center;
   animation: runline 50s linear infinite;
 }
+@media (max-width: 34.375rem) {
+  .hero__runline-wrap {
+    animation: runline 20s linear infinite;
+  }
+}
 .hero__runline-item {
   margin-left: 2.5rem;
   margin-right: 2.5rem;
@@ -774,8 +779,8 @@ body, html {
     margin-top: 1.5rem;
   }
   .hero__runline-item {
-    margin-left: 1.875rem;
-    margin-right: 1.875rem;
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
   }
   .hero__runline-item img {
     height: 2.25rem;
@@ -997,6 +1002,30 @@ body, html {
     transform: translateX(0rem) translateY(0rem) rotate(0deg);
   }
 }
+.small-hero .hero__c {
+  min-height: 100%;
+}
+.small-hero .hero__h1 {
+  margin-top: 0;
+  font-size: 26px;
+  max-width: 770px;
+}
+@media (min-width: 550px) and (max-width: 768px) {
+  .small-hero .hero__h1 {
+    font-size: clamp(26px, 7.3394495413vw - 14.367px, 42px);
+  }
+}
+@media (min-width: 768px) and (max-width: 1440px) {
+  .small-hero .hero__h1 {
+    font-size: clamp(42px, 1.1904761905vw + 32.857px, 50px);
+  }
+}
+@media (min-width: 1440px) {
+  .small-hero .hero__h1 {
+    font-size: 50px;
+  }
+}
+
 .page_header__main {
   margin-top: 5rem;
   padding-bottom: 5rem;
@@ -4529,6 +4558,7 @@ body, html {
 }
 @media (max-width: 870px) {
   .dev-sticky-container {
+    position: relative;
     height: auto;
   }
 }
@@ -4599,6 +4629,13 @@ body, html {
 @media (max-width: 870px) {
   .dev-content-wrapper {
     height: auto;
+    overflow: auto;
+    overflow-x: auto;
+  }
+  .dev-content-wrapper::-webkit-scrollbar {
+    display: block;
+    width: 100%;
+    height: 200px;
   }
 }
 .dev-content-item {
@@ -4647,6 +4684,21 @@ body, html {
     width: 332px;
     height: 207px;
   }
+}
+
+/* Класс для мобильного горизонтального скролла */
+#animated.mobile-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* плавный скролл на iOS */
+  scroll-behavior: smooth; /* плавность при прокрутке колесом (опционально) */
+  /* Если дочерние элементы должны быть в ряд */
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px; /* по желанию */
+}
+
+#animated.mobile-scroll > .dev-content-item {
+  flex-shrink: 0; /* чтобы элементы не сжимались */
 }
 
 .dev-scroll-spacer {
@@ -4698,6 +4750,8 @@ body, html {
     padding: 20px;
     width: 100%;
     border-right: none;
+    height: auto;
+    gap: 65px;
   }
 }
 .dev-vars-item::after {
@@ -4813,36 +4867,50 @@ body, html {
 }
 
 .dev-features {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 колонки на десктопе */
+}
+@media (max-width: 870px) {
+  .dev-features {
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки на планшетах */
+  }
+}
+@media (max-width: 550px) {
+  .dev-features {
+    grid-template-columns: 1fr; /* 1 колонка на мобильных */
+  }
+}
+.dev-features {
   position: relative;
-  flex-wrap: wrap;
   z-index: 2;
 }
 .dev-features-item {
   display: flex;
-  width: 25%;
+  flex-direction: column;
   height: 22.5rem;
   padding: 1.875rem;
-  flex-direction: column;
-  justify-content: space-between;
   align-items: flex-start;
   gap: 5.5625rem;
   border-top: 0.04375rem solid rgba(255, 255, 255, 0.3);
   border-right: 0.04375rem solid rgba(255, 255, 255, 0.3);
   border-bottom: 0.04375rem solid rgba(255, 255, 255, 0.3);
 }
+@media (max-width: 970px) {
+  .dev-features-item {
+    height: auto;
+  }
+}
 @media (max-width: 870px) {
   .dev-features-item {
-    width: 50%;
-    height: auto;
-    aspect-ratio: 1/1;
     padding: 30px;
     margin-top: -1px;
+  }
+  .dev-features-item:nth-child(2) {
+    border-right: none;
   }
 }
 @media (max-width: 550px) {
   .dev-features-item {
-    width: 100%;
     height: auto;
     aspect-ratio: auto;
     padding: 20px;
@@ -4869,6 +4937,9 @@ body, html {
   }
 }
 .dev-features-desc {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   color: rgba(255, 255, 255, 0.8);
   font-family: "Suisse Intl";
   font-size: 0.875rem;
@@ -5381,4 +5452,21 @@ body, html {
   transform: rotate(41.24deg);
   left: -0.625rem;
   top: 0.4375rem;
+}
+
+.blogs .cases-item::after {
+  content: none;
+}
+.blogs .cases-item__bottom {
+  opacity: 1;
+  transform: none;
+}
+.blogs .cases-item__bottom .cases-item__desc {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 118%;
+  letter-spacing: -0.01em;
+  color: #fff;
+  width: 100%;
+  max-width: 350px;
 }/*# sourceMappingURL=app.css.map */

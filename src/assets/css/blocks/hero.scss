@@ -418,3 +418,32 @@
     transform: translateX(0rem * 0.0625) translateY(0rem * 0.0625) rotate(0deg);
   }
 }
+
+.small-hero {
+  .hero__c {
+    min-height: 100%;
+  }
+  .hero__h1 {
+    margin-top: 0;
+    font-size: 26px;
+    max-width: 770px;
+  }
+
+  @media (min-width: 550px) and (max-width: 768px) {
+    .hero__h1 {
+      font-size: clamp(26px, calc((16 / 218) * 100vw - 14.367px), 42px);
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1440px) {
+    .hero__h1 {
+      font-size: clamp(42px, calc((1 / 84) * 100vw + 32.857px), 50px);
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .hero__h1 {
+      font-size: 50px;
+    }
+  }
+}
