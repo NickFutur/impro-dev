@@ -3,10 +3,29 @@
     margin-bottom: 150px;
   }
 }
+.blogs .cases-item {
+  text-decoration: none;
+}
 .blogs .cases-item::after {
   content: none;
 }
+.blogs .cases-item__back-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+}
+.blogs .cases-item__top {
+  position: relative;
+  z-index: 1;
+}
 .blogs .cases-item__bottom {
+  position: relative;
+  z-index: -2;
   opacity: 1;
   transform: none;
 }
