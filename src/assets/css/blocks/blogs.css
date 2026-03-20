@@ -1,3 +1,8 @@
+@media (max-width: 870px) {
+  .blogs {
+    margin-bottom: 150px;
+  }
+}
 .blogs .cases-item::after {
   content: none;
 }
