@@ -429,6 +429,14 @@
     max-width: 770px;
   }
 
+  .hero__main {
+    @media (max-width: 870px) {
+      .hero__tags {
+        margin-top: 3rem;
+      }
+    }
+  }
+
   @media (min-width: 550px) and (max-width: 768px) {
     .hero__h1 {
       font-size: clamp(26px, calc((16 / 218) * 100vw - 14.367px), 42px);

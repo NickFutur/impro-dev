@@ -13,4 +13,10 @@
   color: #fff;
   width: 100%;
   max-width: 350px;
+}
+@media (max-width: 870px) {
+  .blogs .cases-item__bottom .cases-item__desc {
+    font-size: 18px;
+    max-width: 320px;
+  }
 }/*# sourceMappingURL=blogs.css.map */

@@ -5469,4 +5469,28 @@ body, html {
   color: #fff;
   width: 100%;
   max-width: 350px;
+}
+
+.nav-blog__wrapper {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 52px;
+}
+.nav-blog__item {
+  color: #fff;
+  border: 0.7px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 15px 16px;
+  height: 45px;
+  backdrop-filter: blur(10px);
+  box-shadow: inset 0 0 1px 0 #a4a4a4;
+  background: rgba(255, 255, 255, 0.03);
+  transition: all 0.5s ease;
+}
+.nav-blog__item--active, .nav-blog__item:hover, .nav-blog__item:focus, .nav-blog__item:active {
+  box-shadow: inset 0 0 1px 0 #a4a4a4;
+  background: #fff;
+  color: #0f0f0f;
+  transition: all 0.5s ease;
 }/*# sourceMappingURL=app.css.map */
