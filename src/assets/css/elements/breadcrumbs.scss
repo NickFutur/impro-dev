@@ -1,23 +1,24 @@
-.breadcrumbs{
-    display: flex;
-    font-weight: 400;
-    font-size: 14rem * 0.0625;
-    letter-spacing: -0.01em;
-    color: #fff;
-    li:not(:last-child){
-        &:after{
-            content: '/';
-            margin: 0 .8em;
-            display: inline-block;
-        }
-        
-        a, span{
-            opacity: .6;
-            transition: all .3s;
-        }
-    }
-    li a:hover{
-        opacity: 1;
+.breadcrumbs {
+  display: flex;
+  font-weight: 400;
+  font-size: 14rem * 0.0625;
+  letter-spacing: -0.01em;
+  color: #fff;
+  flex-wrap: wrap;
+  li:not(:last-child) {
+    &:after {
+      content: "/";
+      margin: 0 0.8em;
+      display: inline-block;
     }
 
+    a,
+    span {
+      opacity: 0.6;
+      transition: all 0.3s;
+    }
+  }
+  li a:hover {
+    opacity: 1;
+  }
 }
