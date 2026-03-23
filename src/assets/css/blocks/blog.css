@@ -113,4 +113,9 @@
 .blog__btn {
   width: -moz-max-content;
   width: max-content;
+}
+
+.articles-slider {
+  padding-top: 120px;
+  padding-bottom: 120px;
 }/*# sourceMappingURL=blog.css.map */

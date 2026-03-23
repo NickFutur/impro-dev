@@ -39,4 +39,14 @@
     padding: 11px 12px;
     height: 35px;
   }
+}
+
+.article-info__date {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.article-info__date:hover {
+  background: rgba(255, 255, 255, 0.03);
+  color: #fff;
 }/*# sourceMappingURL=nav-blog.css.map */
