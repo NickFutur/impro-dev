@@ -156,8 +156,8 @@
             </div>
         </div>
 
-        <div class="blog__list articles-list slider">
-            <div class="blog-card-wrapper">
+        <div class="articles-list slider">
+            <div class="blog-card-wrapper slick-slide">
                 <a href="" class="blog-card">
                     <span class="blog-card-preview">
                         <img src="assets/img/blog.png" alt="">
@@ -169,7 +169,7 @@
                     </span>
                 </a>
             </div>
-            <div class="blog-card-wrapper">
+            <div class="blog-card-wrapper slick-slide">
                 <a href="" class="blog-card">
                     <span class="blog-card-preview">
                         <img src="assets/img/blog.png" alt="">
@@ -181,7 +181,7 @@
                     </span>
                 </a>
             </div>
-            <div class="blog-card-wrapper">
+            <div class="blog-card-wrapper slick-slide">
                 <a href="" class="blog-card">
                     <span class="blog-card-preview">
                         <img src="assets/img/blog2.jpg" alt="">
@@ -193,7 +193,7 @@
                     </span>
                 </a>
             </div>
-            <div class="blog-card-wrapper">
+            <div class="blog-card-wrapper slick-slide">
                 <a href="" class="blog-card">
                     <span class="blog-card-preview">
                         <img src="assets/img/blog4.jpg" alt="">
@@ -205,7 +205,7 @@
                     </span>
                 </a>
             </div>
-            <div class="blog-card-wrapper">
+            <div class="blog-card-wrapper slick-slide">
                 <a href="" class="blog-card">
                     <span class="blog-card-preview">
                         <img src="assets/img/blog3.jpg" alt="">
@@ -229,5 +229,74 @@
 {% endblock %}
 
 {% block add_scripts %}
+<!-- Подключаем необходимые библиотеки -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js"></script>
 
+<!-- Скрипт для отправки формы (заменить на реальную логику отправки формы) -->
+<script>
+
+    $('.footer-form').on('submit', function (e) {
+        e.preventDefault()
+        is_valid = validateForm(this)
+        if (is_valid) {
+            $('.footer-form-form').hide()
+            $('.footer-form-thx').show()
+        }
+
+    })
+
+    function validateForm(form) {
+        var isValid = true
+
+        // Phone validation
+        if ($(form).find('input[name=phone]').val() == '') {
+            isValid = false
+            $(form).find('input[name=phone]').addClass('error').attr('placeholder', 'Введите номер')
+        }
+        else {
+            $(form).find('input[name=phone]').removeClass('error').attr('placeholder', '+7(999)999-99-99')
+        }
+
+        // Name validation
+        if ($(form).find('input[name=name]').val() == '') {
+            isValid = false
+            $(form).find('input[name=name]').addClass('error').attr('placeholder', 'Введите имя')
+        }
+        else {
+            $(form).find('input[name=name]').removeClass('error').attr('placeholder', 'Ваше имя')
+        }
+
+        // Email validation
+        if ($(form).find('input[name=email]').val() == '') {
+            isValid = false
+            $(form).find('input[name=email]').addClass('error').attr('placeholder', 'Введите email')
+        }
+        else {
+            $(form).find('input[name=email]').removeClass('error').attr('placeholder', 'Ваш email')
+        }
+
+        // Message validation
+        if ($(form).find('textarea[name=message]').val() == '') {
+            isValid = false
+            $(form).find('textarea[name=message]').addClass('error').attr('placeholder', 'Введите сообщение')
+        }
+        else {
+            $(form).find('textarea[name=message]').removeClass('error').attr('placeholder', 'Ваше сообщение')
+        }
+
+        // Contact method validation
+        if ($(form).find('input[name=contact]:checked').length == 0) {
+            isValid = false
+            $(form).find('.footer-form-select').addClass('error')
+        }
+        else {
+            $(form).find('.footer-form-select').removeClass('error')
+        }
+
+        return isValid
+    }
+</script>
 {% endblock %}
