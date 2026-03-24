@@ -168,42 +168,47 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //слайдер с страницы шаблоны "
-$(document).ready(function(){
-
-  $('.blog__list').slick({
+$(document).ready(function () {
+  $(".articles-list").slick({
+    variableWidth: true,
     dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
 
-    prevArrow: '.blog__left',
-    nextArrow: '.blog__right',
+    prevArrow: ".blog__left",
+    nextArrow: ".blog__right",
 
     responsive: [
+      {
+        breakpoint: 1440,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+        },
+      },
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 1
-        }
+          slidesToScroll: 1,
+        },
       },
       {
         breakpoint: 870,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1
-        }
+          slidesToScroll: 1,
+        },
       },
       {
         breakpoint: 550,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
-
+          slidesToScroll: 1,
+        },
+      },
+    ],
   });
-
 });
