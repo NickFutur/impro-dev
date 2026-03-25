@@ -145,6 +145,7 @@
   }
   &__info {
     .article-info__type {
+      cursor: auto;
       height: 40px;
       padding: 10px 16px;
       @media (max-width: 870px) {
@@ -155,6 +156,7 @@
     align-items: center;
     gap: 0.625rem;
     flex-wrap: wrap;
+    transition: all 0.3s ease-in-out;
   }
   &__networks {
     display: flex;
@@ -181,6 +183,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background: rgba(28, 28, 28, 0.5);
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    background: rgba(255, 255, 255, 0.08);
+  }
 
   @media (max-width: 870px) {
     height: 35px;
