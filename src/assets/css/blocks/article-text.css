@@ -166,14 +166,25 @@
   }
 }
 .article-text__info .article-info__type {
-  cursor: auto;
+  cursor: pointer;
   height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 10px 16px;
+  transition: all 0.3s ease-in-out;
 }
 @media (max-width: 870px) {
   .article-text__info .article-info__type {
     height: 35px;
   }
+}
+.article-text__info .article-info__type:hover {
+  backdrop-filter: blur(10px);
+  box-shadow: inset 0 0 1px 0 #a4a4a4;
+  background: rgba(255, 255, 255, 0.03);
+  color: #fff;
+  transition: all 0.3s ease-in-out;
 }
 .article-text__info {
   display: flex;
