@@ -1,12 +1,17 @@
 .project {
-    h1 {}
+    &__title {
+        padding-left: clamp(19px, 3vw, 40px);
 
-    p {}
+        h1 {
+            margin-bottom: 2.5rem;
+        }
+    }
 
     &__card {
         display: flex;
         flex-direction: row;
         gap: 1rem;
+        margin-bottom: 4.3rem;
 
         .card {
             display: flex;
@@ -22,17 +27,52 @@
 
     }
 
-    &__image {
-        width: 100vw;
-        height: 100vh;
-
-    }
-
     &__img {
         width: 100%;
-        height: 100%;
+        height: auto;
         object-fit: cover;
         object-position: center;
         background-size: contain;
     }
+
+    .about-project {
+        display: flex;
+        flex-direction: column;
+
+        .title {
+            align-items: flex-end;
+        }
+
+        &__card {
+            display: flex;
+            flex-direction: row;
+
+            .button {
+                a {
+                   
+                }
+            }
+
+            .client {
+                h2 {
+                    
+                }
+
+                p {
+                   
+                }
+            }
+
+            .goal {
+                h2 {
+                   
+                }
+
+                p {
+                   
+                }
+            }
+        }
+    }
+
 }

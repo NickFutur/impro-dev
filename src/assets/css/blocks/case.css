@@ -1,7 +1,14 @@
+.project__title {
+  padding-left: clamp(19px, 3vw, 40px);
+}
+.project__title h1 {
+  margin-bottom: 2.5rem;
+}
 .project__card {
   display: flex;
   flex-direction: row;
   gap: 1rem;
+  margin-bottom: 4.3rem;
 }
 .project__card .card {
   display: flex;
@@ -14,16 +21,23 @@
   backdrop-filter: blur(40px);
   background: rgba(255, 255, 255, 0.05);
 }
-.project__image {
-  width: 100vw;
-  height: 100vh;
-}
 .project__img {
   width: 100%;
-  height: 100%;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
   background-size: contain;
+}
+.project .about-project {
+  display: flex;
+  flex-direction: column;
+}
+.project .about-project .title {
+  align-items: flex-end;
+}
+.project .about-project__card {
+  display: flex;
+  flex-direction: row;
 }/*# sourceMappingURL=case.css.map */
