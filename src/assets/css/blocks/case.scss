@@ -1,5 +1,4 @@
 .project {
-
     &__title {
         padding-left: clamp(19px, 3vw, 40px);
 
@@ -16,7 +15,6 @@
 
         .card {
             display: flex;
-            flex-direction: row;
             align-items: center;
             gap: 0.5rem;
             border: 1px solid rgba(255, 255, 255, 0.3);
@@ -40,13 +38,12 @@
     }
 
     .about-project {
-        display: flex;
-        flex-direction: row;
-        padding-left: 40px;
-        padding-right: 40px;
-        gap: 194px;
-        padding-bottom: 60px;
-        border-bottom: 0.50px solid rgba(255, 255, 255, 0.3);
+        display: grid;
+        grid-template-columns: clamp(140px, 12vw, 151px) 1fr;
+        column-gap: clamp(60px, 10vw, 194px);
+        align-items: start;
+        padding: 0 40px 60px;
+        border-bottom: 0.5px solid rgba(255, 255, 255, 0.3);
 
         &__card-mobile {
             display: none;
@@ -54,11 +51,69 @@
 
         &__button {
             cursor: pointer;
-            margin-top: clamp(50px, 15vw, 290px);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 0.7px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 15px 16px;
+            width: 100%;
+            max-width: 151px;
+            min-height: clamp(39px, 4vw, 45px);
+            backdrop-filter: blur(10px);
+            box-shadow: inset 0 0 1px 0 #a4a4a4;
+            background: rgba(255, 255, 255, 0.03);
+            white-space: nowrap;
+            margin-top: clamp(50px, 16vw, 290px);
+
+            a {
+                text-align: center;
+            }
+        }
+
+        &__card {
+            display: grid;
+            grid-template-rows: auto auto;
+            row-gap: clamp(40px, 6vw, 97px);
+            min-width: 0;
+        }
+
+        &__title {
+            min-width: 0;
+        }
+
+        &__nav {
+            display: grid;
+            grid-template-columns: minmax(300px, 440px) minmax(240px, 350px);
+            column-gap: clamp(40px, 8vw, 129px);
+            align-items: start;
+        }
+
+        &__client,
+        &__goal {
+            display: grid;
+            row-gap: clamp(16px, 1vw, 20px);
+            width: 100%;
+            min-width: 0;
+        }
+    }
+
+    .about-module {
+        display: grid;
+        row-gap: 96px;
+        padding: 0 40px;
+
+        &__card {
+            display: grid;
+            grid-template-columns: clamp(140px, 18vw, 240px) 1fr;
+            column-gap: clamp(24px, 4vw, 64px);
+            align-items: start;
+        }
+
+        &__button {
             display: flex;
             align-items: center;
             justify-content: center;
-            text-align: center;
             border: 0.70px solid rgba(255, 255, 255, 0.1);
             border-radius: 12px;
             padding: 15px 16px;
@@ -71,147 +126,102 @@
             white-space: nowrap;
 
             a {
-                text-align: center;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                padding: 16px 20px;
+                border-radius: 16px;
+                white-space: nowrap;
             }
         }
 
-        &__card {
-            display: flex;
-            flex-direction: column;
-        }
-
         &__title {
-            display: flex;
-            margin-bottom: clamp(40px, 6vw, 97px);
-        }
+            display: grid;
+            gap: 32px;
 
-        &__nav {
-            display: flex;
-            flex-direction: row;
-            gap: clamp(60px, 10vw, 129px);
-        }
-
-        &__client {
-            display: flex;
-            flex-direction: column;
-            gap: clamp(16px, 1vw, 20px);
-            max-width: 440px;
-            width: 100%;
-            margin-right: clamp(60px, 10vw, 129px);
-        }
-
-        &__goal {
-            display: flex;
-            flex-direction: column;
-            gap: clamp(16px, 1vw, 20px);
-            max-width: 350px;
-            width: 100%;
+            h3,
+            p {
+                margin: 0;
+            }
         }
     }
 }
 
-@media(max-width: $tablet_res) {
+@media (max-width: $tablet_sm_res) {
     .project {
-
         .about-project {
-            justify-content: space-between;
-            gap: clamp(50px, 6vw, 90px);
-            padding: 0 30px 70px 30px;
-
-            &__card-mobile {
-               display: none;
-            }
+            grid-template-columns: 147px 1fr;
+            column-gap: clamp(24px, 4vw, 60px);
+            padding: 0 40px 70px;
 
             &__button {
                 max-width: 147px;
             }
 
             &__nav {
-                flex-direction: row;
-                gap: 40px
+                grid-template-columns: 1fr;
+                row-gap: 40px;
             }
-
         }
     }
 }
 
-@media (max-width: $mobile_big_res) {
+
+@media (max-width: $mobile_big_res),
+(max-width: $mobile_res) {
     .project {
         .about-project {
-            display: flex;
-            flex-direction: column;
-            gap: 0;
-            padding: 0 20px 60px 20px;
+            grid-template-columns: 1fr;
+            padding: 0 20px 60px;
 
-            > .about-project__button {
-                display: none; // скрываем только кнопку рядом с десктопной карточкой
+            >.about-project__button {
+                display: none;
             }
 
             &__card {
-                display: none; // скрываем десктопную карточку
+                display: none;
             }
 
             &__card-mobile {
-                display: flex;
-                flex-direction: column;
-            }
-
-            &__card-mobile .about-project__button {
-                display: flex; // показываем кнопку внутри мобильной карточки
-                margin-top: 0;
-                margin-bottom: 24px;
+                display: grid;
+                grid-template-columns: 1fr;
+                row-gap: 24px;
             }
 
             &__card-mobile .about-project__title {
-                display: flex;
-                margin-bottom: 24px;
+                margin-bottom: 0;
+            }
+
+            &__card-mobile .about-project__button {
+                display: inline-flex;
+                width: auto;
+                max-width: max-content;
+                margin-top: 0;
+                margin-bottom: 0;
             }
 
             &__card-mobile .about-project__nav {
-                display: flex;
-                flex-direction: column;
-                gap: 24px;
+                display: grid;
+                grid-template-columns: 1fr;
+                row-gap: 24px;
             }
         }
-    }
 
-}
-
-@media (max-width: $mobile_res) {
-    .project {
-        .about-project {
-            display: flex;
-            flex-direction: column;
-            gap: 0;
-            padding: 0 20px 60px 20px;
-
-            > .about-project__button {
-                display: none; // скрываем только кнопку рядом с десктопной карточкой
-            }
+        .about-module {
+            padding: 0 20px;
+            row-gap: 64px;
 
             &__card {
-                display: none; // скрываем десктопную карточку
+                grid-template-columns: 1fr;
+                row-gap: 24px;
             }
 
-            &__card-mobile {
-                display: flex;
-                flex-direction: column;
+            &__button {
+                width: auto;
+                max-width: max-content;
             }
 
-            &__card-mobile .about-project__button {
-                display: flex; // показываем кнопку внутри мобильной карточки
-                margin-top: 0;
-                margin-bottom: 24px;
-            }
-
-            &__card-mobile .about-project__title {
-                display: flex;
-                margin-bottom: 24px;
-            }
-
-            &__card-mobile .about-project__nav {
-                display: flex;
-                flex-direction: column;
+            &__title {
                 gap: 24px;
             }
         }
