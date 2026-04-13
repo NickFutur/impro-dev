@@ -48,6 +48,10 @@
         padding-bottom: 60px;
         border-bottom: 0.50px solid rgba(255, 255, 255, 0.3);
 
+        &__card-mobile {
+            display: none;
+        }
+
         &__button {
             cursor: pointer;
             margin-top: clamp(50px, 15vw, 290px);
@@ -111,15 +115,19 @@
 
         .about-project {
             justify-content: space-between;
-            gap:clamp(20px, 4vw, 90px);
+            gap: clamp(50px, 6vw, 90px);
             padding: 0 30px 70px 30px;
+
+            &__card-mobile {
+               display: none;
+            }
 
             &__button {
                 max-width: 147px;
             }
 
             &__nav {
-                flex-direction: column;
+                flex-direction: row;
                 gap: 40px
             }
 
@@ -127,30 +135,85 @@
     }
 }
 
-@media(max-width: $mobile_res) {
-    .about-project {
-        display: flex;
-        flex-direction: column;
-
-        &__button {
-            order: 2; // на мобилке после заголовка
-        }
-
-        &__card {
+@media (max-width: $mobile_big_res) {
+    .project {
+        .about-project {
             display: flex;
             flex-direction: column;
-        }
+            gap: 0;
+            padding: 0 20px 60px 20px;
 
-        &__title {
-            order: 1; // заголовок первый
-        }
+            > .about-project__button {
+                display: none; // скрываем только кнопку рядом с десктопной карточкой
+            }
 
-        &__nav {
-            order: 3; // клиент и цель после кнопки
-            display: flex;
-            flex-direction: column;
-        }
+            &__card {
+                display: none; // скрываем десктопную карточку
+            }
 
+            &__card-mobile {
+                display: flex;
+                flex-direction: column;
+            }
+
+            &__card-mobile .about-project__button {
+                display: flex; // показываем кнопку внутри мобильной карточки
+                margin-top: 0;
+                margin-bottom: 24px;
+            }
+
+            &__card-mobile .about-project__title {
+                display: flex;
+                margin-bottom: 24px;
+            }
+
+            &__card-mobile .about-project__nav {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+            }
+        }
     }
 
+}
+
+@media (max-width: $mobile_res) {
+    .project {
+        .about-project {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            padding: 0 20px 60px 20px;
+
+            > .about-project__button {
+                display: none; // скрываем только кнопку рядом с десктопной карточкой
+            }
+
+            &__card {
+                display: none; // скрываем десктопную карточку
+            }
+
+            &__card-mobile {
+                display: flex;
+                flex-direction: column;
+            }
+
+            &__card-mobile .about-project__button {
+                display: flex; // показываем кнопку внутри мобильной карточки
+                margin-top: 0;
+                margin-bottom: 24px;
+            }
+
+            &__card-mobile .about-project__title {
+                display: flex;
+                margin-bottom: 24px;
+            }
+
+            &__card-mobile .about-project__nav {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+            }
+        }
+    }
 }
