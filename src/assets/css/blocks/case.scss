@@ -1,4 +1,36 @@
+%glass-surface {
+    border: 0.7px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.03);
+    box-shadow: inset 0 0 1px 0 #a4a4a4;
+}
+
+%project-button {
+    @extend %glass-surface;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 16px;
+    min-height: clamp(39px, 4vw, 45px);
+    white-space: nowrap;
+
+    >a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+    }
+}
+
 .project {
+    margin: 30% 0;
+
+    &__header {
+        margin-bottom: clamp(40px, 6vw, 90px);
+    }
+
     &__title {
         padding-left: clamp(19px, 3vw, 40px);
 
@@ -9,19 +41,19 @@
 
     &__card {
         display: flex;
-        flex-direction: row;
         flex-wrap: wrap;
         gap: 1rem;
-        margin-bottom: 4.3rem;
+        margin: 0 0 4.3rem;
+        padding: 0;
+        list-style: none;
 
-        .card {
+        &-item {
+            @extend %glass-surface;
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 10px;
             padding: 9px 12px;
-            backdrop-filter: blur(40px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
             background: rgba(255, 255, 255, 0.05);
         }
     }
@@ -51,23 +83,13 @@
         }
 
         &__button {
+            @extend %project-button;
             cursor: pointer;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            border: 0.7px solid rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            padding: 15px 16px;
             width: max-content;
             min-width: 147px;
-            min-height: clamp(39px, 4vw, 45px);
-            backdrop-filter: blur(10px);
-            box-shadow: inset 0 0 1px 0 #a4a4a4;
-            background: rgba(255, 255, 255, 0.03);
-            white-space: nowrap;
             margin-top: clamp(50px, 16vw, 290px);
 
-            a {
+            >a {
                 text-align: center;
             }
         }
@@ -112,21 +134,11 @@
         }
 
         &__button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 0.70px solid rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            padding: 15px 16px;
+            @extend %project-button;
             width: max-content;
             min-width: 85px;
-            min-height: clamp(39px, 4vw, 45px);
-            backdrop-filter: blur(10px);
-            box-shadow: inset 0 0 1px 0 #a4a4a4;
-            background: rgba(255, 255, 255, 0.03);
-            white-space: nowrap;
 
-            a {
+            >a {
                 white-space: nowrap;
             }
         }
@@ -134,14 +146,39 @@
         &__description {
             display: grid;
             gap: 32px;
+            max-width: 900px;
+            min-width: 0;
 
-            h3,
+            h3 {
+                margin:0;
+                .about-module__title-nowrap {
+                    white-space: nowrap;
+                }
+            }
+
             p {
                 margin: 0;
             }
         }
+
+        &__images {
+            display: flex;
+            flex-direction: row;
+            gap: 2px;
+            margin: 0 -40px 0 -40px;
+
+            img {
+                display: block;
+                flex: 1 1 50%;
+                width: 50%;
+                aspect-ratio: 1 / 1;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
     }
 }
+
 
 @media (max-width: $tablet_res) {
     .project {
@@ -195,14 +232,15 @@
     }
 }
 
-@media (max-width: $mobile_big_res), (max-width: $mobile_res) {
+@media (max-width: $mobile_big_res),
+(max-width: $mobile_res) {
     .project {
         .about-project {
             grid-template-columns: 1fr;
             padding: 0 20px 60px;
             margin-bottom: 30px;
 
-            > .about-project__button {
+            >.about-project__button {
                 display: none;
             }
 
@@ -252,6 +290,21 @@
 
             &__description {
                 gap: 24px;
+
+                h3 {
+                    .about-module__title-nowrap {
+                        white-space: normal;
+                    }
+                }
+            }
+
+            &__images {
+                display: flex;
+                flex-direction: column;
+
+                img {
+                    width: 100%;
+                }
             }
         }
     }

@@ -6,21 +6,23 @@
 
 {% block content %}
 
-<section class="project" style="margin-top: 30%; margin-bottom: 30%;">
-    <div class="project__title">
-        <h1 class="t-title">Интеграция системы&nbsp;<br> бронирования «Контур»&nbsp;<br>в сайт на Tilda</h1>
-        <div class="project__card">
-            <div class="card"><img src="assets/img/cases/setting.svg" alt="">
-                <p class="t-caption">Интеграции</p>
-            </div>
-            <div class="card"><img src="assets/img/cases/tilda.svg" alt="">
-                <p class="t-caption">Tilda Publishing</p>
-            </div>
-            <div class="card"><img src="assets/img/cases/href.svg" alt="">
-                <p class="t-caption">holmgardvillage.ru</p>
-            </div>
+<section class="project">
+    <header class="project__header">
+        <div class="project__title">
+            <h1 class="t-title">Интеграция системы&nbsp;<br> бронирования «Контур»&nbsp;<br>в сайт на Tilda</h1>
+            <ul class="project__card">
+                <li class="project__card-item"><img src="assets/img/cases/setting.svg" alt="Иконка интеграции">
+                    <p class="t-caption">Интеграции</p>
+                </li>
+                <li class="project__card-item"><img src="assets/img/cases/tilda.svg" alt="Логотип Tilda">
+                    <p class="t-caption">Tilda Publishing</p>
+                </li>
+                <li class="project__card-item"><img src="assets/img/cases/href.svg" alt="Сайт holmgardvillage.ru">
+                    <p class="t-caption">holmgardvillage.ru</p>
+                </li>
+            </ul>
         </div>
-    </div>
+    </header>
     <div class="project__image">
         <img class="project__img" src="assets/img/cases/case-main.png" alt="Главное изображение проекта">
     </div>
@@ -46,6 +48,7 @@
                 </div>
             </div>
         </div>
+        <!--код для мобилки, так как переставить некоторые элементы невозможно-->
         <div class="about-project__card-mobile">
             <div class="about-project__title">
                 <h2 class="t-title-section">Расскажем, как мы автоматизировали бронирование на сайте этнопоселения
@@ -68,29 +71,65 @@
         </div>
     </div>
     <div class="about-module">
-        <div class="about-module__card">
+        <article class="about-module__card">
+            <div class="about-module__button"> <a class="t-caption" href="">О задаче</a> </div>
+            <div class="about-module__description">
+                <h3 class="t-title-section-small"> <span class="about-module__title-nowrap">Как модуль
+                        онлайн-бронирования</span><br> помогает бизнесу </h3>
+                <p class="t-text">Модуль онлайн-бронирования значительно упрощает взаимодействие между клиентом и
+                    бизнесом. Он позволяет пользователям самостоятельно выбирать услуги и бронировать их в удобное
+                    время, снижая нагрузку на операторов и повышая уровень конверсии. Для бизнеса это значит — меньше
+                    ручной работы, больше заявок и возможность аналитики бронирований.</p>
+                <p class="t-text">На сайтах, созданных на Tilda, такие модули особенно важны: интеграция виджетов
+                    бронирования помогает автоматизировать приём заявок без необходимости развёртывания сложных CRM или
+                    сторонних платформ.</p>
+            </div>
+        </article>
+        <div class="about-module__images">
+            <img src="assets/img/cases/kontyr.png" alt="">
+            <img src="assets/img/cases/kontyrLogo.png" alt="">
+        </div>
+        <article class="about-module__card">
             <div class="about-module__button">
-                <a class="t-caption" href="">О задаче</a>
+                <a class="t-caption" href="">Особенности проекта</a>
             </div>
             <div class="about-module__description">
-                <h3 class="t-title-section">Как модуль онлайн-бронирования<br> помогает бизнесу</h3>
-                <p class="t-text">Модуль онлайн-бронирования значительно упрощает взаимодействие между клиентом и бизнесом. Он позволяет пользователям самостоятельно выбирать услуги и бронировать их в удобное время, снижая нагрузку на операторов и повышая уровень конверсии. Для бизнеса это значит — меньше ручной работы, больше заявок и возможность аналитики бронирований.</p>
-                <p class="t-text">На сайтах, созданных на Tilda, такие модули особенно важны: интеграция виджетов бронирования помогает автоматизировать приём заявок без необходимости развёртывания сложных CRM или сторонних платформ.</p>
+                <p class="t-text">Сервис «Контур» предлагает ограниченные возможности по стилизации и управлению. Мы не
+                    имели доступа к личному кабинету клиента — все изменения (например, добавление домена в whitelist)
+                    вносил сам заказчик по нашей инструкции.</p>
+                <p class="t-text">Было два подхода: либо встроить виджет напрямую в Tilda с помощью JavaScript, либо
+                    перенаправлять на отдельную страницу с модулем. Мы выбрали первый способ, чтобы сохранить единый UX.
+                </p>
             </div>
-        </div>
-
-
-
-         <div class="about-module__card">
+        </article>
+        <article class="about-module__card">
             <div class="about-module__button">
-                <a class="t-caption" href="">О задаче о задаче</a>
+                <a class="t-caption" href="">Публикация работы</a>
             </div>
             <div class="about-module__description">
-                <h3 class="t-title-section">Как мы интегрировали виджет бронирования в Tilda</h3>
-                <p class="t-text">Модуль онлайн-бронирования значительно упрощает взаимодействие между клиентом и бизнесом. Он позволяет пользователям самостоятельно выбирать услуги и бронировать их в удобное время, снижая нагрузку на операторов и повышая уровень конверсии. Для бизнеса это значит — меньше ручной работы, больше заявок и возможность аналитики бронирований.</p>
-                <p class="t-text">На сайтах, созданных на Tilda, такие модули особенно важны: интеграция виджетов бронирования помогает автоматизировать приём заявок без необходимости развёртывания сложных CRM или сторонних платформ.</p>
+                <p class="t-text">Мы реализовали кастомное подключение виджета Контур в два блока сайта, заменив
+                    стандартные формы. Ещё три блока с вариантами размещения были адаптированы под разные параметры
+                    брони. Несмотря на ограничения сервиса, нам удалось настроить внешний вид виджета так, чтобы он
+                    соответствовал фирменному стилю «Хольмгард».</p>
             </div>
+        </article>
+        <div class="about-module__images">
+            <img src="assets/img/cases/legend.png" alt="">
+            <img src="assets/img/cases/legend2.png" alt="">
         </div>
+        <article class="about-module__card">
+            <div class="about-module__button">
+                <a class="t-caption" href="">Результаты</a>
+            </div>
+            <div class="about-module__description">
+                <h3 class="t-title-section-small">
+                 Виджеты на сайте Tilda работают стабильно, при этом пользовательский путь остался привычным и простым. Все заявки поступают напрямую в систему Контур, что исключает ручную&nbsp;обработку.
+                </h3>
+                <p class="t-text">Клиент остался доволен работой и подтвердил, что готов обращаться снова<br> при
+                    необходимости развития проекта.</p>
+            </div>
+        </article>
+
     </div>
 </section>
 
