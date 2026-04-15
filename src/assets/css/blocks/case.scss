@@ -58,18 +58,18 @@
         }
     }
 
-    &__img {
-        width: 100%;
-        height: auto;
+    &__image {
         margin-bottom: clamp(44px, 6vw, 90px);
 
         img {
+            width: 100%;
             object-fit: cover;
             object-position: center;
             background-size: contain;
         }
     }
 
+    //TODO - сделать адаптив кнопкам, также переделать первый блок на flex
     .about-project {
         display: grid;
         grid-template-columns: clamp(140px, 12vw, 151px) 1fr;
@@ -77,6 +77,8 @@
         align-items: start;
         padding: 0 40px 60px;
         border-bottom: 0.5px solid rgba(255, 255, 255, 0.3);
+
+        &__title {}
 
         &__card-mobile {
             display: none;
@@ -129,7 +131,8 @@
         &__card {
             display: grid;
             grid-template-columns: clamp(140px, 18vw, 240px) 1fr;
-            column-gap: clamp(24px, 4vw, 64px);
+            column-gap: clamp(24px, 4.7vw, 150px);
+            ;
             align-items: start;
         }
 
@@ -150,7 +153,8 @@
             min-width: 0;
 
             h3 {
-                margin:0;
+                margin: 0;
+
                 .about-module__title-nowrap {
                     white-space: nowrap;
                 }
@@ -184,7 +188,7 @@
     .project {
         .about-project {
             grid-template-columns: 147px 1fr;
-            column-gap: clamp(24px, 4vw, 60px);
+            column-gap: clamp(80px, 8vw, 90px);
             padding: 0 40px 70px;
 
             &__button {
@@ -200,7 +204,11 @@
         .about-module {
             &__card {
                 grid-template-columns: 147px 1fr;
-                column-gap: clamp(24px, 4vw, 60px);
+                column-gap: clamp(80px, 8vw, 90px);
+            }
+
+            &__button {
+                max-width: 147px;
             }
         }
     }
@@ -210,7 +218,7 @@
     .project {
         .about-project {
             grid-template-columns: 147px 1fr;
-            column-gap: clamp(24px, 4vw, 60px);
+            column-gap: clamp(60px, 4vw, 80px);
             padding: 0 40px 70px;
 
             &__button {
@@ -226,7 +234,15 @@
         .about-module {
             &__card {
                 grid-template-columns: 147px 1fr;
-                column-gap: clamp(24px, 4vw, 60px);
+                column-gap: clamp(60px, 4vw, 80px);
+            }
+
+            &__description {
+                h3 {
+                    .about-module__title-nowrap {
+                        white-space: normal;
+                    }
+                }
             }
         }
     }
@@ -301,6 +317,7 @@
             &__images {
                 display: flex;
                 flex-direction: column;
+                margin: 0 -18px 0 -18px;
 
                 img {
                     width: 100%;
