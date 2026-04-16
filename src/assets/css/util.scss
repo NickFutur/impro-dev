@@ -56,6 +56,6 @@
 /*стили для текста в плашках*/
 .t-caption {
     font-weight: 400;
-    font-size: 13px;
+    font-size:clamp(12px, 1.5vw, 13px);
     color: $text-white;
 }
