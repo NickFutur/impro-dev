@@ -25,14 +25,7 @@
     padding: 15px 16px;
     min-height: clamp(39px, 4vw, 45px);
     white-space: nowrap;
-
-    >a {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        text-align: center;
-    }
+    text-align: center;
 }
 
 .project {
@@ -98,10 +91,6 @@
             width: max-content;
             min-width: 147px;
             margin-top: clamp(50px, 16vw, 290px);
-
-            >a {
-                text-align: center;
-            }
         }
 
         &__card {
@@ -148,10 +137,6 @@
             width: max-content;
             cursor: pointer;
             min-width: 85px;
-
-            >a {
-                white-space: nowrap;
-            }
         }
 
         &__description {
@@ -345,8 +330,8 @@
         radial-gradient(circle at 65% 50%, rgba(92, 70, 255, 0.35), transparent 65%),
         radial-gradient(circle at 75% 100%, rgba(25, 50, 255, 0.18), transparent 25%),
         linear-gradient(90deg, #050505 0%, #120d1f 45%, #22113f 100%);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-
+    border-bottom: 1.20px solid rgba(255, 255, 255, 0.2);
+    border-top: 1.20px solid rgba(255, 255, 255, 0.2);
 
     &__container {
         position: relative;
