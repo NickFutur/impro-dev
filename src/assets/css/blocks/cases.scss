@@ -267,21 +267,6 @@
   }
 }
 
-.cases-item-action {
-  .cases-item__content {
-    .cases-item__t {
-      .cases-item__project {
-        font-size: 36px;
-        @media screen and (max-width: 870px) {
-          font-size: 28px;
-        }
-        @media (max-width: 550px) {
-          font-size: 26px;
-        }
-      }
-    }
-  }
-}
 @media screen and (max-width: 870px) {
   .cases-item {
     min-height: 375px;
