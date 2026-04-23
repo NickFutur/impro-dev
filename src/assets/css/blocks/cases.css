@@ -140,6 +140,7 @@
 }
 .cases-item__nav {
   display: flex;
+  gap: 4px;
 }
 .cases-item::after {
   content: "";
@@ -266,6 +267,16 @@
 @media (max-width: 870px) {
   .cases-item__content {
     padding: 1rem;
+  }
+}
+
+.cases--inner .cases-list .cases-item__b__photo {
+  gap: 0.4rem;
+}
+@media screen and (min-width: 871px) {
+  .cases--inner .cases-list .cases-item__b__photo img {
+    width: 4.5rem;
+    height: 4.5rem;
   }
 }
 

@@ -1,8 +1,14 @@
+@import "../variables.scss";
+
 .hero {
   width: 100%;
   overflow: hidden;
   position: relative;
   background-color: #121212;
+
+  &--dop {
+    border-bottom: 0.7px solid rgba(255, 255, 255, 0.4);
+  }
   &__c {
     display: flex;
     flex-wrap: wrap;

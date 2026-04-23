@@ -603,6 +603,7 @@ body, html {
   overflow: hidden;
   position: relative;
   background-color: #121212;
+  border-bottom: 0.7px solid rgba(255, 255, 255, 0.4);
 }
 .hero__c {
   display: flex;
