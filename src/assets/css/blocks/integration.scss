@@ -1,4 +1,51 @@
-.hero{
-    display: flex;
-    flex-direction: column;
-} 
+.dev-vars {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin-bottom: clamp(80px, 10vw, 155px);
+}
+
+.booking-hero {
+
+    @media (max-width: 1400px) {
+        @include booking-hero-tablet;
+    }
+
+    &--compact {
+
+        @include booking-hero-tablet;
+        background: none;
+        border: none;
+
+        .booking-hero__glow--left {
+            left: auto;
+            right: 20%;
+            top: 30%;
+        }
+
+        .booking-hero__glow--bottom {
+            left: auto;
+            right: 20%;
+            top: 40%;
+        }
+
+        .booking-hero__visual {
+            order: 1;
+        }
+
+        .booking-hero__content {
+            order: 2;
+            max-width: 900px;
+            width: 100%;
+
+            .booking-hero__title {
+                max-width: 900px;
+                padding-right: 5px;
+            }
+
+            .booking-hero__text {
+                max-width: 697px;
+                width: 100%;
+                padding-right: 5px;
+            }
+        }
+    }
+}

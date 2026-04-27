@@ -320,6 +320,119 @@
   }
 }
 
+@mixin booking-hero-tablet {
+  position: relative;
+  overflow: hidden;
+  background:
+    url("assets/img/cases/noiseEffect.svg"),
+    radial-gradient(
+      circle at 20% 35%,
+      rgba(255, 120, 40, 0.22),
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 25% 50%,
+      rgba(92, 70, 255, 0.35),
+      transparent 65%
+    ),
+    radial-gradient(
+      circle at 20% 100%,
+      rgba(25, 50, 255, 0.18),
+      transparent 25%
+    ),
+    linear-gradient(90deg, #050505 0%, #120d1f 45%, #22113f 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  .booking-hero__container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .booking-hero__content {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
+  .booking-hero__button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    max-width: max-content;
+    min-height: 46px;
+    padding: 10px 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #fff;
+    box-shadow: inset 0 0 1px 0 #a4a4a4;
+    background: linear-gradient(323deg, #3824b0 0%, #6163ef 100%);
+    margin: 0 auto;
+  }
+
+  .booking-hero__text {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .booking-hero__visual {
+    width: min(100%, 760px);
+    margin: 0 auto;
+  }
+
+  .booking-hero__phone {
+    z-index: 10;
+    left: 30%;
+    top: 10%;
+    width: 184px;
+    height: 379px;
+  }
+
+  .booking-hero__tablet {
+    z-index: 9;
+    left: 50%;
+    bottom: 25%;
+    width: clamp(220px, 25vw, 360px);
+  }
+
+  .booking-hero__chart-circle {
+    top: 4%;
+    right: 13%;
+    height: 125px;
+  }
+
+  .booking-hero__chart-lines {
+    right: 5%;
+    top: 20%;
+    width: 244px;
+    height: 112px;
+  }
+
+  .booking-hero__widget {
+    &--settings {
+      top: 8%;
+      left: 15%;
+      width: 62px;
+      height: 62px;
+    }
+
+    &--docs {
+      top: 20%;
+      left: 25%;
+      width: 46px;
+      height: 46px;
+    }
+
+    &--stats {
+      left: 25%;
+      bottom: 23%;
+      width: 99px;
+      height: 78px;
+    }
+  }
+}
+
 .booking-hero {
   position: relative;
   overflow: hidden;
@@ -513,121 +626,12 @@
     }
   }
 
-  @media (max-width: 1400px) {
-    &__container {
-      grid-template-columns: 1fr;
-      text-align: center;
-    }
-
-    &__content {
-      max-width: 780px;
-      margin: 0 auto;
-    }
-
-    &__button {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      max-width: max-content;
-      min-height: 46px;
-      padding: 10px 18px;
-      border-radius: 12px;
-      text-decoration: none;
-      color: #fff;
-      box-shadow: inset 0 0 1px 0 #a4a4a4;
-      background: linear-gradient(323deg, #3824b0 0%, #6163ef 100%);
-    }
-
-    &__text {
-      max-width: 500px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    &__visual {
-      width: min(100%, 760px);
-      margin: 0 auto;
-    }
-
-    &__phone {
-      z-index: 10;
-      left: 30%;
-      top: 10%;
-      width: 184px;
-      height: 379px;
-    }
-
-    &__tablet {
-      z-index: 9;
-      left: 50%;
-      bottom: 25%;
-      width: clamp(220px, 25vw, 360px);
-    }
-
-    &__chart-circle {
-      top: 4%;
-      right: 13%;
-      height: 125px;
-    }
-
-    &__chart-lines {
-      right: 5%;
-      top: 20%;
-      width: 244px;
-      height: 112px;
-    }
-
-    &__widget {
-      &--settings {
-        top: 8%;
-        left: 15%;
-        width: 62px;
-        height: 62px;
-      }
-
-      &--docs {
-        top: 20%;
-        left: 25%;
-        width: 46px;
-        height: 46px;
-      }
-
-      &--stats {
-        left: 25%;
-        bottom: 23%;
-        width: 99px;
-        height: 78px;
-      }
-    }
-
-    &__button {
-      margin: 0 auto;
-    }
+  &--compact {
+    @include booking-hero-tablet;
   }
+
   @media (max-width: 1400px) {
-    position: relative;
-    overflow: hidden;
-    background:
-      url("assets/img/cases/noiseEffect.svg"),
-      radial-gradient(
-        circle at 20% 35%,
-        rgba(255, 120, 40, 0.22),
-        transparent 45%
-      ),
-      radial-gradient(
-        circle at 25% 50%,
-        rgba(92, 70, 255, 0.35),
-        transparent 65%
-      ),
-      radial-gradient(
-        circle at 20% 100%,
-        rgba(25, 50, 255, 0.18),
-        transparent 25%
-      ),
-      linear-gradient(90deg, #050505 0%, #120d1f 45%, #22113f 100%);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    @include booking-hero-tablet;
   }
   @media (max-width: 630px) {
     position: relative;
