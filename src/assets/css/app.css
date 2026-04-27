@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import "blocks/integration.css";
 @font-face {
   font-family: "Suisse Intl";
   src: url("../fonts/SuisseIntl-Light.otf");
@@ -603,6 +604,8 @@ body, html {
   overflow: hidden;
   position: relative;
   background-color: #121212;
+}
+.hero--dop {
   border-bottom: 0.7px solid rgba(255, 255, 255, 0.4);
 }
 .hero__c {
@@ -1320,6 +1323,7 @@ body, html {
 }
 .cases-item__nav {
   display: flex;
+  gap: 4px;
 }
 .cases-item::after {
   content: "";
@@ -1446,6 +1450,16 @@ body, html {
 @media (max-width: 870px) {
   .cases-item__content {
     padding: 1rem;
+  }
+}
+
+.cases--inner .cases-list .cases-item__b__photo {
+  gap: 0.4rem;
+}
+@media screen and (min-width: 871px) {
+  .cases--inner .cases-list .cases-item__b__photo img {
+    width: 4.5rem;
+    height: 4.5rem;
   }
 }
 
