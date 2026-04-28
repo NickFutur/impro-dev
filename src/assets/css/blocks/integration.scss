@@ -1,30 +1,50 @@
 .dev-vars {
+    margin-top: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     margin-bottom: clamp(80px, 10vw, 155px);
+
+    .dev-vars-item {
+        height: auto;
+        min-height: 21rem;
+
+        &:nth-child(odd) {
+           border-right: 0.15rem solid rgba(255, 255, 255, 0.3);
+            @media (max-width: 550px) {
+                border-right: none;
+            }
+        }
+
+        .dev-vars-item-top {
+            display: flex;
+            flex-direction: column;
+            gap: clamp(15px, 1vw, 20px);
+            margin-bottom: clamp(29px, 4vw, 82px);
+
+            .dev-vars-item-desc {
+                margin-top: 0;
+            }
+
+            .project__card {
+                margin-bottom: 10px;
+                gap: 4px;
+            }
+        }
+    }
 }
 
 .booking-hero {
-
     @media (max-width: 1400px) {
         @include booking-hero-tablet;
     }
 
     &--compact {
-
         @include booking-hero-tablet;
         background: none;
         border: none;
-
-        .booking-hero__glow--left {
-            left: auto;
-            right: 20%;
-            top: 30%;
-        }
-
-        .booking-hero__glow--bottom {
-            left: auto;
-            right: 20%;
-            top: 40%;
+        margin-bottom: clamp(90px, 10vw, 130px);
+        
+        .booking-hero__container {
+           padding: 5px;
         }
 
         .booking-hero__visual {
@@ -35,16 +55,30 @@
             order: 2;
             max-width: 900px;
             width: 100%;
+        }
 
-            .booking-hero__title {
-                max-width: 900px;
-                padding-right: 5px;
+        .booking-hero__title {
+            max-width: 900px;
+            padding-right: 5px;
+        }
+
+        .booking-hero__text {
+            max-width: 697px;
+            width: 100%;
+            padding-right: 5px;
+        }
+
+        .booking-hero__glow {
+            &--left {
+                left: auto;
+                right: 20%;
+                top: 30%;
             }
 
-            .booking-hero__text {
-                max-width: 697px;
-                width: 100%;
-                padding-right: 5px;
+            &--bottom {
+                left: auto;
+                right: 20%;
+                top: 40%;
             }
         }
     }

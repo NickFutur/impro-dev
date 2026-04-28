@@ -6879,6 +6879,9 @@ body, html {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   margin-bottom: clamp(80px, 10vw, 155px);
 }
+.dev-vars .dev-vars__item .dev-vars-item-top {
+  gap: clamp(15px, 1vw, 20px);
+}
 
 @media (max-width: 1400px) {
   .booking-hero {
@@ -7048,6 +7051,13 @@ body, html {
 }
 .booking-hero--compact {
   background: none;
+  border: none;
+  margin-bottom: clamp(90px, 10vw, 130px);
+}
+.booking-hero--compact .booking-hero__glow--left {
+  left: auto;
+  right: 20%;
+  top: 30%;
 }
 .booking-hero--compact .booking-hero__glow--bottom {
   left: auto;
