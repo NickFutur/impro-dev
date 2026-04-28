@@ -8,7 +8,7 @@
         min-height: 21rem;
 
         &:nth-child(odd) {
-           border-right: 0.15rem solid rgba(255, 255, 255, 0.3);
+           border-right: 0.12rem solid rgba(255, 255, 255, 0.3);
             @media (max-width: 550px) {
                 border-right: none;
             }

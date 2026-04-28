@@ -386,6 +386,12 @@ body, html {
   color: #fff;
 }
 
+.t-caption-gray {
+  font-weight: 400;
+  font-size: clamp(12px, 1.5vw, 13px);
+  color: rgba(255, 255, 255, 0.5);
+}
+
 .tags {
   display: flex;
   flex-wrap: wrap;
@@ -6876,11 +6882,34 @@ body, html {
 }
 
 .dev-vars {
+  margin-top: 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   margin-bottom: clamp(80px, 10vw, 155px);
 }
-.dev-vars .dev-vars__item .dev-vars-item-top {
+.dev-vars .dev-vars-item {
+  height: auto;
+  min-height: 21rem;
+}
+.dev-vars .dev-vars-item:nth-child(odd) {
+  border-right: 0.12rem solid rgba(255, 255, 255, 0.3);
+}
+@media (max-width: 550px) {
+  .dev-vars .dev-vars-item:nth-child(odd) {
+    border-right: none;
+  }
+}
+.dev-vars .dev-vars-item .dev-vars-item-top {
+  display: flex;
+  flex-direction: column;
   gap: clamp(15px, 1vw, 20px);
+  margin-bottom: clamp(29px, 4vw, 82px);
+}
+.dev-vars .dev-vars-item .dev-vars-item-top .dev-vars-item-desc {
+  margin-top: 0;
+}
+.dev-vars .dev-vars-item .dev-vars-item-top .project__card {
+  margin-bottom: 10px;
+  gap: 4px;
 }
 
 @media (max-width: 1400px) {
@@ -7054,15 +7083,8 @@ body, html {
   border: none;
   margin-bottom: clamp(90px, 10vw, 130px);
 }
-.booking-hero--compact .booking-hero__glow--left {
-  left: auto;
-  right: 20%;
-  top: 30%;
-}
-.booking-hero--compact .booking-hero__glow--bottom {
-  left: auto;
-  right: 20%;
-  top: 40%;
+.booking-hero--compact .booking-hero__container {
+  padding: 5px;
 }
 .booking-hero--compact .booking-hero__visual {
   order: 1;
@@ -7072,12 +7094,22 @@ body, html {
   max-width: 900px;
   width: 100%;
 }
-.booking-hero--compact .booking-hero__content .booking-hero__title {
+.booking-hero--compact .booking-hero__title {
   max-width: 900px;
   padding-right: 5px;
 }
-.booking-hero--compact .booking-hero__content .booking-hero__text {
+.booking-hero--compact .booking-hero__text {
   max-width: 697px;
   width: 100%;
   padding-right: 5px;
+}
+.booking-hero--compact .booking-hero__glow--left {
+  left: auto;
+  right: 20%;
+  top: 30%;
+}
+.booking-hero--compact .booking-hero__glow--bottom {
+  left: auto;
+  right: 20%;
+  top: 40%;
 }/*# sourceMappingURL=app.css.map */
