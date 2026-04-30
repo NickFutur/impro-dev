@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import "blocks/integration.css";
 @font-face {
   font-family: "Suisse Intl";
   src: url("../fonts/SuisseIntl-Light.otf");
@@ -6796,4 +6795,43 @@ body, html {
     width: 88px;
     height: 70px;
   }
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-maket {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  margin-top: 155px;
+}
+.service-maket__title-block {
+  display: flex;
+  width: 100%;
+}
+.service-maket__title-block::before {
+  content: "";
+  display: block;
+  width: 25%;
+  flex-shrink: 0;
+}
+.service-maket__desc-block {
+  display: flex;
+}
+.service-maket__desc-quest {
+  width: 25%;
+  flex-shrink: 0;
+}
+.service-maket__desc-answer {
+  display: flex;
+  justify-content: space-between;
+  gap: 66px;
+  flex-wrap: wrap;
+}
+.service-maket__desc-answer__item {
+  width: 100%;
+  max-width: 440px;
 }/*# sourceMappingURL=app.css.map */

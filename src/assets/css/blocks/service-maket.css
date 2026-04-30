@@ -1,0 +1,33 @@
+.service-maket {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  margin-top: 155px;
+}
+.service-maket__title-block {
+  display: flex;
+  width: 100%;
+}
+.service-maket__title-block::before {
+  content: "";
+  display: block;
+  width: 25%;
+  flex-shrink: 0;
+}
+.service-maket__desc-block {
+  display: flex;
+}
+.service-maket__desc-quest {
+  width: 25%;
+  flex-shrink: 0;
+}
+.service-maket__desc-answer {
+  display: flex;
+  justify-content: space-between;
+  gap: 66px;
+  flex-wrap: wrap;
+}
+.service-maket__desc-answer__item {
+  width: 100%;
+  max-width: 440px;
+}/*# sourceMappingURL=service-maket.css.map */

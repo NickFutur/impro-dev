@@ -1,0 +1,42 @@
+@import "../variables.scss";
+
+.service-maket {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  margin-top: 155px;
+
+  &__title-block {
+    display: flex;
+    width: 100%;
+    &::before {
+      content: "";
+      display: block;
+      width: 25%;
+      flex-shrink: 0;
+    }
+  }
+  &__title-info {
+    .t-title-section-small {
+    }
+    .t-text {
+    }
+  }
+  &__desc-block {
+    display: flex;
+  }
+  &__desc-quest {
+    width: 25%;
+    flex-shrink: 0;
+  }
+  &__desc-answer {
+    display: flex;
+    justify-content: space-between;
+    gap: 66px;
+    flex-wrap: wrap;
+    &__item {
+      width: 100%;
+      max-width: 440px;
+    }
+  }
+}
