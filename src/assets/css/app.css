@@ -6808,6 +6808,11 @@ body, html {
   gap: 100px;
   margin-top: 155px;
 }
+.service-maket__wrap, .service-maket__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 90px;
+}
 .service-maket__title-block {
   display: flex;
   width: 100%;
@@ -6818,12 +6823,26 @@ body, html {
   width: 25%;
   flex-shrink: 0;
 }
+.service-maket__title-info .t-title-section-small {
+  margin-bottom: 24px;
+}
 .service-maket__desc-block {
   display: flex;
 }
 .service-maket__desc-quest {
   width: 25%;
   flex-shrink: 0;
+}
+.service-maket__desc-quest__button {
+  border: 0.7px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 15px 16px;
+  backdrop-filter: blur(10px);
+  box-shadow: inset 0 0 1px 0 #a4a4a4;
+  background: rgba(255, 255, 255, 0.03);
+  width: -moz-max-content;
+  width: max-content;
+  text-align: center;
 }
 .service-maket__desc-answer {
   display: flex;
@@ -6834,4 +6853,26 @@ body, html {
 .service-maket__desc-answer__item {
   width: 100%;
   max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: flex-start;
+}
+.service-maket__desc-answer ul {
+  margin-left: 0;
+  padding-left: 0;
+}
+.service-maket__desc-answer ul li {
+  list-style: disc;
+  margin-left: 25px;
+  margin-bottom: 10px;
+  padding: 0;
+  line-height: 1.6;
+}
+.service-maket__desc-answer ul li p {
+  margin: 10px 0 0 0;
+  margin-left: 0;
+  padding: 0;
+  padding-left: 0;
+  display: block;
 }/*# sourceMappingURL=app.css.map */
