@@ -6805,13 +6805,16 @@ body, html {
 .service-maket {
   display: flex;
   flex-direction: column;
-  gap: 100px;
   margin-top: 155px;
 }
 .service-maket__wrap, .service-maket__wrapper {
   display: flex;
   flex-direction: column;
   gap: 90px;
+}
+.service-maket__wrap {
+  padding: 90px;
+  border-bottom: 0.6px solid rgba(255, 255, 255, 0.3);
 }
 .service-maket__title-block {
   display: flex;
@@ -6847,8 +6850,14 @@ body, html {
 .service-maket__desc-answer {
   display: flex;
   justify-content: space-between;
-  gap: 66px;
+  gap: 40px;
   flex-wrap: wrap;
+}
+.service-maket__desc-answer--items {
+  gap: 66px;
+}
+.service-maket__desc-answer--items .service-maket__desc-answer__item p {
+  font-size: 14px;
 }
 .service-maket__desc-answer__item {
   width: 100%;
@@ -6858,21 +6867,49 @@ body, html {
   gap: 20px;
   justify-content: flex-start;
 }
+.service-maket__desc-answer h3 {
+  font-weight: 450;
+  font-size: 26px;
+  line-height: 115%;
+  letter-spacing: -0.01em;
+  color: #fff;
+}
 .service-maket__desc-answer ul {
-  margin-left: 0;
-  padding-left: 0;
+  padding-left: 20px;
+  margin-bottom: 30px;
 }
 .service-maket__desc-answer ul li {
   list-style: disc;
-  margin-left: 25px;
-  margin-bottom: 10px;
-  padding: 0;
-  line-height: 1.6;
+  font-size: 18px;
+  line-height: 135%;
+  letter-spacing: -0.01em;
+  font-weight: 400;
 }
-.service-maket__desc-answer ul li p {
-  margin: 10px 0 0 0;
-  margin-left: 0;
-  padding: 0;
-  padding-left: 0;
-  display: block;
+.service-maket__desc-answer p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 135%;
+  letter-spacing: -0.01em;
+}
+.service-maket__desc-answer .service-maket__desc-answer__big-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-left: 0px;
+  margin-bottom: 0px;
+}
+.service-maket__desc-answer .service-maket__desc-answer__big-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 18px;
+}
+.service-maket__desc-answer .service-maket__desc-answer__big-list li h4 {
+  line-height: 135%;
+  letter-spacing: -0.01em;
+  font-weight: 500;
+}
+.service-maket__desc-answer .service-maket__desc-answer__big-list li h4::before {
+  content: "•";
+  margin-right: 10px;
 }/*# sourceMappingURL=app.css.map */

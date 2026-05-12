@@ -1,4 +1,5 @@
 @import "../variables.scss";
+@import "../mixins.scss";
 
 .service-maket {
   display: flex;
@@ -20,26 +21,32 @@
   &__title-block {
     display: flex;
     width: 100%;
+    gap: 40px;
     &::before {
       content: "";
       display: block;
       width: 25%;
       flex-shrink: 0;
+      min-width: 250px;
     }
   }
   &__title-info {
     .t-title-section-small {
+      @include adaptive-font(36px, 28px, 18px);
       margin-bottom: 24px;
     }
     .t-text {
+      @include adaptive-font(18px, 18px, 13px);
     }
   }
   &__desc-block {
     display: flex;
+    gap: 40px;
   }
   &__desc-quest {
     width: 25%;
     flex-shrink: 0;
+    min-width: 250px;
     &__button {
       border: 0.7px solid rgba(255, 255, 255, 0.1);
       border-radius: 12px;
@@ -49,6 +56,10 @@
       background: rgba(255, 255, 255, 0.03);
       width: max-content;
       text-align: center;
+
+      p {
+        @include adaptive-font(14px, 14px, 13px);
+      }
     }
   }
   &__desc-answer {
@@ -60,8 +71,11 @@
       gap: 66px;
 
       .service-maket__desc-answer__item {
+        h4 {
+          @include adaptive-font(18px, 18px, 18px);
+        }
         p {
-          font-size: 14px;
+          @include adaptive-font(14px, 14px, 13px);
         }
       }
     }
@@ -76,7 +90,7 @@
 
     h3 {
       font-weight: 450;
-      font-size: 26px;
+      @include adaptive-font(26px, 24px, 18px);
       line-height: 115%;
       letter-spacing: -0.01em;
       color: #fff;
@@ -87,14 +101,14 @@
       margin-bottom: 30px;
       li {
         list-style: disc;
-        font-size: 18px;
+        @include adaptive-font(18px, 14px, 13px);
         line-height: 135%;
         letter-spacing: -0.01em;
         font-weight: 400;
       }
     }
     p {
-      font-size: 18px;
+      @include adaptive-font(18px, 14px, 13px);
       font-weight: 400;
       line-height: 135%;
       letter-spacing: -0.01em;
@@ -110,14 +124,183 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
-        font-size: 18px;
+        @include adaptive-font(18px, 14px, 13px);
         h4 {
+          font-size: 18px;
           line-height: 135%;
           letter-spacing: -0.01em;
           font-weight: 500;
           &::before {
             content: "•";
             margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    &__title-block {
+      &::before {
+        content: none;
+      }
+    }
+
+    &__desc-block {
+      flex-direction: column;
+    }
+
+    &__desc-quest {
+    }
+
+    &__desc-answer {
+      &--items {
+        gap: 30px;
+      }
+      &__item {
+        max-width: 340px;
+      }
+    }
+  }
+  @media (max-width: 870px) {
+    margin-top: 120px;
+    &__wrap,
+    &__wrapper {
+      gap: 50px;
+    }
+
+    &__wrap {
+      padding: 50px 32px;
+    }
+
+    &__title-block {
+    }
+
+    &__title-info {
+      .t-title-section-small {
+        margin-bottom: 20px;
+      }
+      .t-text {
+        margin-bottom: 20px;
+      }
+    }
+
+    &__desc-block {
+    }
+
+    &__desc-quest {
+      &__button {
+        p {
+        }
+      }
+    }
+
+    &__desc-answer {
+      gap: 20px;
+      &--items {
+        .service-maket__desc-answer__item {
+          h4 {
+          }
+          p {
+          }
+        }
+      }
+
+      &__item {
+        gap: 20px;
+      }
+
+      h3 {
+      }
+
+      ul {
+        margin-bottom: 15px;
+        li {
+        }
+      }
+
+      p {
+      }
+
+      .service-maket__desc-answer__big-list {
+        margin-top: 10px;
+        li {
+          h4 {
+            &::before {
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 550px) {
+    margin-top: 80px;
+    &__wrap,
+    &__wrapper {
+      gap: 40px;
+    }
+
+    &__wrap {
+      padding: 40px 18px;
+    }
+
+    &__title-block {
+    }
+
+    &__title-info {
+      .t-title-section-small {
+        margin-bottom: 20px;
+      }
+      .t-text {
+        margin-bottom: 20px;
+      }
+    }
+
+    &__desc-block {
+      // gap: 30px;
+    }
+
+    &__desc-quest {
+      &__button {
+        p {
+        }
+      }
+    }
+
+    &__desc-answer {
+      gap: 20px;
+      &--items {
+        gap: 30px;
+        .service-maket__desc-answer__item {
+          h4 {
+          }
+          p {
+          }
+        }
+      }
+
+      &__item {
+        gap: 20px;
+      }
+
+      h3 {
+      }
+
+      ul {
+        margin-bottom: 15px;
+        li {
+        }
+      }
+
+      p {
+      }
+
+      .service-maket__desc-answer__big-list {
+        margin-top: 10px;
+        li {
+          h4 {
+            &::before {
+            }
           }
         }
       }
