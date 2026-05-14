@@ -122,6 +122,93 @@
     }
     background-color: #121212;
   }
+
+  &--design {
+    overflow: hidden;
+    &::before {
+      filter: blur(200px);
+      background: #fff;
+      opacity: 0.06;
+    }
+    .digital-t {
+      mix-blend-mode: normal;
+      &.--2 {
+        filter: blur(3px);
+        width: 88rem * 0.0625;
+        top: 20rem;
+        left: 25%;
+        @media (max-width: 870px) {
+          width: 66rem * 0.0625;
+          top: 10rem;
+          left: auto;
+          right: 3rem;
+        }
+        @media (max-width: 550px) {
+          width: 53rem * 0.0625;
+          top: 8rem;
+          left: auto;
+          right: 2rem;
+        }
+      }
+      &.--3 {
+        width: 334rem * 0.0625;
+        top: auto;
+        bottom: 2rem;
+        right: 0.5rem;
+        @media (max-width: 870px) {
+          width: 194rem * 0.0625;
+          bottom: 2rem;
+          right: -1rem;
+        }
+        @media (max-width: 550px) {
+          width: 138rem * 0.0625;
+          bottom: 2rem;
+          right: -1.75rem;
+        }
+      }
+      &.--4 {
+        width: 239rem * 0.0625;
+        top: 4rem;
+        left: -4rem;
+        @media (max-width: 870px) {
+          width: 140rem * 0.0625;
+          top: 7rem;
+          left: -1rem;
+        }
+        @media (max-width: 550px) {
+          width: 90rem * 0.0625;
+          top: 3rem;
+          left: -1.5rem;
+        }
+      }
+    }
+    .digital__c {
+      .digital__wrap {
+        .digital__text {
+          max-width: 40rem;
+          @media (max-width: 870px) {
+            max-width: 27rem;
+          }
+          @media (max-width: 550px) {
+            max-width: 324px;
+          }
+        }
+        .digital__sub {
+          max-width: 40rem;
+          @media (max-width: 870px) {
+            max-width: 27rem;
+          }
+          @media (max-width: 550px) {
+            max-width: 324px;
+          }
+        }
+        &::after {
+          width: 110%;
+          bottom: auto;
+        }
+      }
+    }
+  }
 }
 
 .digital-t {
