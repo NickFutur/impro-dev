@@ -19,6 +19,23 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+@media (max-width: 54.375rem) {
+  .hero--design::before {
+    top: -40%;
+    left: -17%;
+    width: 180%;
+    height: 180%;
+  }
+}
+@media (max-width: 34.375rem) {
+  .hero--design::before {
+    top: -51%;
+    left: -17%;
+    width: 180%;
+    height: 180%;
+    transform: rotate(40deg);
+  }
+}
 .hero__c {
   display: flex;
   flex-wrap: wrap;
@@ -358,15 +375,16 @@
 }
 @media (max-width: 54.375rem) {
   .hero__zag-design {
-    width: 100.375rem;
-    top: -30rem;
+    width: 77.375rem;
+    top: 18rem;
+    left: 75%;
   }
 }
 @media (max-width: 34.375rem) {
   .hero__zag-design {
-    width: 60.375rem;
-    top: -15rem;
-    right: -31rem;
+    width: 56.375rem;
+    top: 15rem;
+    left: 32rem;
   }
 }
 .hero::after {

@@ -21,6 +21,20 @@
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
+
+      @media (max-width: 870rem * 0.0625) {
+        top: -40%;
+        left: -17%;
+        width: 180%;
+        height: 180%;
+      }
+      @media (max-width: 550rem * 0.0625) {
+        top: -51%;
+        left: -17%;
+        width: 180%;
+        height: 180%;
+        transform: rotate(40deg);
+      }
     }
   }
   &__c {
@@ -317,13 +331,14 @@
       animation: rotating-design 20s infinite linear;
 
       @media (max-width: 870rem * 0.0625) {
-        width: 100.375rem;
-        top: -30rem;
+        width: 77.375rem;
+        top: 18rem;
+        left: 75%;
       }
       @media (max-width: 550rem * 0.0625) {
-        width: 60.375rem;
-        top: -15rem;
-        right: -31rem;
+        width: 56.375rem;
+        top: 15rem;
+        left: 32rem;
       }
     }
   }
