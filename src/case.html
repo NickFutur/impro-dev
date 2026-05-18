@@ -5,11 +5,193 @@
 {% extends "_html/_base/_layouts/_default.html" %}
 
 {% block content %}
+<section class="hero small-hero">
+    <div class="hero__c container hero__c--subpage">
+        <div class="hero__main hero__main--subpage">
+            <ul class="breadcrumbs">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="cases.html">Кейсы</a></li>
+                <li><span>Модуль онлайн-бронирования Контур на Tilda: интеграция и настройка</span></li>
+            </ul>
+</section>
+<section class="project">
+    <header class="project__header">
+        <div class="project__title">
+            <h1 class="t-title">Интеграция системы&nbsp;<br> бронирования «Контур»&nbsp;<br>в сайт на Tilda</h1>
+            <ul class="project__card">
+                <li class="project__card-item"><img src="assets/img/cases/setting.svg" alt="Иконка интеграции">
+                    <p class="t-caption">Интеграции</p>
+                </li>
+                <li class="project__card-item"><img src="assets/img/cases/tilda.svg" alt="Логотип Tilda">
+                    <p class="t-caption">Tilda Publishing</p>
+                </li>
+                <li class="project__card-item"><img src="assets/img/cases/href.svg" alt="Сайт holmgardvillage.ru">
+                    <p class="t-caption">holmgardvillage.ru</p>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="project__image">
+        <img class="project__img" src="assets/img/cases/case-main.png" alt="Главное изображение проекта">
+    </div>
 
+    <div class="about-project">
+        <div class="about-project__button"><a class="t-caption" href="">Описание проекта</a></div>
+        <div class="about-project__card">
+            <div class="about-project__title">
+                <h2 class="t-title-section">Расскажем, как мы автоматизировали бронирование на сайте этнопоселения
+                    «Хольмгард»</h2>
+            </div>
+            <div class="about-project__nav">
+                <div class="about-project__client">
+                    <h2 class="t-text-muted">Клиент</h2>
+                    <p class="t-text">Этнопоселение «Хольмгард», культурно-туристический проект с уникальной концепцией.
+                        До нас на сайте работали обычные формы заявки в Tilda, и все обращения поступали через почту.
+                    </p>
+                </div>
+                <div class="about-project__goal">
+                    <h2 class="t-text-muted">Цель проекта</h2>
+                    <p class="t-text">Заменить стандартную форму на полноценный виджет онлайн-бронирования от сервиса
+                        «Контур».</p>
+                </div>
+            </div>
+        </div>
+        <!--код для мобилки, так как переставить некоторые элементы невозможно-->
+        <div class="about-project__card-mobile">
+            <div class="about-project__title">
+                <h2 class="t-title-section">Расскажем, как мы автоматизировали бронирование на сайте этнопоселения
+                    «Хольмгард»</h2>
+            </div>
+            <div class="about-project__button"><a class="t-caption" href="">Описание проекта</a></div>
+            <div class="about-project__nav">
+                <div class="about-project__client">
+                    <h2 class="t-text-muted">Клиент</h2>
+                    <p class="t-text">Этнопоселение «Хольмгард», культурно-туристический проект с уникальной концепцией.
+                        До нас на сайте работали обычные формы заявки в Tilda, и все обращения поступали через почту.
+                    </p>
+                </div>
+                <div class="about-project__goal">
+                    <h2 class="t-text-muted">Цель проекта</h2>
+                    <p class="t-text">Заменить стандартную форму на полноценный виджет онлайн-бронирования от сервиса
+                        «Контур».</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="about-module">
+        <article class="about-module__card">
+            <a class="about-module__button t-caption" href="">О задаче</a>
+            <div class="about-module__description">
+                <h3 class="t-title-section-small"> <span class="about-module__title-nowrap">Как модуль
+                        онлайн-бронирования</span><br> помогает бизнесу </h3>
+                <p class="t-text">Модуль онлайн-бронирования значительно упрощает взаимодействие между клиентом и
+                    бизнесом. Он позволяет пользователям самостоятельно выбирать услуги и бронировать их в удобное
+                    время, снижая нагрузку на операторов и повышая уровень конверсии. Для бизнеса это значит — меньше
+                    ручной работы, больше заявок и возможность аналитики бронирований.</p>
+                <p class="t-text">На сайтах, созданных на Tilda, такие модули особенно важны: интеграция виджетов
+                    бронирования помогает автоматизировать приём заявок без необходимости развёртывания сложных CRM или
+                    сторонних платформ.</p>
+            </div>
+        </article>
+        <div class="about-module__images">
+            <img src="assets/img/cases/kontyr.png" alt="">
+            <img src="assets/img/cases/kontyrLogo.png" alt="">
+        </div>
+        <article class="about-module__card">
+            <a class="about-module__button t-caption" href="">Особенности проекта</a>
+            <div class="about-module__description">
+                <p class="t-text">Сервис «Контур» предлагает ограниченные возможности по стилизации и управлению. Мы не
+                    имели доступа к личному кабинету клиента — все изменения (например, добавление домена в whitelist)
+                    вносил сам заказчик по нашей инструкции.</p>
+                <p class="t-text">Было два подхода: либо встроить виджет напрямую в Tilda с помощью JavaScript, либо
+                    перенаправлять на отдельную страницу с модулем. Мы выбрали первый способ, чтобы сохранить единый UX.
+                </p>
+            </div>
+        </article>
+        <article class="about-module__card">
+            <a class="about-module__button t-caption" href="">Публикация работы</a>
+            <div class="about-module__description">
+                <p class="t-text">Мы реализовали кастомное подключение виджета Контур в два блока сайта, заменив
+                    стандартные формы. Ещё три блока с вариантами размещения были адаптированы под разные параметры
+                    брони. Несмотря на ограничения сервиса, нам удалось настроить внешний вид виджета так, чтобы он
+                    соответствовал фирменному стилю «Хольмгард».</p>
+            </div>
+        </article>
+        <div class="about-module__images">
+            <img src="assets/img/cases/legend.png" alt="">
+            <img src="assets/img/cases/legend2.png" alt="">
+        </div>
+        <article class="about-module__card">
+            <a class="about-module__button t-caption" href="">Результаты</a>
+            <div class="about-module__description">
+                <h3 class="t-title-section-small">
+                    Виджеты на сайте Tilda работают стабильно, при этом пользовательский путь остался привычным и
+                    простым. Все заявки поступают напрямую в систему Контур, что исключает ручную&nbsp;обработку.
+                </h3>
+                <p class="t-text">Клиент остался доволен работой и подтвердил, что готов обращаться снова<br> при
+                    необходимости развития проекта.</p>
+            </div>
+        </article>
+    </div>
+</section>
+<section class="booking-hero">
+    <div class="booking-hero__glow booking-hero__glow--left"></div>
+    <div class="booking-hero__glow booking-hero__glow--center"></div>
+    <div class="booking-hero__glow booking-hero__glow--bottom"></div>
 
-<section style="margin-top: 30%; margin-bottom: 30%;">
-    <h1 class="title title--h1">Кейс проекта</h1>
-    <p class="paragraph">Здесь будет описание кейса проекта.</p>
+    <div class="booking-hero__container">
+        <div class="booking-hero__content">
+            <h1 class="booking-hero__title t-title-section-small">
+                <span> Закажите интеграцию </span>модуля<br> бронирования на Tilda
+            </h1>
+
+            <p class="booking-hero__text t-text">
+                Если вы хотите подключить модуль онлайн-бронирования Контур или другой сервис к вашему сайту на Tilda —
+                обращайтесь к нам. Мы реализуем интеграции любой сложности и поможем адаптировать ваш сайт под любые
+                задачи. Также предоставляем услуги по дизайну, SEO и техническому сопровождению.
+            </p>
+
+            <a href="#" class="booking-hero__button t-caption">Оставить заявку
+                <svg width="13" height="15" viewBox="0 0 13 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M2.92322 5.63466C3.51361 5.92168 4.11858 6.193 4.73813 6.44638C5.53747 6.77152 5.52532 7.81644 4.72355 8.13933C4.11615 8.38599 3.5209 8.64834 2.9378 8.92638C2.03156 9.35691 1.30512 10.0543 0.901804 10.9176C0.530076 11.7113 0.240954 12.541 0.0295799 13.355C-0.201231 14.2429 0.972262 14.8618 1.68899 14.2339C4.47816 11.7921 7.77026 9.65738 11.5386 8.1326C12.3403 7.80747 12.3403 6.76928 11.5386 6.44414C7.78241 4.91937 4.56563 2.68602 1.71329 0.248622C0.998987 -0.36353 -0.152639 0.241895 0.0660242 1.11864C0.277399 1.97072 0.561661 2.82504 0.935818 3.64573C1.32455 4.5023 2.03399 5.19966 2.92322 5.63466Z"
+                        fill="white" />
+                </svg>
+            </a>
+        </div>
+
+        <div class="booking-hero__visual">
+            <div class="booking-hero__all">
+
+                <div class="booking-hero__widget--settings">
+                    <img src="assets/img/cases/settings.svg" alt="">
+                </div>
+
+                <div class="booking-hero__widget--docs">
+                    <img src="assets/img/cases/docs.svg" alt="">
+                </div>
+
+                <div class="booking-hero__chart-circle">
+                    <img src="assets/img/cases/chart-circle.svg" alt="Круг для визуального акцента">
+                </div> <!--круг для визуального акцента, не несет функциональной нагрузки-->
+                <div class="booking-hero__chart-lines">
+                    <img src="assets/img/cases/chart-lines.svg" alt="Линии для визуального акцента">
+                </div> <!-- линии для визуального акцента, не несут функциональной нагрузки -->
+
+                <div class="booking-hero__phone">
+                    <img src="assets/img/cases/phone.png" alt="Экран бронирования">
+                </div>
+
+                <div class="booking-hero__tablet">
+                    <img src="assets/img/cases/tablet.png" alt="Графики">
+                </div>
+
+                <div class="booking-hero__widget--stats">
+                    <img src="assets/img/cases/stats.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 

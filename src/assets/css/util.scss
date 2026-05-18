@@ -1,0 +1,61 @@
+/*стили текста*/
+.t-title {
+    //заголовки страниц
+    font-size: clamp(2.25rem, 4vw, 4.375rem);
+    font-weight: 400;
+    line-height: 110%;
+    letter-spacing: -0.03em;
+    color: $text-white;
+}
+
+.t-title-gray {
+    //заголовки страниц
+    font-size: clamp(2.25rem, 4vw, 4.375rem);
+    font-weight: 400;
+    line-height: 110%;
+    background: linear-gradient(180deg, #fffcfc 0%, #9f9f9f 99.52%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.t-title-section {
+    //заголовки на странице
+    font-size: clamp(1.125rem, 3vw, 4.2rem);
+    font-weight: 400;
+    line-height: 115%;
+    letter-spacing: 0.01em;
+    color: $text-white;
+}
+.t-title-section-small {
+    //второстепенные заголовки на странице
+    font-size: clamp(24px, 3vw, 36px);
+    font-weight: 400;
+    line-height: 115%;
+    letter-spacing: 0.01em;
+    color: $text-white;
+}
+
+.t-text {
+    //основной текст на странице
+    font-size: clamp(0.9375rem, 1vw, 1.8rem);
+    font-weight: 400;
+    line-height: 135%;
+    letter-spacing: -0.01em;
+    color: $text-white;
+}
+
+.t-text-muted {
+    //второстепенный текст на странице (серый)
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: -0.01em;
+    color: $text-gray;
+}
+
+/*стили для текста в плашках*/
+.t-caption {
+    font-weight: 400;
+    font-size:clamp(12px, 1.5vw, 13px);
+    color: $text-white;
+}
