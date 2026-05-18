@@ -386,6 +386,12 @@ body, html {
   color: #fff;
 }
 
+.t-caption-gray {
+  font-weight: 400;
+  font-size: clamp(12px, 1.5vw, 13px);
+  color: rgba(255, 255, 255, 0.5);
+}
+
 .tags {
   display: flex;
   flex-wrap: wrap;
@@ -4908,7 +4914,8 @@ body, html {
   font-size: 2.625rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 115%; /* 48.3rem * 0.0625 */
+  line-height: 115%;
+  /* 48.3rem * 0.0625 */
   letter-spacing: -0.013125rem;
 }
 @media (max-width: 870px) {
@@ -4917,7 +4924,8 @@ body, html {
     font-size: 36px;
     font-style: normal;
     font-weight: 400;
-    line-height: 44px; /* 122.222% */
+    line-height: 44px;
+    /* 122.222% */
     letter-spacing: -0.72px;
   }
 }
@@ -5126,16 +5134,20 @@ body, html {
 /* Класс для мобильного горизонтального скролла */
 #animated.mobile-scroll {
   overflow-x: auto;
-  -webkit-overflow-scrolling: touch; /* плавный скролл на iOS */
-  scroll-behavior: smooth; /* плавность при прокрутке колесом (опционально) */
+  -webkit-overflow-scrolling: touch;
+  /* плавный скролл на iOS */
+  scroll-behavior: smooth;
+  /* плавность при прокрутке колесом (опционально) */
   /* Если дочерние элементы должны быть в ряд */
   display: flex;
   flex-wrap: nowrap;
-  gap: 20px; /* по желанию */
+  gap: 20px;
+  /* по желанию */
 }
 
 #animated.mobile-scroll > .dev-content-item {
-  flex-shrink: 0; /* чтобы элементы не сжимались */
+  flex-shrink: 0;
+  /* чтобы элементы не сжимались */
 }
 
 .dev-scroll-spacer {
@@ -5234,7 +5246,8 @@ body, html {
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 135%; /* 21.6rem * 0.0625 */
+  line-height: 135%;
+  /* 21.6rem * 0.0625 */
   letter-spacing: -0.002rem;
   max-width: 23.125rem;
   margin-top: 1.25rem;
@@ -5315,16 +5328,19 @@ body, html {
 
 .dev-features {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 колонки на десктопе */
+  grid-template-columns: repeat(4, 1fr);
+  /* 4 колонки на десктопе */
 }
 @media (max-width: 870px) {
   .dev-features {
-    grid-template-columns: repeat(2, 1fr); /* 2 колонки на планшетах */
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 колонки на планшетах */
   }
 }
 @media (max-width: 550px) {
   .dev-features {
-    grid-template-columns: 1fr; /* 1 колонка на мобильных */
+    grid-template-columns: 1fr;
+    /* 1 колонка на мобильных */
   }
 }
 .dev-features {
@@ -5373,7 +5389,8 @@ body, html {
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 125%; /* 30rem * 0.0625 */
+  line-height: 125%;
+  /* 30rem * 0.0625 */
   letter-spacing: -0.015rem;
 }
 @media (max-width: 550px) {
@@ -5392,7 +5409,8 @@ body, html {
   font-size: 0.875rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 135%; /* 18.9rem * 0.0625 */
+  line-height: 135%;
+  /* 18.9rem * 0.0625 */
   letter-spacing: -0.004375rem;
   margin-top: 1.25rem;
 }
@@ -5421,7 +5439,8 @@ body, html {
   font-size: 2.625rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 125%; /* 52.5rem * 0.0625 */
+  line-height: 125%;
+  /* 52.5rem * 0.0625 */
   letter-spacing: -0.02625rem;
 }
 @media (max-width: 550px) {
@@ -5484,7 +5503,8 @@ body, html {
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 125%; /* 30rem * 0.0625 */
+  line-height: 125%;
+  /* 30rem * 0.0625 */
   letter-spacing: -0.015rem;
 }
 @media (max-width: 870px) {
@@ -5506,7 +5526,8 @@ body, html {
   font-size: 0.875rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 135%; /* 18.9rem * 0.0625 */
+  line-height: 135%;
+  /* 18.9rem * 0.0625 */
   letter-spacing: -0.004375rem;
 }
 @media (max-width: 870px) {
@@ -5555,7 +5576,8 @@ body, html {
   font-size: 2.625rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 125%; /* 52.5rem * 0.0625 */
+  line-height: 125%;
+  /* 52.5rem * 0.0625 */
   letter-spacing: -0.02625rem;
   background: var(--linear-2-paints, linear-gradient(146deg, #f9f7f7 20.35%, rgba(243, 243, 243, 0.3) 128.73%));
   background-clip: text;
@@ -5660,7 +5682,8 @@ body, html {
   font-size: 0.875rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 135%; /* 18.9rem * 0.0625 */
+  line-height: 135%;
+  /* 18.9rem * 0.0625 */
   letter-spacing: -0.004375rem;
   width: 31.25rem;
   max-width: 100%;
@@ -5690,20 +5713,36 @@ body, html {
   }
 }
 
+.how-content .how-item:first-child {
+  height: auto;
+  min-height: 15rem;
+}
 @media (max-width: 870px) {
   .how-content .how-item:first-child .how-item-lottie dotlottie-wc {
     margin-left: -30px;
   }
+}
+.how-content .how-item:nth-child(2) {
+  height: auto;
+  min-height: 15rem;
 }
 @media (max-width: 870px) {
   .how-content .how-item:nth-child(2) .how-item-lottie dotlottie-wc {
     margin-left: -40px;
   }
 }
+.how-content .how-item:nth-child(3) {
+  height: auto;
+  min-height: 15rem;
+}
 @media (max-width: 870px) {
   .how-content .how-item:nth-child(3) .how-item-lottie dotlottie-wc {
     margin-left: -25px;
   }
+}
+.how-content .how-item:last-child {
+  height: auto;
+  min-height: 15rem;
 }
 @media (max-width: 870px) {
   .how-content .how-item:last-child .how-item-lottie dotlottie-wc {
@@ -5726,7 +5765,8 @@ body, html {
   font-size: 2.625rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 125%; /* 52.5rem * 0.0625 */
+  line-height: 125%;
+  /* 52.5rem * 0.0625 */
   letter-spacing: -0.02625rem;
   background: var(--linear-2-paints, linear-gradient(146deg, #f9f7f7 20.35%, rgba(243, 243, 243, 0.3) 128.73%));
   background-clip: text;
@@ -5795,7 +5835,8 @@ body, html {
   font-size: 1.125rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 125%; /* 22.5rem * 0.0625 */
+  line-height: 125%;
+  /* 22.5rem * 0.0625 */
   letter-spacing: -0.005625rem;
   width: 58%;
   transition: color 0.3s ease;
@@ -5817,7 +5858,8 @@ body, html {
   font-size: 0.875rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 125%; /* 17.5rem * 0.0625 */
+  line-height: 125%;
+  /* 17.5rem * 0.0625 */
   letter-spacing: -0.004375rem;
   width: 20rem;
   transition: color 0.3s ease;
@@ -6372,6 +6414,9 @@ body, html {
      object-position: center;
   background-size: contain;
 }
+.project__image--promo {
+  margin-bottom: 0;
+}
 .project .about-project {
   display: grid;
   grid-template-columns: clamp(140px, 12vw, 151px) 1fr;
@@ -6724,16 +6769,104 @@ body, html {
   height: 280px;
   background: rgba(38, 67, 255, 0.2);
 }
+.booking-hero--compact {
+  position: relative;
+  overflow: hidden;
+  background: url("assets/img/cases/noiseEffect.svg"), radial-gradient(circle at 20% 35%, rgba(255, 120, 40, 0.22), transparent 45%), radial-gradient(circle at 25% 50%, rgba(92, 70, 255, 0.35), transparent 65%), radial-gradient(circle at 20% 100%, rgba(25, 50, 255, 0.18), transparent 25%), linear-gradient(90deg, #050505 0%, #120d1f 45%, #22113f 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.booking-hero--compact .booking-hero__container {
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+.booking-hero--compact .booking-hero__content {
+  max-width: 780px;
+  margin: 0 auto;
+}
+.booking-hero--compact .booking-hero__button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  min-height: 46px;
+  padding: 10px 18px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #fff;
+  box-shadow: inset 0 0 1px 0 #a4a4a4;
+  background: linear-gradient(323deg, #3824b0 0%, #6163ef 100%);
+  margin: 0 auto;
+}
+.booking-hero--compact .booking-hero__text {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.booking-hero--compact .booking-hero__visual {
+  width: min(100%, 760px);
+  margin: 0 auto;
+}
+.booking-hero--compact .booking-hero__phone {
+  z-index: 10;
+  left: 30%;
+  top: 10%;
+  width: 184px;
+  height: 379px;
+}
+.booking-hero--compact .booking-hero__tablet {
+  z-index: 9;
+  left: 50%;
+  bottom: 25%;
+  width: clamp(220px, 25vw, 360px);
+}
+.booking-hero--compact .booking-hero__chart-circle {
+  top: 4%;
+  right: 13%;
+  height: 125px;
+}
+.booking-hero--compact .booking-hero__chart-lines {
+  right: 5%;
+  top: 20%;
+  width: 244px;
+  height: 112px;
+}
+.booking-hero--compact .booking-hero__widget--settings {
+  top: 8%;
+  left: 15%;
+  width: 62px;
+  height: 62px;
+}
+.booking-hero--compact .booking-hero__widget--docs {
+  top: 20%;
+  left: 25%;
+  width: 46px;
+  height: 46px;
+}
+.booking-hero--compact .booking-hero__widget--stats {
+  left: 25%;
+  bottom: 23%;
+  width: 99px;
+  height: 78px;
+}
 @media (max-width: 1400px) {
-  .booking-hero__container {
+  .booking-hero {
+    position: relative;
+    overflow: hidden;
+    background: url("assets/img/cases/noiseEffect.svg"), radial-gradient(circle at 20% 35%, rgba(255, 120, 40, 0.22), transparent 45%), radial-gradient(circle at 25% 50%, rgba(92, 70, 255, 0.35), transparent 65%), radial-gradient(circle at 20% 100%, rgba(25, 50, 255, 0.18), transparent 25%), linear-gradient(90deg, #050505 0%, #120d1f 45%, #22113f 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .booking-hero .booking-hero__container {
     grid-template-columns: 1fr;
     text-align: center;
   }
-  .booking-hero__content {
+  .booking-hero .booking-hero__content {
     max-width: 780px;
     margin: 0 auto;
   }
-  .booking-hero__button {
+  .booking-hero .booking-hero__button {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -6748,68 +6881,58 @@ body, html {
     color: #fff;
     box-shadow: inset 0 0 1px 0 #a4a4a4;
     background: linear-gradient(323deg, #3824b0 0%, #6163ef 100%);
+    margin: 0 auto;
   }
-  .booking-hero__text {
+  .booking-hero .booking-hero__text {
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
   }
-  .booking-hero__visual {
+  .booking-hero .booking-hero__visual {
     width: min(100%, 760px);
     margin: 0 auto;
   }
-  .booking-hero__phone {
+  .booking-hero .booking-hero__phone {
     z-index: 10;
     left: 30%;
     top: 10%;
     width: 184px;
     height: 379px;
   }
-  .booking-hero__tablet {
+  .booking-hero .booking-hero__tablet {
     z-index: 9;
     left: 50%;
     bottom: 25%;
     width: clamp(220px, 25vw, 360px);
   }
-  .booking-hero__chart-circle {
+  .booking-hero .booking-hero__chart-circle {
     top: 4%;
     right: 13%;
     height: 125px;
   }
-  .booking-hero__chart-lines {
+  .booking-hero .booking-hero__chart-lines {
     right: 5%;
     top: 20%;
     width: 244px;
     height: 112px;
   }
-  .booking-hero__widget--settings {
+  .booking-hero .booking-hero__widget--settings {
     top: 8%;
     left: 15%;
     width: 62px;
     height: 62px;
   }
-  .booking-hero__widget--docs {
+  .booking-hero .booking-hero__widget--docs {
     top: 20%;
     left: 25%;
     width: 46px;
     height: 46px;
   }
-  .booking-hero__widget--stats {
+  .booking-hero .booking-hero__widget--stats {
     left: 25%;
     bottom: 23%;
     width: 99px;
     height: 78px;
-  }
-  .booking-hero__button {
-    margin: 0 auto;
-  }
-}
-@media (max-width: 1400px) {
-  .booking-hero {
-    position: relative;
-    overflow: hidden;
-    background: url("assets/img/cases/noiseEffect.svg"), radial-gradient(circle at 20% 35%, rgba(255, 120, 40, 0.22), transparent 45%), radial-gradient(circle at 25% 50%, rgba(92, 70, 255, 0.35), transparent 65%), radial-gradient(circle at 20% 100%, rgba(25, 50, 255, 0.18), transparent 25%), linear-gradient(90deg, #050505 0%, #120d1f 45%, #22113f 100%);
-    border: 1px solid rgba(255, 255, 255, 0.08);
   }
 }
 @media (max-width: 630px) {
@@ -7014,9 +7137,295 @@ body, html {
   }
 }
 
-.hero {
+.dev-vars {
+  margin-top: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  margin-bottom: clamp(80px, 10vw, 155px);
+}
+.dev-vars .dev-vars-item {
+  height: auto;
+  min-height: 21rem;
+}
+.dev-vars .dev-vars-item:nth-child(odd) {
+  border-right: 0.12rem solid rgba(255, 255, 255, 0.3);
+}
+@media (max-width: 550px) {
+  .dev-vars .dev-vars-item:nth-child(odd) {
+    border-right: none;
+  }
+}
+.dev-vars .dev-vars-item .dev-vars-item-top {
   display: flex;
   flex-direction: column;
+  gap: clamp(15px, 1vw, 20px);
+  margin-bottom: clamp(29px, 4vw, 82px);
+}
+.dev-vars .dev-vars-item .dev-vars-item-top .dev-vars-item-desc {
+  margin-top: 0;
+}
+.dev-vars .dev-vars-item .dev-vars-item-top .project__card {
+  margin-bottom: 10px;
+  gap: 4px;
+}
+
+@media (max-width: 1400px) {
+  .booking-hero {
+    position: relative;
+    overflow: hidden;
+    background: url("assets/img/cases/noiseEffect.svg"), radial-gradient(circle at 20% 35%, rgba(255, 120, 40, 0.22), transparent 45%), radial-gradient(circle at 25% 50%, rgba(92, 70, 255, 0.35), transparent 65%), radial-gradient(circle at 20% 100%, rgba(25, 50, 255, 0.18), transparent 25%), linear-gradient(90deg, #050505 0%, #120d1f 45%, #22113f 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .booking-hero .booking-hero__container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .booking-hero .booking-hero__content {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .booking-hero .booking-hero__button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    max-width: -moz-max-content;
+    max-width: max-content;
+    min-height: 46px;
+    padding: 10px 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #fff;
+    box-shadow: inset 0 0 1px 0 #a4a4a4;
+    background: linear-gradient(323deg, #3824b0 0%, #6163ef 100%);
+    margin: 0 auto;
+  }
+  .booking-hero .booking-hero__text {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .booking-hero .booking-hero__visual {
+    width: min(100%, 760px);
+    margin: 0 auto;
+  }
+  .booking-hero .booking-hero__phone {
+    z-index: 10;
+    left: 30%;
+    top: 10%;
+    width: 184px;
+    height: 379px;
+  }
+  .booking-hero .booking-hero__tablet {
+    z-index: 9;
+    left: 50%;
+    bottom: 25%;
+    width: clamp(220px, 25vw, 360px);
+  }
+  .booking-hero .booking-hero__chart-circle {
+    top: 4%;
+    right: 13%;
+    height: 125px;
+  }
+  .booking-hero .booking-hero__chart-lines {
+    right: 5%;
+    top: 20%;
+    width: 244px;
+    height: 112px;
+  }
+  .booking-hero .booking-hero__widget--settings {
+    top: 8%;
+    left: 15%;
+    width: 62px;
+    height: 62px;
+  }
+  .booking-hero .booking-hero__widget--docs {
+    top: 20%;
+    left: 25%;
+    width: 46px;
+    height: 46px;
+  }
+  .booking-hero .booking-hero__widget--stats {
+    left: 25%;
+    bottom: 23%;
+    width: 99px;
+    height: 78px;
+  }
+}
+.booking-hero--compact {
+  position: relative;
+  overflow: hidden;
+  background: url("assets/img/cases/noiseEffect.svg"), radial-gradient(circle at 20% 35%, rgba(255, 120, 40, 0.22), transparent 45%), radial-gradient(circle at 25% 50%, rgba(92, 70, 255, 0.35), transparent 65%), radial-gradient(circle at 20% 100%, rgba(25, 50, 255, 0.18), transparent 25%), linear-gradient(90deg, #050505 0%, #120d1f 45%, #22113f 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.booking-hero--compact .booking-hero__container {
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+.booking-hero--compact .booking-hero__content {
+  max-width: 780px;
+  margin: 0 auto;
+}
+.booking-hero--compact .booking-hero__button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  min-height: 46px;
+  padding: 10px 18px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #fff;
+  box-shadow: inset 0 0 1px 0 #a4a4a4;
+  background: linear-gradient(323deg, #3824b0 0%, #6163ef 100%);
+  margin: 0 auto;
+}
+.booking-hero--compact .booking-hero__text {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.booking-hero--compact .booking-hero__visual {
+  width: min(100%, 760px);
+  margin: 0 auto;
+}
+.booking-hero--compact .booking-hero__phone {
+  z-index: 10;
+  left: 30%;
+  top: 10%;
+  width: 184px;
+  height: 379px;
+}
+.booking-hero--compact .booking-hero__tablet {
+  z-index: 9;
+  left: 50%;
+  bottom: 25%;
+  width: clamp(220px, 25vw, 360px);
+}
+.booking-hero--compact .booking-hero__chart-circle {
+  top: 4%;
+  right: 13%;
+  height: 125px;
+}
+.booking-hero--compact .booking-hero__chart-lines {
+  right: 5%;
+  top: 20%;
+  width: 244px;
+  height: 112px;
+}
+.booking-hero--compact .booking-hero__widget--settings {
+  top: 8%;
+  left: 15%;
+  width: 62px;
+  height: 62px;
+}
+.booking-hero--compact .booking-hero__widget--docs {
+  top: 20%;
+  left: 25%;
+  width: 46px;
+  height: 46px;
+}
+.booking-hero--compact .booking-hero__widget--stats {
+  left: 25%;
+  bottom: 23%;
+  width: 99px;
+  height: 78px;
+}
+.booking-hero--compact {
+  background: none;
+  border: none;
+  margin-bottom: clamp(90px, 10vw, 130px);
+}
+.booking-hero--compact .booking-hero__container {
+  padding: 5px;
+}
+.booking-hero--compact .booking-hero__visual {
+  order: 1;
+}
+.booking-hero--compact .booking-hero__content {
+  order: 2;
+  max-width: 900px;
+  width: 100%;
+}
+.booking-hero--compact .booking-hero__title {
+  max-width: 900px;
+  padding-right: 5px;
+}
+.booking-hero--compact .booking-hero__text {
+  max-width: 697px;
+  width: 100%;
+  padding-right: 5px;
+}
+.booking-hero--compact .booking-hero__glow--left {
+  left: auto;
+  right: 20%;
+  top: 30%;
+}
+.booking-hero--compact .booking-hero__glow--bottom {
+  left: auto;
+  right: 20%;
+  top: 40%;
+}
+
+.hero--integration .hero__c--subpage {
+  position: relative;
+}
+.hero--integration .hero__main--subpage {
+  position: relative;
+  z-index: 3;
+}
+.hero--integration .hero__txt {
+  position: relative;
+  z-index: 3;
+}
+.hero--integration .hero__rings {
+  position: absolute;
+  top: clamp(180px, 22vw, 320px);
+  right: clamp(-110px, -7vw, -40px);
+  width: clamp(420px, 44vw, 760px);
+  pointer-events: none;
+  z-index: 2;
+}
+.hero--integration .hero__rings-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 1200px) {
+  .hero--integration .hero__rings {
+    top: clamp(220px, 28vw, 360px);
+    right: -140px;
+    width: clamp(360px, 48vw, 560px);
+  }
+}
+@media (max-width: 870px) {
+  .hero--integration .hero__c--subpage {
+    padding-bottom: 40px;
+  }
+  .hero--integration .hero__rings {
+    top: auto;
+    bottom: 155px;
+    right: -85px;
+    width: clamp(300px, 60vw, 460px);
+    opacity: 0.92;
+  }
+  .hero--integration .hero__txt {
+    padding-right: clamp(145px, 30vw, 250px);
+  }
+}
+@media (max-width: 550px) {
+  .hero--integration .hero__rings {
+    bottom: 210px;
+    right: -95px;
+    width: 330px;
+    opacity: 0.75;
+  }
+  .hero--integration .hero__txt {
+    padding-right: 0;
+  }
 }
 
 .service-maket {
