@@ -112,6 +112,35 @@
     bottom: 0;
     left: 0;
   }
+  .dec-design {
+    position: absolute;
+    top: -14rem;
+    right: 16rem;
+    width: 437.356rem * 0.0625;
+    height: 557.89rem * 0.0625;
+  }
+  .dec-design-1 {
+    background: linear-gradient(90deg, #339 0%, #ff0059 100%);
+    filter: blur(196.804931640625px);
+  }
+  .dec-design-2 {
+    background: #0038ff;
+    border-radius: 100%;
+    filter: blur(196.804931640625px);
+  }
+  .dec-design-3 {
+    width: 348.701rem * 0.0625;
+    height: 258.223rem * 0.0625;
+    transform: rotate(-76.288deg);
+    flex-shrink: 0;
+    border-radius: 348.701rem * 0.0625;
+    opacity: 0.6;
+    background: linear-gradient(90deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+    filter: blur(196.804931640625px);
+    position: absolute;
+    bottom: 0;
+    left: 10rem;
+  }
 }
 
 .dev-icons-ph {
@@ -217,6 +246,9 @@
   margin-top: 4rem;
   display: flex;
   flex-wrap: wrap;
+  &--design {
+    border-bottom: 1rem * 0.0625 solid rgba(255, 255, 255, 0.3);
+  }
   &-item {
     position: relative;
     overflow: hidden;
@@ -274,6 +306,15 @@
       }
     }
 
+    &--design {
+      &::after {
+        top: auto;
+        bottom: 0;
+        transform: translateY(0);
+        background-size: cover;
+        background-image: url("/assets/img/dev-vars-design-2.svg");
+      }
+    }
     &-title {
       position: relative;
       z-index: 2;

@@ -115,6 +115,35 @@
   bottom: 0;
   left: 0;
 }
+.dev-sticky-container .dec-design {
+  position: absolute;
+  top: -14rem;
+  right: 16rem;
+  width: 27.33475rem;
+  height: 34.868125rem;
+}
+.dev-sticky-container .dec-design-1 {
+  background: linear-gradient(90deg, #339 0%, #ff0059 100%);
+  filter: blur(196.8049316406px);
+}
+.dev-sticky-container .dec-design-2 {
+  background: #0038ff;
+  border-radius: 100%;
+  filter: blur(196.8049316406px);
+}
+.dev-sticky-container .dec-design-3 {
+  width: 21.7938125rem;
+  height: 16.1389375rem;
+  transform: rotate(-76.288deg);
+  flex-shrink: 0;
+  border-radius: 21.7938125rem;
+  opacity: 0.6;
+  background: linear-gradient(90deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+  filter: blur(196.8049316406px);
+  position: absolute;
+  bottom: 0;
+  left: 10rem;
+}
 
 .dev-icons-ph {
   width: 2.625rem;
@@ -232,6 +261,9 @@
   display: flex;
   flex-wrap: wrap;
 }
+.dev-vars--design {
+  border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.3);
+}
 .dev-vars-item {
   position: relative;
   overflow: hidden;
@@ -292,6 +324,13 @@
 }
 .dev-vars-item:hover::after {
   opacity: 1;
+}
+.dev-vars-item--design::after {
+  top: auto;
+  bottom: 0;
+  transform: translateY(0);
+  background-size: cover;
+  background-image: url("/assets/img/dev-vars-design-2.svg");
 }
 .dev-vars-item-title {
   position: relative;
