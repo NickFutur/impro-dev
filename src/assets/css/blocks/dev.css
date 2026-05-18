@@ -22,7 +22,8 @@
   font-size: 2.625rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 115%; /* 48.3rem * 0.0625 */
+  line-height: 115%;
+  /* 48.3rem * 0.0625 */
   letter-spacing: -0.013125rem;
 }
 @media (max-width: 870px) {
@@ -31,7 +32,8 @@
     font-size: 36px;
     font-style: normal;
     font-weight: 400;
-    line-height: 44px; /* 122.222% */
+    line-height: 44px;
+    /* 122.222% */
     letter-spacing: -0.72px;
   }
 }
@@ -240,16 +242,20 @@
 /* Класс для мобильного горизонтального скролла */
 #animated.mobile-scroll {
   overflow-x: auto;
-  -webkit-overflow-scrolling: touch; /* плавный скролл на iOS */
-  scroll-behavior: smooth; /* плавность при прокрутке колесом (опционально) */
+  -webkit-overflow-scrolling: touch;
+  /* плавный скролл на iOS */
+  scroll-behavior: smooth;
+  /* плавность при прокрутке колесом (опционально) */
   /* Если дочерние элементы должны быть в ряд */
   display: flex;
   flex-wrap: nowrap;
-  gap: 20px; /* по желанию */
+  gap: 20px;
+  /* по желанию */
 }
 
 #animated.mobile-scroll > .dev-content-item {
-  flex-shrink: 0; /* чтобы элементы не сжимались */
+  flex-shrink: 0;
+  /* чтобы элементы не сжимались */
 }
 
 .dev-scroll-spacer {
@@ -348,7 +354,8 @@
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 135%; /* 21.6rem * 0.0625 */
+  line-height: 135%;
+  /* 21.6rem * 0.0625 */
   letter-spacing: -0.002rem;
   max-width: 23.125rem;
   margin-top: 1.25rem;
@@ -429,16 +436,19 @@
 
 .dev-features {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 колонки на десктопе */
+  grid-template-columns: repeat(4, 1fr);
+  /* 4 колонки на десктопе */
 }
 @media (max-width: 870px) {
   .dev-features {
-    grid-template-columns: repeat(2, 1fr); /* 2 колонки на планшетах */
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 колонки на планшетах */
   }
 }
 @media (max-width: 550px) {
   .dev-features {
-    grid-template-columns: 1fr; /* 1 колонка на мобильных */
+    grid-template-columns: 1fr;
+    /* 1 колонка на мобильных */
   }
 }
 .dev-features {
@@ -487,7 +497,8 @@
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 125%; /* 30rem * 0.0625 */
+  line-height: 125%;
+  /* 30rem * 0.0625 */
   letter-spacing: -0.015rem;
 }
 @media (max-width: 550px) {
@@ -506,7 +517,8 @@
   font-size: 0.875rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 135%; /* 18.9rem * 0.0625 */
+  line-height: 135%;
+  /* 18.9rem * 0.0625 */
   letter-spacing: -0.004375rem;
   margin-top: 1.25rem;
 }
@@ -535,7 +547,8 @@
   font-size: 2.625rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 125%; /* 52.5rem * 0.0625 */
+  line-height: 125%;
+  /* 52.5rem * 0.0625 */
   letter-spacing: -0.02625rem;
 }
 @media (max-width: 550px) {
@@ -598,7 +611,8 @@
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 125%; /* 30rem * 0.0625 */
+  line-height: 125%;
+  /* 30rem * 0.0625 */
   letter-spacing: -0.015rem;
 }
 @media (max-width: 870px) {
@@ -620,7 +634,8 @@
   font-size: 0.875rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 135%; /* 18.9rem * 0.0625 */
+  line-height: 135%;
+  /* 18.9rem * 0.0625 */
   letter-spacing: -0.004375rem;
 }
 @media (max-width: 870px) {
@@ -669,7 +684,8 @@
   font-size: 2.625rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 125%; /* 52.5rem * 0.0625 */
+  line-height: 125%;
+  /* 52.5rem * 0.0625 */
   letter-spacing: -0.02625rem;
   background: var(--linear-2-paints, linear-gradient(146deg, #f9f7f7 20.35%, rgba(243, 243, 243, 0.3) 128.73%));
   background-clip: text;
@@ -774,7 +790,8 @@
   font-size: 0.875rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 135%; /* 18.9rem * 0.0625 */
+  line-height: 135%;
+  /* 18.9rem * 0.0625 */
   letter-spacing: -0.004375rem;
   width: 31.25rem;
   max-width: 100%;
@@ -804,20 +821,36 @@
   }
 }
 
+.how-content .how-item:first-child {
+  height: auto;
+  min-height: 15rem;
+}
 @media (max-width: 870px) {
   .how-content .how-item:first-child .how-item-lottie dotlottie-wc {
     margin-left: -30px;
   }
+}
+.how-content .how-item:nth-child(2) {
+  height: auto;
+  min-height: 15rem;
 }
 @media (max-width: 870px) {
   .how-content .how-item:nth-child(2) .how-item-lottie dotlottie-wc {
     margin-left: -40px;
   }
 }
+.how-content .how-item:nth-child(3) {
+  height: auto;
+  min-height: 15rem;
+}
 @media (max-width: 870px) {
   .how-content .how-item:nth-child(3) .how-item-lottie dotlottie-wc {
     margin-left: -25px;
   }
+}
+.how-content .how-item:last-child {
+  height: auto;
+  min-height: 15rem;
 }
 @media (max-width: 870px) {
   .how-content .how-item:last-child .how-item-lottie dotlottie-wc {
@@ -840,7 +873,8 @@
   font-size: 2.625rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 125%; /* 52.5rem * 0.0625 */
+  line-height: 125%;
+  /* 52.5rem * 0.0625 */
   letter-spacing: -0.02625rem;
   background: var(--linear-2-paints, linear-gradient(146deg, #f9f7f7 20.35%, rgba(243, 243, 243, 0.3) 128.73%));
   background-clip: text;
@@ -909,7 +943,8 @@
   font-size: 1.125rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 125%; /* 22.5rem * 0.0625 */
+  line-height: 125%;
+  /* 22.5rem * 0.0625 */
   letter-spacing: -0.005625rem;
   width: 58%;
   transition: color 0.3s ease;
@@ -931,7 +966,8 @@
   font-size: 0.875rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 125%; /* 17.5rem * 0.0625 */
+  line-height: 125%;
+  /* 17.5rem * 0.0625 */
   letter-spacing: -0.004375rem;
   width: 20rem;
   transition: color 0.3s ease;
