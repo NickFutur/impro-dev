@@ -129,6 +129,108 @@
 .digital--inner {
   background-color: #121212;
 }
+.digital--design {
+  overflow: hidden;
+}
+.digital--design::before {
+  filter: blur(200px);
+  background: #fff;
+  opacity: 0.06;
+}
+.digital--design .digital-t {
+  mix-blend-mode: normal;
+}
+.digital--design .digital-t.--2 {
+  filter: blur(3px);
+  width: 5.5rem;
+  top: 20rem;
+  left: 25%;
+}
+@media (max-width: 870px) {
+  .digital--design .digital-t.--2 {
+    width: 4.125rem;
+    top: 10rem;
+    left: auto;
+    right: 3rem;
+  }
+}
+@media (max-width: 550px) {
+  .digital--design .digital-t.--2 {
+    width: 3.3125rem;
+    top: 8rem;
+    left: auto;
+    right: 2rem;
+  }
+}
+.digital--design .digital-t.--3 {
+  width: 20.875rem;
+  top: auto;
+  bottom: 2rem;
+  right: 0.5rem;
+}
+@media (max-width: 870px) {
+  .digital--design .digital-t.--3 {
+    width: 12.125rem;
+    bottom: 2rem;
+    right: -1rem;
+  }
+}
+@media (max-width: 550px) {
+  .digital--design .digital-t.--3 {
+    width: 8.625rem;
+    bottom: 2rem;
+    right: -1.75rem;
+  }
+}
+.digital--design .digital-t.--4 {
+  width: 14.9375rem;
+  top: 4rem;
+  left: -4rem;
+}
+@media (max-width: 870px) {
+  .digital--design .digital-t.--4 {
+    width: 8.75rem;
+    top: 7rem;
+    left: -1rem;
+  }
+}
+@media (max-width: 550px) {
+  .digital--design .digital-t.--4 {
+    width: 5.625rem;
+    top: 3rem;
+    left: -1.5rem;
+  }
+}
+.digital--design .digital__c .digital__wrap .digital__text {
+  max-width: 40rem;
+}
+@media (max-width: 870px) {
+  .digital--design .digital__c .digital__wrap .digital__text {
+    max-width: 27rem;
+  }
+}
+@media (max-width: 550px) {
+  .digital--design .digital__c .digital__wrap .digital__text {
+    max-width: 324px;
+  }
+}
+.digital--design .digital__c .digital__wrap .digital__sub {
+  max-width: 40rem;
+}
+@media (max-width: 870px) {
+  .digital--design .digital__c .digital__wrap .digital__sub {
+    max-width: 27rem;
+  }
+}
+@media (max-width: 550px) {
+  .digital--design .digital__c .digital__wrap .digital__sub {
+    max-width: 324px;
+  }
+}
+.digital--design .digital__c .digital__wrap::after {
+  width: 110%;
+  bottom: auto;
+}
 
 .digital-t {
   position: absolute;

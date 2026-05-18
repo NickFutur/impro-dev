@@ -74,6 +74,11 @@
       object-position: center;
       background-size: contain;
     }
+    &--promo {
+      margin-bottom: 0;
+      img {
+      }
+    }
   }
 
   .about-project {

@@ -55,6 +55,9 @@
      object-position: center;
   background-size: contain;
 }
+.project__image--promo {
+  margin-bottom: 0;
+}
 .project .about-project {
   display: grid;
   grid-template-columns: clamp(140px, 12vw, 151px) 1fr;
