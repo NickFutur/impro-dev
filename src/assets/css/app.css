@@ -7137,6 +7137,72 @@ body, html {
   }
 }
 
+.hero--integration {
+  position: relative;
+  isolation: isolate;
+}
+.hero--integration .booking-hero__glow--bottom {
+  display: none;
+  left: 28%;
+  top: 0px;
+  width: 280px;
+  height: 280px;
+  z-index: -1;
+  background: rgba(38, 67, 255, 0.2);
+}
+.hero--integration .hero__txt {
+  top: 3rem;
+  position: relative;
+  z-index: 3;
+}
+.hero--integration .hero__c {
+  overflow: visible;
+  position: relative;
+  z-index: 2;
+  min-height: 0;
+}
+.hero--integration::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  border-radius: 50%;
+  transform: translateZ(0);
+}
+.hero--integration::after {
+  width: 31rem;
+  height: 31rem;
+  right: 8rem;
+  top: 23rem;
+  background: radial-gradient(circle, rgba(82, 128, 255, 0.33) 0%, rgba(82, 128, 255, 0) 74%);
+  filter: blur(82px);
+}
+.hero--integration .hero__runline {
+  margin-top: 7rem;
+}
+.hero--integration .hero__zag-2 {
+  width: 108rem;
+  top: -53rem;
+  right: -12rem;
+  mix-blend-mode: normal;
+  z-index: 0;
+  filter: brightness(0.76) saturate(0.92) contrast(1.02);
+}
+@media (min-width: 871px) and (max-width: 1200px) {
+  .hero--integration .hero__main--subpage {
+    width: 60%;
+  }
+  .hero--integration .hero__txt {
+    width: 35%;
+    top: 7rem;
+    gap: 1.75rem;
+    align-self: center;
+  }
+  .hero--integration .hero__c--subpage .hero__runline {
+    margin-top: 15rem;
+  }
+}
+
 .dev-vars {
   margin-top: 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -7370,64 +7436,66 @@ body, html {
   top: 40%;
 }
 
-.hero--integration .hero__c--subpage {
-  position: relative;
-}
-.hero--integration .hero__main--subpage {
-  position: relative;
-  z-index: 3;
-}
-.hero--integration .hero__txt {
-  position: relative;
-  z-index: 3;
-}
-.hero--integration .hero__rings {
-  position: absolute;
-  top: clamp(180px, 22vw, 320px);
-  right: clamp(-110px, -7vw, -40px);
-  width: clamp(420px, 44vw, 760px);
-  pointer-events: none;
-  z-index: 2;
-}
-.hero--integration .hero__rings-image {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-@media (max-width: 1200px) {
-  .hero--integration .hero__rings {
-    top: clamp(220px, 28vw, 360px);
-    right: -140px;
-    width: clamp(360px, 48vw, 560px);
+@media (max-width: 1400px) {
+  .hero--integration .hero__c {
+    min-height: 0;
+  }
+  .hero--integration .hero__zag-2 {
+    width: 94rem;
+    right: -24rem;
+    top: -34rem;
+  }
+  .hero--integration::after {
+    width: 26rem;
+    height: 26rem;
+    right: 5rem;
+    top: 20rem;
+    filter: blur(72px);
   }
 }
 @media (max-width: 870px) {
-  .hero--integration .hero__c--subpage {
-    padding-bottom: 40px;
+  .hero--integration .hero__runline {
+    margin-top: 15rem;
   }
-  .hero--integration .hero__rings {
-    top: auto;
-    bottom: 155px;
-    right: -85px;
-    width: clamp(300px, 60vw, 460px);
-    opacity: 0.92;
+  .hero--integration .hero__zag-2 {
+    width: 90rem;
+    right: -36rem;
+    top: -20rem;
+    filter: brightness(0.73) saturate(0.9) contrast(1.02);
   }
-  .hero--integration .hero__txt {
-    padding-right: clamp(145px, 30vw, 250px);
+  .hero--integration::after {
+    width: 18rem;
+    height: 18rem;
+    right: 2rem;
+    top: 19rem;
+    filter: blur(62px);
   }
 }
 @media (max-width: 550px) {
-  .hero--integration .hero__rings {
-    bottom: 210px;
-    right: -95px;
-    width: 330px;
-    opacity: 0.75;
+  .hero--integration {
+    overflow: hidden;
   }
-  .hero--integration .hero__txt {
-    padding-right: 0;
+  .hero--integration .booking-hero__glow--bottom {
+    display: block;
+  }
+  .hero--integration .hero__runline {
+    margin-top: 5rem;
+  }
+  .hero--integration .hero__zag-2 {
+    width: 56rem;
+    right: -22rem;
+    top: -12rem;
+    filter: brightness(0.84) saturate(0.94) contrast(1.03);
+  }
+  .hero--integration::after {
+    width: 16rem;
+    height: 16rem;
+    right: 2.2rem;
+    top: 4.2rem;
+    background: radial-gradient(circle, rgba(113, 110, 237, 0.62) 0%, rgba(113, 110, 237, 0) 72%);
+    filter: blur(92px);
   }
 }
-
 .service-maket {
   display: flex;
   flex-direction: column;
