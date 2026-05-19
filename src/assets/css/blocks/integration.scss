@@ -238,3 +238,12 @@
         }
     }
 }
+
+@media (max-width: 360px) {
+    .booking-hero--compact {
+        .booking-hero__visual {
+            position: relative; // смещаем только визуальный слой, не трогая текстовый контент
+            left: -16px; // дополнительный сдвиг влево для узких экранов (<=360px)
+        }
+    }
+}

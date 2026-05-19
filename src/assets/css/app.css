@@ -7168,14 +7168,13 @@ body, html {
   z-index: 1;
   border-radius: 50%;
   transform: translateZ(0);
-}
-.hero--integration::after {
   width: 31rem;
   height: 31rem;
   right: 8rem;
   top: 23rem;
   background: radial-gradient(circle, rgba(82, 128, 255, 0.33) 0%, rgba(82, 128, 255, 0) 74%);
   filter: blur(82px);
+  will-change: transform, filter;
 }
 .hero--integration .hero__runline {
   margin-top: 7rem;
@@ -7187,6 +7186,7 @@ body, html {
   mix-blend-mode: normal;
   z-index: 0;
   filter: brightness(0.76) saturate(0.92) contrast(1.02);
+  will-change: transform, filter;
 }
 @media (min-width: 871px) and (max-width: 1200px) {
   .hero--integration .hero__main--subpage {
@@ -7494,6 +7494,12 @@ body, html {
     top: 4.2rem;
     background: radial-gradient(circle, rgba(113, 110, 237, 0.62) 0%, rgba(113, 110, 237, 0) 72%);
     filter: blur(92px);
+  }
+}
+@media (max-width: 360px) {
+  .booking-hero--compact .booking-hero__visual {
+    position: relative;
+    left: -16px;
   }
 }
 .service-maket {
