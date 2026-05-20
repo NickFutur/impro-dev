@@ -1,4 +1,4 @@
-@use "../mixins.scss" as *;
+@use '../mixins.scss' as *;
 
 .hero--integration {
     position: relative;
@@ -28,7 +28,7 @@
     }
 
     &::after {
-        content: "";
+        content: '';
         position: absolute;
         pointer-events: none;
         z-index: 1;
@@ -164,7 +164,6 @@
 
 @media (max-width: 1400px) {
     .hero--integration {
-
         .hero__c {
             min-height: 0;
         }

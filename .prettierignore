@@ -1,0 +1,14 @@
+﻿# Vendor and minified assets
+src/assets/js-includes/**
+src/assets/css-includes/**
+
+# Generated CSS artifacts
+src/assets/css/**/*.css
+src/assets/css/**/*.css.map
+src/assets/style.css
+
+# Build output
+dist/**
+
+# Dependency lockfile
+package-lock.json
