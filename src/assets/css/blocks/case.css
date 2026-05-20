@@ -776,4 +776,19 @@
     width: 88px;
     height: 70px;
   }
+}
+
+@media (max-width: 360px) {
+  .booking-hero .booking-hero__all {
+    right: 15%;
+  }
+  .booking-hero .booking-hero__chart-circle {
+    left: 60%;
+  }
+  .booking-hero .booking-hero__chart-lines {
+    left: 30%;
+    top: 20%;
+    width: 244px;
+    height: 112px;
+  }
 }/*# sourceMappingURL=case.css.map */

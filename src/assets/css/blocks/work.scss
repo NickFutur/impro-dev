@@ -1,9 +1,9 @@
-.work{
+.work {
     padding-bottom: 100rem * 0.0625;
     position: relative;
 
-    &__item{
-        border: 0.80rem * 0.0625 solid rgba(255, 255, 255, 0.1);
+    &__item {
+        border: 0.8rem * 0.0625 solid rgba(255, 255, 255, 0.1);
         width: 360rem * 0.0625;
         height: 360rem * 0.0625;
         backdrop-filter: blur(16px);
@@ -23,65 +23,64 @@
             height: 238px;
             padding: 16px;
         }
-        &-icon{
+        &-icon {
             height: 48px;
             width: 48px;
             @media (max-width: 550px) {
                 height: 36px;
                 width: 36px;
-              }
+            }
         }
-        &:nth-child(1){
+        &:nth-child(1) {
             margin-left: auto;
         }
-        &:nth-child(2){
+        &:nth-child(2) {
             margin-top: -200rem * 0.0625;
         }
-        &:nth-child(3){
-           margin-top: 40rem * 0.0625;
-           margin-left: 42%;
+        &:nth-child(3) {
+            margin-top: 40rem * 0.0625;
+            margin-left: 42%;
         }
-        &:nth-child(4){
+        &:nth-child(4) {
             margin-left: 9%;
             margin-top: 48rem * 0.0625;
         }
-        &:nth-child(5){
+        &:nth-child(5) {
             margin-left: auto;
             margin-top: -85rem * 0.0625;
         }
 
         @media (max-width: 870px) {
-            &:nth-child(odd){
+            &:nth-child(odd) {
                 margin-left: auto;
             }
-            &:nth-child(even){
+            &:nth-child(even) {
                 margin-left: 0;
             }
-            &:nth-child(n){
+            &:nth-child(n) {
                 margin-top: 6rem;
             }
         }
         @media screen and (max-width: 550px) {
-            &:nth-child(even){
+            &:nth-child(even) {
                 margin-left: auto;
             }
-            &:nth-child(odd){
+            &:nth-child(odd) {
                 margin-left: 0;
             }
- 
         }
-        &-title{
+        &-title {
             font-weight: 500;
             font-size: 24rem * 0.0625;
             line-height: 135%;
             letter-spacing: -0.01em;
             color: #fff;
-     
+
             @media (max-width: 550px) {
-              font-size: 18px;
+                font-size: 18px;
             }
         }
-        &-desc{
+        &-desc {
             font-weight: 400;
             font-size: 14rem * 0.0625;
             line-height: 135%;
@@ -89,27 +88,27 @@
             margin-top: 1em;
             @media (max-width: 550px) {
                 font-size: 11px;
-              }
+            }
         }
-        &-info{
+        &-info {
             // Add any specific styles for info if needed
         }
-        &-btn{
+        &-btn {
             align-self: flex-start;
         }
-        &.--order{
+        &.--order {
             background-image: url(../img/b3.png);
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
         }
     }
-    &__items{
+    &__items {
         margin-top: 200rem * 0.0625;
         position: relative;
         z-index: 2;
     }
-    &-text{
+    &-text {
         margin-top: 160rem * 0.0625;
         text-align: center;
         max-width: 890rem * 0.0625;
@@ -118,25 +117,25 @@
         position: sticky;
         top: 40%;
         z-index: 2;
-        &-title{
+        &-title {
             font-weight: 400;
             font-size: 42rem * 0.0625;
             line-height: 129%;
             letter-spacing: -0.02em;
             text-align: center;
-            span{
-                opacity: .4;
+            span {
+                opacity: 0.4;
             }
             @media (max-width: 870px) {
                 font-size: 36px;
                 line-height: 125%;
-             }
-             @media (max-width: 550px) {
+            }
+            @media (max-width: 550px) {
                 font-size: 22px;
                 line-height: 115%;
-             }
+            }
         }
-        &-desc{
+        &-desc {
             font-weight: 400;
             font-size: 18rem * 0.0625;
             line-height: 135%;
@@ -150,14 +149,14 @@
             @media (max-width: 870px) {
                 font-size: 14px;
                 line-height: 125%;
-             }
-             @media (max-width: 550px) {
+            }
+            @media (max-width: 550px) {
                 font-size: 13px;
                 line-height: 115%;
-             }
+            }
         }
     }
-    &__c{
+    &__c {
         position: relative;
         z-index: 2;
     }
