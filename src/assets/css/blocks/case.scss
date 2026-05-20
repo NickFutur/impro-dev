@@ -793,3 +793,22 @@
     }
   }
 }
+//доделать чтобы этот код заработал 
+@media (max-width: 360px) {
+    .booking-hero {
+        .booking-hero__all {
+            right: 15%;
+        }
+
+  .booking-hero__chart-circle {
+           left: 60%;
+        }
+
+        .booking-hero__chart-lines {
+            left: 30%;
+            top: 20%;
+            width: 244px;
+            height: 112px;
+        }
+    }
+}

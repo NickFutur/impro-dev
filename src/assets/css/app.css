@@ -7137,6 +7137,20 @@ body, html {
   }
 }
 
+@media (max-width: 360px) {
+  .booking-hero--compact .booking-hero__all {
+    left: -16px;
+  }
+  .booking-hero--compact .booking-hero__chart-circle {
+    right: 1%;
+  }
+  .booking-hero--compact .booking-hero__chart-lines {
+    left: 30%;
+    top: 20%;
+    width: 244px;
+    height: 112px;
+  }
+}
 .hero--integration {
   position: relative;
   isolation: isolate;
@@ -7497,9 +7511,17 @@ body, html {
   }
 }
 @media (max-width: 360px) {
-  .booking-hero--compact .booking-hero__visual {
-    position: relative;
+  .booking-hero--compact .booking-hero__all {
     left: -16px;
+  }
+  .booking-hero--compact .booking-hero__chart-circle {
+    right: 1%;
+  }
+  .booking-hero--compact .booking-hero__chart-lines {
+    left: 30%;
+    top: 20%;
+    width: 244px;
+    height: 112px;
   }
 }
 .service-maket {

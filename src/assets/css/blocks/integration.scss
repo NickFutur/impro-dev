@@ -213,6 +213,7 @@
 @media (max-width: 550px) {
     .hero--integration {
         overflow: hidden;
+
         .booking-hero__glow--bottom {
             display: block;
         }
@@ -241,9 +242,19 @@
 
 @media (max-width: 360px) {
     .booking-hero--compact {
-        .booking-hero__visual {
-            position: relative; // смещаем только визуальный слой, не трогая текстовый контент
-            left: -16px; // дополнительный сдвиг влево для узких экранов (<=360px)
+        .booking-hero__all {
+            left: -16px;
+        }
+
+        .booking-hero__chart-circle {
+            right: 1%;
+        }
+
+        .booking-hero__chart-lines {
+            left: 30%;
+            top: 20%;
+            width: 244px;
+            height: 112px;
         }
     }
 }
