@@ -99,7 +99,7 @@
   .booking-hero {
     position: relative;
     overflow: hidden;
-    background: url("assets/img/cases/noiseEffect.svg"), radial-gradient(circle at 20% 35%, rgba(255, 120, 40, 0.22), transparent 45%), radial-gradient(circle at 25% 50%, rgba(92, 70, 255, 0.35), transparent 65%), radial-gradient(circle at 20% 100%, rgba(25, 50, 255, 0.18), transparent 25%), linear-gradient(90deg, #050505 0%, #120d1f 45%, #22113f 100%);
+    background: url("../img/cases/noiseEffect.svg"), radial-gradient(circle at 20% 35%, rgba(255, 120, 40, 0.22), transparent 45%), radial-gradient(circle at 25% 50%, rgba(92, 70, 255, 0.35), transparent 65%), radial-gradient(circle at 20% 100%, rgba(25, 50, 255, 0.18), transparent 25%), linear-gradient(90deg, #050505 0%, #120d1f 45%, #22113f 100%);
     border: 1px solid rgba(255, 255, 255, 0.08);
   }
   .booking-hero .booking-hero__container {
@@ -182,7 +182,7 @@
 .booking-hero--compact {
   position: relative;
   overflow: hidden;
-  background: url("assets/img/cases/noiseEffect.svg"), radial-gradient(circle at 20% 35%, rgba(255, 120, 40, 0.22), transparent 45%), radial-gradient(circle at 25% 50%, rgba(92, 70, 255, 0.35), transparent 65%), radial-gradient(circle at 20% 100%, rgba(25, 50, 255, 0.18), transparent 25%), linear-gradient(90deg, #050505 0%, #120d1f 45%, #22113f 100%);
+  background: url("../img/cases/noiseEffect.svg"), radial-gradient(circle at 20% 35%, rgba(255, 120, 40, 0.22), transparent 45%), radial-gradient(circle at 25% 50%, rgba(92, 70, 255, 0.35), transparent 65%), radial-gradient(circle at 20% 100%, rgba(25, 50, 255, 0.18), transparent 25%), linear-gradient(90deg, #050505 0%, #120d1f 45%, #22113f 100%);
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 .booking-hero--compact .booking-hero__container {
