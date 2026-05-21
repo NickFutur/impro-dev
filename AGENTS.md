@@ -17,7 +17,6 @@
 Перед финальным ответом выполнить:
 
 - npm run check
-- npm run fix
 - npm run check повторно
 
 ## HTML
