@@ -981,7 +981,9 @@
         const controller = new ScrollMagic.Controller();
 
         // Получаем высоту блока stages
-        const stagesHeight = document.querySelector('.stages').offsetHeight - 400;
+        const stagesElement = document.querySelector('.stages');
+        if (!stagesElement) return;
+        const stagesHeight = stagesElement.offsetHeight - 400;
 
         // Создаем анимацию для элемента stages-dec
         const stagesDecTween = gsap.to('.stages-dec', {
@@ -1236,3 +1238,4 @@
     }
 </script>
 {% endblock %}
+

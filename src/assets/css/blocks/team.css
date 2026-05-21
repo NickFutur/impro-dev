@@ -6,7 +6,7 @@
   font-size: 2.25rem;
   line-height: 127%;
   letter-spacing: -0.02em;
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(145.55deg, #F9F7F7 20.35%, rgba(243, 243, 243, 0.3) 128.73%);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(145.55deg, #f9f7f7 20.35%, rgba(243, 243, 243, 0.3) 128.73%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
