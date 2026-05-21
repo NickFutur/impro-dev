@@ -1,5 +1,5 @@
-@use '../mixins' as *;
-@use '../variables' as vars;
+@import '../mixins.scss';
+@import '../variables.scss';
 
 %glass-surface {
     border: 0.7px solid rgba(255, 255, 255, 0.1);
@@ -186,7 +186,7 @@
     }
 }
 
-@media (max-width: vars.$tablet_res) {
+@media (max-width: $tablet_res) {
     .project {
         .about-project {
             grid-template-columns: 147px 1fr;
@@ -216,7 +216,7 @@
     }
 }
 
-@media (max-width: vars.$tablet_sm_res) {
+@media (max-width: $tablet_sm_res) {
     .project {
         .about-project {
             grid-template-columns: 147px 1fr;
@@ -250,7 +250,7 @@
     }
 }
 
-@media (max-width: vars.$mobile_big_res), (max-width: vars.$mobile_res) {
+@media (max-width: $mobile_big_res), (max-width: $mobile_res) {
     .project {
         .about-project {
             grid-template-columns: 1fr;
@@ -773,6 +773,8 @@
         }
     }
 }
+
+//доделать чтобы этот код заработал
 @media (max-width: 360px) {
     .booking-hero {
         .booking-hero__all {
