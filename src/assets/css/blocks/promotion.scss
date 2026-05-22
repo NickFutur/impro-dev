@@ -1,0 +1,46 @@
+.booking-hero--promo {
+    .booking-hero__glow--left {
+        left: auto;
+        right: 55%;
+        top: 12%;
+        width: 160px;
+        height: 160px;
+    }
+
+    .booking-hero__container {
+
+
+        .booking-hero__content {
+            span {
+                color: #5d50ff;
+            }
+        }
+
+        .booking-hero__visual {
+            .booking-hero__widget--stats {
+                z-index: 2;
+
+            }
+        }
+    }
+}
+
+@media (max-width: 390px) {
+    .booking-hero--promo {
+        .booking-hero__container {
+            .booking-hero__content {
+                span {
+                    color: #fff;
+                }
+            }
+
+            .booking-hero__visual {
+                .booking-hero__chart-circle {
+                    right: 0;
+                    left: 70%;
+                    top: 10%;
+                }
+            }
+        }
+    }
+}
