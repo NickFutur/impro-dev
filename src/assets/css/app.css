@@ -98,7 +98,7 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   width: 100%;
   color: #fff;
-  background-color: #0F0F0F;
+  background-color: #0f0f0f;
   font-family: "Suisse Intl";
 }
 body.fixed {
@@ -174,7 +174,8 @@ img {
           user-select: none;
 }
 
-button, input {
+button,
+input {
   border: none;
   outline: none;
   background: none;
@@ -190,7 +191,12 @@ button {
   box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
 }
 
@@ -260,7 +266,8 @@ section {
   width: 100%;
 }
 
-header, footer {
+header,
+footer {
   z-index: 2;
 }
 
@@ -303,7 +310,8 @@ select {
   z-index: 2;
 }
 
-body, html {
+body,
+html {
   scroll-behavior: smooth;
 }
 
@@ -1210,7 +1218,7 @@ body, html {
   font-size: 50px;
   line-height: 110%;
   letter-spacing: -0.02em;
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(145.55deg, #F9F7F7 20.35%, rgba(243, 243, 243, 0.3) 128.73%);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(145.55deg, #f9f7f7 20.35%, rgba(243, 243, 243, 0.3) 128.73%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -2085,7 +2093,7 @@ body, html {
   letter-spacing: -0.02em;
   background-clip: text;
   text-fill-color: transparent;
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(145.55deg, #F9F7F7 20.35%, rgba(243, 243, 243, 0.3) 128.73%);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(145.55deg, #f9f7f7 20.35%, rgba(243, 243, 243, 0.3) 128.73%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -2304,7 +2312,7 @@ body, html {
   position: absolute;
   width: 16.125rem;
   height: 16.125rem;
-  background: linear-gradient(180deg, #3824B0 3.85%, #4A40CC 25.96%, #A7246A 53.85%, #AC5914 77.4%);
+  background: linear-gradient(180deg, #3824b0 3.85%, #4a40cc 25.96%, #a7246a 53.85%, #ac5914 77.4%);
   box-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
   border-radius: 31.25rem;
   transform: translate(-50%, -50%);
@@ -2318,7 +2326,7 @@ body, html {
   height: 8.115rem;
   left: -5rem;
   top: 7rem;
-  background: linear-gradient(180deg, #3824B0 3.85%, #4A40CC 25.96%, #A7246A 53.85%, #AC5914 77.4%);
+  background: linear-gradient(180deg, #3824b0 3.85%, #4a40cc 25.96%, #a7246a 53.85%, #ac5914 77.4%);
   box-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
   border-radius: 31.25rem;
   transform: rotate(163.45deg);
@@ -2328,7 +2336,7 @@ body, html {
   position: absolute;
   width: 14.344375rem;
   height: 8.275625rem;
-  background: linear-gradient(90deg, #3824B0 0%, #4A40CC 31.25%, #8F127D 78.85%);
+  background: linear-gradient(90deg, #3824b0 0%, #4a40cc 31.25%, #8f127d 78.85%);
   box-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
   border-radius: 31.25rem;
   transform: rotate(41.24deg);
@@ -2453,7 +2461,8 @@ body, html {
   .service_list-item {
     position: relative;
   }
-  .service_list-item-title, .service_list-item-desc {
+  .service_list-item-title,
+  .service_list-item-desc {
     max-width: calc(100vw - 310px);
   }
   .service_list-item-list {
@@ -2473,10 +2482,12 @@ body, html {
   .service_list-item-desc {
     font-size: 13px;
   }
-  .service_list-item-list-name, .service_list-item-list-price {
+  .service_list-item-list-name,
+  .service_list-item-list-price {
     font-size: 13px;
   }
-  .service_list-item-title, .service_list-item-desc {
+  .service_list-item-title,
+  .service_list-item-desc {
     max-width: 100%;
   }
   .service_list dotlottie-wc {
@@ -2672,7 +2683,7 @@ body, html {
   font-size: 2.25rem;
   line-height: 127%;
   letter-spacing: -0.02em;
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(145.55deg, #F9F7F7 20.35%, rgba(243, 243, 243, 0.3) 128.73%);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(145.55deg, #f9f7f7 20.35%, rgba(243, 243, 243, 0.3) 128.73%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -3029,7 +3040,7 @@ body, html {
   line-height: 3.375rem;
   letter-spacing: -0.02em;
   /* Linear (2 paints) */
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(145.55deg, #F9F7F7 20.35%, rgba(243, 243, 243, 0.3) 128.73%);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(145.55deg, #f9f7f7 20.35%, rgba(243, 243, 243, 0.3) 128.73%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -3115,7 +3126,7 @@ body, html {
   content: "";
   width: 27.3675rem;
   height: 29.03625rem;
-  background: linear-gradient(250.91deg, #E0966D 5.48%, #C95453 23.49%, #A72579 42.39%, #574DE5 70.51%, #3A2DDE 93.36%);
+  background: linear-gradient(250.91deg, #e0966d 5.48%, #c95453 23.49%, #a72579 42.39%, #574de5 70.51%, #3a2dde 93.36%);
   mix-blend-mode: normal;
   opacity: 0.6;
   filter: blur(7.5rem);
@@ -3181,7 +3192,7 @@ body, html {
   line-height: 3.375rem;
   text-align: center;
   letter-spacing: -0.02em;
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(191.88deg, #F9F7F7 8.69%, rgba(243, 243, 243, 0.3) 181.04%);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(191.88deg, #f9f7f7 8.69%, rgba(243, 243, 243, 0.3) 181.04%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -3336,7 +3347,7 @@ body, html {
   position: absolute;
   top: 0;
   left: 0;
-  background: linear-gradient(277.2deg, #3325CD -83.34%, #6768FB 58.79%);
+  background: linear-gradient(277.2deg, #3325cd -83.34%, #6768fb 58.79%);
 }
 .long__timeline__c {
   display: flex;
@@ -3861,7 +3872,7 @@ body, html {
   position: absolute;
   width: 14.945625rem;
   height: 15.856875rem;
-  background: linear-gradient(250.91deg, #E0966D 5.48%, #C95453 23.49%, #A72579 42.39%, #574DE5 70.51%, #3A2DDE 93.36%);
+  background: linear-gradient(250.91deg, #e0966d 5.48%, #c95453 23.49%, #a72579 42.39%, #574de5 70.51%, #3a2dde 93.36%);
   mix-blend-mode: normal;
   opacity: 0.5;
   filter: blur(70px);
@@ -3875,7 +3886,7 @@ body, html {
     position: absolute;
     width: 14.945625rem;
     height: 15.856875rem;
-    background: linear-gradient(250.91deg, #E0966D 5.48%, #C95453 23.49%, #A72579 42.39%, #574DE5 70.51%, #3A2DDE 93.36%);
+    background: linear-gradient(250.91deg, #e0966d 5.48%, #c95453 23.49%, #a72579 42.39%, #574de5 70.51%, #3a2dde 93.36%);
     mix-blend-mode: normal;
     opacity: 0.5;
     filter: blur(60px);
@@ -4067,7 +4078,7 @@ body, html {
   line-height: 3.125rem;
   /* or 120% */
   letter-spacing: -0.02em;
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(145.55deg, #F9F7F7 42.75%, rgba(243, 243, 243, 0.3) 128.73%);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(145.55deg, #f9f7f7 42.75%, rgba(243, 243, 243, 0.3) 128.73%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -4159,10 +4170,10 @@ body, html {
   }
 }
 .footer-form-input.error::-moz-placeholder {
-  color: #C54E5E;
+  color: #c54e5e;
 }
 .footer-form-input.error::placeholder {
-  color: #C54E5E;
+  color: #c54e5e;
 }
 .footer-form-select {
   position: relative;
@@ -4170,7 +4181,7 @@ body, html {
   border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.4);
 }
 .footer-form-select.error .footer-form-select-head {
-  color: #C54E5E;
+  color: #c54e5e;
 }
 .footer-form-select-head {
   cursor: pointer;
@@ -4229,7 +4240,7 @@ body, html {
   backdrop-filter: blur(3.7468779087rem);
 }
 .footer-form-select-option:hover {
-  color: #3A2DDE;
+  color: #3a2dde;
 }
 .footer-form-select-option {
   border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.4);
@@ -4318,10 +4329,10 @@ body, html {
   }
 }
 .footer-form-textarea.error::-moz-placeholder {
-  color: #C54E5E;
+  color: #c54e5e;
 }
 .footer-form-textarea.error::placeholder {
-  color: #C54E5E;
+  color: #c54e5e;
 }
 .footer-form-button {
   width: 100%;
@@ -4431,7 +4442,9 @@ body, html {
   opacity: 0.35;
   transition: all 0.5s;
 }
-.footer-addr svg, .footer-addr path, .footer-phone svg, .footer-phone path {
+.footer-addr svg,
+.footer-addr path, .footer-phone svg,
+.footer-phone path {
   fill-opacity: 1;
 }
 .footer-addr:hover, .footer-phone:hover {
@@ -4559,7 +4572,7 @@ body, html {
   font-size: 2.25rem;
   line-height: 2.875rem;
   letter-spacing: -0.02em;
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(145.55deg, #F9F7F7 42.75%, rgba(243, 243, 243, 0.3) 128.73%);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(145.55deg, #f9f7f7 42.75%, rgba(243, 243, 243, 0.3) 128.73%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -4598,7 +4611,7 @@ body, html {
   counter-increment: num;
 }
 .footer-form-st-item::before {
-  background: linear-gradient(180deg, #595CFF 93.75%, #5C35E5 212.8%);
+  background: linear-gradient(180deg, #595cff 93.75%, #5c35e5 212.8%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -4834,7 +4847,7 @@ body, html {
   position: relative;
   margin: auto;
   width: 40.625rem;
-  background-color: #0F0F0F;
+  background-color: #0f0f0f;
   padding-top: 40px;
   padding-bottom: 40px;
   border: 0.8px solid rgba(255, 255, 255, 0.3);
@@ -7138,13 +7151,13 @@ body, html {
 }
 
 @media (max-width: 360px) {
-  .booking-hero--compact .booking-hero__all {
-    left: -16px;
+  .booking-hero .booking-hero__all {
+    right: 15%;
   }
-  .booking-hero--compact .booking-hero__chart-circle {
-    right: 1%;
+  .booking-hero .booking-hero__chart-circle {
+    left: 60%;
   }
-  .booking-hero--compact .booking-hero__chart-lines {
+  .booking-hero .booking-hero__chart-lines {
     left: 30%;
     top: 20%;
     width: 244px;
