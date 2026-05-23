@@ -60,6 +60,18 @@ $promo-hero: ".hero--integration[data-bx-block='promo-hero']";
     }
 }
 
+.cases--inner {
+    padding-top: 7.6rem;
+
+    .how-title--promo {
+        .how-title__text {
+            display: block;
+            max-width: 869px;
+            padding-bottom: clamp(24px, 4.8vw, 40px);
+        }
+    }
+}
+
 @media (max-width: 1199px) and (min-width: 871px) {
     #{$promo-hero} {
         .hero__txt {
