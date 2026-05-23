@@ -3,7 +3,7 @@
 
 <!-- HERO BLOCK START -->
 
-<section class="hero hero--dop hero--integration" id="hero-block">
+<section class="hero hero--dop hero--integration" id="hero-block" data-bx-block="promo-hero">
     <div class="booking-hero__glow booking-hero__glow--bottom"></div>
 
     <div class="hero__c container hero__c--subpage">
@@ -33,8 +33,17 @@
             <div class="hero__h1__wrap">
                 <h1 class="hero__h1 animate-custom-7 wow">Продвигаем бизнес в интернете</h1>
             </div>
-
-            <div class="hero__features --flex">
+          
+        </div>
+        <div class="hero__txt">
+            <p>
+                Занимаемся комплексным SEO, контекстной рекламой, таргетированными кампаниями и настройкой
+                Яндекс.Бизнес,
+                чтобы ваш бренд был на виду и привлекал клиентов.
+            </p>
+            <a href="#form" class="btn"><span>Обсудить проект</span></a>
+        </div>
+          <div class="hero__features --flex">
                 <div class="hero__features-item">
                     <img src="assets/img/icon/f1.svg" alt="" class="hero__features-icon" />
                     <div class="hero__features-text">
@@ -57,15 +66,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="hero__txt">
-            <p>
-                Занимаемся комплексным SEO, контекстной рекламой, таргетированными кампаниями и настройкой
-                Яндекс.Бизнес,
-                чтобы ваш бренд был на виду и привлекал клиентов.
-            </p>
-            <a href="#form" class="btn"><span>Обсудить проект</span></a>
-        </div>
         <div class="hero__runline">
             <div class="hero__runline-wrap">
                 <div class="hero__runline-item"><img src="assets/img/logo/8.svg" alt="" /></div>
@@ -110,7 +110,7 @@
 <!-- PROJECT IMAGE END -->
 
 <!-- dev-vars START -->
-<div class="dev-vars">
+<div class="dev-vars" data-bx-block="promo-services">
     <div class="dev-vars-item">
         <div class="dev-vars-item-top">
             <div class="dev-vars-item-title">Контекстная реклама</div>
@@ -219,7 +219,7 @@
 </div>
 <!-- dev-vars END -->
 
-<section class="booking-hero booking-hero--compact booking-hero--promo">
+<section class="booking-hero booking-hero--compact booking-hero--promo" id="promo-booking" data-bx-block="promo-booking-hero">
     <div class="booking-hero__glow booking-hero__glow--left"></div>
     <div class="booking-hero__glow booking-hero__glow--center"></div>
     <div class="booking-hero__glow booking-hero__glow--bottom"></div>
@@ -236,7 +236,7 @@
                Наши менеджеры помогут разработать <span>индивидуальную стратегию</span> и реализовать её в кратчайшие сроки.
             </p>
 
-            <a href="#" class="booking-hero__button t-caption">Обсудить проект
+            <a href="#form" class="booking-hero__button t-caption">Обсудить проект
                 <svg width="13" height="15" viewBox="0 0 13 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M2.92322 5.63466C3.51361 5.92168 4.11858 6.193 4.73813 6.44638C5.53747 6.77152 5.52532 7.81644 4.72355 8.13933C4.11615 8.38599 3.5209 8.64834 2.9378 8.92638C2.03156 9.35691 1.30512 10.0543 0.901804 10.9176C0.530076 11.7113 0.240954 12.541 0.0295799 13.355C-0.201231 14.2429 0.972262 14.8618 1.68899 14.2339C4.47816 11.7921 7.77026 9.65738 11.5386 8.1326C12.3403 7.80747 12.3403 6.76928 11.5386 6.44414C7.78241 4.91937 4.56563 2.68602 1.71329 0.248622C0.998987 -0.36353 -0.152639 0.241895 0.0660242 1.11864C0.277399 1.97072 0.561661 2.82504 0.935818 3.64573C1.32455 4.5023 2.03399 5.19966 2.92322 5.63466Z"
@@ -279,7 +279,7 @@
 
 <!-- DIGITAL BLOCK START -->
 
-<div class="dev-features">
+<div class="dev-features" data-bx-block="promo-features">
     <div class="dev-features-item">
         <img src="assets/img/icon/d1.svg" alt="" class="dev-features-icon" />
         <div class="dev-features-text">
@@ -1223,14 +1223,16 @@
 </script>
 <!-- Скрипт для отправки формы (заменить на реальную логику отправки формы) -->
 <script>
-    $('.footer-form').on('submit', function (e) {
-        e.preventDefault();
-        is_valid = validateForm(this);
-        if (is_valid) {
-            $('.footer-form-form').hide();
-            $('.footer-form-thx').show();
-        }
-    });
+    if (typeof $ !== 'undefined' && $('.footer-form').length) {
+        $('.footer-form').on('submit', function (e) {
+            e.preventDefault();
+            const isValid = validateForm(this);
+            if (isValid) {
+                $('.footer-form-form').hide();
+                $('.footer-form-thx').show();
+            }
+        });
+    }
 
     function validateForm(form) {
         var isValid = true;

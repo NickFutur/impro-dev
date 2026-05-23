@@ -7835,4 +7835,91 @@ html {
   .service-maket__desc-answer .service-maket__desc-answer__big-list {
     margin-top: 10px;
   }
+}
+
+.booking-hero--promo .booking-hero__glow--left {
+  left: auto;
+  right: 55%;
+  top: 12%;
+  width: 160px;
+  height: 160px;
+}
+.booking-hero--promo .booking-hero__container .booking-hero__content span {
+  color: #5d50ff;
+}
+.booking-hero--promo .booking-hero__container .booking-hero__visual .booking-hero__widget--stats {
+  z-index: 2;
+}
+
+@media (max-width: 550px) {
+  .hero--integration[data-bx-block=promo-hero] .hero__c--subpage {
+    min-height: auto;
+    padding-top: 120px;
+    padding-bottom: 16px;
+    align-content: flex-start;
+  }
+  .hero--integration[data-bx-block=promo-hero] .hero__main--subpage {
+    width: 100%;
+    order: 1;
+  }
+  .hero--integration[data-bx-block=promo-hero] .hero__tags--subpage {
+    margin-top: 42px;
+    max-width: 240px;
+  }
+  .hero--integration[data-bx-block=promo-hero] .hero__h1 {
+    margin-top: 38px;
+    max-width: 340px;
+  }
+  .hero--integration[data-bx-block=promo-hero] .hero__features.--flex {
+    position: static;
+    margin-top: 28px;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+  }
+  .hero--integration[data-bx-block=promo-hero] .hero__features-item {
+    margin-bottom: 0;
+    gap: 20px;
+  }
+  .hero--integration[data-bx-block=promo-hero] .hero__features-icon {
+    width: 48px;
+    height: 48px;
+  }
+  .hero--integration[data-bx-block=promo-hero] .hero__features-text {
+    margin-left: 0;
+    font-size: 13px;
+    line-height: 1.45;
+  }
+  .hero--integration[data-bx-block=promo-hero] .hero__txt {
+    width: 100%;
+    margin-top: 20px;
+    gap: 30px;
+    font-size: 13px;
+    line-height: 1.35;
+    letter-spacing: -0.026px;
+    order: 2;
+  }
+  .hero--integration[data-bx-block=promo-hero] .hero__txt p {
+    max-width: 302px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  .hero--integration[data-bx-block=promo-hero] .hero__c--subpage .hero__runline {
+    margin-top: 44px;
+    order: 3;
+  }
+}
+@media (max-width: 390px) and (min-width: 320px) {
+  .booking-hero--promo .booking-hero__container .booking-hero__content span {
+    color: #fff;
+  }
+  .booking-hero--promo .booking-hero__container .booking-hero__visual .booking-hero__all {
+    right: 7%;
+  }
+  .booking-hero--promo .booking-hero__container .booking-hero__visual .booking-hero__chart-circle {
+    right: 0;
+    left: 70%;
+    top: 10%;
+  }
 }/*# sourceMappingURL=app.css.map */
