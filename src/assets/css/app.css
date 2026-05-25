@@ -7233,7 +7233,6 @@ html {
 .dev-vars {
   margin-top: 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  margin-bottom: clamp(80px, 10vw, 155px);
 }
 .dev-vars .dev-vars-item {
   height: auto;
@@ -7437,6 +7436,7 @@ html {
 }
 .booking-hero--compact .booking-hero__visual {
   order: 1;
+  padding-botton: clamp(40px, 10vw, 100px);
 }
 .booking-hero--compact .booking-hero__content {
   order: 2;

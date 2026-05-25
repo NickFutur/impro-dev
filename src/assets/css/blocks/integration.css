@@ -67,7 +67,6 @@
 .dev-vars {
   margin-top: 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  margin-bottom: clamp(80px, 10vw, 155px);
 }
 .dev-vars .dev-vars-item {
   height: auto;
@@ -150,8 +149,8 @@
     width: clamp(220px, 25vw, 360px);
   }
   .booking-hero .booking-hero__chart-circle {
-    top: 4%;
-    right: 13%;
+    top: 1%;
+    right: 8%;
     height: 125px;
   }
   .booking-hero .booking-hero__chart-lines {
@@ -233,8 +232,8 @@
   width: clamp(220px, 25vw, 360px);
 }
 .booking-hero--compact .booking-hero__chart-circle {
-  top: 4%;
-  right: 13%;
+  top: 1%;
+  right: 8%;
   height: 125px;
 }
 .booking-hero--compact .booking-hero__chart-lines {
@@ -271,6 +270,7 @@
 }
 .booking-hero--compact .booking-hero__visual {
   order: 1;
+  padding-top: clamp(40px, 10vw, 100px);
 }
 .booking-hero--compact .booking-hero__content {
   order: 2;
@@ -356,13 +356,22 @@
     background: radial-gradient(circle, rgba(113, 110, 237, 0.62) 0%, rgba(113, 110, 237, 0) 72%);
     filter: blur(92px);
   }
-}
-@media (max-width: 360px) {
   .booking-hero--compact .booking-hero__all {
     left: -16px;
   }
   .booking-hero--compact .booking-hero__chart-circle {
-    right: 1%;
+    top: 1%;
+    right: clamp(1%, 0.8vw, 7%);
+  }
+}
+@media (max-width: 550px) and (max-width: 360px) {
+  .booking-hero--compact .booking-hero__all {
+    left: -16px;
+  }
+  .booking-hero--compact .booking-hero__chart-circle {
+    left: 70%;
+    top: 1%;
+    right: 0;
   }
   .booking-hero--compact .booking-hero__chart-lines {
     left: 30%;
