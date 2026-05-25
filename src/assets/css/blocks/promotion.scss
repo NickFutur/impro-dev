@@ -159,6 +159,15 @@ $promo-hero: ".hero--integration[data-bx-block='promo-hero']";
             width: 60rem;
         }
     }
+
+    .booking-hero__container {
+        .booking-hero__all {
+            .booking-hero__chart-circle {
+                right: 13%;
+            }
+        }
+
+    }
 }
 
 @media (max-width: 550px) {
