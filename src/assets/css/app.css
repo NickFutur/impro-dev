@@ -6836,8 +6836,8 @@ html {
   width: clamp(220px, 25vw, 360px);
 }
 .booking-hero--compact .booking-hero__chart-circle {
-  top: 4%;
-  right: 13%;
+  top: 1%;
+  right: 8%;
   height: 125px;
 }
 .booking-hero--compact .booking-hero__chart-lines {
@@ -6919,8 +6919,8 @@ html {
     width: clamp(220px, 25vw, 360px);
   }
   .booking-hero .booking-hero__chart-circle {
-    top: 4%;
-    right: 13%;
+    top: 1%;
+    right: 8%;
     height: 125px;
   }
   .booking-hero .booking-hero__chart-lines {
@@ -7025,7 +7025,7 @@ html {
   }
   .booking-hero__chart-circle {
     top: -5%;
-    right: 10%;
+    left: 70%;
   }
   .booking-hero__chart-circle img {
     height: 84px;
@@ -7090,7 +7090,7 @@ html {
   }
   .booking-hero__chart-circle {
     top: -5%;
-    right: 7%;
+    left: 60%;
   }
   .booking-hero__chart-circle img {
     height: 84px;
@@ -7315,8 +7315,8 @@ html {
     width: clamp(220px, 25vw, 360px);
   }
   .booking-hero .booking-hero__chart-circle {
-    top: 4%;
-    right: 13%;
+    top: 1%;
+    right: 8%;
     height: 125px;
   }
   .booking-hero .booking-hero__chart-lines {
@@ -7398,8 +7398,8 @@ html {
   width: clamp(220px, 25vw, 360px);
 }
 .booking-hero--compact .booking-hero__chart-circle {
-  top: 4%;
-  right: 13%;
+  top: 1%;
+  right: 8%;
   height: 125px;
 }
 .booking-hero--compact .booking-hero__chart-lines {
@@ -7436,7 +7436,7 @@ html {
 }
 .booking-hero--compact .booking-hero__visual {
   order: 1;
-  padding-botton: clamp(40px, 10vw, 100px);
+  padding-top: clamp(40px, 10vw, 100px);
 }
 .booking-hero--compact .booking-hero__content {
   order: 2;
@@ -7522,13 +7522,22 @@ html {
     background: radial-gradient(circle, rgba(113, 110, 237, 0.62) 0%, rgba(113, 110, 237, 0) 72%);
     filter: blur(92px);
   }
-}
-@media (max-width: 360px) {
   .booking-hero--compact .booking-hero__all {
     left: -16px;
   }
   .booking-hero--compact .booking-hero__chart-circle {
-    right: 1%;
+    top: 1%;
+    right: clamp(1%, 0.8vw, 7%);
+  }
+}
+@media (max-width: 550px) and (max-width: 360px) {
+  .booking-hero--compact .booking-hero__all {
+    left: -16px;
+  }
+  .booking-hero--compact .booking-hero__chart-circle {
+    left: 70%;
+    top: 1%;
+    right: 0;
   }
   .booking-hero--compact .booking-hero__chart-lines {
     left: 30%;
@@ -7953,6 +7962,9 @@ html {
     top: 10%;
     left: 10%;
     width: 60rem;
+  }
+  .booking-hero__container .booking-hero__all .booking-hero__chart-circle {
+    right: 13%;
   }
 }
 @media (max-width: 550px) {

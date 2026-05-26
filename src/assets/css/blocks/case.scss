@@ -616,7 +616,7 @@
 
         &__chart-circle {
             top: -5%;
-            right: 10%;
+            left: 70%;
 
             img {
                 height: 84px;
@@ -698,7 +698,7 @@
 
         &__chart-circle {
             top: -5%;
-            right: 7%;
+            left: 70%;
 
             img {
                 height: 84px;
@@ -774,7 +774,6 @@
     }
 }
 
-//доделать чтобы этот код заработал
 @media (max-width: 360px) {
     .booking-hero {
         .booking-hero__all {
@@ -782,7 +781,7 @@
         }
 
         .booking-hero__chart-circle {
-            left: 60%;
+            left: 70%;
         }
 
         .booking-hero__chart-lines {

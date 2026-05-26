@@ -464,8 +464,8 @@
   width: clamp(220px, 25vw, 360px);
 }
 .booking-hero--compact .booking-hero__chart-circle {
-  top: 4%;
-  right: 13%;
+  top: 1%;
+  right: 8%;
   height: 125px;
 }
 .booking-hero--compact .booking-hero__chart-lines {
@@ -547,8 +547,8 @@
     width: clamp(220px, 25vw, 360px);
   }
   .booking-hero .booking-hero__chart-circle {
-    top: 4%;
-    right: 13%;
+    top: 1%;
+    right: 8%;
     height: 125px;
   }
   .booking-hero .booking-hero__chart-lines {
@@ -653,7 +653,7 @@
   }
   .booking-hero__chart-circle {
     top: -5%;
-    right: 10%;
+    left: 70%;
   }
   .booking-hero__chart-circle img {
     height: 84px;
@@ -718,7 +718,7 @@
   }
   .booking-hero__chart-circle {
     top: -5%;
-    right: 7%;
+    left: 70%;
   }
   .booking-hero__chart-circle img {
     height: 84px;
@@ -783,7 +783,7 @@
     right: 15%;
   }
   .booking-hero .booking-hero__chart-circle {
-    left: 60%;
+    left: 70%;
   }
   .booking-hero .booking-hero__chart-lines {
     left: 30%;
