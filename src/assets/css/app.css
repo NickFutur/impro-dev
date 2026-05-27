@@ -7090,7 +7090,7 @@ html {
   }
   .booking-hero__chart-circle {
     top: -5%;
-    left: 60%;
+    left: 70%;
   }
   .booking-hero__chart-circle img {
     height: 84px;
@@ -7155,7 +7155,7 @@ html {
     right: 15%;
   }
   .booking-hero .booking-hero__chart-circle {
-    left: 60%;
+    left: 70%;
   }
   .booking-hero .booking-hero__chart-lines {
     left: 30%;
@@ -8055,4 +8055,24 @@ html {
     left: 70%;
     top: 10%;
   }
+}
+.hero--error[data-bx-block=error] .hero__c--subpage {
+  display: flex;
+  flex-direction: column;
+}
+.hero--error[data-bx-block=error] .hero__c--subpage .hero__main--subpage {
+  padding-top: 250px;
+}
+.hero--error[data-bx-block=error] .hero__c--subpage .hero__txt {
+  width: 35%;
+  margin-left: 0;
+  align-self: flex-start;
+}
+.hero--error[data-bx-block=error] .hero__c--subpage .hero__txt__btns {
+  display: flex;
+  flex-direction: row;
+}
+.hero--error[data-bx-block=error] .hero__zag {
+  top: -10rem;
+  mix-blend-mode: unset;
 }/*# sourceMappingURL=app.css.map */

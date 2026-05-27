@@ -1,0 +1,50 @@
+$error-hero: ".hero--error[data-bx-block='error']";
+
+#{$error-hero} {
+    .hero__c--subpage {
+        display: flex;
+        flex-direction: column;
+
+        .hero__main--subpage {
+            padding-top: 250px;
+        }
+
+        .hero__txt {
+            margin-top: 20px;
+            position: unset;
+            width: 35%;
+            margin-left: 0;
+            align-self: flex-start;
+        }
+
+        .hero__btns {
+            margin-top: clamp(20px, 5vw, 70px);
+            display: flex;
+            flex-direction: row;
+            gap: 8px;
+
+            .btn-call {
+                border: 0.80px solid rgba(255, 255, 255, 0.1);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 400;
+                font-size: 0.8125rem;
+                color: #fff;
+                width: max-content;
+                border-radius: 0.75rem;
+                padding: 1rem 1.125rem;
+                backdrop-filter: blur(18px);
+                background: rgba(28, 28, 28, 0.5);
+
+            }
+        }
+    }
+    .hero__zag {
+        top: -10rem;
+        right: -25rem;
+        width: 90rem;
+        mix-blend-mode: unset;
+    }
+    padding-bottom: clamp(30px, 5vw, 60px);
+}
