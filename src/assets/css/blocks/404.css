@@ -1,0 +1,90 @@
+.hero--error[data-bx-block=error] .hero__c--subpage {
+  display: flex;
+  flex-direction: column;
+}
+.hero--error[data-bx-block=error] .hero__c--subpage .hero__main--subpage {
+  padding-top: 250px;
+}
+.hero--error[data-bx-block=error] .hero__c--subpage .hero__txt {
+  margin-top: 20px;
+  position: unset;
+  width: 35%;
+  margin-left: 0;
+  align-self: flex-start;
+}
+.hero--error[data-bx-block=error] .hero__c--subpage .hero__btns {
+  margin-top: clamp(20px, 5vw, 70px);
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+.hero--error[data-bx-block=error] .hero__c--subpage .hero__btns .btn-call {
+  border: 0.8px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 0.8125rem;
+  color: #fff;
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 0.75rem;
+  padding: 1rem 1.125rem;
+  backdrop-filter: blur(18px);
+  background: rgba(28, 28, 28, 0.5);
+}
+.hero--error[data-bx-block=error] .hero__zag {
+  top: -10rem;
+  right: -25rem;
+  width: 90rem;
+  mix-blend-mode: unset;
+}
+.hero--error[data-bx-block=error] {
+  padding-bottom: clamp(10px, 5vw, 60px);
+}
+
+@media (max-width: 870px) and (min-width: 551px) {
+  .hero--error[data-bx-block=error] .hero__c--subpage .hero__main--subpage {
+    padding-top: 200px;
+  }
+  .hero--error[data-bx-block=error] .hero__c--subpage .hero__txt {
+    width: 50%;
+  }
+  .hero--error[data-bx-block=error] .hero__zag {
+    top: -5rem;
+    right: -10rem;
+    width: 50rem;
+  }
+}
+@media (max-width: 550px) {
+  .hero--error[data-bx-block=error] .hero__c--subpage {
+    padding-top: 10rem;
+  }
+  .hero--error[data-bx-block=error] .hero__c--subpage .hero__txt {
+    width: 90%;
+    margin-top: 20px;
+    gap: 22px;
+    font-size: 13px;
+    line-height: 1.35;
+    letter-spacing: -0.026px;
+  }
+  .hero--error[data-bx-block=error] .hero__c--subpage .hero__txt p {
+    max-width: 100%;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  .hero--error[data-bx-block=error] .hero__c--subpage .hero__btns {
+    gap: 5px;
+  }
+  .hero--error[data-bx-block=error] .hero__c--subpage .hero__btns .btn-call {
+    max-width: 186px;
+    width: 100%;
+    justify-content: center;
+    font-size: 0.6875rem;
+    padding: 0.75rem 0.875rem;
+  }
+  .hero--error[data-bx-block=error] .hero__zag {
+    top: -5rem;
+    right: -10rem;
+    width: 40rem;
+  }
+}/*# sourceMappingURL=404.css.map */
