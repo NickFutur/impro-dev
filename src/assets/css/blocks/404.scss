@@ -24,7 +24,7 @@ $error-hero: ".hero--error[data-bx-block='error']";
             gap: 8px;
 
             .btn-call {
-                border: 0.80px solid rgba(255, 255, 255, 0.1);
+                border: 0.8px solid rgba(255, 255, 255, 0.1);
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -36,15 +36,90 @@ $error-hero: ".hero--error[data-bx-block='error']";
                 padding: 1rem 1.125rem;
                 backdrop-filter: blur(18px);
                 background: rgba(28, 28, 28, 0.5);
-
             }
         }
     }
+
     .hero__zag {
         top: -10rem;
         right: -25rem;
         width: 90rem;
         mix-blend-mode: unset;
     }
-    padding-bottom: clamp(30px, 5vw, 60px);
+
+    padding-bottom: clamp(10px, 5vw, 60px);
+}
+
+@media (max-width: 870px) and (min-width: 551px) {
+    #{$error-hero} {
+        .hero__c--subpage {
+            .hero__main--subpage {
+                padding-top: 200px;
+            }
+
+            .hero__txt {
+                width: 50%;
+            }
+        }
+
+        .hero__zag {
+            top: -5rem;
+            right: -10rem;
+            width: 50rem;
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    #{$error-hero} {
+        .hero__c--subpage {
+            padding-top: 10rem;
+
+            .hero__txt {
+                width: 90%;
+                margin-top: 20px;
+                gap: 22px;
+                font-size: 13px;
+                line-height: 1.35;
+                letter-spacing: -0.026px;
+
+                p {
+                    max-width: 100%;
+                    color: rgba(255, 255, 255, 0.8);
+                }
+            }
+
+            .hero__btns {
+                gap: 5px;
+
+                .btn-call {
+                    max-width: 186px;
+                    width: 100%;
+                    justify-content: center;
+                    font-size: 0.6875rem;
+                    padding: 0.75rem 0.875rem;
+                    white-space: nowrap;
+                }
+            }
+        }
+
+        .hero__zag {
+            top: -5rem;
+            right: -10rem;
+            width: 40rem;
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    #{$error-hero} {
+        .hero__c--subpage {
+            .hero__btns {
+                .btn-call {
+                    font-size: 0.625rem;
+                    padding: 0.75rem 0.625rem;
+                }
+            }
+        }
+    }
 }
