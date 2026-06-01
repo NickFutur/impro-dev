@@ -50,7 +50,7 @@ $('.header-menu-head').click(function () {
     $(this).next().slideToggle();
 });
 
-$('.footer-form-input[name="phone"]').mask('+7 (999) 999-99-99');
+$('.footer-form-input[name="phone"], .review-page-form__input[name="phone"]').mask('+7 (999) 999-99-99');
 
 $('.footer-form-choose-label').click(function () {
     $('.footer-form-choose-label').removeClass('active');
