@@ -81,17 +81,17 @@ $review-border-color: rgba(255, 255, 255, 0.4);
 
     &__title {
         font-weight: 400;
-        font-size: 56rem * 0.0625;
+        font-size: 50rem * 0.0625;
         line-height: 95%;
         letter-spacing: -0.02em;
         max-width: 430rem * 0.0625;
 
-        @media (max-width: 1050px) {
-            font-size: 46rem * 0.0625;
+        @media (max-width: 870px) {
+            font-size: 42rem * 0.0625;
         }
 
         @media (max-width: 550px) {
-            font-size: 42rem * 0.0625;
+            font-size: 26rem * 0.0625;
             max-width: 100%;
         }
     }
