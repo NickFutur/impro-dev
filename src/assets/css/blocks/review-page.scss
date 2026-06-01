@@ -2,6 +2,7 @@ $review-border-color: rgba(255, 255, 255, 0.4);
 
 .review-page {
     padding-top: 40rem * 0.0625;
+    overflow-x: clip;
 
     @media (max-width: 870px) {
         padding-top: 24rem * 0.0625;
@@ -109,6 +110,7 @@ $review-border-color: rgba(255, 255, 255, 0.4);
 }
 
 .review-page-form {
+    margin-top: clamp(20px, 2vw, 40px);
     backdrop-filter: blur(59.95004653930664px);
     background: rgba(255, 255, 255, 0.03);
 
@@ -174,7 +176,7 @@ $review-border-color: rgba(255, 255, 255, 0.4);
 
     &__textarea {
         resize: none;
-        min-height: 124rem * 0.0625;
+        min-height: 165px;
     }
 
     &__upload {
@@ -238,12 +240,17 @@ $review-border-color: rgba(255, 255, 255, 0.4);
         }
 
         .footer-form-policy-span {
+            display: inline-block;
+            padding-top: 3rem * 0.0625;
+            padding-bottom: 3rem * 0.0625;
+            line-height: 140%;
+
             a {
                 text-decoration: underline;
             }
         }
 
-        input[name='policy']:checked + .footer-form-policy-label::before {
+        input[name='policy']:checked+.footer-form-policy-label::before {
             background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.3333 3.33333L5.66667 11L2.66667 8' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
             background-size: 16rem * 0.0625;
         }
@@ -251,6 +258,8 @@ $review-border-color: rgba(255, 255, 255, 0.4);
         @media (max-width: 550px) {
             padding-left: 16rem * 0.0625;
             padding-right: 16rem * 0.0625;
+            padding-top: 16rem * 0.0625;
+            padding-bottom: 16rem * 0.0625;
         }
     }
 }

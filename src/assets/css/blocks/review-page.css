@@ -1,5 +1,6 @@
 .review-page {
   padding-top: 2.5rem;
+  overflow-x: clip;
 }
 @media (max-width: 870px) {
   .review-page {
@@ -109,6 +110,7 @@
 }
 
 .review-page-form {
+  margin-top: clamp(20px, 2vw, 40px);
   backdrop-filter: blur(59.9500465393px);
   background: rgba(255, 255, 255, 0.03);
 }
@@ -165,7 +167,7 @@
 }
 .review-page-form__textarea {
   resize: none;
-  min-height: 7.75rem;
+  min-height: 165px;
 }
 .review-page-form__upload {
   display: inline-flex;
@@ -221,6 +223,12 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+.review-page-form__policy .footer-form-policy-span {
+  display: inline-block;
+  padding-top: 0.1875rem;
+  padding-bottom: 0.1875rem;
+  line-height: 140%;
+}
 .review-page-form__policy .footer-form-policy-span a {
   text-decoration: underline;
 }
@@ -232,5 +240,7 @@
   .review-page-form__policy {
     padding-left: 1rem;
     padding-right: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 }/*# sourceMappingURL=review-page.css.map */
