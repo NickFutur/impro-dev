@@ -27,7 +27,7 @@ $review-border-color: rgba(255, 255, 255, 0.4);
         border-top: 1px solid $review-border-color;
         border-left: none;
         border-right: none;
-        border-bottom: none;
+        border-bottom: 1px solid $review-border-color;
 
         @media (max-width: 870px) {
             flex-direction: column;
@@ -68,10 +68,10 @@ $review-border-color: rgba(255, 255, 255, 0.4);
     }
 
     &__breadcrumbs {
-        margin: 0 20rem * 0.0625 16rem * 0.0625;
+        margin: 70rem * 0.0625 20rem * 0.0625 40rem * 0.0625;
 
         @media (max-width: 550px) {
-            margin: 16rem * 0.0625;
+            margin: 70rem * 0.0625 16rem * 0.0625 20rem * 0.0625;
         }
     }
 
