@@ -8235,19 +8235,19 @@ html {
 }
 .review-page__title {
   font-weight: 400;
-  font-size: 3.5rem;
+  font-size: 3.125rem;
   line-height: 95%;
   letter-spacing: -0.02em;
   max-width: 26.875rem;
 }
-@media (max-width: 1050px) {
+@media (max-width: 870px) {
   .review-page__title {
-    font-size: 2.875rem;
+    font-size: 2.625rem;
   }
 }
 @media (max-width: 550px) {
   .review-page__title {
-    font-size: 2.625rem;
+    font-size: 1.625rem;
     max-width: 100%;
   }
 }

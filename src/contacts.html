@@ -1,0 +1,116 @@
+{% set title = "IMPro - Отзывы" %} {% set bodyClass = "" %} {% set show_info = true %} {% extends
+"_html/_base/_layouts/_default.html" %} {% block content %}
+
+<section class="contacts">
+    <div class="container">
+        <div class="nav">
+            <nav aria-label="breadcrumbs">
+                <ul class="breadcrumbs">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><span>Контакты</span></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="contacts__content">
+            <div class="hero__h1__wrap">
+                <h1 class="hero__h1 animate-custom-7 wow">
+                    Свяжитесь с нами
+                </h1>
+            </div>
+            <div class="contacts-info">
+                <div class="contacts-info__col contacts-info__col--manager">
+                    <h2 class="contacts-info__title">
+                        С радостью ответит<br>
+                        на ваши вопросы
+                    </h2>
+
+                    <div class="contacts-manager">
+                        <img src="assets/img/contacts/manager.jpg" alt="Анастасия" class="contacts-manager__photo">
+
+                        <div class="contacts-manager__body">
+                            <div class="contacts-manager__name">
+                                Анастасия
+                                <span class="contacts-manager__status"></span>
+                            </div>
+
+                            <div class="contacts-manager__position">
+                                Проектный менеджер
+                            </div>
+
+                            <a href="#" class="contacts-manager__button">
+                                Заказать звонок
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contacts-info__col contacts-info__col--communication">
+                    <h2 class="contacts-info__title">
+                        Для клиентов и партнеров
+                    </h2>
+
+                    <div class="contacts-social">
+                        <a href="#" class="contacts-social__link contacts-social__link--telegram"
+                            aria-label="Telegram"></a>
+                        <a href="#" class="contacts-social__link contacts-social__link--whatsapp"
+                            aria-label="WhatsApp"></a>
+                    </div>
+
+                    <div class="contacts-communication">
+                        <a href="mailto:marketing@impro.pro" class="contacts-communication__link">
+                            marketing@impro.pro
+                        </a>
+
+                        <a href="tel:+79933477618" class="contacts-communication__link">
+                            +7 993 347 76 18
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contacts-info__col contacts-info__col--details">
+                    <h2 class="contacts-info__title">
+                        Реквизиты
+                    </h2>
+
+                    <div class="contacts-details">
+                        <div class="contacts-details__main">
+                            <p class="contacts-details__company">
+                                ИП Литвинов Андрей<br>
+                                Александрович
+                            </p>
+
+                            <div class="contacts-details__item">
+                                <span class="contacts-details__label">ИНН</span>
+                                <span class="contacts-details__value">781443018337</span>
+                            </div>
+
+                            <div class="contacts-details__item">
+                                <span class="contacts-details__label">БИК</span>
+                                <span class="contacts-details__value">044525104</span>
+                            </div>
+                        </div>
+
+                        <div class="contacts-details__bank">
+                            <div class="contacts-details__item">
+                                <span class="contacts-details__label">Название банка</span>
+                                <span class="contacts-details__value">ООО «Банк Точка»</span>
+                            </div>
+
+                            <div class="contacts-details__item">
+                                <span class="contacts-details__label">Расчётный счёт</span>
+                                <span class="contacts-details__value">40802810703500030763</span>
+                            </div>
+
+                            <div class="contacts-details__item">
+                                <span class="contacts-details__label">Корсчёт</span>
+                                <span class="contacts-details__value">30101810745374525104</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %} {% block add_scripts %} {% endblock %}
