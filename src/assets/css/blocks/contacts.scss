@@ -11,9 +11,9 @@
 }
 
 .contacts-info {
-    display: grid;
-    grid-template-columns: minmax(190px, 0.85fr) minmax(240px, 1fr) minmax(380px, 1.6fr);
+    display: flex;
     align-items: stretch;
+    justify-content: space-between;
     gap: clamp(32px, 4vw, 90px);
 
     margin-top: clamp(50px, 6vw, 100px);
@@ -26,14 +26,20 @@
     }
 
     &__col--manager {
+        flex: 0 1 clamp(190px, 20vw, 360px);
+
         min-width: 0;
     }
 
     &__col--communication {
+        flex: 1 1 240px;
+
         min-width: 0;
     }
 
     &__col--details {
+        flex: 1.6 1 380px;
+
         min-width: 0;
     }
 
@@ -165,15 +171,21 @@
 
 @media (max-width: $tablet_res) {
     .contacts-info {
-        grid-template-columns: minmax(220px, 1fr) minmax(280px, 1fr);
+        flex-wrap: wrap;
         gap: clamp(52px, 7vw, 82px) clamp(36px, 6vw, 70px);
 
+        &__col--manager {
+            flex: 1 1 calc(50% - 35px);
+        }
+
         &__col--communication {
+            flex: 1 1 calc(50% - 35px);
+
             min-width: 0;
         }
 
         &__col--details {
-            grid-column: 1 / -1;
+            flex: 1 1 100%;
         }
     }
 
@@ -209,10 +221,25 @@
 
         &__col--communication,
         &__col--details {
+            position: relative;
+
             padding-top: clamp(48px, 8vw, 64px);
             margin-top: clamp(48px, 8vw, 64px);
 
-            border-top: 1px solid rgba(255, 255, 255, 0.22);
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 50%;
+
+                width: 100vw;
+                height: 1px;
+
+                background-color: rgba(255, 255, 255, 0.22);
+
+                transform: translateX(-50%);
+
+                content: "";
+            }
         }
     }
 
