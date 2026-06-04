@@ -8,6 +8,35 @@
         display: flex;
         flex-direction: column;
     }
+
+    &__title {
+        max-width: 770px;
+        margin-top: 0;
+
+        font-size: 50px;
+        color: #fff;
+    }
+}
+
+.contacts-info__title,
+.contacts-manager__name,
+.contacts-details__company,
+.contacts-details__value {
+    font-family: var(--font-family);
+    font-weight: 450;
+    font-size: clamp(16px, 1.2vw, 18px);
+    line-height: 135%;
+    letter-spacing: -0.01em;
+    color: #fff;
+}
+
+.contacts-communication__link {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: clamp(26px, 2.3vw, 30px);
+    line-height: 140%;
+    letter-spacing: -0.01em;
+    color: #fff;
 }
 
 .contacts-info {
@@ -15,7 +44,7 @@
     align-items: stretch;
     justify-content: space-between;
     gap: clamp(32px, 4vw, 90px);
-
+    margin-bottom: 48px;
     margin-top: clamp(50px, 6vw, 100px);
 
     &__col {
@@ -44,7 +73,7 @@
     }
 
     &__title {
-        margin: 0;
+        margin-bottom: clamp(40px, 4vw, 47px);
     }
 }
 
@@ -53,11 +82,15 @@
     flex-direction: column;
     align-items: flex-start;
 
-    margin-top: clamp(40px, 5vw, 80px);
+    margin-top: auto;
 
     &__photo {
         display: block;
         flex-shrink: 0;
+        border: 0.70px solid rgba(255, 255, 255, 0.5);
+        border-radius: 1199px;
+        width: 130px;
+        height: 130px;
     }
 
     &__body {
@@ -80,6 +113,11 @@
 
     &__position {
         margin-top: 8px;
+
+        font-weight: 400;
+        font-size: clamp(13px, 1vw, 14px);
+        line-height: 110%;
+        color: rgba(255, 255, 255, 0.5);
     }
 
     &__button {
@@ -94,9 +132,9 @@
 .contacts-social {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 6px;
 
-    margin-top: clamp(78px, 9vw, 160px);
+    margin-top: auto;
 
     &__link {
         display: inline-flex;
@@ -111,7 +149,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: clamp(16px, 1.4vw, 24px);
+    gap: 11px;
 
     margin-top: clamp(38px, 4vw, 62px);
 
@@ -130,21 +168,19 @@
     align-items: flex-start;
     gap: clamp(32px, 3vw, 86px);
 
-    margin-top: clamp(114px, 11vw, 170px);
+    margin-top: auto;
 
     &__main {
         display: flex;
         flex-direction: column;
-        gap: clamp(28px, 3vw, 48px);
-
+        gap: 22px;
         min-width: 0;
     }
 
     &__bank {
         display: flex;
         flex-direction: column;
-        gap: clamp(28px, 3vw, 48px);
-
+        gap: 22px;
         min-width: 0;
     }
 
@@ -164,15 +200,29 @@
         display: block;
     }
 
+    &__label {
+        font-weight: 400;
+        font-size: clamp(13px, 1vw, 14px);
+        line-height: 110%;
+        color: rgba(255, 255, 255, 0.5);
+    }
+
     &__value {
         overflow-wrap: anywhere;
     }
 }
 
 @media (max-width: $tablet_res) {
+    .contacts {
+        &__title {
+            font-size: 42px;
+        }
+    }
+
     .contacts-info {
         flex-wrap: wrap;
         gap: clamp(52px, 7vw, 82px) clamp(36px, 6vw, 70px);
+        margin-bottom: 70px;
 
         &__col--manager {
             flex: 1 1 calc(50% - 35px);
@@ -206,7 +256,6 @@
         display: flex;
         flex-direction: column;
         gap: 0;
-
         margin-top: clamp(36px, 7vw, 60px);
 
         &__col {
@@ -230,14 +279,10 @@
                 position: absolute;
                 top: 0;
                 left: 50%;
-
                 width: 100vw;
                 height: 1px;
-
                 background-color: rgba(255, 255, 255, 0.22);
-
                 transform: translateX(-50%);
-
                 content: "";
             }
         }
@@ -265,10 +310,15 @@
         .nav {
             display: none;
         }
+
+        &__title {
+            font-size: 26px;
+        }
     }
 
     .contacts-info {
         margin-top: clamp(34px, 9vw, 50px);
+        margin-bottom: 84px;
 
         &__col--communication {
             display: flex;
@@ -315,6 +365,7 @@
 
 @media (max-width: $mobile_res) {
     .contacts-info {
+
         &__col--communication,
         &__col--details {
             padding-top: 48px;

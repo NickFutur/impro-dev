@@ -8409,11 +8409,32 @@ html {
   flex-direction: column;
 }
 
+.contacts-info__title,
+.contacts-manager__name,
+.contacts-details__company,
+.contacts-details__value {
+  font-family: var(--font-family);
+  font-weight: 450;
+  font-size: clamp(16px, 1.2vw, 18px);
+  line-height: 135%;
+  letter-spacing: -0.01em;
+  color: #fff;
+}
+
+.contacts-communication__link {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: clamp(26px, 2.3vw, 30px);
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  color: #fff;
+}
+
 .contacts-info {
   display: flex;
   align-items: stretch;
   justify-content: space-between;
-  gap: clamp(40px, 5vw, 90px);
+  gap: clamp(32px, 4vw, 90px);
   margin-top: clamp(50px, 6vw, 100px);
 }
 .contacts-info__col {
@@ -8422,14 +8443,15 @@ html {
   min-width: 0;
 }
 .contacts-info__col--manager {
-  flex: 0 0 clamp(260px, 20vw, 360px);
+  flex: 0 1 clamp(190px, 20vw, 360px);
+  min-width: 0;
 }
 .contacts-info__col--communication {
-  flex: 1 1 auto;
-  min-width: 280px;
+  flex: 1 1 240px;
+  min-width: 0;
 }
 .contacts-info__col--details {
-  flex: 0 1 clamp(520px, 39vw, 760px);
+  flex: 1.6 1 380px;
   min-width: 0;
 }
 .contacts-info__title {
@@ -8445,6 +8467,10 @@ html {
 .contacts-manager__photo {
   display: block;
   flex-shrink: 0;
+  border: 0.7px solid rgba(255, 255, 255, 0.5);
+  border-radius: 1199px;
+  width: 130px;
+  height: 130px;
 }
 .contacts-manager__body {
   display: flex;
@@ -8462,6 +8488,10 @@ html {
 }
 .contacts-manager__position {
   margin-top: 8px;
+  font-weight: 400;
+  font-size: clamp(13px, 1vw, 14px);
+  line-height: 110%;
+  color: rgba(255, 255, 255, 0.5);
 }
 .contacts-manager__button {
   display: inline-flex;
@@ -8474,7 +8504,7 @@ html {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-top: clamp(80px, 10vw, 170px);
+  margin-top: clamp(78px, 9vw, 160px);
 }
 .contacts-social__link {
   display: inline-flex;
@@ -8487,35 +8517,33 @@ html {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: clamp(20px, 2vw, 32px);
-  margin-top: clamp(40px, 5vw, 70px);
+  gap: clamp(16px, 1.4vw, 24px);
+  margin-top: clamp(38px, 4vw, 62px);
 }
 .contacts-communication__link {
   display: inline-flex;
   max-width: 100%;
   min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .contacts-details {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(160px, 0.85fr) minmax(0, 1fr);
   align-items: flex-start;
-  gap: clamp(50px, 5vw, 90px);
-  margin-top: clamp(120px, 12vw, 180px);
+  gap: clamp(32px, 3vw, 86px);
+  margin-top: clamp(114px, 11vw, 170px);
 }
 .contacts-details__main {
   display: flex;
   flex-direction: column;
   gap: clamp(28px, 3vw, 48px);
-  flex: 0 0 clamp(300px, 18vw, 360px);
-  flex-shrink: 0;
   min-width: 0;
 }
 .contacts-details__bank {
   display: flex;
   flex-direction: column;
   gap: clamp(28px, 3vw, 48px);
-  flex: 0 0 auto;
-  flex-shrink: 0;
   min-width: 0;
 }
 .contacts-details__company {
@@ -8530,32 +8558,44 @@ html {
 .contacts-details__label, .contacts-details__value {
   display: block;
 }
+.contacts-details__label {
+  font-weight: 400;
+  font-size: clamp(13px, 1vw, 14px);
+  line-height: 110%;
+  color: rgba(255, 255, 255, 0.5);
+}
+.contacts-details__value {
+  overflow-wrap: anywhere;
+}
 
 @media (max-width: 1050px) {
   .contacts-info {
     flex-wrap: wrap;
-    gap: clamp(60px, 8vw, 90px) clamp(40px, 6vw, 70px);
+    gap: clamp(52px, 7vw, 82px) clamp(36px, 6vw, 70px);
   }
   .contacts-info__col--manager {
-    flex: 0 0 calc(50% - 35px);
+    flex: 1 1 calc(50% - 35px);
   }
   .contacts-info__col--communication {
     flex: 1 1 calc(50% - 35px);
+    min-width: 0;
   }
   .contacts-info__col--details {
     flex: 1 1 100%;
   }
   .contacts-social {
-    margin-top: clamp(120px, 16vw, 180px);
+    margin-top: clamp(110px, 14vw, 170px);
   }
   .contacts-details {
-    margin-top: clamp(40px, 6vw, 70px);
+    grid-template-columns: minmax(220px, 1fr) minmax(280px, 1fr);
+    gap: clamp(40px, 8vw, 90px);
+    margin-top: clamp(40px, 6vw, 64px);
   }
 }
 @media (max-width: 768px) {
   .contacts-info {
+    display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
     gap: 0;
     margin-top: clamp(36px, 7vw, 60px);
   }
@@ -8563,12 +8603,22 @@ html {
     width: 100%;
   }
   .contacts-info__col--manager, .contacts-info__col--communication, .contacts-info__col--details {
-    flex: 1 1 auto;
+    flex: 0 1 auto;
   }
   .contacts-info__col--communication, .contacts-info__col--details {
+    position: relative;
     padding-top: clamp(48px, 8vw, 64px);
     margin-top: clamp(48px, 8vw, 64px);
-    border-top: 1px solid rgba(255, 255, 255, 0.22);
+  }
+  .contacts-info__col--communication::before, .contacts-info__col--details::before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100vw;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.22);
+    transform: translateX(-50%);
+    content: "";
   }
   .contacts-manager {
     margin-top: clamp(36px, 7vw, 56px);
@@ -8613,22 +8663,13 @@ html {
     margin-top: 36px;
   }
   .contacts-details {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: minmax(150px, 0.9fr) minmax(0, 1fr);
     align-items: flex-start;
     gap: clamp(24px, 7vw, 48px);
   }
-  .contacts-details__main {
-    flex: 0 0 clamp(190px, 45vw, 260px);
-    flex-shrink: 0;
-  }
-  .contacts-details__bank {
-    flex: 0 1 auto;
-    flex-shrink: 1;
-    min-width: 0;
-  }
   .contacts-details__value {
-    word-break: break-word;
+    word-break: normal;
   }
 }
 @media (max-width: 450px) {
@@ -8642,23 +8683,13 @@ html {
   .contacts-details {
     gap: 24px;
   }
-  .contacts-details__main {
-    flex: 0 0 190px;
-    flex-shrink: 0;
-  }
-  .contacts-details__bank {
-    flex: 1 1 auto;
-    flex-shrink: 1;
-    min-width: 0;
-  }
 }
 @media (max-width: 360px) {
   .contacts-details {
-    flex-direction: column;
-    gap: 28px;
+    grid-template-columns: minmax(120px, 0.85fr) minmax(0, 1fr);
+    gap: 20px;
   }
   .contacts-details__main, .contacts-details__bank {
-    flex: 1 1 auto;
-    width: 100%;
+    min-width: 0;
   }
 }/*# sourceMappingURL=app.css.map */
