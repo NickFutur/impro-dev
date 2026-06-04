@@ -1,0 +1,4 @@
+.contacts .nav {
+  margin-top: clamp(50px, 5vw, 90px);
+  margin-bottom: clamp(20px, 2vw, 40px);
+}/*# sourceMappingURL=contacts.css.map */

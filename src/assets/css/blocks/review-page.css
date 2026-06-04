@@ -78,6 +78,24 @@
 .review-page__head {
   padding: 0 1.25rem 1.5rem;
 }
+.review-page__title {
+  font-weight: 400;
+  font-size: 3.125rem;
+  line-height: 95%;
+  letter-spacing: -0.02em;
+  max-width: 26.875rem;
+}
+@media (max-width: 870px) {
+  .review-page__title {
+    font-size: 2.625rem;
+  }
+}
+@media (max-width: 550px) {
+  .review-page__title {
+    font-size: 1.625rem;
+    max-width: 100%;
+  }
+}
 .review-page__subtitle {
   margin-top: 1rem;
   max-width: 21.25rem;
