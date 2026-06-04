@@ -400,6 +400,15 @@ html {
   color: rgba(255, 255, 255, 0.5);
 }
 
+.contacts-text-info {
+  font-family: var(--font-family);
+  font-weight: 450;
+  font-size: clamp(13px, 1.2vw, 18px);
+  line-height: 135%;
+  letter-spacing: -0.01em;
+  color: #fff;
+}
+
 .tags {
   display: flex;
   flex-wrap: wrap;
@@ -8401,12 +8410,29 @@ html {
 }
 
 .contacts .nav {
-  margin-top: clamp(50px, 5vw, 90px);
-  margin-bottom: clamp(20px, 2vw, 40px);
+  padding-top: 8.5rem;
+  padding-bottom: clamp(45px, 5vw, 105px);
+  justify-content: flex-start;
+}
+@media (max-width: 54.375rem) {
+  .contacts .nav {
+    padding-top: 9.5rem;
+  }
+}
+@media (max-width: 34.375rem) {
+  .contacts .nav {
+    padding-top: 7.5rem;
+  }
 }
 .contacts__content {
   display: flex;
   flex-direction: column;
+}
+.contacts__title {
+  max-width: 770px;
+  margin-top: 0;
+  font-size: 50px;
+  color: #fff;
 }
 
 .contacts-info__title,
@@ -8430,11 +8456,36 @@ html {
   color: #fff;
 }
 
+.contacts-text-info {
+  display: block;
+  max-width: 100%;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.contacts-features .features__item {
+  min-width: 0;
+  min-height: 187px;
+}
+.contacts-features .features__item:nth-child(4n) {
+  border-right: 0;
+}
+.contacts-features .features__item-icon::before {
+  content: none;
+}
+.contacts-features .features__item-icon .icon-inner {
+  background-color: transparent;
+}
+.contacts-features .features__item-icon:hover .icon-inner {
+  background-color: transparent;
+}
+
 .contacts-info {
   display: flex;
   align-items: stretch;
   justify-content: space-between;
   gap: clamp(32px, 4vw, 90px);
+  margin-bottom: 48px;
   margin-top: clamp(50px, 6vw, 100px);
 }
 .contacts-info__col {
@@ -8455,14 +8506,14 @@ html {
   min-width: 0;
 }
 .contacts-info__title {
-  margin: 0;
+  margin-bottom: clamp(40px, 4vw, 47px);
 }
 
 .contacts-manager {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: clamp(40px, 5vw, 80px);
+  margin-top: auto;
 }
 .contacts-manager__photo {
   display: block;
@@ -8485,6 +8536,10 @@ html {
 }
 .contacts-manager__status {
   flex-shrink: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #6867ff;
 }
 .contacts-manager__position {
   margin-top: 8px;
@@ -8498,13 +8553,24 @@ html {
   align-items: center;
   justify-content: center;
   margin-top: clamp(24px, 2.5vw, 34px);
+  color: #fff;
+  background-size: 200% 100%;
+  background-position: 0 0;
+  transition: background-position 0.45s ease, box-shadow 0.45s ease;
+}
+.contacts-manager__button::before {
+  content: none;
+}
+.contacts-manager__button:hover, .contacts-manager__button:focus-visible {
+  color: #fff;
+  background-position: 100% 0;
 }
 
 .contacts-social {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-top: clamp(78px, 9vw, 160px);
+  gap: 6px;
+  margin-top: auto;
 }
 .contacts-social__link {
   display: inline-flex;
@@ -8517,7 +8583,7 @@ html {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: clamp(16px, 1.4vw, 24px);
+  gap: 11px;
   margin-top: clamp(38px, 4vw, 62px);
 }
 .contacts-communication__link {
@@ -8532,18 +8598,18 @@ html {
   grid-template-columns: minmax(160px, 0.85fr) minmax(0, 1fr);
   align-items: flex-start;
   gap: clamp(32px, 3vw, 86px);
-  margin-top: clamp(114px, 11vw, 170px);
+  margin-top: auto;
 }
 .contacts-details__main {
   display: flex;
   flex-direction: column;
-  gap: clamp(28px, 3vw, 48px);
+  gap: 22px;
   min-width: 0;
 }
 .contacts-details__bank {
   display: flex;
   flex-direction: column;
-  gap: clamp(28px, 3vw, 48px);
+  gap: 22px;
   min-width: 0;
 }
 .contacts-details__company {
@@ -8569,9 +8635,13 @@ html {
 }
 
 @media (max-width: 1050px) {
+  .contacts__title {
+    font-size: 42px;
+  }
   .contacts-info {
     flex-wrap: wrap;
     gap: clamp(52px, 7vw, 82px) clamp(36px, 6vw, 70px);
+    margin-bottom: 70px;
   }
   .contacts-info__col--manager {
     flex: 1 1 calc(50% - 35px);
@@ -8587,12 +8657,55 @@ html {
     margin-top: clamp(110px, 14vw, 170px);
   }
   .contacts-details {
-    grid-template-columns: minmax(220px, 1fr) minmax(280px, 1fr);
-    gap: clamp(40px, 8vw, 90px);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(28px, 6vw, 90px);
     margin-top: clamp(40px, 6vw, 64px);
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 870px) {
+  .contacts-features .features__list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .contacts-features .features__item {
+    width: auto;
+    margin: 0;
+    border-right: 0;
+    padding-right: 80px;
+  }
+  .contacts-features .features__item:nth-child(odd) {
+    border-left: 0;
+  }
+  .contacts-features .features__item:nth-child(even) {
+    border-left: 1px solid rgb(76, 76, 76);
+  }
+  .contacts-features .features__item-icon {
+    position: absolute;
+    top: 30px;
+    right: 1.5625rem;
+  }
+}
+@media (max-width: 550px) {
+  .contacts-features .features__list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .contacts-features .features__item {
+    width: auto;
+    margin: 0;
+    border: 0;
+    border-top: 1px solid rgb(76, 76, 76);
+    padding-right: 16px;
+    aspect-ratio: auto;
+    justify-content: flex-end;
+  }
+  .contacts-features .features__item:nth-child(even) {
+    border-left: 1px solid rgb(76, 76, 76);
+  }
+  .contacts-features .features__item-icon {
+    top: 16px;
+    right: 16px;
+  }
   .contacts-info {
     display: flex;
     flex-direction: column;
@@ -8633,12 +8746,16 @@ html {
     margin-top: clamp(32px, 6vw, 48px);
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 550px) {
   .contacts .nav {
     display: none;
   }
+  .contacts__title {
+    font-size: 26px;
+  }
   .contacts-info {
     margin-top: clamp(34px, 9vw, 50px);
+    margin-bottom: 84px;
   }
   .contacts-info__col--communication {
     display: flex;
@@ -8685,6 +8802,16 @@ html {
   }
 }
 @media (max-width: 360px) {
+  .contacts-features .features__item-icon {
+    width: 40px;
+    height: 40px;
+  }
+  .contacts-features .features__item-icon img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
   .contacts-details {
     grid-template-columns: minmax(120px, 0.85fr) minmax(0, 1fr);
     gap: 20px;
