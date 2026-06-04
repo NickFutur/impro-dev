@@ -11,34 +11,52 @@
             <div class="review-page__form-col">
                 <div class="review-page__head">
                     <h1 class="review-page__title">Оставьте отзыв о нашей работе</h1>
-                    <p class="review-page__subtitle">Ваши комментарии помогут сделать сотрудничество с нами ещё приятнее
+                    <p class="review-page__subtitle">
+                        Ваши комментарии помогут сделать сотрудничество с нами ещё приятнее
                     </p>
                 </div>
 
                 <form action="" class="review-page-form" id="review-form">
                     <div class="review-page-form__line">
-                        <input type="text" name="name" class="review-page-form__input" placeholder="Ваше имя">
+                        <input type="text" name="name" class="review-page-form__input" placeholder="Ваше имя" />
                     </div>
                     <div class="review-page-form__line review-page-form__line--half">
-                        <input type="text" name="company" class="review-page-form__input"
-                            placeholder="Название компании">
-                        <input type="text" name="position" class="review-page-form__input" placeholder="Ваша должность">
+                        <input
+                            type="text"
+                            name="company"
+                            class="review-page-form__input"
+                            placeholder="Название компании"
+                        />
+                        <input
+                            type="text"
+                            name="position"
+                            class="review-page-form__input"
+                            placeholder="Ваша должность"
+                        />
                     </div>
                     <div class="review-page-form__line">
-                        <input type="tel" name="phone" class="review-page-form__input"
-                            placeholder="+ 7 (999) 999-99-99">
+                        <input
+                            type="tel"
+                            name="phone"
+                            class="review-page-form__input"
+                            placeholder="+ 7 (999) 999-99-99"
+                        />
                     </div>
                     <div class="review-page-form__line">
                         <label class="review-page-form__upload">
-                            <input type="file" class="visually-hidden" name="photo">
-                            <span class="review-page-form__upload-icon" aria-hidden="true"><img
-                                    src="assets/img/domload.svg" alt="Иконка загрузки"></span>
+                            <input type="file" class="visually-hidden" name="photo" />
+                            <span class="review-page-form__upload-icon" aria-hidden="true"
+                                ><img src="assets/img/domload.svg" alt="Иконка загрузки"
+                            /></span>
                             <span>Загрузите ваше фото</span>
                         </label>
                     </div>
                     <div class="review-page-form__line review-page-form__line--textarea">
-                        <textarea name="message" class="review-page-form__textarea"
-                            placeholder="Расскажите о своих впечатлениях о работе с нами"></textarea>
+                        <textarea
+                            name="message"
+                            class="review-page-form__textarea"
+                            placeholder="Расскажите о своих впечатлениях о работе с нами"
+                        ></textarea>
                     </div>
 
                     <button type="submit" class="review-page-form__submit btn">
@@ -46,8 +64,8 @@
                     </button>
 
                     <div class="review-page-form__policy">
-                        <input type="checkbox" checked name="policy" id="review-policy" class="visually-hidden">
-                       <label for="review-policy" class="footer-form-policy-label">
+                        <input type="checkbox" checked name="policy" id="review-policy" class="visually-hidden" />
+                        <label for="review-policy" class="footer-form-policy-label">
                             <span class="footer-form-policy-span">
                                 Я ознакомлен и согласен с <a href="">политикой обработки персональных данных</a>
                             </span>
@@ -57,7 +75,7 @@
             </div>
 
             <div class="review-page__image-col">
-                <img src="assets/img/review.png" alt="Изображение для формы отзыва" class="review-page__image">
+                <img src="assets/img/review.png" alt="Изображение для формы отзыва" class="review-page__image" />
             </div>
         </div>
     </div>
@@ -272,7 +290,4 @@
         </div>
     </div>
 </section>
-{% endblock %}
-
-{% block add_scripts %}
-{% endblock %}
+{% endblock %} {% block add_scripts %} {% endblock %}

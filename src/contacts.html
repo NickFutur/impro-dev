@@ -1,0 +1,143 @@
+{% set title = "IMPro - Отзывы" %} {% set bodyClass = "" %} {% set show_info = true %} {% extends
+"_html/_base/_layouts/_default.html" %} {% block content %}
+
+<section class="contacts">
+    <div class="container">
+        <div class="nav">
+            <nav aria-label="breadcrumbs">
+                <ul class="breadcrumbs">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><span>Контакты</span></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="contacts__content">
+            <div class="hero__h1__wrap">
+                <h1 class="contacts__title animate-custom-7 wow">Свяжитесь с нами</h1>
+            </div>
+            <div class="contacts-info">
+                <div class="contacts-info__col contacts-info__col--manager">
+                    <h2 class="contacts-info__title">
+                        С радостью ответит<br />
+                        на ваши вопросы
+                    </h2>
+
+                    <div class="contacts-manager">
+                        <img src="assets/img/team/2.png" alt="Анастасия" class="contacts-manager__photo" />
+
+                        <div class="contacts-manager__body">
+                            <div class="contacts-manager__name">
+                                Анастасия
+                                <span class="contacts-manager__status"></span>
+                            </div>
+
+                            <div class="contacts-manager__position">Проектный менеджер</div>
+
+                            <a href="#" class="contacts-manager__button btn"> Заказать звонок </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contacts-info__col contacts-info__col--communication">
+                    <h2 class="contacts-info__title">Для клиентов и партнеров</h2>
+
+                    <div class="contacts-social">
+                        <!--добавить изображения соц сетей -->
+                        <a href="#" class="contacts-social__link contacts-social__link--telegram" aria-label="Telegram"
+                            ><img src="assets/img/icon/social/tgWithFon.svg" alt="Telegram"
+                        /></a>
+                        <a href="#" class="contacts-social__link contacts-social__link--whatsapp" aria-label="WhatsApp"
+                            ><img src="assets/img/icon/social/waWithFon.svg" alt="WhatsApp"
+                        /></a>
+                    </div>
+
+                    <div class="contacts-communication">
+                        <a href="mailto:marketing@impro.pro" class="contacts-communication__link">
+                            marketing@impro.pro
+                        </a>
+
+                        <a href="tel:+79933477618" class="contacts-communication__link"> +7 993 347 76 18 </a>
+                    </div>
+                </div>
+
+                <div class="contacts-info__col contacts-info__col--details">
+                    <h2 class="contacts-info__title">Реквизиты</h2>
+
+                    <div class="contacts-details">
+                        <div class="contacts-details__main">
+                            <p class="contacts-text-info">
+                                ИП Литвинов Андрей<br />
+                                Александрович
+                            </p>
+
+                            <div class="contacts-details__item">
+                                <span class="contacts-details__label">ИНН</span>
+                                <span class="contacts-text-info">781443018337</span>
+                            </div>
+
+                            <div class="contacts-details__item">
+                                <span class="contacts-details__label">БИК</span>
+                                <span class="contacts-text-info">044525104</span>
+                            </div>
+                        </div>
+
+                        <div class="contacts-details__bank">
+                            <div class="contacts-details__item">
+                                <span class="contacts-details__label">Название банка</span>
+                                <span class="contacts-text-info">ООО «Банк Точка»</span>
+                            </div>
+
+                            <div class="contacts-details__item">
+                                <span class="contacts-details__label">Расчётный счёт</span>
+                                <span class="contacts-text-info">40802810703500030763</span>
+                            </div>
+
+                            <div class="contacts-details__item">
+                                <span class="contacts-details__label">Корсчёт</span>
+                                <span class="contacts-text-info">30101810745374525104</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="features contacts-features">
+    <div class="features__list">
+        <a href="#" class="features__item">
+            <div class="features__item-icon icon">
+                <div class="icon-inner"><img src="assets/img/contacts/be.svg" alt="" /></div>
+            </div>
+            <div class="features__item-name">
+              Behance
+            </div>
+        </a>
+        <a href="#" class="features__item">
+            <div class="features__item-icon icon">
+                <div class="icon-inner"><img src="assets/img/contacts/dropfile.svg" alt="" /></div>
+            </div>
+            <div class="features__item-name">
+               Dprofile
+            </div>
+        </a>
+        <a href="#" class="features__item">
+            <div class="features__item-icon icon">
+                <div class="icon-inner"><img src="assets/img/contacts/youtube.svg" alt="" /></div>
+            </div>
+            <div class="features__item-name">
+               YouTube
+            </div>
+        </a>
+        <a href="#" class="features__item">
+            <div class="features__item-icon icon">
+                <div class="icon-inner"><img src="assets/img/contacts/Tg.svg" alt="" /></div>
+            </div>
+            <div class="features__item-name">
+              Телеграм-канал
+            </div>
+        </a>
+    </div>
+</section>
+
+{% endblock %} {% block add_scripts %} {% endblock %}
