@@ -1,15 +1,17 @@
 .contacts {
     .nav {
-            padding-top: 8.5rem;
-            padding-bottom: clamp(45px, 5vw, 105px);
-            justify-content: flex-start;
-            @media (max-width: 54.375rem) {
-                padding-top: 9.5rem;
-            }
-            @media (max-width: 34.375rem) {
-                padding-top: 7.5rem;
-            }
+        padding-top: 8.5rem;
+        padding-bottom: clamp(45px, 5vw, 105px);
+        justify-content: flex-start;
+
+        @media (max-width: 54.375rem) {
+            padding-top: 9.5rem;
         }
+
+        @media (max-width: 34.375rem) {
+            padding-top: 7.5rem;
+        }
+    }
 
     &__content {
         display: flex;
@@ -20,6 +22,7 @@
         max-width: 770px;
         margin-top: 0;
         font-size: 50px;
+        font-weight: 400;
         color: #fff;
     }
 }
@@ -29,7 +32,7 @@
 .contacts-details__company,
 .contacts-details__value {
     font-family: var(--font-family);
-    font-weight: 450;
+    font-weight: 400;
     font-size: clamp(16px, 1.2vw, 18px);
     line-height: 135%;
     letter-spacing: -0.01em;
@@ -49,6 +52,7 @@
     display: block;
     max-width: 100%;
     min-width: 0;
+    font-weight:400;
     overflow-wrap: anywhere;
 }
 
@@ -471,6 +475,7 @@
 
 @media (max-width: $mobile_res) {
     .contacts-info {
+
         &__col--communication,
         &__col--details {
             padding-top: 48px;
