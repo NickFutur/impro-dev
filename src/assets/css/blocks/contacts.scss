@@ -52,7 +52,7 @@
     display: block;
     max-width: 100%;
     min-width: 0;
-    font-weight:400;
+    font-weight: 400;
     overflow-wrap: anywhere;
 }
 
@@ -475,7 +475,6 @@
 
 @media (max-width: $mobile_res) {
     .contacts-info {
-
         &__col--communication,
         &__col--details {
             padding-top: 48px;
