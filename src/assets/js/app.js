@@ -1,3 +1,9 @@
+const currentYearElements = document.querySelectorAll('[data-current-year]');
+
+currentYearElements.forEach((element) => {
+    element.textContent = new Date().getFullYear();
+});
+
 if ($('#lottie-scroll-1').length > 0) {
     LottieInteractivity.create({
         mode: 'scroll',
