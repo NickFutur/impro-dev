@@ -4,7 +4,7 @@
     "description": "Разработка и продвижение сайтов",
     "main": "index.js",
     "scripts": {
-        "build": "set NODE_OPTIONS=--openssl-legacy-provider && gulp",
+        "build": "gulp build --prod",
         "deploy": "npm run build && gh-pages -d dist",
         "format": "prettier --write \"README.md\" \"package.json\" \".prettierrc.json\" \".stylelintrc.json\" \".htmlhintrc\" \"eslint.config.mjs\" \"src/*.html\" \"src/assets/css/**/*.scss\" \"src/assets/js/app.js\"",
         "lint:scss": "stylelint \"src/assets/css/**/*.scss\"",
