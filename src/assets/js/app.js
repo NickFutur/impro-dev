@@ -1,3 +1,9 @@
+const currentYearElements = document.querySelectorAll('[data-current-year]');
+
+currentYearElements.forEach((element) => {
+    element.textContent = new Date().getFullYear();
+});
+
 if ($('#lottie-scroll-1').length > 0) {
     LottieInteractivity.create({
         mode: 'scroll',
@@ -66,11 +72,72 @@ $('.footer-form-select-option').click(function () {
     $('.footer-form-select-head').html($(this).find('span').text());
 });
 
+$('.footer-form').on('submit', function (e) {
+    e.preventDefault();
+
+    const isValid = validateFooterForm(this);
+
+    if (isValid) {
+        const $form = $(this);
+
+        $form.find('.footer-form-form').hide();
+        $form.find('.footer-form-thx').show();
+    }
+});
+
+function validateFooterForm(form) {
+    let isValid = true;
+    const $form = $(form);
+
+    const $phone = $form.find('input[name=phone]');
+    if ($phone.length > 0 && $phone.val() == '') {
+        isValid = false;
+        $phone.addClass('error').attr('placeholder', 'Введите номер');
+    } else {
+        $phone.removeClass('error').attr('placeholder', '+7(999)999-99-99');
+    }
+
+    const $name = $form.find('input[name=name]');
+    if ($name.length > 0 && $name.val() == '') {
+        isValid = false;
+        $name.addClass('error').attr('placeholder', 'Введите имя');
+    } else {
+        $name.removeClass('error').attr('placeholder', 'Ваше имя');
+    }
+
+    const $email = $form.find('input[name=email]');
+    if ($email.length > 0 && $email.val() == '') {
+        isValid = false;
+        $email.addClass('error').attr('placeholder', 'Введите email');
+    } else {
+        $email.removeClass('error').attr('placeholder', 'Ваш email');
+    }
+
+    const $message = $form.find('textarea[name=message]');
+    if ($message.length > 0 && $message.val() == '') {
+        isValid = false;
+        $message.addClass('error').attr('placeholder', 'Введите сообщение');
+    } else {
+        $message.removeClass('error').attr('placeholder', 'Ваше сообщение');
+    }
+
+    const $contactFields = $form.find('input[name=contact]');
+    if ($contactFields.length > 0 && $form.find('input[name=contact]:checked').length == 0) {
+        isValid = false;
+        $form.find('.footer-form-select').addClass('error');
+    } else {
+        $form.find('.footer-form-select').removeClass('error');
+    }
+
+    return isValid;
+}
+
 $('.reviews__item').click(function () {
     $('.reviews-slider').slick('slickGoTo', $(this).data('slide') - 1);
 });
 
-wow = new WOW().init();
+const wow = new WOW();
+wow.init();
 
 if ($('#typed').length > 0) {
     var typed = new Typed('#typed', {
@@ -91,11 +158,6 @@ $(document).ready(function () {
     $('.services__item').each(function () {
         $(this).append('<div class="services-blur-effect"></div>');
     });
-
-    // Добавляем CSS для плавного перемещения
-    $('<style>')
-        .text('.services-blur-effect { transition: left 0.3s ease-out, top 0.3s ease-out, opacity 0.3s ease; }')
-        .appendTo('head');
 
     // Обработчик наведения на блоки services__item
     $('.services__item')
