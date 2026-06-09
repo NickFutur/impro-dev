@@ -8432,6 +8432,7 @@ html {
   max-width: 770px;
   margin-top: 0;
   font-size: 50px;
+  font-weight: 400;
   color: #fff;
 }
 
@@ -8440,7 +8441,7 @@ html {
 .contacts-details__company,
 .contacts-details__value {
   font-family: var(--font-family);
-  font-weight: 450;
+  font-weight: 400;
   font-size: clamp(16px, 1.2vw, 18px);
   line-height: 135%;
   letter-spacing: -0.01em;
@@ -8460,6 +8461,7 @@ html {
   display: block;
   max-width: 100%;
   min-width: 0;
+  font-weight: 400;
   overflow-wrap: anywhere;
 }
 
@@ -8747,9 +8749,6 @@ html {
   }
 }
 @media (max-width: 550px) {
-  .contacts .nav {
-    display: none;
-  }
   .contacts__title {
     font-size: 26px;
   }

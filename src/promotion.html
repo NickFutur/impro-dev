@@ -111,7 +111,7 @@
 <!-- PROJECT IMAGE END -->
 
 <!-- dev-vars START -->
-<div class="dev-vars" data-bx-block="promo-services">
+<section class="dev-vars" data-bx-block="promo-services">
     <div class="dev-vars-item">
         <div class="dev-vars-item-top">
             <div class="dev-vars-item-title">Контекстная реклама</div>
@@ -223,7 +223,7 @@
             <div class="dev-vars-item-cost-val">от 50 000 ₽</div>
         </div>
     </div>
-</div>
+</section>
 <!-- dev-vars END -->
 
 <section
@@ -291,7 +291,7 @@
 
 <!-- DIGITAL BLOCK START -->
 
-<div class="dev-features" data-bx-block="promo-features">
+<section class="dev-features" data-bx-block="promo-features">
     <div class="dev-features-item">
         <img src="assets/img/icon/d1.svg" alt="" class="dev-features-icon" />
         <div class="dev-features-text">
@@ -340,7 +340,7 @@
             </div>
         </div>
     </div>
-</div>
+</section>
 
 <!-- DIGITAL BLOCK END -->
 
@@ -664,7 +664,7 @@
 
 <!-- MORE SERVICE BLOCK START -->
 
-<div class="more-service">
+<section class="more-service">
     <div class="more-service-title container">
         Чем можем <br class="pc-hidden" />
         помочь еще?
@@ -742,7 +742,7 @@
             </div>
         </a>
     </div>
-</div>
+</section>
 
 <section class="review">
     <div class="container review__c">
@@ -1164,64 +1164,5 @@
             resizeTimer = setTimeout(updateState, 100);
         });
     })();
-</script>
-<!-- Скрипт для отправки формы (заменить на реальную логику отправки формы) -->
-<script>
-    if (typeof $ !== 'undefined' && $('.footer-form').length) {
-        $('.footer-form').on('submit', function (e) {
-            e.preventDefault();
-            const isValid = validateForm(this);
-            if (isValid) {
-                $('.footer-form-form').hide();
-                $('.footer-form-thx').show();
-            }
-        });
-    }
-
-    function validateForm(form) {
-        var isValid = true;
-
-        // Phone validation
-        if ($(form).find('input[name=phone]').val() == '') {
-            isValid = false;
-            $(form).find('input[name=phone]').addClass('error').attr('placeholder', 'Введите номер');
-        } else {
-            $(form).find('input[name=phone]').removeClass('error').attr('placeholder', '+7(999)999-99-99');
-        }
-
-        // Name validation
-        if ($(form).find('input[name=name]').val() == '') {
-            isValid = false;
-            $(form).find('input[name=name]').addClass('error').attr('placeholder', 'Введите имя');
-        } else {
-            $(form).find('input[name=name]').removeClass('error').attr('placeholder', 'Ваше имя');
-        }
-
-        // Email validation
-        if ($(form).find('input[name=email]').val() == '') {
-            isValid = false;
-            $(form).find('input[name=email]').addClass('error').attr('placeholder', 'Введите email');
-        } else {
-            $(form).find('input[name=email]').removeClass('error').attr('placeholder', 'Ваш email');
-        }
-
-        // Message validation
-        if ($(form).find('textarea[name=message]').val() == '') {
-            isValid = false;
-            $(form).find('textarea[name=message]').addClass('error').attr('placeholder', 'Введите сообщение');
-        } else {
-            $(form).find('textarea[name=message]').removeClass('error').attr('placeholder', 'Ваше сообщение');
-        }
-
-        // Contact method validation
-        if ($(form).find('input[name=contact]:checked').length == 0) {
-            isValid = false;
-            $(form).find('.footer-form-select').addClass('error');
-        } else {
-            $(form).find('.footer-form-select').removeClass('error');
-        }
-
-        return isValid;
-    }
 </script>
 {% endblock %}

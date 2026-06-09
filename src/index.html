@@ -524,7 +524,6 @@
 
                 <dotlottie-wc
                     src="https://lottie.host/0815c2fa-76aa-4214-861e-4e77ae1672c8/0kexT4deSz.lottie"
-                    style=""
                     speed="1"
                     autoplay
                     loop
@@ -1175,63 +1174,4 @@
     </div>
 </section>
 <!-- BLOCK END -->
-{% endblock %} {% block add_scripts %}
-
-<!-- Скрипт для отправки формы (заменить на реальную логику отправки формы) -->
-<script>
-    $('.footer-form').on('submit', function (e) {
-        e.preventDefault();
-        is_valid = validateForm(this);
-        if (is_valid) {
-            $('.footer-form-form').hide();
-            $('.footer-form-thx').show();
-        }
-    });
-
-    function validateForm(form) {
-        var isValid = true;
-
-        // Phone validation
-        if ($(form).find('input[name=phone]').val() == '') {
-            isValid = false;
-            $(form).find('input[name=phone]').addClass('error').attr('placeholder', 'Введите номер');
-        } else {
-            $(form).find('input[name=phone]').removeClass('error').attr('placeholder', '+7(999)999-99-99');
-        }
-
-        // Name validation
-        if ($(form).find('input[name=name]').val() == '') {
-            isValid = false;
-            $(form).find('input[name=name]').addClass('error').attr('placeholder', 'Введите имя');
-        } else {
-            $(form).find('input[name=name]').removeClass('error').attr('placeholder', 'Ваше имя');
-        }
-
-        // Email validation
-        if ($(form).find('input[name=email]').val() == '') {
-            isValid = false;
-            $(form).find('input[name=email]').addClass('error').attr('placeholder', 'Введите email');
-        } else {
-            $(form).find('input[name=email]').removeClass('error').attr('placeholder', 'Ваш email');
-        }
-
-        // Message validation
-        if ($(form).find('textarea[name=message]').val() == '') {
-            isValid = false;
-            $(form).find('textarea[name=message]').addClass('error').attr('placeholder', 'Введите сообщение');
-        } else {
-            $(form).find('textarea[name=message]').removeClass('error').attr('placeholder', 'Ваше сообщение');
-        }
-
-        // Contact method validation
-        if ($(form).find('input[name=contact]:checked').length == 0) {
-            isValid = false;
-            $(form).find('.footer-form-select').addClass('error');
-        } else {
-            $(form).find('.footer-form-select').removeClass('error');
-        }
-
-        return isValid;
-    }
-</script>
-{% endblock %}
+{% endblock %} {% block add_scripts %} {% endblock %}
