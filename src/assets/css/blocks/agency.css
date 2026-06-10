@@ -70,7 +70,7 @@
   }
 }
 .agency__c {
-  max-width: 42.5rem;
+  max-width: 42.5rem!important;
   margin-right: auto;
   margin-left: auto;
 }

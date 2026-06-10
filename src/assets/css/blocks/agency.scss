@@ -56,7 +56,7 @@
             line-height: 130%;
         }
     }
-    &__c {
+    @at-root #{&}__c.container {
         max-width: 680rem * 0.0625;
         margin-right: auto;
         margin-left: auto;
