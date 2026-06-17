@@ -30,7 +30,7 @@ var copy = require("gulp-copy");
 /**
  * Include projectConfig file
  */
-const projectConfig = require("./projectСonfig.json");
+const projectConfig = require("./projectConfig.json");
 
 /**
  * Path settings
