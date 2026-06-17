@@ -23,11 +23,11 @@
 | Основная команда | `npm run build` |
 | Фактическая Gulp-задача | `gulp build --prod` |
 | Проверка исходников | `npm run check` |
-| Конфиг путей | `projectСonfig.json` |
+| Конфиг путей | `projectConfig.json` |
 | Source | `src/` |
 | Output | `dist/` |
 
-Важно: файл `projectСonfig.json` содержит кириллическую букву `С` в имени. При переносе или настройке CI это нужно учитывать, потому что визуально имя похоже на `projectConfig.json`, но это другой путь.
+Важно: используйте именно `projectConfig.json` — это файл с настройками путей для Gulp и сборки.
 
 ## 3. Будущая структура `/local/templates/impro/`
 
