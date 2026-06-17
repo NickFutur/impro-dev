@@ -1,3 +1,5 @@
+@import '../variables.scss';
+
 .contacts {
     .nav {
         padding-top: 8.5rem;
@@ -270,6 +272,28 @@
     }
 }
 
+.contacts-map {
+    overflow: hidden;
+
+    .map {
+        display: block;
+        width: 100%;
+        height: auto;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .contacts-map {
+        .map {
+            width: auto;
+            max-width: none;
+            height: 100vw;
+            transform: translateX(-12%);
+        }
+    }
+}
+
 @media (max-width: $tablet_res) {
     .contacts {
         &__title {
@@ -417,6 +441,13 @@
     .contacts-details {
         margin-top: clamp(32px, 6vw, 48px);
     }
+
+    .contacts-map {
+        .map {
+            height: 528px;
+            transform: translateX(-10%);
+        }
+    }
 }
 
 @media (max-width: 550px) {
@@ -489,6 +520,13 @@
     .contacts-details {
         gap: 24px;
     }
+
+    .contacts-map {
+        .map {
+            height: 528px;
+            transform: translateX(-17%);
+        }
+    }
 }
 
 @media (max-width: $mobile_sm_res) {
@@ -512,6 +550,13 @@
         &__main,
         &__bank {
             min-width: 0;
+        }
+    }
+
+    .contacts-map {
+        .map {
+            height: 528px;
+            transform: translateX(-20%);
         }
     }
 }

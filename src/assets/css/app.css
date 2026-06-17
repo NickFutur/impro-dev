@@ -8636,6 +8636,42 @@ html {
   overflow-wrap: anywhere;
 }
 
+.contacts-map {
+  overflow: hidden;
+}
+.contacts-map .map {
+  display: block;
+  width: 100%;
+  height: auto;
+  transform: translateX(0);
+}
+
+@media (max-width: 768px) {
+  .contacts-map .map {
+    width: auto;
+    max-width: none;
+    height: 100vw;
+    transform: translateX(-12%);
+  }
+}
+@media (max-width: 550px) {
+  .contacts-map .map {
+    height: 528px;
+    transform: translateX(-10%);
+  }
+}
+@media (max-width: 460px) {
+  contacts-map .map {
+    height: 528px;
+    transform: translateX(-17%);
+  }
+}
+@media (max-width: 360px) {
+  contacts-map .map {
+    height: 528px;
+    transform: translateX(-46%);
+  }
+}
 @media (max-width: 1050px) {
   .contacts__title {
     font-size: 42px;
