@@ -12,6 +12,9 @@
         &:last-child() {
             border-right: none;
         }
+        &:nth-child(-n + 4) {
+            margin-top: 0;
+        }
         border: 1rem * 0.0625 solid rgba(76, 76, 76, 1);
         font-weight: 400;
         font-size: 18rem * 0.0625;
@@ -30,6 +33,15 @@
             width: calc(50% + 1px * 0.0625);
             margin-left: -1px;
             margin-top: -1px;
+            &:nth-child(-n + 2) {
+                margin-top: 0;
+            }
+            &:nth-child(n + 3) {
+                margin-top: -1px;
+            }
+            &:nth-child(even) {
+                border-right: none;
+            }
             height: auto;
             padding-top: 30px;
             padding-bottom: 30px;

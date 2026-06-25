@@ -12,6 +12,9 @@
 .features__item:last-child() {
   border-right: none;
 }
+.features__item:nth-child(-n+4) {
+  margin-top: 0;
+}
 .features__item {
   border: 0.0625rem solid rgb(76, 76, 76);
   font-weight: 400;
@@ -33,6 +36,17 @@
     width: calc(50% + 0.0625px);
     margin-left: -1px;
     margin-top: -1px;
+  }
+  .features__item:nth-child(-n+2) {
+    margin-top: 0;
+  }
+  .features__item:nth-child(n+3) {
+    margin-top: -1px;
+  }
+  .features__item:nth-child(even) {
+    border-right: none;
+  }
+  .features__item {
     height: auto;
     padding-top: 30px;
     padding-bottom: 30px;
