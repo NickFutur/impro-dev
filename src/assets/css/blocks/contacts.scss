@@ -48,6 +48,12 @@
     line-height: 140%;
     letter-spacing: -0.01em;
     color: #fff;
+    transition: all 0.3s ease;
+
+    &:hover {
+        opacity: 0.8;
+        transition: all 0.3s ease;
+    }
 }
 
 .contacts-text-info {
@@ -214,6 +220,12 @@
         justify-content: center;
 
         flex-shrink: 0;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transition: all 0.3s ease;
+        }
     }
 }
 
@@ -285,6 +297,7 @@
 }
 
 .contacts-map {
+    // position: relative;
     overflow: hidden;
 
     .map {
@@ -292,6 +305,32 @@
         width: 100%;
         height: auto;
         transform: translateX(0);
+    }
+
+    &__container {
+        width: 100%;
+        height: 50rem;
+        max-height: 670px;
+        min-height: 420px;
+    }
+
+    &__marker {
+        width: 18px;
+        height: 18px;
+        border: 4px solid #fff;
+        border-radius: 50%;
+        background: $accent_color;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+        transform: translate(-50%, -50%);
+    }
+
+    &::after {
+        position: absolute;
+        inset: 0;
+        z-index: 10;
+        pointer-events: none;
+        background: rgba(0, 0, 0, 0.45);
+        // content: '';
     }
 }
 
@@ -302,6 +341,9 @@
             max-width: none;
             height: 100vw;
             transform: translateX(-12%);
+        }
+        &__container {
+            height: 100vw;
         }
     }
 }
@@ -460,6 +502,10 @@
             height: 528px;
             transform: translateX(-10%);
         }
+        &__container {
+            height: 528px;
+            min-height: 528px;
+        }
     }
 }
 
@@ -539,6 +585,9 @@
             height: 528px;
             transform: translateX(-17%);
         }
+        &__container {
+            height: 528px;
+        }
     }
 }
 
@@ -570,6 +619,9 @@
         .map {
             height: 528px;
             transform: translateX(-20%);
+        }
+        &__container {
+            height: 528px;
         }
     }
 }

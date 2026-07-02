@@ -416,7 +416,7 @@ html {
 }
 
 .tag-item {
-  font-weight: 450;
+  font-weight: 400;
   font-size: 0.8125rem;
   color: #fff;
   border-radius: 0.625rem;
@@ -471,7 +471,7 @@ html {
   backdrop-filter: blur(48px);
   -webkit-backdrop-filter: blur(48px);
   /* color: white; */
-  font-weight: 500;
+  font-weight: 400;
   /* padding: 15px 30px; */
   /* border: none; */
   border-radius: 0.625rem;
@@ -874,11 +874,11 @@ html {
   min-width: -moz-max-content;
   min-width: max-content;
   align-items: center;
-  animation: runline 50s linear infinite;
+  animation: runline 100s linear infinite;
 }
 @media (max-width: 34.375rem) {
   .hero__runline-wrap {
-    animation: runline 20s linear infinite;
+    animation: runline 100s linear infinite;
   }
 }
 .hero__runline-item {
@@ -3520,6 +3520,7 @@ html {
   width: 30rem;
   margin-left: -0.0625rem;
   border: 0.0625rem solid #4c4c4c;
+  border-right: none;
   flex-shrink: 0;
   padding-bottom: 5rem;
 }
@@ -3602,7 +3603,13 @@ html {
   width: 100%;
   justify-content: center;
   gap: 0.75rem;
+  flex-wrap: wrap;
   transform: translateX(-50%);
+}
+@media (max-width: 550px) {
+  .reviews-slider .slick-dots {
+    bottom: 1.25rem;
+  }
 }
 .reviews-slider .slick-dots li {
   font-size: 0;
@@ -5095,7 +5102,7 @@ html {
 .dev-content-wrapper {
   width: 100%;
   height: auto;
-  margin-top: 2rem;
+  margin-top: 0rem;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -5588,6 +5595,7 @@ html {
   margin-bottom: -9rem;
   position: relative;
   overflow: hidden;
+  background-color: #0f0f0f;
 }
 .stages-dec {
   position: absolute;
@@ -8107,13 +8115,19 @@ html {
   justify-content: center;
   font-weight: 400;
   font-size: 0.8125rem;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.9);
   width: -moz-max-content;
   width: max-content;
   border-radius: 0.75rem;
   padding: 1rem 1.125rem;
   backdrop-filter: blur(18px);
   background: rgba(28, 28, 28, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+.hero--error[data-bx-block=error] .hero__c--subpage .hero__btns .btn-call:hover {
+  border-color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+  transition: all 0.3s ease-in-out;
 }
 .hero--error[data-bx-block=error] .hero__zag {
   top: -10rem;
@@ -8289,6 +8303,7 @@ html {
 }
 
 .review-page-form {
+  font-family: "Suisse Intl", sans-serif;
   margin-top: clamp(20px, 2vw, 40px);
   backdrop-filter: blur(59.9500465393px);
   background: rgba(255, 255, 255, 0.03);
@@ -8327,6 +8342,7 @@ html {
   }
 }
 .review-page-form__input, .review-page-form__textarea {
+  font-family: "Suisse Intl", sans-serif;
   width: 100%;
   border: none;
   outline: none;

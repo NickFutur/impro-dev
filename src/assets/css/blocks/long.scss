@@ -135,12 +135,18 @@
         }
         &::before {
             content: '';
-            width: 74.5%;
+            width: 0;
             height: 100%;
             position: absolute;
             top: 0;
             left: 0;
             background: linear-gradient(277.2deg, #3325cd -83.34%, #6768fb 58.79%);
+            transition: width 2s ease-in-out;
+        }
+        &--visible {
+            &::before {
+                width: 74.5%;
+            }
         }
         &__c {
             display: flex;
