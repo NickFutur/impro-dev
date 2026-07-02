@@ -88,6 +88,7 @@
     width: 480rem * 0.0625;
     margin-left: -1rem * 0.0625;
     border: 1rem * 0.0625 solid #4c4c4c;
+    border-right: none;
     flex-shrink: 0;
     padding-bottom: 80rem * 0.0625;
     @media (max-width: 870px) {
@@ -159,7 +160,11 @@
         width: 100%;
         justify-content: center;
         gap: 12rem * 0.0625;
+        flex-wrap: wrap;
         transform: translateX(-50%);
+        @media (max-width: 550px) {
+            bottom: 20rem * 0.0625;
+        }
         li {
             font-size: 0;
             button {

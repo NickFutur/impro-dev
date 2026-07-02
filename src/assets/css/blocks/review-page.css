@@ -110,6 +110,7 @@
 }
 
 .review-page-form {
+  font-family: "Suisse Intl", sans-serif;
   margin-top: clamp(20px, 2vw, 40px);
   backdrop-filter: blur(59.9500465393px);
   background: rgba(255, 255, 255, 0.03);
@@ -148,6 +149,7 @@
   }
 }
 .review-page-form__input, .review-page-form__textarea {
+  font-family: "Suisse Intl", sans-serif;
   width: 100%;
   border: none;
   outline: none;

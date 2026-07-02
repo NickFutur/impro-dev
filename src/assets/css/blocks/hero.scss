@@ -219,9 +219,9 @@
             width: max-content;
             min-width: max-content;
             align-items: center;
-            animation: runline 50s linear infinite;
+            animation: runline 100s linear infinite;
             @media (max-width: 550rem * 0.0625) {
-                animation: runline 20s linear infinite;
+                animation: runline 100s linear infinite;
             }
         }
         &-item {

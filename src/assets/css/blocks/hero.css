@@ -251,11 +251,11 @@
   min-width: -moz-max-content;
   min-width: max-content;
   align-items: center;
-  animation: runline 50s linear infinite;
+  animation: runline 100s linear infinite;
 }
 @media (max-width: 34.375rem) {
   .hero__runline-wrap {
-    animation: runline 20s linear infinite;
+    animation: runline 100s linear infinite;
   }
 }
 .hero__runline-item {

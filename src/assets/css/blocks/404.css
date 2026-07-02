@@ -25,13 +25,19 @@
   justify-content: center;
   font-weight: 400;
   font-size: 0.8125rem;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.9);
   width: -moz-max-content;
   width: max-content;
   border-radius: 0.75rem;
   padding: 1rem 1.125rem;
   backdrop-filter: blur(18px);
   background: rgba(28, 28, 28, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+.hero--error[data-bx-block=error] .hero__c--subpage .hero__btns .btn-call:hover {
+  border-color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+  transition: all 0.3s ease-in-out;
 }
 .hero--error[data-bx-block=error] .hero__zag {
   top: -10rem;

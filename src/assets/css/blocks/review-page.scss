@@ -110,6 +110,7 @@ $review-border-color: rgba(255, 255, 255, 0.4);
 }
 
 .review-page-form {
+    font-family: 'Suisse Intl', sans-serif;
     margin-top: clamp(20px, 2vw, 40px);
     backdrop-filter: blur(59.95004653930664px);
     background: rgba(255, 255, 255, 0.03);
@@ -158,6 +159,7 @@ $review-border-color: rgba(255, 255, 255, 0.4);
 
     &__input,
     &__textarea {
+        font-family: 'Suisse Intl', sans-serif;
         width: 100%;
         border: none;
         outline: none;
