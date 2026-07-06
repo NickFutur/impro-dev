@@ -155,6 +155,7 @@
 }
 .article-text__tags span {
   font-size: 18px;
+  font-weight: 400;
 }
 @media (max-width: 870px) {
   .article-text__tags span {

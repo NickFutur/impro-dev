@@ -14,6 +14,7 @@
 }
 .features__item:nth-child(-n+4) {
   margin-top: 0;
+  border-right: none;
 }
 .features__item {
   border: 0.0625rem solid rgb(76, 76, 76);

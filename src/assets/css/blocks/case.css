@@ -54,6 +54,7 @@
   -o-object-position: center;
      object-position: center;
   background-size: contain;
+  height: 100vh;
 }
 .project__image--promo {
   margin-bottom: 0;
@@ -315,6 +316,23 @@
 }
 .booking-hero__phone img, .booking-hero__tablet img {
   display: block;
+}
+.booking-hero__tablet img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: auto;
+  max-height: 233px;
+}
+@media (max-width: 850px) {
+  .booking-hero__tablet img {
+    max-height: 222px;
+  }
+}
+@media (max-width: 500px) {
+  .booking-hero__tablet img {
+    max-height: 150px;
+  }
 }
 .booking-hero__phone {
   z-index: 10;

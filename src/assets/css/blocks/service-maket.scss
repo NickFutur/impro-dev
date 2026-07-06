@@ -1,5 +1,42 @@
-@import '../variables.scss';
-@import '../mixins.scss';
+@use '../variables.scss' as *;
+@use '../mixins.scss' as *;
+
+.cases--service-maket {
+    .cases-list--static {
+        .cases-item {
+            &:nth-child(3n + 1) {
+                border-left: none;
+            }
+
+            &:nth-child(3n) {
+                border-right: none;
+            }
+
+            @media (max-width: 870px) {
+                &:nth-child(3n + 1) {
+                    border-left: 1px solid rgba(255, 255, 255, 0.4);
+                }
+
+                &:nth-child(3n) {
+                    border-right: 1px solid rgba(255, 255, 255, 0.4);
+                }
+
+                &:nth-child(odd) {
+                    border-left: none;
+                }
+
+                &:nth-child(even) {
+                    border-right: none;
+                }
+            }
+
+            @media (max-width: 550px) {
+                border-right: none;
+                border-left: none;
+            }
+        }
+    }
+}
 
 .service-maket {
     display: flex;

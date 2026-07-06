@@ -1,4 +1,4 @@
-@import '../variables.scss';
+@use '../variables.scss' as *;
 
 .hero {
     width: 100%;
@@ -256,6 +256,7 @@
             object-fit: contain;
         }
         &-name {
+            font-weight: 450;
         }
         &-text {
             margin-left: 16rem * 0.0625;

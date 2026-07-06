@@ -1,5 +1,5 @@
-@import '../mixins.scss';
-@import '../variables.scss';
+@use '../mixins.scss' as *;
+@use '../variables.scss' as *;
 
 %glass-surface {
     border: 0.7px solid rgba(255, 255, 255, 0.1);
@@ -73,6 +73,7 @@
             object-fit: cover;
             object-position: center;
             background-size: contain;
+            height: 100vh;
         }
 
         &--promo {
@@ -399,6 +400,20 @@
 
         img {
             display: block;
+        }
+    }
+    &__tablet {
+        img {
+            width: 100%;
+            object-fit: contain;
+            height: auto;
+            max-height: 233px;
+            @media (max-width: 850px) {
+                max-height: 222px;
+            }
+            @media (max-width: 500px) {
+                max-height: 150px;
+            }
         }
     }
 
