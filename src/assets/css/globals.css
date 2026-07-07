@@ -1,0 +1,303 @@
+.container {
+  max-width: 112.375rem;
+  width: calc(100% - 128px);
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 1440px) {
+  .container {
+    max-width: calc(100% - 5rem);
+    width: 100%;
+  }
+}
+@media (max-width: 1050px) {
+  .container {
+    max-width: calc(100% - 2.25rem);
+  }
+}
+@media (max-width: 450px) {
+  .container {
+    max-width: 100%;
+    padding-left: 1.125rem;
+    padding-right: 1.125rem;
+  }
+}
+
+.container-min {
+  max-width: 1080px;
+  width: calc(100% - 128px);
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 1440px) {
+  .container-min {
+    max-width: 720px;
+    width: 100%;
+  }
+}
+@media (max-width: 1050px) {
+  .container-min {
+    max-width: calc(100vw - 72px);
+  }
+}
+@media (max-width: 450px) {
+  .container-min {
+    max-width: calc(100vw - 48px);
+  }
+}
+
+:root {
+  --info-banner-h: 0px;
+  --app-height: 100%;
+}
+
+body {
+  margin: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  width: 100%;
+  color: #fff;
+  background-color: #0f0f0f;
+  font-family: "Suisse Intl";
+}
+body.fixed {
+  overflow: hidden;
+}
+
+html {
+  font-size: 29px;
+}
+@media (max-width: 2220px) {
+  html {
+    font-size: 24px;
+  }
+}
+@media (max-width: 1920px) {
+  html {
+    font-size: 20px;
+  }
+}
+@media (max-width: 1600px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1250px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media (max-width: 870px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media (max-width: 720px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media (max-width: 640px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media (max-width: 550px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  color: inherit;
+}
+
+img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+button,
+input {
+  border: none;
+  outline: none;
+  background: none;
+  padding: 0;
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.fw-bold {
+  font-weight: bold;
+}
+
+.fw-black {
+  font-weight: 900;
+}
+
+.fw-normal {
+  font-weight: normal;
+}
+
+.crossed {
+  text-decoration: line-through;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.decor {
+  position: absolute;
+}
+
+picture {
+  display: block;
+}
+picture img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.slick-initialized .slick-slide {
+  display: block;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.slick-track {
+  height: -moz-max-content;
+  height: max-content;
+}
+
+section {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+header,
+footer {
+  z-index: 2;
+}
+
+@media (max-width: 450px) {
+  .m-hidden {
+    display: none;
+  }
+}
+
+@media (min-width: 451px) {
+  .pc-hidden {
+    display: none;
+  }
+}
+
+input:not([type=checkbox]):not([type=radio]),
+textarea,
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.page-wrapper {
+  padding-top: 8.4375rem;
+}
+@media (max-width: 870px) {
+  .page-wrapper {
+    padding-top: 9.5rem;
+  }
+}
+@media (max-width: 550px) {
+  .page-wrapper {
+    padding-top: 7.5rem;
+  }
+}
+
+.page-content {
+  position: relative;
+  z-index: 2;
+}
+
+body,
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes an_7 {
+  from {
+    opacity: 0;
+    transform: perspective(62.5rem) translate3d(0px, 18.75rem, 0px) rotate3d(-100, 0, 50, 45deg);
+  }
+  to {
+    opacity: 1;
+    transform: perspective(31.25rem) translate3d(0, 0, 0);
+  }
+}
+.animate-custom-7 {
+  animation-name: an_7;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@media (max-width: 550px) {
+  section:not(.digital) {
+    width: 100%;
+    overflow: hidden;
+  }
+}/*# sourceMappingURL=globals.css.map */

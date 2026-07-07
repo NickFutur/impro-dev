@@ -872,7 +872,7 @@
     }
     .how-item:first-child {
         height: auto;
-        min-height: 15rem;
+        // min-height: 15rem;
 
         .how-item-lottie dotlottie-wc {
             @media (max-width: 870px) {
@@ -883,7 +883,7 @@
 
     .how-item:nth-child(2) {
         height: auto;
-        min-height: 15rem;
+        // min-height: 15rem;
 
         .how-item-lottie dotlottie-wc {
             @media (max-width: 870px) {
@@ -894,7 +894,7 @@
 
     .how-item:nth-child(3) {
         height: auto;
-        min-height: 15rem;
+        // min-height: 15rem;
 
         .how-item-lottie dotlottie-wc {
             @media (max-width: 870px) {
@@ -905,10 +905,14 @@
 
     .how-item:last-child {
         height: auto;
-        min-height: 15rem;
+        // min-height: 15rem;
         .how-item-lottie dotlottie-wc {
+            width: 12.75rem !important;
+            height: 12.75rem !important;
             @media (max-width: 870px) {
                 margin-left: -20px;
+                width: 150px !important;
+                height: 150px !important;
             }
         }
     }

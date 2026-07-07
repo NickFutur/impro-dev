@@ -844,7 +844,6 @@
 }
 .how-content .how-item:first-child {
   height: auto;
-  min-height: 15rem;
 }
 @media (max-width: 870px) {
   .how-content .how-item:first-child .how-item-lottie dotlottie-wc {
@@ -853,7 +852,6 @@
 }
 .how-content .how-item:nth-child(2) {
   height: auto;
-  min-height: 15rem;
 }
 @media (max-width: 870px) {
   .how-content .how-item:nth-child(2) .how-item-lottie dotlottie-wc {
@@ -862,7 +860,6 @@
 }
 .how-content .how-item:nth-child(3) {
   height: auto;
-  min-height: 15rem;
 }
 @media (max-width: 870px) {
   .how-content .how-item:nth-child(3) .how-item-lottie dotlottie-wc {
@@ -871,11 +868,16 @@
 }
 .how-content .how-item:last-child {
   height: auto;
-  min-height: 15rem;
+}
+.how-content .how-item:last-child .how-item-lottie dotlottie-wc {
+  width: 12.75rem !important;
+  height: 12.75rem !important;
 }
 @media (max-width: 870px) {
   .how-content .how-item:last-child .how-item-lottie dotlottie-wc {
     margin-left: -20px;
+    width: 150px !important;
+    height: 150px !important;
   }
 }
 
