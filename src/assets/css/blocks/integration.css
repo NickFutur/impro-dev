@@ -64,6 +64,10 @@
   }
 }
 
+.booking-hero--integration + .dev-features .dev-features-item {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
 .dev-vars {
   margin-top: 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -673,7 +677,7 @@
     width: 65px;
     height: 65px;
     left: 390px;
-    top: 30px;
+    top: 0px;
     right: auto;
     bottom: auto;
   }
@@ -685,7 +689,7 @@
     width: 125px;
     height: 57px;
     left: 360px;
-    top: 0px;
+    top: 40px;
     right: auto;
     bottom: auto;
   }
