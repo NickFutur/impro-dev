@@ -3485,6 +3485,7 @@ html {
 .review__content {
   margin-top: 3.5rem;
   display: flex;
+  position: relative;
 }
 @media (max-width: 550px) {
   .review__content {
@@ -3578,14 +3579,11 @@ html {
 .reviews-slider-item__logo {
   position: absolute;
   top: 2.5rem;
-  right: 2.5rem;
+  left: 50%;
   filter: grayscale(100%);
   max-width: 15rem;
   max-height: 2.5rem;
-}
-.reviews-slider-item-photo {
-  margin-right: auto;
-  margin-left: auto;
+  transform: translateX(-50%);
 }
 .reviews-slider-item-name {
   font-weight: 400;
@@ -3628,34 +3626,50 @@ html {
 .reviews-slider {
   position: relative;
 }
-.reviews-slider .slick-dots {
+.reviews-slider__arrow {
   position: absolute;
+  left: calc(100% - 15rem);
   bottom: 3.75rem;
-  left: 50%;
   display: flex !important;
-  width: 100%;
+  width: 2rem;
+  height: 2rem;
+  align-items: center;
   justify-content: center;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-  transform: translateX(-50%);
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
 }
-@media (max-width: 550px) {
-  .reviews-slider .slick-dots {
-    bottom: 1.25rem;
+.reviews-slider__arrow:hover {
+  opacity: 0.7;
+}
+.reviews-slider__arrow--prev {
+  transform: translateX(calc(-100% - 0.5rem)) rotate(180deg);
+}
+.reviews-slider__arrow--next {
+  transform: translateX(0.5rem);
+}
+.reviews-slider__arrow svg {
+  width: 0.5625rem;
+  height: 1rem;
+}
+@media (max-width: 870px) {
+  .reviews-slider__arrow {
+    left: calc(100% - 12rem);
   }
 }
-.reviews-slider .slick-dots li {
-  font-size: 0;
-}
-.reviews-slider .slick-dots li button {
-  height: 0.5rem;
-  width: 0.5rem;
-  font-size: 0;
-  border-radius: 50%;
-  background-color: rgba(217, 217, 217, 0.4);
-}
-.reviews-slider .slick-dots li.slick-active button {
-  background-color: #fff;
+@media (max-width: 550px) {
+  .reviews-slider__arrow {
+    left: 50%;
+    bottom: 1.25rem;
+  }
+  .reviews-slider__arrow--prev {
+    transform: translateX(calc(-100% - 0.5rem)) rotate(180deg);
+  }
+  .reviews-slider__arrow--next {
+    transform: translateX(0.5rem);
+  }
 }
 
 .blog {
