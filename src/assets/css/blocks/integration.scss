@@ -114,6 +114,81 @@
         @include booking-hero-tablet;
     }
 
+    &--integration {
+        .booking-hero__phone {
+            img {
+                object-fit: contain;
+            }
+        }
+
+        .booking-hero__tablet {
+            width: 304px;
+            height: 233px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .booking-hero__chart-circle {
+            width: 153px;
+            height: 153px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .booking-hero__chart-lines {
+            width: 295px;
+            height: 135px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .booking-hero__widget--settings,
+        .booking-hero__widget--docs {
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        .booking-hero__widget--settings {
+            width: 76px;
+            height: 76px;
+
+            img {
+                width: 35px;
+                height: 35px;
+            }
+        }
+
+        .booking-hero__widget--docs {
+            width: 56px;
+            height: 56px;
+
+            img {
+                width: 23px;
+                height: 23px;
+            }
+        }
+
+        .booking-hero__widget--stats {
+            img {
+                width: 120px;
+                height: 94px;
+            }
+        }
+    }
+
     &--compact {
         @include booking-hero-tablet;
         background: none;
@@ -146,6 +221,7 @@
             width: 100%;
             padding-right: 5px;
         }
+
         .booking-hero__glow {
             &--left {
                 left: auto;
@@ -206,8 +282,76 @@
             filter: blur(62px);
         }
     }
-    .booking-hero__widget {
-        &--settings {
+
+    .booking-hero--integration {
+        .booking-hero__phone {
+            width: 154px;
+            height: 318px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                aspect-ratio: auto;
+                object-fit: cover;
+            }
+        }
+
+        .booking-hero__tablet {
+            width: 225px;
+            height: 173px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .booking-hero__chart-circle {
+            width: 114px;
+            height: 114px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .booking-hero__chart-lines {
+            width: 218px;
+            height: 100px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .booking-hero__widget--settings {
+            width: 56px;
+            height: 56px;
+
+            img {
+                width: 26px;
+                height: 26px;
+            }
+        }
+
+        .booking-hero__widget--docs {
+            width: 41px;
+            height: 41px;
+
+            img {
+                width: 17px;
+                height: 17px;
+            }
+        }
+
+        .booking-hero__widget--stats {
+            img {
+                width: 89px;
+                height: 69px;
+            }
         }
     }
 }
@@ -253,6 +397,80 @@
         }
     }
 
+    .booking-hero--integration {
+        .booking-hero__phone {
+            width: 88px;
+            height: 182px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                aspect-ratio: auto;
+                object-fit: cover;
+            }
+        }
+
+        .booking-hero__tablet {
+            width: 129px;
+            height: 99px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        .booking-hero__chart-circle {
+            width: 66px;
+            height: 66px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .booking-hero__chart-lines {
+            width: 125px;
+            height: 57px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .booking-hero__widget--settings {
+            border-radius: 6px;
+            width: 32px;
+            height: 32px;
+
+            img {
+                width: 15px;
+                height: 15px;
+            }
+        }
+
+        .booking-hero__widget--docs {
+            border-radius: 6px;
+            width: 23px;
+            height: 23px;
+
+            img {
+                width: 10px;
+                height: 10px;
+            }
+        }
+
+        .booking-hero__widget--stats {
+            img {
+                width: 51px;
+                height: 40px;
+            }
+        }
+    }
+
     @media (max-width: 360px) {
         .booking-hero--compact {
             .booking-hero__all {
@@ -270,6 +488,18 @@
                 top: 20%;
                 width: 244px;
                 height: 112px;
+            }
+        }
+
+        .booking-hero--integration {
+            .booking-hero__chart-circle {
+                width: 66px;
+                height: 66px;
+            }
+
+            .booking-hero__chart-lines {
+                width: 125px;
+                height: 57px;
             }
         }
     }
