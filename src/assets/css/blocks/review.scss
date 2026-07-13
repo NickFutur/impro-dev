@@ -30,6 +30,7 @@
     &__content {
         margin-top: 3.5rem;
         display: flex;
+        position: relative;
         @media (max-width: 550px) {
             flex-direction: column-reverse;
         }
@@ -109,14 +110,11 @@
         &__logo {
             position: absolute;
             top: 40rem * 0.0625;
-            right: 40rem * 0.0625;
+            left: 50%;
             filter: grayscale(100%);
             max-width: 240rem * 0.0625;
             max-height: 40rem * 0.0625;
-        }
-        &-photo {
-            margin-right: auto;
-            margin-left: auto;
+            transform: translateX(-50%);
         }
         &-name {
             font-weight: 400;
@@ -154,32 +152,50 @@
         }
     }
     position: relative;
-    .slick-dots {
+    &__arrow {
         position: absolute;
+        left: calc(100% - 15rem);
         bottom: 60rem * 0.0625;
-        left: 50%;
         display: flex !important;
-        width: 100%;
+        width: 32rem * 0.0625;
+        height: 32rem * 0.0625;
+        align-items: center;
         justify-content: center;
-        gap: 12rem * 0.0625;
-        flex-wrap: wrap;
-        transform: translateX(-50%);
-        @media (max-width: 550px) {
-            bottom: 20rem * 0.0625;
+        padding: 0;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+
+        &:hover {
+            opacity: 0.7;
         }
-        li {
-            font-size: 0;
-            button {
-                height: 8rem * 0.0625;
-                width: 8rem * 0.0625;
-                font-size: 0;
-                border-radius: 50%;
-                background-color: rgba(217, 217, 217, 0.4);
+
+        &--prev {
+            transform: translateX(calc(-100% - 8rem * 0.0625)) rotate(180deg);
+        }
+
+        &--next {
+            transform: translateX(8rem * 0.0625);
+        }
+
+        svg {
+            width: 9rem * 0.0625;
+            height: 16rem * 0.0625;
+        }
+
+        @media (max-width: 870px) {
+            left: calc(100% - 12rem);
+        }
+
+        @media (max-width: 550px) {
+            left: 50%;
+            bottom: 20rem * 0.0625;
+            &--prev {
+                transform: translateX(calc(-100% - 8rem * 0.0625)) rotate(180deg);
             }
-            &.slick-active {
-                button {
-                    background-color: #fff;
-                }
+            &--next {
+                transform: translateX(8rem * 0.0625);
             }
         }
     }

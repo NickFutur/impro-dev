@@ -32,8 +32,10 @@ $(document).ready(function () {
     $('.reviews-slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: false,
-        dots: true,
+        arrows: true,
+        dots: false,
+        prevArrow: '.reviews-slider__arrow--prev',
+        nextArrow: '.reviews-slider__arrow--next',
         infinite: true,
         autoplay: false,
         adaptiveHeight: true,

@@ -146,7 +146,6 @@
             width: 100%;
             padding-right: 5px;
         }
-
         .booking-hero__glow {
             &--left {
                 left: auto;
@@ -205,6 +204,10 @@
             right: 2rem;
             top: 19rem;
             filter: blur(62px);
+        }
+    }
+    .booking-hero__widget {
+        &--settings {
         }
     }
 }
