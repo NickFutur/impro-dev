@@ -7477,6 +7477,15 @@ html {
   }
 }
 
+@media (max-width: 550px) {
+  .booking-hero--integration + .dev-features .dev-features-item:first-child {
+    margin-top: 0;
+  }
+}
+.booking-hero--integration + .dev-features .dev-features-item {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
 .dev-vars {
   margin-top: 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -7906,10 +7915,19 @@ html {
     top: 19rem;
     filter: blur(62px);
   }
+  .booking-hero--integration .booking-hero__all {
+    position: relative;
+    min-height: 462px;
+    margin: 0 auto;
+    left: auto;
+  }
   .booking-hero--integration .booking-hero__phone {
     width: 154px;
     height: 318px;
-    left: 45%;
+    left: 222px;
+    top: 70px;
+    right: auto;
+    bottom: auto;
   }
   .booking-hero--integration .booking-hero__phone img {
     width: 100%;
@@ -7921,6 +7939,10 @@ html {
   .booking-hero--integration .booking-hero__tablet {
     width: 225px;
     height: 173px;
+    left: 330px;
+    top: 150px;
+    right: auto;
+    bottom: auto;
   }
   .booking-hero--integration .booking-hero__tablet img {
     width: 100%;
@@ -7931,6 +7953,10 @@ html {
   .booking-hero--integration .booking-hero__chart-circle {
     width: 114px;
     height: 114px;
+    left: 390px;
+    top: 30px;
+    right: auto;
+    bottom: auto;
   }
   .booking-hero--integration .booking-hero__chart-circle img {
     width: 100%;
@@ -7939,6 +7965,10 @@ html {
   .booking-hero--integration .booking-hero__chart-lines {
     width: 218px;
     height: 100px;
+    left: 360px;
+    top: 95px;
+    right: auto;
+    bottom: auto;
   }
   .booking-hero--integration .booking-hero__chart-lines img {
     width: 100%;
@@ -7947,6 +7977,10 @@ html {
   .booking-hero--integration .booking-hero__widget--settings {
     width: 56px;
     height: 56px;
+    left: 102px;
+    top: 37px;
+    right: auto;
+    bottom: auto;
   }
   .booking-hero--integration .booking-hero__widget--settings img {
     width: 26px;
@@ -7955,17 +7989,43 @@ html {
   .booking-hero--integration .booking-hero__widget--docs {
     width: 41px;
     height: 41px;
+    left: 165px;
+    top: 45px;
+    right: auto;
+    bottom: auto;
   }
   .booking-hero--integration .booking-hero__widget--docs img {
     width: 17px;
     height: 17px;
+  }
+  .booking-hero--integration .booking-hero__widget--stats {
+    left: 169px;
+    top: 250px;
+    right: auto;
+    bottom: auto;
   }
   .booking-hero--integration .booking-hero__widget--stats img {
     width: 89px;
     height: 69px;
   }
 }
+@media (max-width: 601px) {
+  .booking-hero--integration .booking-hero__all {
+    position: relative;
+    min-height: 462px;
+    margin: 0 auto;
+    left: -10%;
+  }
+}
 @media (max-width: 550px) {
+  .booking-hero--integration .booking-hero__all {
+    position: relative;
+    min-height: 462px;
+    margin: 0 auto;
+    left: -18%;
+  }
+}
+@media (max-width: 499px) {
   .hero--integration {
     overflow: hidden;
   }
@@ -7990,15 +8050,25 @@ html {
     filter: blur(92px);
   }
   .booking-hero--compact .booking-hero__all {
-    left: -16px;
+    left: -1;
   }
   .booking-hero--compact .booking-hero__chart-circle {
     top: 1%;
     right: clamp(1%, 0.8vw, 7%);
   }
+  .booking-hero--integration .booking-hero__all {
+    position: relative;
+    min-height: 320px;
+    margin: 0 auto;
+    left: -18%;
+  }
   .booking-hero--integration .booking-hero__phone {
     width: 88px;
     height: 182px;
+    left: 300px;
+    top: 30px;
+    right: auto;
+    bottom: auto;
   }
   .booking-hero--integration .booking-hero__phone img {
     width: 100%;
@@ -8010,16 +8080,24 @@ html {
   .booking-hero--integration .booking-hero__tablet {
     width: 129px;
     height: 99px;
+    left: 340px;
+    top: 75px;
+    right: auto;
+    bottom: auto;
   }
   .booking-hero--integration .booking-hero__tablet img {
     width: 100%;
     height: 100%;
-    -o-object-fit: contain;
-       object-fit: contain;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .booking-hero--integration .booking-hero__chart-circle {
-    width: 66px;
-    height: 66px;
+    width: 65px;
+    height: 65px;
+    left: 390px;
+    top: 0px;
+    right: auto;
+    bottom: auto;
   }
   .booking-hero--integration .booking-hero__chart-circle img {
     width: 100%;
@@ -8028,6 +8106,10 @@ html {
   .booking-hero--integration .booking-hero__chart-lines {
     width: 125px;
     height: 57px;
+    left: 360px;
+    top: 40px;
+    right: auto;
+    bottom: auto;
   }
   .booking-hero--integration .booking-hero__chart-lines img {
     width: 100%;
@@ -8037,6 +8119,10 @@ html {
     border-radius: 6px;
     width: 32px;
     height: 32px;
+    left: 215px;
+    top: 13px;
+    right: auto;
+    bottom: auto;
   }
   .booking-hero--integration .booking-hero__widget--settings img {
     width: 15px;
@@ -8046,38 +8132,55 @@ html {
     border-radius: 6px;
     width: 23px;
     height: 23px;
+    left: 250px;
+    top: 10px;
+    right: auto;
+    bottom: auto;
   }
   .booking-hero--integration .booking-hero__widget--docs img {
-    width: 10px;
-    height: 10px;
+    width: 9px;
+    height: 9px;
+  }
+  .booking-hero--integration .booking-hero__widget--stats {
+    left: 250px;
+    top: 130px;
+    right: auto;
+    bottom: auto;
   }
   .booking-hero--integration .booking-hero__widget--stats img {
     width: 51px;
     height: 40px;
   }
 }
-@media (max-width: 550px) and (max-width: 360px) {
-  .booking-hero--compact .booking-hero__all {
-    left: -16px;
+@media (max-width: 490px) {
+  .booking-hero--integration .booking-hero__all {
+    position: relative;
+    width: 100vw;
+    min-height: 260px;
+    margin: 0;
+    left: 50%;
+    transform: translateX(-50%);
   }
-  .booking-hero--compact .booking-hero__chart-circle {
-    left: 70%;
-    top: 1%;
-    right: 0;
+  .booking-hero--integration .booking-hero__widget--settings {
+    left: calc((100vw - 270px) / 2);
   }
-  .booking-hero--compact .booking-hero__chart-lines {
-    left: 30%;
-    top: 20%;
-    width: 244px;
-    height: 112px;
+  .booking-hero--integration .booking-hero__widget--docs {
+    left: calc((100vw - 270px) / 2 + 35px);
   }
-  .booking-hero--integration .booking-hero__chart-circle {
-    width: 66px;
-    height: 66px;
+  .booking-hero--integration .booking-hero__widget--stats {
+    left: calc((100vw - 270px) / 2 + 35px);
+  }
+  .booking-hero--integration .booking-hero__phone {
+    left: calc((100vw - 270px) / 2 + 85px);
+  }
+  .booking-hero--integration .booking-hero__tablet {
+    left: calc((100vw - 270px) / 2 + 125px);
   }
   .booking-hero--integration .booking-hero__chart-lines {
-    width: 125px;
-    height: 57px;
+    left: calc((100vw - 270px) / 2 + 145px);
+  }
+  .booking-hero--integration .booking-hero__chart-circle {
+    left: calc((100vw - 270px) / 2 + 175px);
   }
 }
 .cases--service-maket .cases-list--static .cases-item:nth-child(3n+1) {
