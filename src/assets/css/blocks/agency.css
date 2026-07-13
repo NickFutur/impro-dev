@@ -50,6 +50,7 @@
   font-size: 1.125rem;
   line-height: 140%;
   letter-spacing: -0.02em;
+  font-weight: 400;
   text-align: center;
   color: #fff;
   margin-top: 2.2rem;
@@ -69,11 +70,12 @@
     line-height: 130%;
   }
 }
-.agency__c {
-  max-width: 42.5rem!important;
+.agency__c.container {
+  max-width: 42.5rem;
   margin-right: auto;
   margin-left: auto;
 }
+
 .agency__img {
   position: absolute;
 }

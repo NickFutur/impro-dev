@@ -36,6 +36,12 @@
   margin-right: auto;
   margin-left: auto;
   width: 100%;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.header--hidden {
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(-100%);
 }
 .header-menu {
   border: 0.04375rem solid rgba(255, 255, 255, 0.1);
@@ -151,6 +157,14 @@
 .menu-bottom .header-menu-link {
   font-size: 18px;
   padding-left: 17px;
+}
+.menu-bottom {
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.menu-bottom--hidden {
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(calc(100% + 16px));
 }
 
 .menu-bottom-burger {

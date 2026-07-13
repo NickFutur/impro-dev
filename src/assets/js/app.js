@@ -32,8 +32,10 @@ $(document).ready(function () {
     $('.reviews-slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: false,
-        dots: true,
+        arrows: true,
+        dots: false,
+        prevArrow: '.reviews-slider__arrow--prev',
+        nextArrow: '.reviews-slider__arrow--next',
         infinite: true,
         autoplay: false,
         adaptiveHeight: true,
@@ -227,6 +229,51 @@ document.addEventListener('DOMContentLoaded', function () {
     observer.observe(header);
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    const timeline = document.querySelector('.long__timeline');
+
+    if (!timeline) return;
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+
+                timeline.classList.add('long__timeline--visible');
+                observer.unobserve(timeline);
+            });
+        },
+        { threshold: 0.35 },
+    );
+
+    observer.observe(timeline);
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const header = document.querySelector('.header');
+    const footer = document.querySelector('.footer');
+    const menuBottom = document.querySelector('.menu-bottom');
+
+    if (!header || !footer) return;
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                const isFooterVisible = entry.isIntersecting;
+
+                header.classList.toggle('header--hidden', isFooterVisible);
+
+                if (menuBottom) {
+                    menuBottom.classList.toggle('menu-bottom--hidden', isFooterVisible);
+                }
+            });
+        },
+        { threshold: 0.05 },
+    );
+
+    observer.observe(footer);
+});
+
 //слайдер с страницы шаблоны "
 $(document).ready(function () {
     $('.articles-list').slick({
@@ -272,3 +319,60 @@ $(document).ready(function () {
         ],
     });
 });
+
+function loadYandexMapScript(apiKey) {
+    return new Promise((resolve, reject) => {
+        if (window.ymaps3) {
+            resolve();
+            return;
+        }
+
+        const script = document.createElement('script');
+
+        script.src = `https://api-maps.yandex.ru/v3/?apikey=${apiKey}&lang=ru_RU`;
+        script.onload = resolve;
+        script.onerror = reject;
+
+        document.head.appendChild(script);
+    });
+}
+
+async function initContactsMap() {
+    const mapElement = document.getElementById('contacts-map');
+
+    if (!mapElement) return;
+
+    const apiKey = '188c5186-7f33-407e-9e78-e5a1bee54420';
+    const center = mapElement.dataset.center.split(',').map(Number);
+    const zoom = Number(mapElement.dataset.zoom) || 15;
+
+    await loadYandexMapScript(apiKey);
+    await window.ymaps3.ready;
+
+    const { YMap, YMapDefaultFeaturesLayer, YMapDefaultSchemeLayer, YMapMarker } = window.ymaps3;
+
+    const map = new YMap(mapElement, {
+        location: {
+            center,
+            zoom,
+        },
+    });
+
+    map.addChild(new YMapDefaultSchemeLayer());
+    map.addChild(new YMapDefaultFeaturesLayer());
+
+    const markerElement = document.createElement('div');
+
+    markerElement.className = 'contacts-map__marker';
+
+    map.addChild(
+        new YMapMarker(
+            {
+                coordinates: center,
+            },
+            markerElement,
+        ),
+    );
+}
+
+initContactsMap();

@@ -1,4 +1,6 @@
 /*стили текста*/
+@use 'variables.scss' as *;
+
 .t-title {
     //заголовки страниц
     font-size: clamp(2.25rem, 4vw, 4.375rem);

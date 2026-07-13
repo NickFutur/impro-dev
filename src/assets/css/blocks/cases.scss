@@ -70,17 +70,28 @@
         position: relative;
         border: 1px solid rgba($color: #fff, $alpha: 0.4);
         border-bottom: none;
+        &:nth-child(1),
+        &:nth-child(3),
+        &:nth-child(5),
+        &:nth-child(7),
+        &:nth-child(9) {
+            border-left: none;
+        }
         &:nth-child(2),
         &:nth-child(4),
         &:nth-child(8),
         &:nth-child(10) {
             border-left: none;
+            border-right: none;
         }
         margin-top: -1px;
         @media (max-width: 1200px) {
             &:nth-child(5),
             &:nth-child(6) {
                 grid-column: span 2;
+            }
+            &:nth-child(6) {
+                border-left: none;
             }
             &:nth-child(7) {
                 grid-column: span 2;
@@ -117,7 +128,7 @@
     overflow: hidden;
     &__tags {
         display: flex;
-        gap: 10rem * 0.0625;
+        gap: 8rem * 0.0625;
         margin-bottom: 10rem * 0.0625;
         flex-wrap: wrap;
     }
@@ -134,6 +145,10 @@
         border-radius: 10rem * 0.0625;
         padding: 8rem * 0.0625 12rem * 0.0625;
         background-color: #fff;
+
+        &:hover {
+            color: rgba($color: #0f0f0f, $alpha: 0.8);
+        }
     }
     &__label,
     &__link {
@@ -243,6 +258,7 @@
             gap: 10rem * 0.0625;
             img {
                 border-radius: 12rem * 0.0625;
+                border: 1.2px solid rgba($color: #fff, $alpha: 0.4);
                 width: 88rem * 0.0625;
                 height: 88rem * 0.0625;
                 object-fit: cover;
@@ -294,6 +310,7 @@
         width: 100%;
         &:nth-child(3) {
             grid-column: span 3;
+            border-right: none;
         }
         &:nth-child(4) {
             grid-column-start: 3;
@@ -311,6 +328,8 @@
     .cases-item {
         min-height: 375px;
         width: 100%;
+        border-right: none;
+        border-left: none;
         &:nth-child(3) {
             height: 562px;
         }

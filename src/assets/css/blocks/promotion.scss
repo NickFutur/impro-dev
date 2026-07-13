@@ -63,6 +63,49 @@ $promo-hero: ".hero--integration[data-bx-block='promo-hero']";
 .cases--inner {
     padding-top: 7.6rem;
 
+    .cases-list--static {
+        .cases-item {
+            &:nth-child(3n + 1) {
+                border-left: none;
+            }
+
+            &:nth-child(3n) {
+                border-right: none;
+            }
+
+            @media (max-width: 870px) {
+                &:nth-child(3n + 1) {
+                    border-left: 1px solid rgba(255, 255, 255, 0.4);
+                }
+
+                &:nth-child(3n) {
+                    border-right: 1px solid rgba(255, 255, 255, 0.4);
+                }
+
+                &:nth-child(odd) {
+                    border-left: none;
+                }
+
+                &:nth-child(even) {
+                    border-right: none;
+                }
+            }
+            @media (max-width: 550px) {
+                &:nth-child(3n + 1) {
+                    border-left: none;
+                }
+
+                &:nth-child(3n) {
+                    border-right: none;
+                }
+            }
+            @media (max-width: 550px) {
+                border-right: none;
+                border-left: none;
+            }
+        }
+    }
+
     .how-title--promo {
         .how-title__text {
             display: block;

@@ -1,6 +1,7 @@
 @charset "UTF-8";
 .dev {
   padding-top: 6.25rem;
+  margin-bottom: 4.375rem;
 }
 @media (max-width: 550px) {
   .dev {
@@ -25,6 +26,8 @@
   line-height: 115%;
   /* 48.3rem * 0.0625 */
   letter-spacing: -0.013125rem;
+  max-width: 80rem;
+  margin-bottom: 2rem;
 }
 @media (max-width: 870px) {
   .dev-text {
@@ -166,7 +169,7 @@
 .dev-content-wrapper {
   width: 100%;
   height: auto;
-  margin-top: 2rem;
+  margin-top: 0rem;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -192,9 +195,9 @@
   }
 }
 .dev-content-item {
-  width: 47.875rem;
-  height: 30.4375rem;
-  background-image: url(../img/mac.png);
+  width: 46.625rem;
+  height: 29.1875rem;
+  background-image: url(../img/mac-2x.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -343,7 +346,7 @@
   z-index: 2;
   font-size: 1.5rem;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 450;
   line-height: normal;
   letter-spacing: -0.015rem;
   transition: color 0.3s ease;
@@ -496,7 +499,7 @@
 .dev-features-title {
   font-size: 1.5rem;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 125%;
   /* 30rem * 0.0625 */
   letter-spacing: -0.015rem;
@@ -516,7 +519,7 @@
   font-family: "Suisse Intl";
   font-size: 0.875rem;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 450;
   line-height: 135%;
   /* 18.9rem * 0.0625 */
   letter-spacing: -0.004375rem;
@@ -570,15 +573,23 @@
 .how-item .container {
   display: flex;
 }
-@media (max-width: 870px) {
-  .how-item .container {
-    flex-direction: column;
-    padding-left: 170px;
-  }
-}
 @media (max-width: 550px) {
   .how-item .container {
+    flex-direction: column;
     padding-left: 1.125rem;
+  }
+}
+.how-item__text-wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex: 1;
+  flex-wrap: wrap;
+}
+@media (max-width: 870px) {
+  .how-item__text-wrap {
+    flex-direction: column;
+    justify-content: center;
   }
 }
 .how-item {
@@ -590,9 +601,8 @@
 @media (max-width: 870px) {
   .how-item-lottie {
     width: 155px;
-    position: absolute;
     left: 0;
-    top: 8px;
+    top: 0px;
   }
 }
 @media (max-width: 550px) {
@@ -610,7 +620,7 @@
   font-family: "Suisse Intl";
   font-size: 1.5rem;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 450;
   line-height: 125%;
   /* 30rem * 0.0625 */
   letter-spacing: -0.015rem;
@@ -628,7 +638,7 @@
 .how-item-text {
   padding-right: 1.875rem;
   padding-top: 2.5rem;
-  width: 30%;
+  width: 40%;
   color: rgba(255, 255, 255, 0.5);
   font-family: "Suisse Intl";
   font-size: 0.875rem;
@@ -643,7 +653,7 @@
     max-width: 350px;
     width: 100%;
     padding-right: 0;
-    padding-top: 1rem;
+    padding-top: 0rem;
     padding-bottom: 2rem;
   }
 }
@@ -659,6 +669,7 @@
   margin-bottom: -9rem;
   position: relative;
   overflow: hidden;
+  background-color: #0f0f0f;
 }
 .stages-dec {
   position: absolute;
@@ -810,6 +821,10 @@
   }
 }
 
+.how-item-lottie {
+  display: flex;
+  align-items: center;
+}
 .how-item-lottie dotlottie-wc {
   width: 13.75rem !important;
   height: 13.75rem !important;
@@ -821,9 +836,14 @@
   }
 }
 
+@media (max-width: 870px) {
+  .how-content .how-item {
+    display: flex;
+    align-items: center;
+  }
+}
 .how-content .how-item:first-child {
   height: auto;
-  min-height: 15rem;
 }
 @media (max-width: 870px) {
   .how-content .how-item:first-child .how-item-lottie dotlottie-wc {
@@ -832,7 +852,6 @@
 }
 .how-content .how-item:nth-child(2) {
   height: auto;
-  min-height: 15rem;
 }
 @media (max-width: 870px) {
   .how-content .how-item:nth-child(2) .how-item-lottie dotlottie-wc {
@@ -841,7 +860,6 @@
 }
 .how-content .how-item:nth-child(3) {
   height: auto;
-  min-height: 15rem;
 }
 @media (max-width: 870px) {
   .how-content .how-item:nth-child(3) .how-item-lottie dotlottie-wc {
@@ -850,11 +868,16 @@
 }
 .how-content .how-item:last-child {
   height: auto;
-  min-height: 15rem;
+}
+.how-content .how-item:last-child .how-item-lottie dotlottie-wc {
+  width: 12.75rem !important;
+  height: 12.75rem !important;
 }
 @media (max-width: 870px) {
   .how-content .how-item:last-child .how-item-lottie dotlottie-wc {
     margin-left: -20px;
+    width: 150px !important;
+    height: 150px !important;
   }
 }
 
@@ -942,7 +965,7 @@
   z-index: 2;
   font-size: 1.125rem;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 450;
   line-height: 125%;
   /* 22.5rem * 0.0625 */
   letter-spacing: -0.005625rem;

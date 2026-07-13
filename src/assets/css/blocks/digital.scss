@@ -13,7 +13,8 @@
     }
     &__text {
         font-size: 42rem * 0.0625;
-        line-height: 129%;
+        line-height: 110%;
+        font-weight: 400;
         letter-spacing: -0.02em;
         text-align: center;
         max-width: 745rem * 0.0625;
@@ -51,6 +52,7 @@
     &__sub {
         font-size: 18rem * 0.0625;
         line-height: 135%;
+        font-weight: 400;
         letter-spacing: -0.01em;
         text-align: center;
         margin-right: auto;

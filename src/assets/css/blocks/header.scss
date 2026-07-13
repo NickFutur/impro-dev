@@ -32,6 +32,14 @@
     margin-right: auto;
     margin-left: auto;
     width: 100%;
+    transition:
+        opacity 0.3s ease-in-out,
+        transform 0.3s ease-in-out;
+    &--hidden {
+        pointer-events: none;
+        opacity: 0;
+        transform: translateY(-100%);
+    }
     &-menu {
         border: 0.7rem * 0.0625 solid rgba(255, 255, 255, 0.1);
         border-radius: 12rem * 0.0625;
@@ -136,6 +144,14 @@
     .header-menu-link {
         font-size: 18px;
         padding-left: 17px;
+    }
+    transition:
+        opacity 0.3s ease-in-out,
+        transform 0.3s ease-in-out;
+    &--hidden {
+        pointer-events: none;
+        opacity: 0;
+        transform: translateY(calc(100% + 16px));
     }
 }
 

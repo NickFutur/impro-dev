@@ -1,4 +1,4 @@
-@import '../variables.scss';
+@use '../variables.scss' as *;
 
 .hero {
     width: 100%;
@@ -219,9 +219,9 @@
             width: max-content;
             min-width: max-content;
             align-items: center;
-            animation: runline 50s linear infinite;
+            animation: runline 100s linear infinite;
             @media (max-width: 550rem * 0.0625) {
-                animation: runline 20s linear infinite;
+                animation: runline 100s linear infinite;
             }
         }
         &-item {
@@ -256,6 +256,7 @@
             object-fit: contain;
         }
         &-name {
+            font-weight: 450;
         }
         &-text {
             margin-left: 16rem * 0.0625;

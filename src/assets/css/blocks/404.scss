@@ -30,12 +30,19 @@ $error-hero: ".hero--error[data-bx-block='error']";
                 justify-content: center;
                 font-weight: 400;
                 font-size: 0.8125rem;
-                color: #fff;
+                color: rgba(255, 255, 255, 0.9);
                 width: max-content;
                 border-radius: 0.75rem;
                 padding: 1rem 1.125rem;
                 backdrop-filter: blur(18px);
                 background: rgba(28, 28, 28, 0.5);
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    border-color: rgba(255, 255, 255, 1);
+                    color: rgba(255, 255, 255, 1);
+                    transition: all 0.3s ease-in-out;
+                }
             }
         }
     }

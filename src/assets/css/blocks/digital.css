@@ -18,7 +18,8 @@
 }
 .digital__text {
   font-size: 2.625rem;
-  line-height: 129%;
+  line-height: 110%;
+  font-weight: 400;
   letter-spacing: -0.02em;
   text-align: center;
   max-width: 46.5625rem;
@@ -58,6 +59,7 @@
 .digital__sub {
   font-size: 1.125rem;
   line-height: 135%;
+  font-weight: 400;
   letter-spacing: -0.01em;
   text-align: center;
   margin-right: auto;

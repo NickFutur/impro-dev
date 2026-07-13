@@ -1,7 +1,7 @@
 .nav-blog {
     &__wrapper {
         display: flex;
-        gap: 1rem;
+        gap: 0.5rem;
         flex-wrap: wrap;
         margin-bottom: 52px;
         @media (max-width: 550px) {
@@ -10,6 +10,7 @@
     }
     &__item {
         font-size: 13px;
+        font-weight: 400;
         color: #fff;
         border: 0.7px solid rgba(255, 255, 255, 0.1);
         border-radius: 12px;

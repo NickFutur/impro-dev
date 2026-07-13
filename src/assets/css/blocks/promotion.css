@@ -43,6 +43,40 @@
 .cases--inner {
   padding-top: 7.6rem;
 }
+.cases--inner .cases-list--static .cases-item:nth-child(3n+1) {
+  border-left: none;
+}
+.cases--inner .cases-list--static .cases-item:nth-child(3n) {
+  border-right: none;
+}
+@media (max-width: 870px) {
+  .cases--inner .cases-list--static .cases-item:nth-child(3n+1) {
+    border-left: 1px solid rgba(255, 255, 255, 0.4);
+  }
+  .cases--inner .cases-list--static .cases-item:nth-child(3n) {
+    border-right: 1px solid rgba(255, 255, 255, 0.4);
+  }
+  .cases--inner .cases-list--static .cases-item:nth-child(odd) {
+    border-left: none;
+  }
+  .cases--inner .cases-list--static .cases-item:nth-child(even) {
+    border-right: none;
+  }
+}
+@media (max-width: 550px) {
+  .cases--inner .cases-list--static .cases-item:nth-child(3n+1) {
+    border-left: none;
+  }
+  .cases--inner .cases-list--static .cases-item:nth-child(3n) {
+    border-right: none;
+  }
+}
+@media (max-width: 550px) {
+  .cases--inner .cases-list--static .cases-item {
+    border-right: none;
+    border-left: none;
+  }
+}
 .cases--inner .how-title--promo .how-title__text {
   display: block;
   max-width: 869px;
