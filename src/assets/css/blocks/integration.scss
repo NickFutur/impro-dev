@@ -263,6 +263,7 @@
 // Small tablet / large mobile
 @media (max-width: 870px) {
     .hero--integration {
+
         .hero__runline {
             margin-top: 15rem;
         }
@@ -284,9 +285,16 @@
     }
 
     .booking-hero--integration {
+        .booking-hero__all {
+            position: relative;
+            min-height: 462px;
+            left: -5%;
+        }
+
         .booking-hero__phone {
             width: 154px;
             height: 318px;
+            left: 45%;
 
             img {
                 width: 100%;
@@ -299,6 +307,8 @@
         .booking-hero__tablet {
             width: 225px;
             height: 173px;
+            left: 57%;
+            bottom: 42%;
 
             img {
                 width: 100%;
