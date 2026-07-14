@@ -90,17 +90,6 @@ html {
     }
 }
 
-@media (min-width: 532px) and (max-width: 550px) {
-    html {
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-    }
-
-    html::-webkit-scrollbar {
-        display: none;
-    }
-}
-
 li {
     list-style: none;
 }
