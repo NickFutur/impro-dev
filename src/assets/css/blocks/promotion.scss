@@ -335,7 +335,7 @@ $promo-hero: ".hero--integration[data-bx-block='promo-hero']";
             position: relative;
             min-height: 462px;
             margin: 0 auto;
-            left: auto;
+            left: calc((100% - 640px) / 2);
         }
 
         .booking-hero__phone {

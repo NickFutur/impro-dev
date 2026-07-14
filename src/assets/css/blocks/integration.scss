@@ -101,6 +101,14 @@
     margin-top: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 
+    @media (max-width: 870px) and (min-width: 551px) {
+        border-bottom: none;
+
+        .dev-vars-item:nth-last-child(-n + 2) {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    }
+
     .dev-vars-item {
         height: auto;
         min-height: 21rem;
@@ -312,7 +320,7 @@
             // max-width: 100%;
             min-height: 462px;
             margin: 0 auto;
-            left: auto;
+            left: calc((100% - 640px) / 2);
         }
 
         .booking-hero__phone {
@@ -416,24 +424,10 @@
     }
 }
 
-@media(max-width:601px) {
+@media (max-width: 601px) and (min-width: 500px) {
     .booking-hero--integration {
         .booking-hero__all {
-            position: relative;
-            min-height: 462px;
-            margin: 0 auto;
-            left: -10%;
-        }
-    }
-}
-
-@media (max-width: 550px) {
-    .booking-hero--integration {
-        .booking-hero__all {
-            position: relative;
-            min-height: 462px;
-            margin: 0 auto;
-            left: -18%;
+            left: calc((100vw - 640px) / 2);
         }
     }
 }
