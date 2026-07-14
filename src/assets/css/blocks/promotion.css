@@ -40,6 +40,15 @@
   z-index: 2;
 }
 
+.booking-hero--promo + .dev-features .dev-features-item {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+@media (max-width: 550px) {
+  .booking-hero--promo + .dev-features .dev-features-item:first-child {
+    margin-top: 0;
+  }
+}
+
 .cases--inner {
   padding-top: 7.6rem;
 }
@@ -312,14 +321,11 @@
     height: 69px;
   }
 }
-@media (max-width: 601px) {
+@media (max-width: 601px) and (min-width: 500px) {
   .booking-hero--promo .booking-hero__all {
-    left: -10%;
-  }
-}
-@media (max-width: 550px) {
-  .booking-hero--promo .booking-hero__all {
-    left: -18%;
+    width: 640px;
+    margin: 0;
+    left: calc((100% - 640px) / 2);
   }
 }
 @media (max-width: 499px) {

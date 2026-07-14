@@ -355,7 +355,7 @@ $promo-hero: ".hero--integration[data-bx-block='promo-hero']";
             img {
                 width: 100%;
                 height: 100%;
-                object-fit: cover;
+                object-fit: contain;
             }
         }
 
@@ -415,18 +415,12 @@ $promo-hero: ".hero--integration[data-bx-block='promo-hero']";
     }
 }
 
-@media (max-width: 601px) {
+@media (max-width: 601px) and (min-width: 500px) {
     .booking-hero--promo {
         .booking-hero__all {
-            left: -10%;
-        }
-    }
-}
-
-@media (max-width: 550px) {
-    .booking-hero--promo {
-        .booking-hero__all {
-            left: -18%;
+            width: 640px;
+            margin: 0;
+            left: calc((100vw - 640px) / 2);
         }
     }
 }
@@ -469,7 +463,7 @@ $promo-hero: ".hero--integration[data-bx-block='promo-hero']";
             img {
                 width: 100%;
                 height: 100%;
-                object-fit: cover;
+                object-fit: contain;
             }
         }
 
