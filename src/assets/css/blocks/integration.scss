@@ -86,6 +86,17 @@
         }
     }
 }
+
+@media (max-width: 720px) and (min-width: 551px) {
+    .booking-hero--integration {
+        .booking-hero__text {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 135%;
+        }
+    }
+}
+
 .dev-vars {
     margin-top: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);

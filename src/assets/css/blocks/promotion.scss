@@ -72,6 +72,16 @@ $promo-hero: ".hero--integration[data-bx-block='promo-hero']";
     }
 }
 
+@media (max-width: 720px) and (min-width: 551px) {
+    .booking-hero--promo {
+        .booking-hero__text {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 135%;
+        }
+    }
+}
+
 .cases--inner {
     padding-top: 7.6rem;
 
@@ -418,8 +428,6 @@ $promo-hero: ".hero--integration[data-bx-block='promo-hero']";
 @media (max-width: 601px) and (min-width: 500px) {
     .booking-hero--promo {
         .booking-hero__all {
-            width: 640px;
-            margin: 0;
             left: calc((100vw - 640px) / 2);
         }
     }
