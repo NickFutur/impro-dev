@@ -703,6 +703,12 @@
   }
 }
 
+@media (min-width: 532px) and (max-width: 870px) {
+  .footer-form {
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
+}
 @media (max-width: 34.375rem) {
   .footer-form-choose {
     flex-wrap: wrap;

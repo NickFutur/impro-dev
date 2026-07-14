@@ -20,6 +20,10 @@
             transform: scaleX(-1);
             left: 4rem;
         }
+        @media (min-width: 532px) and (max-width: 550px) {
+            right: 0;
+            left: auto;
+        }
     }
     &::after {
         position: absolute;
@@ -631,6 +635,13 @@
 .footer-form {
     @media screen and (max-width: 550rem * 0.0625) {
         margin-left: -18rem * 0.0625;
+    }
+}
+
+@media (min-width: 551px) and (max-width: 870px) {
+    .footer-form {
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
     }
 }
 
