@@ -7477,13 +7477,13 @@ html {
   }
 }
 
+.booking-hero--integration + .dev-features .dev-features-item {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
 @media (max-width: 550px) {
   .booking-hero--integration + .dev-features .dev-features-item:first-child {
     margin-top: 0;
   }
-}
-.booking-hero--integration + .dev-features .dev-features-item {
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .dev-vars {
