@@ -218,4 +218,12 @@
   .reviews-slider__arrow--next {
     transform: translateX(0.5rem);
   }
+}
+
+@media (max-width: 550px) {
+  .review--home .reviews-slider__arrow {
+    left: 50%;
+    bottom: calc(31rem + clamp(2rem, 5vw, 3.75rem));
+    z-index: 1;
+  }
 }/*# sourceMappingURL=review.css.map */
