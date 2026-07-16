@@ -73,9 +73,24 @@
   }
 }
 
+@media (max-width: 720px) and (min-width: 551px) {
+  .booking-hero--integration .booking-hero__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 135%;
+  }
+}
 .dev-vars {
   margin-top: 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+@media (max-width: 870px) and (min-width: 551px) {
+  .dev-vars {
+    border-bottom: none;
+  }
+  .dev-vars .dev-vars-item:nth-last-child(-n+2) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
 }
 .dev-vars .dev-vars-item {
   height: auto;
@@ -250,8 +265,8 @@
 .booking-hero--integration .booking-hero__tablet img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .booking-hero--integration .booking-hero__chart-circle {
   width: 153px;
@@ -506,7 +521,7 @@
     position: relative;
     min-height: 462px;
     margin: 0 auto;
-    left: auto;
+    left: calc((100% - 640px) / 2);
   }
   .booking-hero--integration .booking-hero__phone {
     width: 154px;
@@ -534,8 +549,8 @@
   .booking-hero--integration .booking-hero__tablet img {
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
   .booking-hero--integration .booking-hero__chart-circle {
     width: 114px;
@@ -596,20 +611,9 @@
     height: 69px;
   }
 }
-@media (max-width: 601px) {
+@media (max-width: 601px) and (min-width: 500px) {
   .booking-hero--integration .booking-hero__all {
-    position: relative;
-    min-height: 462px;
-    margin: 0 auto;
-    left: -10%;
-  }
-}
-@media (max-width: 550px) {
-  .booking-hero--integration .booking-hero__all {
-    position: relative;
-    min-height: 462px;
-    margin: 0 auto;
-    left: -18%;
+    left: calc((100vw - 640px) / 2);
   }
 }
 @media (max-width: 499px) {
@@ -677,8 +681,8 @@
   .booking-hero--integration .booking-hero__tablet img {
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
   .booking-hero--integration .booking-hero__chart-circle {
     width: 65px;
