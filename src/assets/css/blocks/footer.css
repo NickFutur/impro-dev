@@ -22,6 +22,12 @@
     left: 4rem;
   }
 }
+@media (min-width: 532px) and (max-width: 550px) {
+  .footer::before {
+    right: 0;
+    left: auto;
+  }
+}
 .footer::after {
   position: absolute;
   width: 14.945625rem;
@@ -703,7 +709,7 @@
   }
 }
 
-@media (min-width: 532px) and (max-width: 870px) {
+@media (min-width: 551px) and (max-width: 870px) {
   .footer-form {
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);

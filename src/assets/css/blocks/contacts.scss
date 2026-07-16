@@ -74,6 +74,11 @@
         }
     }
 
+    .features__item:hover {
+        background: rgba(255, 255, 255, 0.08);
+        transition: all 0.3s ease;
+    }
+
     .features__item-icon {
         &::before {
             content: none;
@@ -342,6 +347,7 @@
             height: 100vw;
             transform: translateX(-12%);
         }
+
         &__container {
             height: 100vw;
         }
@@ -502,6 +508,7 @@
             height: 528px;
             transform: translateX(-10%);
         }
+
         &__container {
             height: 528px;
             min-height: 528px;
@@ -585,6 +592,7 @@
             height: 528px;
             transform: translateX(-17%);
         }
+
         &__container {
             height: 528px;
         }
@@ -620,6 +628,7 @@
             height: 528px;
             transform: translateX(-20%);
         }
+
         &__container {
             height: 528px;
         }

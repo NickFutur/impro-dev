@@ -66,6 +66,10 @@
 .contacts-features .features__item:nth-child(4n) {
   border-right: 0;
 }
+.contacts-features .features__item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+}
 .contacts-features .features__item-icon::before {
   content: none;
 }
