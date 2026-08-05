@@ -533,7 +533,7 @@
         display: flex;
         flex-direction: column;
         color: rgba(255, 255, 255, 0.8);
-        font-family: 'Suisse Intl';
+        font-family: var(--font-family);
         font-size: 14rem * 0.0625;
         font-style: normal;
         font-weight: 450;
@@ -562,7 +562,7 @@
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        font-family: 'Suisse Intl';
+        font-family: var(--font-family);
         font-size: 42rem * 0.0625;
         font-style: normal;
         font-weight: 400;
@@ -637,7 +637,7 @@
             width: 42%;
             color: #fff;
             padding-top: 40rem * 0.0625;
-            font-family: 'Suisse Intl';
+            font-family: var(--font-family);
             font-size: 24rem * 0.0625;
             font-style: normal;
             font-weight: 450;
@@ -660,7 +660,7 @@
             width: 40%;
             color: rgba(255, 255, 255, 0.5);
 
-            font-family: 'Suisse Intl';
+            font-family: var(--font-family);
             font-size: 14rem * 0.0625;
             font-style: normal;
             font-weight: 400;
@@ -713,7 +713,7 @@
 
     &-title {
         padding-left: 23%;
-        font-family: 'Suisse Intl';
+        font-family: var(--font-family);
         font-size: 42rem * 0.0625;
         font-style: normal;
         font-weight: 400;
@@ -928,7 +928,7 @@
     }
 
     &-title {
-        font-family: 'Suisse Intl';
+        font-family: var(--font-family);
         font-size: 42rem * 0.0625;
         font-style: normal;
         font-weight: 400;
