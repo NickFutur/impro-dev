@@ -12,6 +12,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 5%;
 }
 @media (max-width: 870px) {
   .dev-head {
@@ -516,7 +517,7 @@
   display: flex;
   flex-direction: column;
   color: rgba(255, 255, 255, 0.8);
-  font-family: "Suisse Intl";
+  font-family: var(--font-family);
   font-size: 0.875rem;
   font-style: normal;
   font-weight: 450;
@@ -546,7 +547,7 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: "Suisse Intl";
+  font-family: var(--font-family);
   font-size: 2.625rem;
   font-style: normal;
   font-weight: 400;
@@ -617,7 +618,7 @@
   width: 42%;
   color: #fff;
   padding-top: 2.5rem;
-  font-family: "Suisse Intl";
+  font-family: var(--font-family);
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 450;
@@ -640,7 +641,7 @@
   padding-top: 2.5rem;
   width: 40%;
   color: rgba(255, 255, 255, 0.5);
-  font-family: "Suisse Intl";
+  font-family: var(--font-family);
   font-size: 0.875rem;
   font-style: normal;
   font-weight: 400;
@@ -691,7 +692,7 @@
 }
 .stages-title {
   padding-left: 23%;
-  font-family: "Suisse Intl";
+  font-family: var(--font-family);
   font-size: 2.625rem;
   font-style: normal;
   font-weight: 400;
@@ -892,7 +893,7 @@
   }
 }
 .more-service-title {
-  font-family: "Suisse Intl";
+  font-family: var(--font-family);
   font-size: 2.625rem;
   font-style: normal;
   font-weight: 400;

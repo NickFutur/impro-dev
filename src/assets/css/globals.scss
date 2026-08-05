@@ -47,6 +47,7 @@
 :root {
     --info-banner-h: 0px;
     --app-height: 100%;
+    --font-family: #{$font-family-primary}, #{$font-family-fallback};
 }
 
 body {
@@ -55,7 +56,7 @@ body {
     width: 100%;
     color: #fff;
     background-color: #0f0f0f;
-    font-family: 'Suisse Intl';
+    font-family: var(--font-family);
     &.fixed {
         overflow: hidden;
     }
