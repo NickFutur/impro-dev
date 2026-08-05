@@ -101,6 +101,7 @@
 }
 .services__list {
   margin-top: 6.5625rem;
+  background: rgba(255, 255, 255, 0.02);
   border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.4);
 }
 .services__item {
@@ -326,7 +327,6 @@
   height: 100%;
   left: 0;
   top: 0;
-  background: rgba(255, 255, 255, 0.02);
   border-color: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(5.3125rem);
 }
@@ -336,6 +336,29 @@
 }
 .services__item:hover .services-blur-effect {
   opacity: 1;
+}
+
+.services__item-method.icon.--min {
+  position: relative;
+}
+.services__item-method.icon.--min::before {
+  box-sizing: border-box;
+  padding: 1px;
+  z-index: 0;
+  pointer-events: none;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+          mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+}
+.services__item-method.icon.--min .icon-inner {
+  z-index: 1;
+  background-color: transparent;
+}
+.services__item-method.icon.--min:hover .icon-inner {
+  background-color: transparent;
 }
 
 .service_list-item {

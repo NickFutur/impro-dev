@@ -88,6 +88,7 @@
 
     &__list {
         margin-top: 105rem * 0.0625;
+        background: rgba(255, 255, 255, 0.02);
         border-bottom: 1rem * 0.0625 solid rgba(255, 255, 255, 0.4);
     }
     &__item {
@@ -316,7 +317,7 @@
         left: 0;
         top: 0;
 
-        background: rgba(255, 255, 255, 0.02);
+        // background: rgba(255, 255, 255, 0.02);
         border-color: rgba(255, 255, 255, 0.4);
         backdrop-filter: blur(85rem * 0.0625);
     }
@@ -328,6 +329,38 @@
     }
     .services-blur-effect {
         opacity: 1;
+    }
+}
+
+.services__item-method.icon.--min {
+    position: relative;
+
+    &::before {
+        box-sizing: border-box;
+        padding: 1px;
+        z-index: 0;
+        pointer-events: none;
+
+        -webkit-mask:
+            linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+
+        mask:
+            linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+        mask-composite: exclude;
+    }
+
+    .icon-inner {
+        z-index: 1;
+        background-color: transparent;
+    }
+
+    &:hover {
+        .icon-inner {
+            background-color: transparent;
+        }
     }
 }
 

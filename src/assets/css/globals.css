@@ -55,6 +55,7 @@
 :root {
   --info-banner-h: 0px;
   --app-height: 100%;
+  --font-family: Inter, sans-serif;
 }
 
 body {
@@ -63,7 +64,7 @@ body {
   width: 100%;
   color: #fff;
   background-color: #0f0f0f;
-  font-family: "Suisse Intl";
+  font-family: var(--font-family);
 }
 body.fixed {
   overflow: hidden;

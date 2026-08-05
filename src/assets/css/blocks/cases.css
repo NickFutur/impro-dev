@@ -254,18 +254,12 @@
 .cases-item__b__photo img {
   border-radius: 0.75rem;
   border: 1.2px solid rgba(255, 255, 255, 0.4);
-  width: 5.5rem;
-  height: 5.5rem;
+  width: clamp(62px, 42.73px + 3.504vw, 110px);
+  height: clamp(62px, 42.73px + 3.504vw, 110px);
   -o-object-fit: cover;
      object-fit: cover;
   backdrop-filter: blur(3rem);
   box-shadow: inset 0 0 0.0625rem 0 #a4a4a4;
-}
-@media (max-width: 870px) {
-  .cases-item__b__photo img {
-    width: 3.875rem;
-    height: 3.875rem;
-  }
 }
 .cases-item__btn {
   margin-top: 3rem;
