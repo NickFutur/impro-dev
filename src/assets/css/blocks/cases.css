@@ -248,14 +248,16 @@
   }
 }
 .cases-item__b__photo {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 110px));
   gap: 0.625rem;
 }
 .cases-item__b__photo img {
   border-radius: 0.75rem;
   border: 1.2px solid rgba(255, 255, 255, 0.4);
-  width: clamp(62px, 42.73px + 3.504vw, 110px);
-  height: clamp(62px, 42.73px + 3.504vw, 110px);
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
   -o-object-fit: cover;
      object-fit: cover;
   backdrop-filter: blur(3rem);
@@ -279,9 +281,8 @@
   gap: 0.4rem;
 }
 @media screen and (min-width: 871px) {
-  .cases--inner .cases-list .cases-item__b__photo img {
-    width: 4.5rem;
-    height: 4.5rem;
+  .cases--inner .cases-list .cases-item__b__photo {
+    grid-template-columns: repeat(5, minmax(0, 4.5rem));
   }
 }
 

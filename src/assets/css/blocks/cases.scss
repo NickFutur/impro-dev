@@ -254,22 +254,18 @@
     }
     &__b {
         &__photo {
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 110px));
             gap: 10rem * 0.0625;
             img {
                 border-radius: 12rem * 0.0625;
                 border: 1.2px solid rgba($color: #fff, $alpha: 0.4);
-                // width: 88rem * 0.0625;
-                // height: 88rem * 0.0625;
-                width: clamp(62px, calc(42.73px + 3.504vw), 110px);
-                height: clamp(62px, calc(42.73px + 3.504vw), 110px);
+                width: 100%;
+                height: auto;
+                aspect-ratio: 1;
                 object-fit: cover;
                 backdrop-filter: blur(48rem * 0.0625);
                 box-shadow: inset 0 0 1rem * 0.0625 0 #a4a4a4;
-                @media (max-width: 870px) {
-                    // width: 62rem * 0.0625;
-                    // height: 62rem * 0.0625;
-                }
             }
         }
     }
@@ -289,16 +285,11 @@
 .cases--inner {
     .cases-list {
         .cases-item {
-            &__content {
-            }
             &__b {
                 &__photo {
                     gap: 0.4rem;
-                    img {
-                        @media screen and (min-width: 871px) {
-                            width: 4.5rem;
-                            height: 4.5rem;
-                        }
+                    @media screen and (min-width: 871px) {
+                        grid-template-columns: repeat(5, minmax(0, 4.5rem));
                     }
                 }
             }
