@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+    <filter id="clean-alpha" color-interpolation-filters="sRGB">
+        <feComponentTransfer>
+            <feFuncA type="table" tableValues="0 0 0 0 1" />
+        </feComponentTransfer>
+    </filter>
+</svg>

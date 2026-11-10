@@ -2,3 +2,4 @@
 /dist/*
 .codex/config.toml
 /skills/*
+/task/
