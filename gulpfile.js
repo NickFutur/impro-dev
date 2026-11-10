@@ -44,8 +44,8 @@ path.watch = {};
  */
 path.src.html[0] = path.src.srcPath + path.src.html[0];
 path.src.html[1] = "!" + path.src.html[0].slice(0, -6) + "_*.html";
-path.src.html[2] = "!" + path.src.srcPath + "/assets";
-path.src.html[3] = "!" + path.src.srcPath + "/_html";
+path.src.html[2] = "!" + path.src.srcPath + "/assets/**";
+path.src.html[3] = "!" + path.src.srcPath + "/_html/**";
 
 path.dist.html = path.dist.distPath + path.dist.html;
 
@@ -131,8 +131,12 @@ function browsersync() {
  */
 function njk() {
   return gulp
-    .src(path.src.html)
+    .src(path.src.html, { base: path.src.srcPath })
     .pipe(nunjucks.compile())
+    // Keep case output beside existing pages so shared asset paths still work.
+    .pipe(rename((file) => {
+      if (file.dirname === "cases") file.dirname = "";
+    }))
     .pipe(gulp.dest(path.dist.html))
     .on("end", browserSync.reload);
 }

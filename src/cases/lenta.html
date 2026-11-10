@@ -1,0 +1,349 @@
+{% set title = "IMPro — Чат-боты и лендинг для Ленты и Детского мира" %} {% set meta_description = "Кейс IMPro: создание
+чат-ботов ВКонтакте и Telegram и лендинга для Ленты и Детского мира." %} {% set bodyClass = "lenta-page" %} {% set
+show_info = true %} {% extends "_html/_base/_layouts/_default.html" %} {% block content %}
+<div class="page-wrapper">
+    <div class="lenta-page__content">
+        <section class="lenta-hero" aria-labelledby="lenta-title">
+            <a class="lenta-hero__agency" href="index.html" aria-label="IMPro — на главную">
+                <img src="assets/img/cases/lenta/logo.svg" alt="IMPro" width="75" height="30" />
+            </a>
+            <h1 class="lenta-hero__title" id="lenta-title">
+                <span class="lenta-hero__headline">
+                    <span class="lenta-hero__socials">
+                        <img src="assets/img/cases/lenta/vk.png" alt="ВКонтакте" width="32" height="32" />
+                        <img src="assets/img/cases/lenta/tg.svg" alt="Telegram" width="50" height="50" />
+                    </span>
+                    Создание чат-ботов
+                </span>
+                и лендинга для Ленты и Детского мира
+            </h1>
+            <ul class="lenta-hero__tags" aria-label="О проекте">
+                <li class="lenta-hero__tag">Лендинг</li>
+                <li class="lenta-hero__tag">Чат-боты</li>
+                <li class="lenta-hero__tag">
+                    <a href="https://capybara.lenta.com" class="lenta-hero__site">
+                        <svg
+                            width="14"
+                            height="14"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2.5"
+                            stroke-linecap="round"
+                            aria-hidden="true"
+                        >
+                            <path d="m10 13 4-4m-6 1-3 3a4 4 0 0 0 6 6l3-3m-4-8 3-3a4 4 0 0 1 6 6l-3 3" />
+                        </svg>
+                        capybara.lenta.com
+                    </a>
+                </li>
+                <li class="lenta-hero__tag">
+                    <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        aria-hidden="true"
+                    >
+                        <rect x="3" y="5" width="18" height="16" rx="2" />
+                        <path d="M3 10h18M7 3v4m10-4v4M7 14h1m4 0h1m4 0h1M7 18h1m4 0h1" />
+                    </svg>
+                    <time datetime="2024-11">Ноябрь 2024</time>
+                </li>
+                <li class="lenta-hero__tag">
+                    <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        aria-hidden="true"
+                    >
+                        <circle cx="12" cy="14" r="8" />
+                        <path d="M12 10v4l-2 2M9 2h6m-3 0v4m6 1 2-2" />
+                    </svg>
+                    2 недели
+                </li>
+            </ul>
+            <div class="lenta-hero__client lenta-hero__client--lenta">
+                <img src="assets/img/cases/lenta/lenta.png" alt="Лента" width="268" height="268" />
+            </div>
+            <div class="lenta-hero__client lenta-hero__client--kids">
+                <img src="assets/img/cases/lenta/childword.png" alt="Детский мир" width="268" height="268" />
+            </div>
+            <div class="lenta-hero__visual">
+                <img
+                    class="lenta-hero__tablets"
+                    src="assets/img/cases/lenta/tablets.png"
+                    alt="Лендинг акции Ленты с промокодами Roblox на экранах двух планшетов"
+                    width="1246"
+                    height="1263"
+                    fetchpriority="high"
+                />
+            </div>
+        </section>
+        <section class="lenta-section lenta-task" aria-labelledby="lenta-task-title">
+            <div class="lenta-task__content">
+                <span class="lenta-section__label">задача</span>
+                <h2 class="lenta-section__title" id="lenta-task-title">
+                    Создать систему, включающую лендинг<br />
+                    и ботов, для обработки QR-кодов, отслеживания<br />
+                    пользовательских действий и взаимодействия<br />
+                    через мессенджеры (Telegram, ВКонтакте).
+                </h2>
+                <p class="lenta-section__text lenta-task__client">
+                    Нашим клиентом выступили крупные<br />представители рынка — Лента и Детский Мир
+                </p>
+            </div>
+            <ul class="lenta-task__tags" aria-label="Тематика проекта">
+                <li>#промо-лендинг</li>
+                <li>#чат-бот</li>
+                <li>#вконтакте</li>
+                <li>#телеграм</li>
+                <li>#для детей</li>
+            </ul>
+        </section>
+        <section class="lenta-section lenta-landing" aria-labelledby="lenta-landing-title">
+            <div class="lenta-landing__content">
+                <span class="lenta-section__label lenta-section__label--light">лендинг</span>
+                <h2 class="lenta-landing__title" id="lenta-landing-title">
+                    Мы создали лендинг,<br />который не просто привлекателен,<br />но и выполняет важные задачи:
+                </h2>
+                <ol class="lenta-landing__features">
+                    <li>Мгновенная обработка QR-кодов: один скан — и все данные попадают в защищенную базу.</li>
+                    <li>
+                        Отслеживание действий пользователей: время обращения, IP-адрес и результат фиксируются для
+                        аналитики.
+                    </li>
+                    <li>
+                        Максимальная безопасность: все данные шифруются и хранятся локально, чтобы предотвратить утечки.
+                    </li>
+                </ol>
+            </div>
+            <div class="lenta-landing__visual">
+                <svg
+                    class="lenta-landing__globe"
+                    width="84"
+                    height="84"
+                    viewBox="0 0 84 84"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="4"
+                    aria-hidden="true"
+                >
+                    <circle cx="42" cy="42" r="38" />
+                    <ellipse cx="42" cy="42" rx="19" ry="38" />
+                    <path d="M42 4v76M4 42h76M12 19q30 17 60 0M12 65q30-17 60 0" />
+                </svg>
+                <img
+                    class="lenta-landing__phones"
+                    src="assets/img/cases/lenta/phones.png"
+                    alt="Мобильная версия лендинга Ленты: ввод промокода и участие в акции Roblox"
+                    width="713"
+                    height="740"
+                    loading="lazy"
+                />
+            </div>
+        </section>
+        <section class="lenta-section lenta-bots" aria-labelledby="lenta-bots-title">
+            <div class="lenta-bots__content">
+                <span class="lenta-section__label">чат-боты</span>
+                <h2 class="lenta-section__title" id="lenta-bots-title">Вовлечение и автоматизация</h2>
+                <p class="lenta-section__text">
+                    Клиенты хотели максимально упростить взаимодействие с пользователями. Мы разработали двух ботов
+                    ВКонтакте и одного Telegram-бота с иллюстрациями, которые выполняют роль викторины.
+                </p>
+            </div>
+            <ul class="lenta-bots__platforms" aria-label="Платформы чат-ботов">
+                <li>
+                    <img
+                        src="assets/img/cases/lenta/vk-circle.svg"
+                        alt="ВКонтакте"
+                        width="54"
+                        height="54"
+                        loading="lazy"
+                    />
+                </li>
+                <li>
+                    <img
+                        src="assets/img/cases/lenta/telegram-circle.svg"
+                        alt="Telegram"
+                        width="54"
+                        height="54"
+                        loading="lazy"
+                    />
+                </li>
+            </ul>
+            <div class="lenta-bots__showcase">
+                <img
+                    class="lenta-bots__result"
+                    src="assets/img/cases/lenta/bot-result.png"
+                    alt="Результат викторины Детского мира: плюшевый мишка на экране телефона над голубым подиумом"
+                    width="816"
+                    height="816"
+                    loading="lazy"
+                />
+                <div class="lenta-bots__how">
+                    <span class="lenta-section__label lenta-section__label--light">чат-боты</span>
+                    <h3 class="lenta-bots__how-title">Вот, как это работает:</h3>
+                    <ol class="lenta-bots__features">
+                        <li>Игра-опрос: пользователи отвечают на список вопросов, выбирая один из четырех вариантов</li>
+                        <li>
+                            Результат с бонусом: после прохождения викторины в Telegram пользователи получают стикерпак
+                        </li>
+                    </ol>
+                    <img
+                        class="lenta-bots__icon"
+                        src="assets/img/cases/lenta/bot-icon.png"
+                        alt=""
+                        width="206"
+                        height="166"
+                        loading="lazy"
+                    />
+                </div>
+                <div class="lenta-bots__quizzes">
+                    <img
+                        class="lenta-bots__quiz lenta-bots__quiz--school"
+                        src="assets/img/cases/lenta/quiz-school.png"
+                        alt="Пример вопроса викторины Детского мира: какой был твой любимый предмет в школе, с пятью вариантами ответа"
+                        width="392"
+                        height="642"
+                        loading="lazy"
+                    />
+                    <img
+                        class="lenta-bots__quiz"
+                        src="assets/img/cases/lenta/quiz-bears.png"
+                        alt="Пример иллюстрированной викторины: кто любил собирать плюшевых медведей, с четырьмя вариантами ответа"
+                        width="390"
+                        height="704"
+                        loading="lazy"
+                    />
+                </div>
+                <div class="lenta-bots__stages">
+                    <span class="lenta-section__label">этапы</span>
+                    <h3 class="lenta-section__title">Этапы разработки включали:</h3>
+                    <ul class="lenta-bots__stage-list">
+                        <li>Отрисовку уникального дизайна для Telegram-бота.</li>
+                        <li>Интеграцию ботов с Telegram и ВКонтакте.</li>
+                        <li>Подключение библиотек для работы с API мессенджеров.</li>
+                        <li>Настройку авторизации через JWT-токены.</li>
+                        <li>Подсчет рейтингов и времени выполнения заданий.</li>
+                        <li>Обработку правильных и неправильных ответов.</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="lenta-bots__summary">
+                Мы создали систему, которая не только отвечает запросам клиентов, но и делает взаимодействие
+                увлекательным для пользователей.
+            </p>
+        </section>
+        <section class="lenta-challenges" aria-labelledby="lenta-challenges-title">
+            <span class="lenta-section__label lenta-section__label--light">сложности, с которыми мы справились</span>
+            <h2 class="lenta-challenges__title" id="lenta-challenges-title">
+                Любой большой проект — это вызовы,<br />
+                и мы успешно их преодолели:
+            </h2>
+            <ul class="lenta-challenges__list">
+                <li>Отрисовку уникального дизайна для Telegram-бота</li>
+                <li>Интеграцию ботов с Telegram и ВКонтакте</li>
+                <li>Подключение библиотек для работы с API мессенджеров</li>
+                <li>Настройку авторизации через JWT-токены</li>
+                <li>Подсчет рейтингов и времени выполнения заданий</li>
+                <li>Обработку правильных и неправильных ответов</li>
+            </ul>
+        </section>
+        <section class="lenta-section lenta-results" aria-labelledby="lenta-results-title">
+            <div class="lenta-results__main">
+                <div class="lenta-results__card">
+                    <h2 class="lenta-section__label lenta-section__label--light" id="lenta-results-title">
+                        результат: функциональная система для бизнеса
+                    </h2>
+                    <p class="lenta-results__intro">За короткие сроки мы создали мощную систему, которая включает</p>
+                    <ol class="lenta-results__features">
+                        <li>Лендинг с надежной обработкой данных</li>
+                        <li>Интерактивных ботов для вовлечения пользователей</li>
+                    </ol>
+                    <p class="lenta-results__description">
+                        Проект стал не просто функциональным решением, но и помог нашим клиентам автоматизировать
+                        процессы, привлечь аудиторию и повысить их лояльность.
+                    </p>
+                </div>
+                <div class="lenta-results__team">
+                    <h3 class="lenta-section__label">над проектом работали</h3>
+                    <ul class="lenta-results__people">
+                        <li>
+                            <img
+                                src="assets/img/cases/lenta/team-anastasia.png"
+                                alt="Анастасия Кобзева"
+                                width="134"
+                                height="134"
+                                loading="lazy"
+                            />
+                            <div>
+                                <p class="lenta-results__name">Анастасия Кобзева</p>
+                                <p class="lenta-results__role">Проектный менеджер</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img
+                                src="assets/img/cases/lenta/team-andrey.png"
+                                alt="Аватар Андрея Гнитецкого"
+                                width="134"
+                                height="134"
+                                loading="lazy"
+                            />
+                            <div>
+                                <p class="lenta-results__name">Андрей Гнитецкий</p>
+                                <p class="lenta-results__role">Технический специалист</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img
+                                src="assets/img/cases/lenta/team-nikita.png"
+                                alt="Никита Солдатов"
+                                width="134"
+                                height="134"
+                                loading="lazy"
+                            />
+                            <div>
+                                <p class="lenta-results__name">Никита Солдатов</p>
+                                <p class="lenta-results__role">Дизайнер</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <img
+                class="lenta-results__phone"
+                src="assets/img/cases/lenta/results-phone.png"
+                alt="Стартовый экран викторины Детского мира с предложением пройти опрос и получить стикерпак"
+                width="916"
+                height="748"
+                loading="lazy"
+            />
+            <div class="lenta-results__closing">
+                <img
+                    class="lenta-results__arrow"
+                    src="assets/img/cases/lenta/results-arrow.svg"
+                    alt=""
+                    width="144"
+                    height="233"
+                    loading="lazy"
+                />
+                <a class="lenta-results__agency" href="index.html" aria-label="IMPro — на главную">
+                    <img src="assets/img/cases/lenta/results-logo.svg" alt="IMPro" width="75" height="30" />
+                </a>
+                <h2 class="lenta-results__invitation">
+                    Хотите получить такую же систему<br />для вашего бизнеса? Мы готовы превратить<br />
+                    ваши идеи в реальность!
+                </h2>
+            </div>
+        </section>
+    </div>
+</div>
+{% endblock %}

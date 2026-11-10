@@ -6,10 +6,10 @@
     "scripts": {
         "build": "gulp build --prod",
         "deploy": "npm run build && gh-pages -d dist",
-        "format": "prettier --write \"README.md\" \"package.json\" \".prettierrc.json\" \".stylelintrc.json\" \".htmlhintrc\" \"eslint.config.mjs\" \"src/*.html\" \"src/assets/css/**/*.scss\" \"src/assets/js/app.js\"",
+        "format": "prettier --write \"README.md\" \"package.json\" \".prettierrc.json\" \".stylelintrc.json\" \".htmlhintrc\" \"eslint.config.mjs\" \"src/*.html\" \"src/cases/*.html\" \"src/assets/css/**/*.scss\" \"src/assets/js/app.js\"",
         "lint:scss": "stylelint \"src/assets/css/**/*.scss\"",
         "lint:js": "eslint \"src/assets/js/**/*.js\"",
-        "lint:html": "htmlhint \"src/*.html\"",
+        "lint:html": "htmlhint \"src/**/*.html\" --ignore \"**/_html/**,**/_*.html\"",
         "lint:html:dist": "htmlhint \"dist/**/*.html\"",
         "check": "npm run lint:scss && npm run lint:js && npm run lint:html"
     },
