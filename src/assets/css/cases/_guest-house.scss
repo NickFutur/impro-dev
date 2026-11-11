@@ -1,0 +1,168 @@
+@font-face {
+    font-family: 'NT Somic';
+    src: url('../fonts/nt-somic/NTSomic-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+.guest-house-page {
+    --font12: 'NT Somic', sans-serif;
+}
+
+.guest-house-hero {
+    position: relative;
+    background: #aaa8a5;
+
+    &__title {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip-path: inset(50%);
+        white-space: nowrap;
+    }
+
+    &__image {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    &__header {
+        position: absolute;
+        inset: 0 0 auto;
+        display: flex;
+        align-items: stretch;
+        min-height: 72px;
+        border-bottom: 1px solid rgb(255 255 255 / 35%);
+        background: rgb(255 255 255 / 6%);
+        font-family: var(--font12);
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 1.4;
+        letter-spacing: 0.01em;
+        text-transform: uppercase;
+        color: #fff;
+    }
+
+    &__details {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 16px 30px;
+        padding: 18px 28px;
+    }
+
+    &__detail,
+    &__site {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &__detail {
+        img {
+            display: block;
+            flex-shrink: 0;
+            width: 34px;
+            height: 34px;
+        }
+    }
+
+    &__site-text {
+        text-underline-offset: 2px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__logo {
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+        width: 174px;
+        margin-left: auto;
+        border-left: 1px solid rgb(255 255 255 / 35%);
+
+        img {
+            display: block;
+            width: 81px;
+            height: 30px;
+        }
+    }
+
+    &__logo:focus-visible,
+    &__site:focus-visible {
+        outline: 2px solid #fff;
+        outline-offset: -4px;
+    }
+
+    @media (max-width: 1200px) {
+        &__details {
+            gap: 12px 18px;
+            padding: 14px 20px;
+        }
+
+        &__logo {
+            width: 130px;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 1100px) {
+        &__header {
+            font-size: 11px;
+        }
+
+        &__details {
+            gap: 10px 16px;
+        }
+
+        &__detail img {
+            width: 28px;
+            height: 28px;
+        }
+
+        &__logo {
+            width: 110px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        display: flex;
+        flex-direction: column;
+
+        &__header {
+            position: static;
+            order: -1;
+            flex-direction: column-reverse;
+            font-size: 11px;
+        }
+
+        &__details {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+            padding: 16px;
+        }
+
+        &__detail {
+            gap: 6px;
+
+            img {
+                width: 28px;
+                height: 28px;
+            }
+        }
+
+        &__logo {
+            justify-content: flex-end;
+            width: 100%;
+            padding: 12px 16px;
+            border-bottom: 1px solid rgb(255 255 255 / 35%);
+            border-left: 0;
+        }
+    }
+}

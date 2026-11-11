@@ -1,0 +1,44 @@
+{% set title = "IMPro — Сайт гостевого дома «Слово»" %} {% set meta_description = "Кейс IMPro: сайт для бутик-отеля
+«Слово» на Tilda. Май 2025, срок разработки — один месяц." %} {% set bodyClass = "guest-house-page" %} {% extends
+"_html/_base/_layouts/_default.html" %} {% block site_header %}{% endblock %} {% block content %}
+<section class="guest-house-hero" aria-labelledby="guest-house-title">
+    <h1 class="guest-house-hero__title" id="guest-house-title">Сайт гостевого дома «Слово»</h1>
+    <img
+        class="guest-house-hero__image"
+        src="assets/img/cases/guest-house/slovo-hotel-laptop.png"
+        alt="Ноутбук на кровати в номере гостевого дома с открытым сайтом бутик-отеля «Слово»"
+        width="2880"
+        height="2208"
+        fetchpriority="high"
+    />
+    <header class="guest-house-hero__header">
+        <ul class="guest-house-hero__details" aria-label="О проекте">
+            <li class="guest-house-hero__detail">
+                <img src="assets/img/cases/guest-house/hotel.svg" alt="" width="34" height="34" />
+                Сайт для бутик-отеля
+            </li>
+            <li class="guest-house-hero__detail">
+                <img src="assets/img/cases/guest-house/tilda.svg" alt="" width="34" height="34" />
+                Tilda Publishing
+            </li>
+            <li class="guest-house-hero__detail">
+                <img src="assets/img/cases/guest-house/calendar.svg" alt="" width="34" height="34" />
+                <time datetime="2025-05">Май 2025</time>
+            </li>
+            <li class="guest-house-hero__detail">
+                <img src="assets/img/cases/guest-house/stopwatch.svg" alt="" width="34" height="34" />
+                1 месяц
+            </li>
+            <li class="guest-house-hero__detail">
+                <a class="guest-house-hero__site" href="https://slovohotel.ru/">
+                    <img src="assets/img/cases/guest-house/link.svg" alt="" width="34" height="34" />
+                    <span class="guest-house-hero__site-text">slovohotel.ru</span>
+                </a>
+            </li>
+        </ul>
+        <a class="guest-house-hero__logo" href="index.html" aria-label="IMPro — на главную">
+            <img src="assets/img/cases/guest-house/impro-logo.svg" alt="IMPro" width="81" height="30" />
+        </a>
+    </header>
+</section>
+{% endblock %}
