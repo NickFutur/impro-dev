@@ -1,0 +1,282 @@
+{% set title = "IMPro — Сайт для мгновенной связи в Telegram и WhatsApp" %} {% set meta_description = "Внутренний проект
+IMPro: лендинг для мгновенной связи в Telegram и WhatsApp. Сентябрь 2024, срок разработки — 2 недели." %} {% set
+bodyClass = "messenger-page" %} {% extends "_html/_base/_layouts/_default.html" %} {% block content %}
+<div class="messenger-page__content">
+    <section class="messenger-hero" aria-labelledby="messenger-title">
+        <img
+            class="messenger-hero__image"
+            src="assets/img/cases/messenger/messenger-laptop.png"
+            alt="Лендинг IMPro для связи в WhatsApp и Telegram на экране ноутбука на зелёных подиумах"
+            width="2360"
+            height="1984"
+            fetchpriority="high"
+        />
+        <div class="messenger-hero__meta">
+            <ul class="messenger-hero__categories" aria-label="Категория проекта">
+                <li class="messenger-hero__tag messenger-hero__tag--dark">Категория</li>
+                <li class="messenger-hero__tag">Лендинг</li>
+                <li class="messenger-hero__tag">Чат-боты</li>
+            </ul>
+            <div class="messenger-hero__details">
+                <div class="messenger-hero__summary">
+                    <h1 class="messenger-hero__tag messenger-hero__tag--dark" id="messenger-title">
+                        Сайт для мгновенной связи в Telegram и WhatsApp
+                    </h1>
+                    <p class="messenger-hero__tag">
+                        <img src="assets/img/cases/messenger/calendar.svg" alt="" width="14" height="15" />
+                        <time datetime="2024-09">Сентябрь 2024</time>
+                    </p>
+                    <p class="messenger-hero__tag">
+                        <img src="assets/img/cases/messenger/stopwatch.svg" alt="" width="15" height="18" />
+                        2 недели
+                    </p>
+                </div>
+                <p class="messenger-hero__tag messenger-hero__agency">
+                    Внутренний проект интернет-агентства
+                    <img src="assets/img/cases/messenger/impro-logo.svg" alt="IMPro" width="53" height="22" />
+                </p>
+            </div>
+        </div>
+        <div class="messenger-hero__socials" aria-hidden="true">
+            <img src="assets/img/cases/messenger/telegram-badge.png" alt="" width="131" height="131" />
+            <img src="assets/img/cases/messenger/whatsapp-badge.png" alt="" width="131" height="131" />
+        </div>
+    </section>
+    <section class="messenger-task" aria-labelledby="messenger-task-title">
+        <h2 class="messenger-section-label" id="messenger-task-title">01 Задача</h2>
+        <p class="messenger-task__text">
+            Разработать простой и удобный инструмент, который позволяет пользователю мгновенно открыть чат в
+            <span class="messenger-task__service messenger-task__service--whatsapp">
+                <img src="assets/img/cases/messenger/whatsapp-icon.svg" alt="" width="22" height="22" />
+                WhatsApp</span
+            >
+            или
+            <span class="messenger-task__service messenger-task__service--telegram">
+                <img src="assets/img/cases/messenger/telegram-icon.svg" alt="" width="22" height="22" />
+                Telegram</span
+            >, просто указав номер телефона
+        </p>
+    </section>
+    <section class="messenger-solution" aria-labelledby="messenger-solution-title">
+        <header class="messenger-solution__header">
+            <h2 class="messenger-section-label" id="messenger-solution-title">02 Что мы сделали</h2>
+            <p class="messenger-solution__intro">Для решения задачи мы создали<br />две отдельные страницы:</p>
+        </header>
+        <figure class="messenger-solution__item messenger-solution__item--telegram">
+            <img
+                class="messenger-solution__phone"
+                src="assets/img/cases/messenger/telegram-phone.png"
+                alt="Страница для открытия чата в Telegram по номеру телефона на экране iPhone"
+                width="466"
+                height="949"
+                loading="lazy"
+            />
+            <figcaption class="messenger-solution__card">
+                <h3 class="messenger-solution__name">
+                    <img src="assets/img/cases/messenger/telegram-icon.svg" alt="" width="14" height="14" />
+                    Telegram
+                </h3>
+                <p>Быстрый доступ к диалогу в Telegram</p>
+            </figcaption>
+        </figure>
+        <figure class="messenger-solution__item messenger-solution__item--whatsapp">
+            <img
+                class="messenger-solution__phone"
+                src="assets/img/cases/messenger/whatsapp-phone.png"
+                alt="Страница для открытия чата в WhatsApp по номеру телефона на экране iPhone"
+                width="466"
+                height="952"
+                loading="lazy"
+            />
+            <figcaption class="messenger-solution__card">
+                <h3 class="messenger-solution__name">
+                    <img src="assets/img/cases/messenger/whatsapp-icon.svg" alt="" width="14" height="15" />
+                    WhatsApp
+                </h3>
+                <p>Прямая ссылка на чат для пользователей популярного мессенджера</p>
+            </figcaption>
+        </figure>
+    </section>
+    <section class="messenger-features" aria-labelledby="messenger-features-title">
+        <img
+            class="messenger-features__image"
+            src="assets/img/cases/messenger/telegram-phone-in-hand.png"
+            alt="Телефон в руке со страницей IMPro для открытия чата в Telegram по номеру телефона"
+            width="2360"
+            height="1404"
+            loading="lazy"
+        />
+        <header class="messenger-features__header">
+            <h2 class="messenger-section-label" id="messenger-features-title">03 Функционал</h2>
+            <p class="messenger-features__intro">На каждой странице<br />реализован функционал:</p>
+        </header>
+        <img
+            class="messenger-features__signal"
+            src="assets/img/cases/messenger/wireless-signal.svg"
+            alt=""
+            width="27"
+            height="30"
+            loading="lazy"
+        />
+        {% include "assets/img/cases/messenger/feature-connectors.svg" %}
+        <ul class="messenger-features__list">
+            <li class="messenger-features__card messenger-features__card--input">Поле для ввода номера телефона</li>
+            <li class="messenger-features__card messenger-features__card--interface">
+                Интуитивно понятный интерфейс, подходящий для любого устройства
+            </li>
+            <li class="messenger-features__card messenger-features__card--button">
+                Кнопка, которая автоматически формирует и открывает прямую ссылку в выбранном мессенджере
+            </li>
+        </ul>
+    </section>
+    <section class="messenger-benefits" aria-labelledby="messenger-benefits-title">
+        <div class="messenger-benefits__content">
+            <h2 class="messenger-section-label" id="messenger-benefits-title">
+                04 Какие задачи решает этот инструмент?
+            </h2>
+            <ul class="messenger-benefits__list">
+                <li class="messenger-benefits__item">Упрощение взаимодействия с клиентами, партнерами или коллегами</li>
+                <li class="messenger-benefits__item">
+                    Инструмент подходит для личных нужд, маркетинговых активностей или клиентской поддержки
+                </li>
+                <li class="messenger-benefits__item">
+                    Пользователю больше не нужно искать контакт вручную — достаточно ввести номер
+                </li>
+            </ul>
+        </div>
+        <img
+            class="messenger-benefits__image"
+            src="assets/img/cases/messenger/communication-network.png"
+            alt=""
+            width="548"
+            height="548"
+            loading="lazy"
+        />
+    </section>
+    <section class="messenger-importance" aria-labelledby="messenger-importance-title">
+        <div class="messenger-importance__visual">
+            <img
+                class="messenger-importance__image"
+                src="assets/img/cases/messenger/telegram-laptop-closeup.png"
+                alt="Крупный план экрана ноутбука со страницей IMPro для связи в Telegram по номеру телефона"
+                width="850"
+                height="850"
+                loading="lazy"
+            />
+        </div>
+        <div class="messenger-importance__content">
+            <h2 class="messenger-section-label" id="messenger-importance-title">05 Почему это важно?</h2>
+            <p class="messenger-importance__text">
+                В современном мире каждая секунда на счету. Бизнесу важно обеспечить мгновенную связь с клиентами.
+            </p>
+        </div>
+    </section>
+    <section class="messenger-approach" aria-labelledby="messenger-approach-title">
+        <div class="messenger-approach__content">
+            <h2 class="messenger-approach__title" id="messenger-approach-title">
+                Наш инструмент решает<br />эту задачу за счет:
+            </h2>
+            <ul class="messenger-approach__list">
+                <li class="messenger-approach__item">
+                    Минималистичного дизайна и UX, пользователь видит только необходимый функционал, без отвлекающих
+                    элементов
+                </li>
+                <li class="messenger-approach__item">
+                    Мы использовали лучшие практики веб-разработки для безотказной работы инструмента на всех
+                    устройствах
+                </li>
+                <li class="messenger-approach__item">
+                    Инструмент легок в использовании и может быть полезен для любых маркетинговых и бизнес-процессов
+                </li>
+            </ul>
+            <div class="messenger-approach__team">
+                <h3 class="messenger-approach__title">Проект был выполнен силами<br />нашей команды:</h3>
+                <img
+                    class="messenger-approach__team-icon"
+                    src="assets/img/cases/messenger/web-development.svg"
+                    alt=""
+                    width="60"
+                    height="60"
+                    loading="lazy"
+                />
+                <ul class="messenger-approach__roles">
+                    <li class="messenger-approach__role">
+                        <h4 class="messenger-approach__role-title">Разработчики</h4>
+                        <p>Создали легковесные страницы с мгновенной загрузкой</p>
+                    </li>
+                    <li class="messenger-approach__role">
+                        <h4 class="messenger-approach__role-title">Дизайнеры</h4>
+                        <p>Продумали лаконичный и удобный интерфейс</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="messenger-approach__visual">
+            <img
+                class="messenger-approach__image"
+                src="assets/img/cases/messenger/messenger-laptops.png"
+                alt="Два ноутбука со страницами IMPro для мгновенной связи в WhatsApp и Telegram"
+                width="1438"
+                height="1970"
+                loading="lazy"
+            />
+        </div>
+    </section>
+    <section class="messenger-results" aria-labelledby="messenger-results-title">
+        <p class="messenger-results__statement">
+            Мы стремились не просто создать функционал, но и показать, как даже простой инструмент может решить
+            конкретные бизнес-задачи.
+        </p>
+        <h2 class="messenger-section-label" id="messenger-results-title">06 Результаты проекта</h2>
+        <ul class="messenger-results__list">
+            <li class="messenger-results__item">
+                <img src="assets/img/cases/messenger/shared-tool.svg" alt="" width="26" height="23" loading="lazy" />
+                <p>Инструмент уже используется для внутренних и клиентских задач</p>
+            </li>
+            <li class="messenger-results__item messenger-results__item--launch">
+                <p>Повысил скорость запуска маркетинговых активностей</p>
+                <img src="assets/img/cases/messenger/launch.svg" alt="" width="38" height="38" loading="lazy" />
+            </li>
+            <li class="messenger-results__item">
+                <img
+                    src="assets/img/cases/messenger/positive-feedback.svg"
+                    alt=""
+                    width="30"
+                    height="25"
+                    loading="lazy"
+                />
+                <p>Получил положительные отзывы от первых пользователей</p>
+            </li>
+        </ul>
+        <div class="messenger-results__team" aria-labelledby="messenger-team-title">
+            <h3 class="messenger-section-label" id="messenger-team-title">Над проектом работали</h3>
+            <ul class="messenger-results__people">
+                <li class="messenger-results__person">
+                    <img
+                        class="messenger-results__avatar"
+                        src="assets/img/cases/lenta/team-andrey.png"
+                        alt="Аватар Андрея Гнитецкого"
+                        width="92"
+                        height="92"
+                        loading="lazy"
+                    />
+                    <p class="messenger-results__name">Андрей Гнитецкий</p>
+                    <p class="messenger-results__role">Технический специалист</p>
+                </li>
+                <li class="messenger-results__person">
+                    <img
+                        class="messenger-results__avatar"
+                        src="assets/img/cases/messenger/team-vlada.png"
+                        alt="Влада Шумиловских"
+                        width="92"
+                        height="92"
+                        loading="lazy"
+                    />
+                    <p class="messenger-results__name">Влада Шумиловских</p>
+                    <p class="messenger-results__role">Дизайнер</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+</div>
+{% endblock %}
