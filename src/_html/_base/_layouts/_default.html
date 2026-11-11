@@ -17,7 +17,9 @@
 <body {% if bodyClass %}class="{{ bodyClass }}"{% endif %}>
     <div>
 
-        {% include "_html/_base/_includes/_header.html" %}
+        {% block site_header %}
+            {% include "_html/_base/_includes/_header.html" %}
+        {% endblock %}
         
         <main>
             {% block content %}{% endblock %}
