@@ -1,12 +1,12 @@
-<svg width="1406" height="837" viewBox="0 0 1406 837" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M382 285H535C590 285 610 305 632 377" stroke="url(#feature-input)" stroke-width="0.7"/>
+<svg class="messenger-features__connectors" aria-hidden="true" focusable="false" width="1406" height="837" viewBox="0 0 1406 837" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M358.5 285H535C590 285 610 305 632 377" stroke="url(#feature-input)" stroke-width="0.7"/>
   <circle cx="632" cy="377" r="3.5" fill="white" stroke="url(#feature-input)"/>
-  <path d="M1005 323H900C850 323 830 320 809 245" stroke="url(#feature-interface)" stroke-width="0.7"/>
+  <path d="M1027.8 323H900C850 323 830 320 809 245" stroke="url(#feature-interface)" stroke-width="0.7"/>
   <circle cx="809" cy="245" r="3.5" fill="white" stroke="url(#feature-interface)"/>
   <g transform="translate(452 452) scale(1.2)">
     <circle cx="163.5" cy="3.5" r="3.5" fill="white"/>
     <circle cx="163.5" cy="3.5" r="3" stroke="url(#feature-dot)"/>
-    <path d="M0 151.853C0 151.853 54.0253 151.852 85.6668 151.853C117.308 151.854 144.32 162.421 164 4" stroke-width="0.7" stroke="url(#feature-button)"/>
+    <path d="M-20 151.853C-20 151.853 54.0253 151.852 85.6668 151.853C117.308 151.854 144.32 162.421 164 4" stroke-width="0.7" stroke="url(#feature-button)"/>
   </g>
   <defs>
     <linearGradient id="feature-input" x1="382" y1="285" x2="632" y2="377" gradientUnits="userSpaceOnUse">

@@ -58,18 +58,38 @@
         }
     }
 
+    @media (max-width: 1200px) {
+        padding: 80px 24px 100px;
+
+        &__text {
+            max-width: 680px;
+            margin-top: 32px;
+            font-size: clamp(26px, 2.7vw, 32px);
+        }
+
+        &__service {
+            padding: 4px 14px;
+            font-size: 22px;
+
+            img {
+                width: 18px;
+                height: 18px;
+            }
+        }
+    }
+
     @media (max-width: 767px) {
         padding: 72px 16px 84px;
 
         &__text {
             margin-top: 32px;
-            font-size: clamp(24px, 5.2vw, 36px);
+            font-size: clamp(20px, 3.4vw, 24px);
         }
 
         &__service {
             gap: 5px;
             padding: 4px 12px;
-            font-size: 20px;
+            font-size: 18px;
         }
     }
 }
@@ -255,6 +275,11 @@
         width: 100%;
         height: 100%;
         pointer-events: none;
+
+        path {
+            stroke-width: 1;
+            vector-effect: non-scaling-stroke;
+        }
     }
 
     &__card {
@@ -268,29 +293,44 @@
         font-weight: 400;
         line-height: 1.35;
         letter-spacing: -0.01em;
+        transform: translateY(-50%);
 
         &--input {
-            top: 29.5%;
+            top: 34.05%;
             left: 9.65%;
             width: 15.9%;
         }
 
         &--interface {
-            top: 33.7%;
+            top: 38.59%;
             right: 3.1%;
             width: 23.8%;
         }
 
         &--button {
-            top: 69%;
+            top: 75.7%;
             left: 4.9%;
             width: 25.5%;
         }
     }
 
     @media (min-width: 768px) and (max-width: 1100px) {
+        &__header {
+            gap: 28px;
+        }
+
+        &__intro {
+            font-size: 14px;
+        }
+
         &__card {
-            padding: 12px;
+            padding: 10px 12px;
+            font-size: 12px;
+        }
+
+        &__card--input {
+            left: 6.5%;
+            width: 19%;
         }
     }
 
@@ -324,6 +364,7 @@
             width: auto;
             padding: 16px 18px;
             font-size: 15px;
+            transform: none;
         }
     }
 }
@@ -386,8 +427,7 @@
         }
 
         &__image {
-            width: 180px;
-            margin-top: 0;
+            display: none;
         }
     }
 }
@@ -428,11 +468,14 @@
         letter-spacing: -0.01em;
     }
 
-    @media (min-width: 768px) and (max-width: 1100px) {
+    @media (min-width: 768px) and (max-width: 1200px) {
+        align-items: center;
         gap: 28px;
+        padding: 0 28px 72px;
 
         &__text {
-            margin-top: 36px;
+            margin-top: 24px;
+            font-size: clamp(26px, 2.7vw, 32px);
         }
     }
 
@@ -450,7 +493,7 @@
 
         &__text {
             margin-top: 28px;
-            font-size: clamp(26px, 5.2vw, 36px);
+            font-size: clamp(22px, 3.4vw, 24px);
         }
     }
 }
@@ -606,8 +649,15 @@
     padding-top: 72px;
     background:
         linear-gradient(to bottom, #fff, transparent 160px),
-        radial-gradient(ellipse at 0% 12%, rgb(224 235 200 / 75%), transparent 34%),
-        radial-gradient(ellipse at 30% 22%, rgb(215 241 255 / 65%), transparent 28%);
+        linear-gradient(to right, #fff, transparent clamp(56px, 9vw, 160px)),
+        radial-gradient(
+            ellipse at 12% 18%,
+            rgb(224 235 200 / 45%) 0%,
+            rgb(224 235 200 / 22%) 25%,
+            rgb(224 235 200 / 8%) 45%,
+            transparent 65%
+        ),
+        radial-gradient(ellipse at 35% 24%, rgb(215 241 255 / 40%), transparent 60%);
     font-family: var(--font9);
     text-align: center;
     color: #0a0a0a;
@@ -695,13 +745,21 @@
         color: #a5a5a5;
     }
 
+    @media (min-width: 768px) and (max-width: 1200px) {
+        &__statement {
+            max-width: 680px;
+            margin-bottom: 80px;
+            font-size: clamp(26px, 2.7vw, 32px);
+        }
+    }
+
     @media (max-width: 767px) {
         padding-top: 40px;
 
         &__statement {
             margin-bottom: 64px;
             padding: 0 16px;
-            font-size: clamp(26px, 5.2vw, 36px);
+            font-size: clamp(22px, 3.4vw, 24px);
         }
 
         &__list {
@@ -859,17 +917,35 @@
         border-radius: 22px;
 
         &__meta {
-            padding: 18px 14px 0;
+            gap: 8px;
+            padding: 12px 10px 0;
+        }
+
+        &__categories,
+        &__summary {
+            gap: 4px;
+        }
+
+        &__details {
+            gap: 6px;
         }
 
         &__tag {
-            padding: 9px 12px;
+            gap: 6px;
+            padding: 6px 9px;
+            border-radius: 10px;
+            font-size: 11px;
         }
 
         &__agency {
             flex-wrap: wrap;
             justify-content: flex-start;
             text-align: left;
+
+            img {
+                width: 44px;
+                height: 18px;
+            }
         }
 
         &__socials {

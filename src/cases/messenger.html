@@ -118,14 +118,7 @@ bodyClass = "messenger-page" %} {% extends "_html/_base/_layouts/_default.html" 
             height="30"
             loading="lazy"
         />
-        <img
-            class="messenger-features__connectors"
-            src="assets/img/cases/messenger/feature-connectors.svg"
-            alt=""
-            width="1406"
-            height="837"
-            loading="lazy"
-        />
+        {% include "assets/img/cases/messenger/feature-connectors.svg" %}
         <ul class="messenger-features__list">
             <li class="messenger-features__card messenger-features__card--input">Поле для ввода номера телефона</li>
             <li class="messenger-features__card messenger-features__card--interface">
