@@ -1,0 +1,210 @@
+.veles-page {
+    --font11: 'Hauora', 'Inter', sans-serif;
+
+    main {
+        padding-top: 110px;
+    }
+}
+
+.veles-hero {
+    position: relative;
+    isolation: isolate;
+    aspect-ratio: 1273 / 796;
+    min-height: 500px;
+    color: #fff;
+    font-family: var(--font11);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    text-align: center;
+    text-transform: uppercase;
+
+    &__image {
+        position: absolute;
+        z-index: -1;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 24px;
+        padding: 40px;
+    }
+
+    &__details {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    &__detail {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 11px 13px;
+        border: 1px solid #fff;
+        border-radius: 30px;
+        line-height: 1.25;
+    }
+
+    &__project {
+        display: grid;
+        gap: 8px;
+        justify-items: end;
+    }
+
+    &__type {
+        margin: 0;
+        line-height: 1.4;
+
+        span {
+            margin: 0 10px;
+        }
+    }
+
+    &__link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: inherit;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &:focus-visible {
+            outline: 2px solid #fff;
+            outline-offset: 5px;
+        }
+    }
+
+    &__title {
+        position: absolute;
+        inset: 50% auto auto 50%;
+        margin: 0;
+        transform: translate(-50%, -50%);
+    }
+
+    &__logo {
+        display: block;
+        width: clamp(100px, 10vw, 160px);
+        height: auto;
+    }
+}
+
+.veles-about {
+    background: #fff;
+    display: grid;
+    grid-template-columns: 240px minmax(0, 650px);
+    gap: 40px;
+    padding: 100px 4% 150px;
+    font-family: var(--font11);
+    letter-spacing: -0.01em;
+    color: #0a0a0a;
+
+    &__label {
+        justify-self: start;
+        align-self: start;
+        margin: 0;
+        padding: 11px 16px;
+        border: 1px solid #e9e9e9;
+        border-radius: 30px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.4;
+        color: #778e94;
+    }
+
+    &__intro {
+        margin: 0 0 24px;
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 1.23;
+    }
+
+    &__accent {
+        color: #28829d;
+    }
+
+    &__text {
+        margin: 0;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.35;
+    }
+}
+
+.veles-showcase {
+    background: #b4cdd5;
+
+    &__image {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 1050px) {
+    .veles-hero__header {
+        padding: 28px 20px;
+    }
+
+    .veles-about {
+        grid-template-columns: 180px minmax(0, 1fr);
+        gap: 28px;
+        padding: 72px 4% 90px;
+    }
+}
+
+@media (max-width: 600px) {
+    .veles-hero {
+        min-height: 560px;
+
+        &__header {
+            flex-direction: column;
+            gap: 20px;
+            padding: 24px 18px;
+        }
+
+        &__project {
+            justify-items: start;
+            text-align: left;
+        }
+
+        &__detail {
+            gap: 6px;
+            padding: 9px 10px;
+        }
+
+        &__type span {
+            margin: 0 4px;
+        }
+
+        &__title {
+            top: 58%;
+        }
+
+        &__image {
+            object-position: 63% center;
+        }
+    }
+
+    .veles-about {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 28px;
+        padding: 48px 18px 60px;
+
+        &__intro {
+            font-size: 24px;
+        }
+    }
+}

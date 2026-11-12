@@ -1,0 +1,48 @@
+{% set title = "IMPro — Корпоративный сайт и интернет-магазин «Велес»" %}
+{% set meta_description = "Кейс IMPro: корпоративный сайт и интернет-магазин производителя аварийно-спасательной продукции «Велес» на Битрикс24. Сентябрь 2024, срок — 3 месяца." %}
+{% set bodyClass = "veles-page" %}
+{% extends "_html/_base/_layouts/_default.html" %}
+{% block content %}
+<section class="veles-hero" aria-labelledby="veles-title">
+    <img class="veles-hero__image" src="assets/img/cases/veles/ship-hero.png" alt="" width="2400" height="1486" fetchpriority="high" />
+    <div class="veles-hero__header">
+        <ul class="veles-hero__details" aria-label="О проекте">
+            <li class="veles-hero__detail">
+                <img src="assets/img/cases/veles/calendar.svg" alt="" width="12" height="13" />
+                <time datetime="2024-09">Сентябрь 2024</time>
+            </li>
+            <li class="veles-hero__detail">
+                <img src="assets/img/cases/veles/bitrix.svg" alt="" width="13" height="13" />
+                Битрикс24
+            </li>
+            <li class="veles-hero__detail">
+                <img src="assets/img/cases/veles/stopwatch.svg" alt="" width="13" height="15" />
+                3 месяца
+            </li>
+        </ul>
+        <div class="veles-hero__project">
+            <p class="veles-hero__type">Корпоративный сайт <span aria-hidden="true">|</span> Интернет-магазин</p>
+            <a class="veles-hero__link" href="https://veles-sea.ru/" target="_blank" rel="noopener noreferrer">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m10 13 4-4M8 16l-1 1a4 4 0 0 1-6-6l5-5a4 4 0 0 1 6 0m0 2 1-1a4 4 0 0 1 6 6l-5 5a4 4 0 0 1-6 0" /></svg>
+                veles-sea.ru
+            </a>
+        </div>
+    </div>
+    <h1 class="veles-hero__title" id="veles-title">
+        <img class="veles-hero__logo" src="assets/img/cases/veles/veles-logo.svg" alt="Велес — корпоративный сайт и интернет-магазин" width="117" height="147" />
+    </h1>
+</section>
+<section class="veles-about" aria-labelledby="veles-about-title">
+    <h2 class="veles-about__label" id="veles-about-title">О компании</h2>
+    <div class="veles-about__content">
+        <p class="veles-about__intro">
+            <span class="veles-about__accent">«ВЕЛЕС» — ведущий производитель аварийно-спасательной продукции,</span>
+            сотрудничающий с крупнейшими представителями судостроительной и судоремонтной отрасли, включая выполнение Гособоронзаказов.
+        </p>
+        <p class="veles-about__text">Компания стремится к инновациям и качеству, предлагая решения, которые соответствуют самым высоким стандартам безопасности и надежности.</p>
+    </div>
+</section>
+<section class="veles-showcase" aria-label="Дизайн сайта «Велес»">
+    <img class="veles-showcase__image" src="assets/img/cases/veles/website-laptop.png" alt="Сайт «Велес» на ноутбуке: каталог аварийно-спасательного оборудования для морских и речных судов" width="2400" height="1800" loading="lazy" />
+</section>
+{% endblock %}
