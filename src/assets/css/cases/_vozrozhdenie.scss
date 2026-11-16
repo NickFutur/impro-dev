@@ -200,6 +200,12 @@
         background: #f6d94e;
     }
 
+    &__picture {
+        display: block;
+        width: 100%;
+        min-width: 0;
+    }
+
     &__laptop {
         display: block;
         width: 100%;
@@ -348,7 +354,9 @@
 
         &__intro {
             margin: 28px 20px 0;
-            padding-bottom: 64px;
+            padding-bottom: 40px;
+            font-size: clamp(22px, 5.9vw, 24px);
+            line-height: 1.12;
         }
 
         &__text {
@@ -356,11 +364,25 @@
         }
 
         &__tags {
-            padding: 0 20px 32px;
+            gap: 6px;
+            padding: 0 20px 28px;
+
+            li {
+                padding: 8px 12px;
+                font-size: 11px;
+            }
+        }
+
+        &__laptop {
+            width: 100%;
+            height: auto;
+            margin: 0;
         }
 
         &__visual {
-            min-height: 420px;
+            justify-content: center;
+            min-height: 0;
+            padding: 28px 16px;
         }
     }
 
@@ -764,8 +786,29 @@
         grid-template-columns: minmax(0, 1fr);
 
         &__visual {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 180px));
+            align-items: start;
+            justify-content: center;
+            gap: clamp(12px, 4vw, 28px);
             min-height: 0;
-            aspect-ratio: 601 / 796;
+            aspect-ratio: auto;
+            padding: 32px 20px 0;
+        }
+
+        &__phone {
+            position: static;
+            width: 100%;
+            height: auto;
+        }
+
+        &__phone--home {
+            margin-bottom: 32px;
+        }
+
+        &__phone--advantages {
+            align-self: end;
+            margin-top: clamp(56px, 20vw, 96px);
         }
 
         &__heading {
@@ -1021,5 +1064,302 @@
     &:hover {
         border-color: transparent;
         box-shadow: inset 0 0 1px 0 #fff;
+    }
+}
+// Keep the desktop composition proportional on wide displays; 1920px is the reference width.
+@media (min-width: 1921px) {
+    .vozrozhdenie-page {
+        --wide-unit: clamp(1px, 0.0520833333vw, 2px);
+    }
+
+    .vozrozhdenie-hero__title,
+    .vozrozhdenie-hero__detail,
+    .vozrozhdenie-history__text,
+    .vozrozhdenie-history__heading,
+    .vozrozhdenie-client__heading,
+    .vozrozhdenie-client__goals-title,
+    .vozrozhdenie-brand__heading,
+    .vozrozhdenie-brand__context,
+    .vozrozhdenie-brand__text,
+    .vozrozhdenie-design__heading {
+        font-size: calc(14 * var(--wide-unit));
+    }
+
+    .vozrozhdenie-history__tags li,
+    .vozrozhdenie-client__goals li,
+    .vozrozhdenie-brand__font-description {
+        font-size: calc(12 * var(--wide-unit));
+    }
+
+    .vozrozhdenie-history__intro,
+    .vozrozhdenie-client__intro {
+        font-size: calc(38 * var(--wide-unit));
+    }
+
+    .vozrozhdenie-client__text {
+        font-size: calc(22 * var(--wide-unit));
+    }
+
+    .vozrozhdenie-brand__lead {
+        font-size: calc(26 * var(--wide-unit));
+    }
+
+    .vozrozhdenie-brand__alphabet {
+        font-size: calc(18 * var(--wide-unit));
+    }
+
+    .vozrozhdenie-brand__font-title {
+        font-size: calc(40 * var(--wide-unit));
+    }
+
+    .vozrozhdenie-label::before {
+        width: calc(5 * var(--wide-unit));
+        height: calc(5 * var(--wide-unit));
+        margin-right: calc(12 * var(--wide-unit));
+    }
+
+    .vozrozhdenie-hero {
+        &__header {
+            gap: calc(24 * var(--wide-unit));
+            padding: calc(40 * var(--wide-unit)) calc(32 * var(--wide-unit));
+        }
+
+        &__title {
+            padding: calc(12 * var(--wide-unit)) calc(16 * var(--wide-unit));
+        }
+
+        &__details {
+            gap: calc(8 * var(--wide-unit));
+        }
+
+        &__detail {
+            gap: calc(10 * var(--wide-unit));
+            min-height: calc(40 * var(--wide-unit));
+            padding: calc(8 * var(--wide-unit)) calc(12 * var(--wide-unit));
+        }
+
+        &__link {
+            gap: calc(10 * var(--wide-unit));
+        }
+
+        &__detail img {
+            width: calc(20 * var(--wide-unit));
+            height: calc(20 * var(--wide-unit));
+        }
+    }
+
+    .vozrozhdenie-history {
+        &__story {
+            min-height: calc(760 * var(--wide-unit));
+        }
+
+        &__heading {
+            padding: calc(46 * var(--wide-unit)) calc(24 * var(--wide-unit)) calc(12 * var(--wide-unit));
+        }
+
+        &__intro {
+            margin: calc(40 * var(--wide-unit)) calc(20 * var(--wide-unit)) auto;
+            padding-bottom: calc(100 * var(--wide-unit));
+        }
+
+        &__text {
+            margin: 0 calc(24 * var(--wide-unit)) calc(54 * var(--wide-unit));
+        }
+
+        &__tags {
+            gap: calc(8 * var(--wide-unit));
+            padding: 0 calc(24 * var(--wide-unit)) calc(24 * var(--wide-unit));
+
+            li {
+                padding: calc(10 * var(--wide-unit)) calc(16 * var(--wide-unit));
+            }
+        }
+    }
+
+    .vozrozhdenie-client {
+        &__heading {
+            padding: calc(150 * var(--wide-unit)) calc(32 * var(--wide-unit)) calc(24 * var(--wide-unit));
+        }
+
+        &__layout {
+            min-height: calc(620 * var(--wide-unit));
+        }
+
+        &__content {
+            padding: calc(50 * var(--wide-unit)) calc(36 * var(--wide-unit)) calc(20 * var(--wide-unit));
+        }
+
+        &__intro {
+            margin-bottom: calc(40 * var(--wide-unit));
+        }
+
+        &__text {
+            margin-bottom: calc(80 * var(--wide-unit));
+        }
+
+        &__goals li {
+            padding: calc(36 * var(--wide-unit));
+        }
+    }
+
+    .vozrozhdenie-brand {
+        &__heading {
+            padding: calc(76 * var(--wide-unit)) calc(24 * var(--wide-unit)) calc(12 * var(--wide-unit));
+        }
+
+        &__intro {
+            gap: calc(32 * var(--wide-unit));
+            padding: calc(36 * var(--wide-unit)) calc(30 * var(--wide-unit)) calc(140 * var(--wide-unit));
+        }
+
+        &__context,
+        &__text {
+            max-width: calc(410 * var(--wide-unit));
+        }
+
+        &__lead {
+            margin-bottom: calc(28 * var(--wide-unit));
+        }
+
+        &__grid {
+            gap: calc(10 * var(--wide-unit));
+            padding: 0 calc(16 * var(--wide-unit)) calc(68 * var(--wide-unit));
+        }
+
+        &__font {
+            min-height: calc(280 * var(--wide-unit));
+            padding: calc(20 * var(--wide-unit)) calc(22 * var(--wide-unit));
+        }
+
+        &__font-title {
+            margin-bottom: calc(30 * var(--wide-unit));
+        }
+
+        &__font-description {
+            max-width: calc(320 * var(--wide-unit));
+            margin-bottom: calc(48 * var(--wide-unit));
+        }
+    }
+
+    .vozrozhdenie-team {
+        --team-unit: var(--wide-unit);
+
+        font-size: calc(14 * var(--wide-unit));
+
+        &__closing {
+            max-width: calc(560 * var(--wide-unit));
+        }
+    }
+
+    .vozrozhdenie-page .guest-house-agency {
+        &__top {
+            padding: calc(48 * var(--wide-unit)) calc(52 * var(--wide-unit)) calc(80 * var(--wide-unit));
+        }
+
+        &__intro {
+            gap: calc(48 * var(--wide-unit));
+            margin-top: calc(48 * var(--wide-unit));
+        }
+
+        &__logo,
+        &__logo img {
+            width: calc(96 * var(--wide-unit));
+        }
+
+        &__logo img {
+            height: calc(38 * var(--wide-unit));
+        }
+
+        &__experience {
+            gap: calc(12 * var(--wide-unit));
+
+            img {
+                width: calc(20 * var(--wide-unit));
+                height: calc(36 * var(--wide-unit));
+            }
+        }
+
+        &__social-icon {
+            width: calc(40 * var(--wide-unit));
+            height: calc(40 * var(--wide-unit));
+
+            img {
+                width: calc(20 * var(--wide-unit));
+                height: calc(20 * var(--wide-unit));
+            }
+        }
+
+        &__experience,
+        &__service,
+        &__award-text,
+        &__number span {
+            font-size: calc(14 * var(--wide-unit));
+        }
+
+        &__title {
+            max-width: calc(660 * var(--wide-unit));
+            margin-top: calc(40 * var(--wide-unit));
+            font-size: calc(48 * var(--wide-unit));
+        }
+
+        &__services {
+            gap: calc(12 * var(--wide-unit));
+            width: calc(300 * var(--wide-unit));
+        }
+
+        &__service {
+            gap: calc(10 * var(--wide-unit));
+            padding: calc(10 * var(--wide-unit)) calc(16 * var(--wide-unit));
+            border-radius: calc(14 * var(--wide-unit));
+
+            img {
+                width: calc(15 * var(--wide-unit));
+                height: auto;
+            }
+        }
+
+        &__contacts {
+            padding: calc(26 * var(--wide-unit)) calc(52 * var(--wide-unit));
+        }
+
+        &__email,
+        &__number {
+            font-size: calc(40 * var(--wide-unit));
+        }
+
+        &__socials {
+            gap: calc(20 * var(--wide-unit)) calc(40 * var(--wide-unit));
+            margin-top: calc(28 * var(--wide-unit));
+        }
+
+        &__contact {
+            gap: calc(20 * var(--wide-unit));
+            font-size: calc(18 * var(--wide-unit));
+        }
+
+        &__award {
+            padding: calc(20 * var(--wide-unit));
+        }
+
+        &__award-heading {
+            gap: calc(12 * var(--wide-unit));
+
+            img {
+                width: calc(45 * var(--wide-unit));
+                height: calc(45 * var(--wide-unit));
+            }
+        }
+
+        &__award-text {
+            margin-top: calc(40 * var(--wide-unit));
+        }
+
+        &__number sup {
+            font-size: calc(20 * var(--wide-unit));
+        }
+
+        &__number .guest-house-agency__multiplier {
+            font-size: calc(24 * var(--wide-unit));
+        }
     }
 }

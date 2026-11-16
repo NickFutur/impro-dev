@@ -70,14 +70,22 @@ set bodyClass = "vozrozhdenie-page" %} {% extends "_html/_base/_layouts/_default
         </ul>
     </div>
     <div class="vozrozhdenie-history__visual">
-        <img
-            class="vozrozhdenie-history__laptop"
-            src="assets/img/cases/vozrozhdenie/website-laptop.webp"
-            alt="Главная страница сайта «Возрождение» на экране MacBook Pro"
-            width="992"
-            height="992"
-            loading="lazy"
-        />
+        <picture class="vozrozhdenie-history__picture">
+            <source
+                media="(max-width: 767px)"
+                srcset="assets/img/cases/vozrozhdenie/website-laptop-mobile.webp"
+                width="1556"
+                height="960"
+            />
+            <img
+                class="vozrozhdenie-history__laptop"
+                src="assets/img/cases/vozrozhdenie/website-laptop.webp"
+                alt="Главная страница сайта «Возрождение» на экране MacBook Pro"
+                width="992"
+                height="992"
+                loading="lazy"
+            />
+        </picture>
     </div>
 </section>
 <section class="vozrozhdenie-client" aria-labelledby="vozrozhdenie-client-title">
