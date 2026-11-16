@@ -1,0 +1,394 @@
+﻿@font-face {
+    font-family: Stem;
+    src: url('../fonts/stem/Stem-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Stem;
+    src: url('../fonts/stem/Stem-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Stem;
+    src: url('../fonts/stem/Stem-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+.vozrozhdenie-page {
+    --vozrozhdenie-border: 1px solid rgb(20 20 20 / 20%);
+
+    main {
+        padding-top: 110px;
+        font-family: Stem, sans-serif;
+        color: #141414;
+    }
+}
+
+.vozrozhdenie-label {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.3;
+
+    &::before {
+        content: '▪';
+        margin-right: 12px;
+    }
+}
+
+.vozrozhdenie-hero {
+    position: relative;
+    isolation: isolate;
+    aspect-ratio: 818 / 756;
+    color: #fff;
+
+    &__image {
+        position: absolute;
+        z-index: -1;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 24px;
+        padding: 40px 32px;
+    }
+
+    &__title {
+        margin: 0;
+        padding: 12px 16px;
+        border-radius: 3px;
+        background: #141414;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.3;
+    }
+
+    &__details {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 8px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    &__detail {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        min-height: 40px;
+        padding: 8px 12px;
+        border: 1px solid rgb(255 255 255 / 30%);
+        border-radius: 6px;
+        backdrop-filter: blur(11.1111px);
+        background: rgb(255 255 255 / 10%);
+        font-size: 14px;
+        line-height: 1.3;
+        letter-spacing: -0.01em;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: inherit;
+        text-decoration: none;
+
+        &:focus-visible {
+            outline: 2px solid #fff;
+            outline-offset: 4px;
+        }
+    }
+
+    &__logo {
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        width: 42%;
+        height: auto;
+        transform: translateX(-50%);
+    }
+}
+
+.vozrozhdenie-history {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    background: #fff;
+
+    &__story {
+        display: flex;
+        flex-direction: column;
+        min-height: 760px;
+    }
+
+    &__heading {
+        padding: 46px 24px 12px;
+        border-bottom: var(--vozrozhdenie-border);
+    }
+
+    &__intro {
+        margin: 40px 20px auto;
+        padding-bottom: 100px;
+        font-size: clamp(26px, 2.25vw, 38px);
+        font-weight: 300;
+        line-height: 1.08;
+        letter-spacing: -0.01em;
+    }
+
+    &__text {
+        margin: 0 24px 54px;
+        font-size: 14px;
+        line-height: 1.29;
+        opacity: 0.7;
+    }
+
+    &__tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 0;
+        padding: 0 24px 24px;
+        list-style: none;
+
+        li {
+            padding: 10px 16px;
+            border-radius: 3px;
+            background: #101010;
+            color: #fff;
+            font-size: 12px;
+            line-height: 1.3;
+            letter-spacing: -0.01em;
+        }
+    }
+
+    &__visual {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        background: #f6d94e;
+    }
+
+    &__laptop {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-left: 17%;
+    }
+}
+
+.vozrozhdenie-client {
+    background: #ededeb;
+
+    &__heading {
+        padding: 150px 32px 24px;
+        border-bottom: var(--vozrozhdenie-border);
+        text-align: right;
+        background: linear-gradient(
+            90deg,
+            transparent calc(50% - 1px),
+            rgb(20 20 20 / 20%) 50%,
+            transparent calc(50% + 1px)
+        );
+    }
+
+    &__layout {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        min-height: 620px;
+    }
+
+    &__visual {
+        display: grid;
+        place-items: center;
+        padding: 70px 32px;
+        border-right: var(--vozrozhdenie-border);
+    }
+
+    &__image {
+        display: block;
+        width: 50%;
+        height: auto;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        padding: 50px 36px 20px;
+    }
+
+    &__intro {
+        margin: 0 0 40px;
+        font-size: clamp(26px, 2.25vw, 38px);
+        font-weight: 500;
+        line-height: 1.08;
+        letter-spacing: -0.02em;
+    }
+
+    &__text {
+        margin: 0 0 80px;
+        font-size: clamp(16px, 1.3vw, 22px);
+        line-height: 1.3;
+        opacity: 0.7;
+    }
+
+    &__goals-title {
+        margin-top: auto;
+        text-align: right;
+    }
+
+    &__goals {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        margin: 0;
+        padding: 0;
+        border-top: var(--vozrozhdenie-border);
+        list-style: none;
+
+        li {
+            padding: 36px;
+            font-size: 16px;
+            line-height: 1.25;
+            color: #606060;
+        }
+
+        li + li {
+            border-left: var(--vozrozhdenie-border);
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    .vozrozhdenie-hero {
+        &__header {
+            gap: 16px;
+            padding: 24px;
+        }
+
+        &__title,
+        &__detail {
+            font-size: 12px;
+        }
+    }
+
+    .vozrozhdenie-history__story {
+        min-height: 650px;
+    }
+
+    .vozrozhdenie-client__goals li {
+        padding: 24px;
+    }
+}
+
+@media (max-width: 767px) {
+    .vozrozhdenie-hero {
+        min-height: 620px;
+        aspect-ratio: auto;
+
+        &__header {
+            flex-direction: column;
+            padding: 20px 16px;
+        }
+
+        &__details {
+            justify-content: flex-start;
+            gap: 6px;
+        }
+
+        &__logo {
+            bottom: 32px;
+            width: 76%;
+        }
+    }
+
+    .vozrozhdenie-history {
+        grid-template-columns: minmax(0, 1fr);
+
+        &__story {
+            min-height: auto;
+        }
+
+        &__heading {
+            padding: 32px 20px 16px;
+        }
+
+        &__intro {
+            margin: 28px 20px 0;
+            padding-bottom: 64px;
+        }
+
+        &__text {
+            margin: 0 20px 32px;
+        }
+
+        &__tags {
+            padding: 0 20px 32px;
+        }
+
+        &__visual {
+            min-height: 420px;
+        }
+    }
+
+    .vozrozhdenie-client {
+        &__heading {
+            padding: 60px 20px 20px;
+            background: none;
+        }
+
+        &__layout {
+            grid-template-columns: minmax(0, 1fr);
+            min-height: auto;
+        }
+
+        &__visual {
+            padding: 40px 20px;
+            border-right: 0;
+            border-bottom: var(--vozrozhdenie-border);
+        }
+
+        &__image {
+            width: min(100%, 382px);
+        }
+
+        &__content {
+            padding: 32px 20px 20px;
+        }
+
+        &__intro {
+            margin-bottom: 28px;
+        }
+
+        &__text {
+            margin-bottom: 48px;
+        }
+
+        &__goals {
+            grid-template-columns: minmax(0, 1fr);
+
+            li {
+                padding: 24px 20px;
+            }
+
+            li + li {
+                border-top: var(--vozrozhdenie-border);
+                border-left: 0;
+            }
+        }
+    }
+}
