@@ -1,3 +1,5 @@
+import './mr8-reveal';
+
 const currentYearElements = document.querySelectorAll('[data-current-year]');
 
 currentYearElements.forEach((element) => {

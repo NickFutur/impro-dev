@@ -109,6 +109,7 @@
     }
 
     &__intro {
+        max-width: 30em;
         margin: 40px 0 64px;
         font-size: clamp(28px, 2.78vw, 40px);
         font-weight: 400;
@@ -1309,6 +1310,26 @@
 
         &__socials {
             gap: 16px;
+        }
+    }
+}
+@media (prefers-reduced-motion: no-preference) {
+    .mr8-page [data-mr8-prepared] {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    .mr8-page [data-mr8-prepared][data-mr8-revealed] {
+        transition:
+            opacity 650ms cubic-bezier(0.22, 0.61, 0.36, 1),
+            transform 650ms cubic-bezier(0.22, 0.61, 0.36, 1);
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    @for $person from 2 through 5 {
+        .mr8-team__person[data-mr8-prepared]:nth-child(#{$person}) {
+            transition-delay: ($person - 1) * 45ms;
         }
     }
 }
