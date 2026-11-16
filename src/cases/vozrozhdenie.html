@@ -290,4 +290,115 @@ set bodyClass = "vozrozhdenie-page" %} {% extends "_html/_base/_layouts/_default
     />
 </section>
 
-{% endblock %}
+<section class="vozrozhdenie-results" aria-labelledby="vozrozhdenie-results-title">
+    <div class="vozrozhdenie-results__content">
+        <h2 class="vozrozhdenie-label vozrozhdenie-results__heading" id="vozrozhdenie-results-title">Результаты</h2>
+        <ul class="vozrozhdenie-results__list">
+            <li>Сайт стал первым полноценным цифровым представительством комплекса в интернете</li>
+            <li>Благодаря простой структуре, все услуги представлены чётко, понятно и красиво</li>
+            <li>Связь с администрацией стала доступна через форму заказа звонка</li>
+            <li>Визуальная часть усилила имидж комплекса как серьёзной и современной площадки</li>
+        </ul>
+        <p class="vozrozhdenie-results__summary">
+            Клиент остался доволен результатом и выразил готовность вернуться к нам в будущем при расширении проекта
+        </p>
+    </div>
+    <div class="vozrozhdenie-results__visual">
+        <img
+            class="vozrozhdenie-results__phone vozrozhdenie-results__phone--services"
+            src="assets/img/cases/vozrozhdenie/results-mobile-services.webp"
+            alt="Описание комплекса и услуг на смартфоне"
+            width="330"
+            height="668"
+            loading="lazy"
+            decoding="async"
+        />
+        <img
+            class="vozrozhdenie-results__phone vozrozhdenie-results__phone--events"
+            src="assets/img/cases/vozrozhdenie/results-mobile-events.webp"
+            alt="Спортивные соревнования и командные выезды в мобильной версии сайта"
+            width="330"
+            height="668"
+            loading="lazy"
+            decoding="async"
+        />
+        <img
+            class="vozrozhdenie-results__phone vozrozhdenie-results__phone--booking"
+            src="assets/img/cases/vozrozhdenie/results-mobile-booking.webp"
+            alt="Мероприятия и форма бронирования номера на смартфоне"
+            width="330"
+            height="668"
+            loading="lazy"
+            decoding="async"
+        />
+    </div>
+</section>
+<figure class="vozrozhdenie-showcase">
+    <img
+        class="vozrozhdenie-showcase__image"
+        src="assets/img/cases/vozrozhdenie/website-laptop-on-stone.webp"
+        alt="Ноутбук с открытым сайтом комплекса «Возрождение» на каменной площадке"
+        width="2400"
+        height="1496"
+        loading="lazy"
+        decoding="async"
+    />
+</figure>
+<section class="vozrozhdenie-team" aria-labelledby="vozrozhdenie-team-title">
+    <div class="vozrozhdenie-team__people">
+        <h2 class="vozrozhdenie-team__label" id="vozrozhdenie-team-title">Команда проекта</h2>
+        <ul class="vozrozhdenie-team__list">
+            <li class="vozrozhdenie-team__person">
+                <img
+                    class="vozrozhdenie-team__avatar"
+                    src="assets/img/cases/guest-house/team-vlada.webp"
+                    alt="Влада Шумиловских"
+                    width="68"
+                    height="68"
+                    loading="lazy"
+                    decoding="async"
+                />
+                <div>
+                    <p class="vozrozhdenie-team__name">Влада Шумиловских</p>
+                    <p class="vozrozhdenie-team__role">Дизайнер</p>
+                </div>
+            </li>
+            <li class="vozrozhdenie-team__person">
+                <img
+                    class="vozrozhdenie-team__avatar"
+                    src="assets/img/cases/guest-house/team-kirill.webp"
+                    alt="Кирилл Ковтун"
+                    width="68"
+                    height="68"
+                    loading="lazy"
+                    decoding="async"
+                />
+                <div>
+                    <p class="vozrozhdenie-team__name">Кирилл Ковтун</p>
+                    <p class="vozrozhdenie-team__role">Проектный менеджер</p>
+                </div>
+            </li>
+            <li class="vozrozhdenie-team__person">
+                <span class="vozrozhdenie-team__avatar vozrozhdenie-team__avatar--placeholder" aria-hidden="true"
+                    ><svg width="28" height="36" viewBox="0 0 28 36" fill="none">
+                        <circle cx="14" cy="7" r="4" fill="currentColor" />
+                        <path d="M8 14Q14 10 20 14L18 26H16L15 34H13L12 26H10Z" fill="currentColor" /></svg
+                ></span>
+                <div>
+                    <p class="vozrozhdenie-team__name">Морин Никита</p>
+                    <p class="vozrozhdenie-team__role">Верстальщик</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="vozrozhdenie-team__details">
+        <h3 class="vozrozhdenie-team__label">Срок разработки</h3>
+        <p class="vozrozhdenie-team__duration">2 месяца с момента<br />получения тех. задания</p>
+        <p class="vozrozhdenie-team__closing">
+            » Если вы планируете создать сайт, который будет не только красиво выглядеть, но и эффективно работать на
+            ваш бизнес — привлекать клиентов, быть видимым в поиске и соответствовать ожиданиям аудитории — этот кейс
+            показывает, как мы умеем решать такие задачи комплексно.
+        </p>
+    </div>
+</section>
+{% include "_html/_base/_includes/_vozrozhdenie-agency.html" %} {% endblock %}

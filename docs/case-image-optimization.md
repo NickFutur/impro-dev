@@ -121,3 +121,14 @@ WebP без потерь, исходные PNG находятся в `task`.
 | vozrozhdenie/mobile-homepage.webp | 524.4 | 338.8 | 35.4% |
 | vozrozhdenie/mobile-advantages.webp | 88.6 | 49.5 | 44.2% |
 | vozrozhdenie/website-full-design.webp | 5566.5 | 3340.3 | 40.0% |
+
+## Результаты и финальный мокап «Возрождение»
+
+Новые WebP без потерь, исходники сохранены в `task`.
+
+| Файл | PNG, КБ | WebP, КБ | Снижение |
+|---|---:|---:|---:|
+| vozrozhdenie/results-mobile-services.webp | 129.9 | 77.6 | 40.2% |
+| vozrozhdenie/results-mobile-events.webp | 99.9 | 60.0 | 40.0% |
+| vozrozhdenie/results-mobile-booking.webp | 186.6 | 119.8 | 35.8% |
+| vozrozhdenie/website-laptop-on-stone.webp | 7756.2 | 5224.9 | 32.6% |
