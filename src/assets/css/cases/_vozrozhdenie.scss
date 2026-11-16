@@ -1,0 +1,646 @@
+@font-face {
+    font-family: 'Golos Text';
+    src: url('../fonts/golos-text/GolosText-Variable.ttf') format('truetype');
+    font-weight: 400 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Stem;
+    src: url('../fonts/stem/Stem-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Stem;
+    src: url('../fonts/stem/Stem-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Stem;
+    src: url('../fonts/stem/Stem-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+.vozrozhdenie-page {
+    --font13: 'Golos Text', sans-serif;
+    --font22: 'Stem', sans-serif;
+    --vozrozhdenie-border: 1px solid rgb(20 20 20 / 20%);
+
+    main {
+        padding-top: 110px;
+        font-family: var(--font13);
+        color: #141414;
+    }
+}
+
+.vozrozhdenie-label {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.3;
+
+    &::before {
+        content: '';
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        margin-right: 12px;
+        background: #141414;
+        vertical-align: middle;
+    }
+}
+
+.vozrozhdenie-hero {
+    position: relative;
+    isolation: isolate;
+    aspect-ratio: 818 / 756;
+    color: #fff;
+
+    &__image {
+        position: absolute;
+        z-index: -1;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 24px;
+        padding: 40px 32px;
+    }
+
+    &__title {
+        margin: 0;
+        padding: 12px 16px;
+        border-radius: 3px;
+        background: #141414;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.3;
+    }
+
+    &__details {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 8px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    &__detail {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        min-height: 40px;
+        padding: 8px 12px;
+        border: 1px solid rgb(255 255 255 / 30%);
+        border-radius: 6px;
+        backdrop-filter: blur(11.1111px);
+        background: rgb(255 255 255 / 10%);
+        font-size: 14px;
+        line-height: 1.3;
+        letter-spacing: -0.01em;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: inherit;
+        text-decoration: none;
+
+        &:focus-visible {
+            outline: 2px solid #fff;
+            outline-offset: 4px;
+        }
+    }
+
+    &__logo {
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        width: 42%;
+        height: auto;
+        transform: translateX(-50%);
+    }
+}
+
+.vozrozhdenie-history {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    background: #fff;
+
+    &__story {
+        display: flex;
+        flex-direction: column;
+        min-height: 760px;
+    }
+
+    &__heading {
+        padding: 46px 24px 12px;
+        border-bottom: var(--vozrozhdenie-border);
+    }
+
+    &__intro {
+        margin: 40px 20px auto;
+        padding-bottom: 100px;
+        font-family: var(--font22);
+        font-size: clamp(26px, 2.25vw, 38px);
+        font-weight: 300;
+        line-height: 1.08;
+        letter-spacing: -0.01em;
+    }
+
+    &__text {
+        margin: 0 24px 54px;
+        font-size: 14px;
+        line-height: 1.29;
+        opacity: 0.7;
+    }
+
+    &__tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 0;
+        padding: 0 24px 24px;
+        list-style: none;
+
+        li {
+            padding: 10px 16px;
+            border-radius: 3px;
+            background: #101010;
+            color: #fff;
+            font-size: 12px;
+            line-height: 1.3;
+            letter-spacing: -0.01em;
+        }
+    }
+
+    &__visual {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        background: #f6d94e;
+    }
+
+    &__laptop {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-left: 17%;
+    }
+}
+
+.vozrozhdenie-client {
+    background: #ededeb;
+
+    &__heading {
+        padding: 150px 32px 24px;
+        border-bottom: var(--vozrozhdenie-border);
+        text-align: right;
+        background: linear-gradient(
+            90deg,
+            transparent calc(50% - 1px),
+            rgb(20 20 20 / 20%) 50%,
+            transparent calc(50% + 1px)
+        );
+    }
+
+    &__layout {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        min-height: 620px;
+    }
+
+    &__visual {
+        display: grid;
+        place-items: center;
+        padding: 70px 32px;
+        border-right: var(--vozrozhdenie-border);
+    }
+
+    &__image {
+        display: block;
+        width: 50%;
+        height: auto;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        padding: 50px 36px 20px;
+    }
+
+    &__intro {
+        margin: 0 0 40px;
+        font-family: var(--font22);
+        font-size: clamp(26px, 2.25vw, 38px);
+        font-weight: 500;
+        line-height: 1.08;
+        letter-spacing: -0.02em;
+    }
+
+    &__text {
+        margin: 0 0 80px;
+        font-size: clamp(16px, 1.3vw, 22px);
+        line-height: 1.3;
+        opacity: 0.7;
+    }
+
+    &__goals-title {
+        margin-top: auto;
+        text-align: right;
+    }
+
+    &__goals {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        margin: 0;
+        padding: 0;
+        border-top: var(--vozrozhdenie-border);
+        list-style: none;
+
+        li {
+            padding: 36px;
+            font-family: var(--font13);
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 1.17;
+            color: rgb(20 20 20 / 70%);
+        }
+
+        li + li {
+            box-shadow: -1px 0 0 rgb(20 20 20 / 20%);
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    .vozrozhdenie-hero {
+        &__header {
+            gap: 16px;
+            padding: 24px;
+        }
+
+        &__title,
+        &__detail {
+            font-size: 12px;
+        }
+    }
+
+    .vozrozhdenie-history__story {
+        min-height: 650px;
+    }
+
+    .vozrozhdenie-client__goals li {
+        padding: 24px;
+    }
+}
+
+@media (max-width: 767px) {
+    .vozrozhdenie-hero {
+        min-height: 620px;
+        aspect-ratio: auto;
+
+        &__header {
+            flex-direction: column;
+            padding: 20px 16px;
+        }
+
+        &__details {
+            justify-content: flex-start;
+            gap: 6px;
+        }
+
+        &__logo {
+            bottom: 32px;
+            width: 76%;
+        }
+    }
+
+    .vozrozhdenie-history {
+        grid-template-columns: minmax(0, 1fr);
+
+        &__story {
+            min-height: auto;
+        }
+
+        &__heading {
+            padding: 32px 20px 16px;
+        }
+
+        &__intro {
+            margin: 28px 20px 0;
+            padding-bottom: 64px;
+        }
+
+        &__text {
+            margin: 0 20px 32px;
+        }
+
+        &__tags {
+            padding: 0 20px 32px;
+        }
+
+        &__visual {
+            min-height: 420px;
+        }
+    }
+
+    .vozrozhdenie-client {
+        &__heading {
+            padding: 60px 20px 20px;
+            background: none;
+        }
+
+        &__layout {
+            grid-template-columns: minmax(0, 1fr);
+            min-height: auto;
+        }
+
+        &__visual {
+            padding: 40px 20px;
+            border-right: 0;
+            border-bottom: var(--vozrozhdenie-border);
+        }
+
+        &__image {
+            width: min(100%, 382px);
+        }
+
+        &__content {
+            padding: 32px 20px 20px;
+        }
+
+        &__intro {
+            margin-bottom: 28px;
+        }
+
+        &__text {
+            margin-bottom: 48px;
+        }
+
+        &__goals {
+            grid-template-columns: minmax(0, 1fr);
+
+            li {
+                padding: 24px 20px;
+            }
+
+            li + li {
+                border-top: var(--vozrozhdenie-border);
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+.vozrozhdenie-brand {
+    background: #fff;
+
+    &__heading {
+        padding: 76px 24px 12px;
+        border-bottom: var(--vozrozhdenie-border);
+        text-align: right;
+    }
+
+    &__intro {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 32px;
+        padding: 36px 30px 140px;
+    }
+
+    &__context,
+    &__text {
+        max-width: 410px;
+        margin: 0;
+        font-family: var(--font13);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.29;
+    }
+
+    &__lead {
+        margin: 0 0 28px;
+        font-family: var(--font22);
+        font-size: 26px;
+        font-weight: 350;
+        line-height: 1.08;
+        letter-spacing: -0.01em;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 10px;
+        padding: 0 16px 68px;
+    }
+
+    &__symbol-card {
+        display: grid;
+        place-items: center;
+        background: #f2f2f2;
+    }
+
+    &__symbol {
+        display: block;
+        width: 55%;
+        height: auto;
+    }
+
+    &__font {
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        min-height: 280px;
+        padding: 20px 22px;
+    }
+
+    &__font--golos {
+        background: #139c60;
+        font-family: var(--font13);
+    }
+
+    &__font--stem {
+        grid-column: span 2;
+        background: #141414;
+        font-family: var(--font22);
+        color: #fff;
+    }
+
+    &__font-title {
+        margin: 0 0 30px;
+        font-size: 40px;
+        font-weight: 400;
+        line-height: 1.1;
+        letter-spacing: -0.03em;
+    }
+
+    &__font--stem &__font-title {
+        font-weight: 500;
+    }
+
+    &__font-description {
+        max-width: 320px;
+        margin: 0 0 48px;
+        font-family: var(--font13);
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1.17;
+    }
+
+    &__alphabet {
+        margin: auto 0 0;
+        overflow-wrap: anywhere;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.11;
+        letter-spacing: -0.01em;
+    }
+
+    &__font--stem &__alphabet {
+        font-weight: 500;
+    }
+
+    &__lowercase {
+        text-transform: lowercase;
+    }
+
+    &__football {
+        position: relative;
+        grid-column: span 2;
+        aspect-ratio: 1150 / 558;
+    }
+
+    &__photo {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 64%;
+        height: auto;
+        // This card uses the horizontal wordmark from the existing logo asset.
+        clip-path: inset(42% 0 0);
+        transform: translate(-50%, -70%);
+    }
+
+    &__pattern {
+        position: relative;
+        grid-column: span 2;
+        overflow: hidden;
+        background: #f2f2f2;
+    }
+
+    &__pattern-image {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 58%;
+        height: auto;
+    }
+}
+
+.vozrozhdenie-mobile {
+    margin: 0;
+    background: #141414;
+
+    &__image {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 1000px) {
+    .vozrozhdenie-brand {
+        &__grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        &__symbol-card {
+            min-height: 280px;
+        }
+
+        &__football,
+        &__pattern {
+            grid-column: auto;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .vozrozhdenie-brand {
+        &__heading {
+            padding: 56px 20px 16px;
+        }
+
+        &__intro {
+            grid-template-columns: minmax(0, 1fr);
+            padding: 32px 20px 56px;
+        }
+
+        &__grid {
+            gap: 8px;
+            padding: 0 12px 40px;
+        }
+
+        &__symbol-card {
+            min-height: 220px;
+        }
+
+        &__font {
+            min-height: 260px;
+            padding: 20px 16px;
+        }
+
+        &__font-title {
+            font-size: 30px;
+        }
+
+        &__football,
+        &__pattern {
+            grid-column: span 2;
+        }
+
+        &__pattern {
+            aspect-ratio: 2 / 1;
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .vozrozhdenie-brand {
+        &__symbol-card,
+        &__font--golos {
+            grid-column: span 2;
+        }
+
+        &__symbol {
+            width: 40%;
+        }
+    }
+}
