@@ -438,3 +438,109 @@
     }
 }
 
+
+
+.premier-strategy {
+    padding-block: clamp(32px, 2.9vw, 44px) clamp(36px, 4.2vw, 62px);
+    border-block: 1px solid #dedede;
+    color: #0f0f0f;
+    background: #f5f5f5;
+
+    &__layout {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-areas:
+            '. title'
+            'plan diagram';
+        align-items: start;
+        gap: clamp(24px, 2.8vw, 42px) clamp(24px, 2.2vw, 36px);
+    }
+
+    &__title {
+        grid-area: title;
+        max-width: 640px;
+        margin: 0;
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: 0.01em;
+
+        span {
+            color: #077d96;
+        }
+    }
+
+    &__plan {
+        display: grid;
+        grid-area: plan;
+        grid-template-columns: 40px minmax(0, 1fr);
+        align-items: start;
+        margin-block-start: 6px;
+    }
+
+    &__label {
+        justify-self: start;
+        margin: 0;
+        color: #077d96;
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: -0.01em;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+    }
+
+    &__steps {
+        display: grid;
+        gap: clamp(22px, 2.25vw, 34px);
+        margin: 0;
+        padding: 0 0 0 clamp(18px, 2vw, 30px);
+        border-left: 2px solid #077d96;
+    }
+
+    &__step-title {
+        margin: 0 0 5px;
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 1.35;
+        letter-spacing: -0.01em;
+    }
+
+    &__step-description {
+        margin: 0;
+        color: rgb(15 15 15 / 60%);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.35;
+        letter-spacing: 0.02em;
+    }
+
+    &__diagram {
+        display: block;
+        grid-area: diagram;
+        width: 100%;
+        height: auto;
+    }
+
+    @media (max-width: 820px) {
+        &__layout {
+            grid-template-columns: minmax(0, 1fr);
+            grid-template-areas:
+                'title'
+                'plan'
+                'diagram';
+        }
+
+        &__plan {
+            grid-template-columns: minmax(0, 1fr);
+            gap: 14px;
+            margin-block-start: 0;
+        }
+
+        &__label {
+            writing-mode: horizontal-tb;
+            transform: none;
+        }
+    }
+}
+
