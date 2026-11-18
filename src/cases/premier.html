@@ -1,0 +1,200 @@
+{% set title = "IMPro — Комплексное продвижение частной школы «Премьер»" %}
+{% set meta_description = "Кейс IMPro о продвижении частной школы «Премьер» в Воронеже: Яндекс Директ, SEO и работа с отзывами." %}
+{% set bodyClass = "premier-page" %}
+{% set headerLogo = "assets/img/cases/premier/impro-wordmark.svg" %}
+{% extends "_html/_base/_layouts/_default.html" %}
+
+{% block content %}
+<article class="premier-case" aria-labelledby="premier-title">
+    <header class="premier-hero">
+        <div class="premier-case__inner">
+            <h1 class="premier-hero__title" id="premier-title">Комплексное продвижение частной школы «Премьер»</h1>
+            <ul class="premier-hero__tags" aria-label="Направления работы и сайты школы">
+                <li class="premier-hero__tag">
+                    <img class="premier-hero__icon" src="assets/img/cases/guest-house/agency-promotion.svg" alt="" width="15" height="17" loading="lazy" decoding="async" />
+                    Продвижение
+                </li>
+                <li class="premier-hero__tag">
+                    <svg class="premier-hero__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M15 18V6h-2a3.5 3.5 0 0 0 0 7h2m-3 0-3 5" />
+                    </svg>
+                    Яндекс Директ
+                </li>
+                <li class="premier-hero__tag">SEO</li>
+                {% for domain in ["premier-vrn.ru", "new.premier-vrn.ru"] %}
+                <li>
+                    <a class="premier-hero__tag" href="https://{{ domain }}/">
+                        <svg class="premier-hero__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+                            <path d="m10 13 4-4m-6 1-3 3a4 4 0 0 0 6 6l3-3m-4-8 3-3a4 4 0 0 1 6 6l-3 3" />
+                        </svg>
+                        {{ domain }}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </header>
+
+    <section class="premier-results" aria-label="Результаты продвижения школы «Премьер»">
+        <img class="premier-results__pattern" src="assets/img/cases/premier/premier-brushstroke.webp" alt="" width="2800" height="1090" loading="lazy" decoding="async" />
+        <div class="premier-case__inner premier-results__layout">
+            <div class="premier-results__content">
+                <dl class="premier-results__metrics">
+                    <div class="premier-results__metric premier-results__metric--primary">
+                        <dt>~ Заявок</dt>
+                        <dd>700 <img class="premier-results__click" src="assets/img/cases/medok/click.svg" alt="" width="62" height="62" loading="lazy" decoding="async" /></dd>
+                    </div>
+                    <div class="premier-results__metric">
+                        <dt>Количество отзывов</dt>
+                        <dd>x4</dd>
+                    </div>
+                    <div class="premier-results__metric">
+                        <dt>Средний рейтинг на 6 площадках</dt>
+                        <dd>4,5</dd>
+                    </div>
+                    <div class="premier-results__metric">
+                        <dt>Года непрерывного сотрудничества</dt>
+                        <dd>2+</dd>
+                    </div>
+                </dl>
+                <p class="premier-results__summary">«Премьер» — частная школа в Воронеже, объединяющая несколько образовательных направлений: детский сад, начальную, среднюю и старшую школу, а также сеть дополнительных занятий.</p>
+            </div>
+            <img class="premier-results__photo" src="assets/img/cases/premier/premier-students.webp" alt="Трое учеников школы «Премьер»" width="1036" height="1044" loading="lazy" decoding="async" />
+        </div>
+    </section>
+
+    <section class="premier-task" aria-labelledby="premier-task-title">
+        <div class="premier-case__inner">
+            <p class="premier-task__label">Задача проекта</p>
+            <div class="premier-task__layout">
+                <div class="premier-task__content">
+                    <p class="premier-task__intro">В феврале 2024 года «Премьер» обратился к IMpro.pro с конкретной задачей —</p>
+                    <h2 class="premier-task__title" id="premier-task-title">Усилить набор учеников и помочь заполнить классы к началу нового учебного года</h2>
+                    <p class="premier-task__description">Первым очевидным решением был запуск контекстной рекламы. Однако, довольно быстро стало понятно, что решение этой задачи требует комплексного подхода, поэтому первоначальная задача постепенно выросла в работу над всей digital-воронкой школы.</p>
+                </div>
+                <img class="premier-task__logo" src="assets/img/cases/premier/premier-school-logo.svg" alt="Школа «Премьер»" width="192" height="192" loading="lazy" decoding="async" />
+            </div>
+        </div>
+    </section>
+
+    <section class="premier-comparison" aria-label="Сравнение инструментов продвижения">
+        <img class="premier-comparison__pattern" src="assets/img/cases/premier/premier-brushstroke.webp" alt="" width="2800" height="1090" loading="lazy" decoding="async" />
+        <div class="premier-case__inner premier-comparison__inner">
+            <img class="premier-comparison__graphic" src="assets/img/cases/premier/premier-promotion-comparison.webp" alt="" width="1480" height="886" loading="lazy" decoding="async" />
+            <table class="premier-comparison__table">
+                <caption class="visually-hidden">Инструменты продвижения школы «Премьер» на старте проекта и сейчас</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Инструмент</th>
+                        <th scope="col">На старте</th>
+                        <th scope="col">Сейчас</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Основной сайт</th>
+                        <td>Был</td>
+                        <td>Обновлён и доработан</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Посадочные страницы</th>
+                        <td>Не было</td>
+                        <td>Отдельные страницы под направления</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Яндекс Директ</th>
+                        <td>Требовал оптимизации</td>
+                        <td>Системное продвижение направлений</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">amoCRM</th>
+                        <td>Не использовалась</td>
+                        <td>Настроена единая воронка</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Мессенджеры, почта, онлайн-чат</th>
+                        <td>Не объединены</td>
+                        <td>Подключены к системе</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Коллтрекинг</th>
+                        <td>Не использовался</td>
+                        <td>Подключён</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Работа со звонками</th>
+                        <td>Не анализировалась системно</td>
+                        <td>Анализ и рекомендации администраторам</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Отзывы и репутация</th>
+                        <td>Слабый профиль</td>
+                        <td>Системная работа на 6 площадках</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Средний рейтинг</th>
+                        <td>≈ 2,0 / 5</td>
+                        <td>4,5 / 5</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">SEO</th>
+                        <td>Не использовалось</td>
+                        <td>Подключено системное продвижение</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Сезонная стратегия</th>
+                        <td>—</td>
+                        <td>Отдельная работа в сезон и межсезонье</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="premier-plan" aria-labelledby="premier-plan-title">
+        <div class="premier-case__inner">
+            <p class="premier-task__label">План работ</p>
+            <div class="premier-plan__layout">
+                <div>
+                    <h2 class="premier-plan__title" id="premier-plan-title">Перед увеличением рекламного трафика мы проанализировали путь потенциального клиента целиком.</h2>
+                    <p class="premier-plan__description">Родитель не принимает решение о выборе частной школы после одного рекламного объявления. Обычно он изучает программу и условия обучения, сравнивает несколько школ, смотрит сайт, ищет отзывы, звонит или оставляет заявку и оценивает уже саму коммуникацию с представителем школы.</p>
+                </div>
+                <div class="premier-plan__audit">
+                    <h3 class="premier-plan__audit-title">Аудит показал несколько зон, которые могли снижать результат продвижения:</h3>
+                    <ul class="premier-plan__findings">
+                        <li class="premier-plan__finding">
+                            <span class="premier-plan__icon"><img src="assets/img/cases/premier/site-audit.svg" alt="" width="18" height="18" loading="lazy" decoding="async" /></span>
+                            <div>
+                                <h4 class="premier-plan__finding-title">Сайт требовал актуализации</h4>
+                                <p class="premier-plan__finding-text">Нужно было обновить информацию и подготовить сайт к приёму рекламного трафика.</p>
+                            </div>
+                        </li>
+                        <li class="premier-plan__finding">
+                            <span class="premier-plan__icon"><img src="assets/img/cases/premier/campaign-warning.svg" alt="" width="20" height="18" loading="lazy" decoding="async" /></span>
+                            <div>
+                                <h4 class="premier-plan__finding-title">Рекламные кампании требовали оптимизации</h4>
+                                <p class="premier-plan__finding-text">Необходимо было настроить продвижение под конкретные направления школы и отслеживать целевые действия пользователей.</p>
+                            </div>
+                        </li>
+                        <li class="premier-plan__finding">
+                            <span class="premier-plan__icon"><img src="assets/img/cases/premier/inquiry-review.svg" alt="" width="18" height="18" loading="lazy" decoding="async" /></span>
+                            <div>
+                                <h4 class="premier-plan__finding-title">Требовалась работа с обращениями</h4>
+                                <p class="premier-plan__finding-text">Важно было систематизировать обработку звонков и заявок и выстроить единый путь обращения.</p>
+                            </div>
+                        </li>
+                        <li class="premier-plan__finding">
+                            <span class="premier-plan__icon"><img src="assets/img/cases/premier/reputation-review.svg" alt="" width="19" height="18" loading="lazy" decoding="async" /></span>
+                            <div>
+                                <h4 class="premier-plan__finding-title">Слабый репутационный профиль</h4>
+                                <p class="premier-plan__finding-text">На ключевых площадках было мало актуальных отзывов, а рейтинг не в полной мере отражал отношение родителей к школе.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</article>
+{% endblock %}
