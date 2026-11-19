@@ -1314,12 +1314,14 @@
     }
 }
 @media (prefers-reduced-motion: no-preference) {
-    .mr8-page [data-mr8-prepared] {
+    .mr8-page [data-mr8-prepared],
+    .premier-page [data-mr8-prepared] {
         opacity: 0;
         transform: translateY(12px);
     }
 
-    .mr8-page [data-mr8-prepared][data-mr8-revealed] {
+    .mr8-page [data-mr8-prepared][data-mr8-revealed],
+    .premier-page [data-mr8-prepared][data-mr8-revealed] {
         transition:
             opacity 650ms cubic-bezier(0.22, 0.61, 0.36, 1),
             transform 650ms cubic-bezier(0.22, 0.61, 0.36, 1);

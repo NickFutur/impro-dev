@@ -2,7 +2,7 @@
     <div class="header-container container">
         <div class="header-left">
             <a class="header-logo" href="index.html" aria-label="IMPro — на главную">
-                <img src="assets/img/logo-new.svg" alt="IMPro">
+                <img src="{{ headerLogo | default('assets/img/logo-new.svg') }}" alt="IMPro">
             </a>
             <div class="header-menu-wrap">
                 <div class="header-menu">

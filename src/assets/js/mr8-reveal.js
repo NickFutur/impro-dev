@@ -1,5 +1,5 @@
-﻿function initMr8Reveal() {
-    const page = document.querySelector('.mr8-page, .medok-page');
+function initMr8Reveal() {
+    const page = document.querySelector('.mr8-page, .medok-page, .premier-page');
 
     if (!page || typeof window.IntersectionObserver !== 'function' || !window.matchMedia) return;
 
