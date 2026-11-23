@@ -549,6 +549,12 @@
     }
 }
 
+.west-nautical-home-showcase__board,
+.west-nautical-equipment__board {
+    max-width: calc(100% - 20px);
+    margin-inline: auto;
+}
+
 .west-nautical-home-showcase {
     --west-nautical-showcase-gap: clamp(6px, 0.8vw, 12px);
     --west-nautical-showcase-radius: clamp(10px, 1.1vw, 20px);
