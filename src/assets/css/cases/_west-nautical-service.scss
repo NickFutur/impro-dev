@@ -1,11 +1,31 @@
 .west-nautical-page main {
     --third-family: 'TT Hoves Pro Trial', Inter, sans-serif;
-    --west-nautical-top: clamp(88px, 9vw, 110px);
 
-    padding-top: var(--west-nautical-top);
-    background: linear-gradient(#0f0f0f var(--west-nautical-top), #f8f8f8 var(--west-nautical-top));
+    padding-bottom: 10px;
+    background: #f8f8f8;
     color: #141414;
     font-family: var(--third-family);
+}
+
+.west-nautical-page .header {
+    transition:
+        opacity 0.3s ease-in-out,
+        transform 0.3s ease-in-out,
+        background-color 0.3s ease-in-out;
+
+    &--scroll-dark {
+        background-color: #121212;
+    }
+
+    &--scroll-hidden:not(:has(:focus-visible)) {
+        pointer-events: none;
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
+    }
 }
 
 .west-nautical-hero {
@@ -20,13 +40,16 @@
     color: #fff;
 
     &__header {
+        --west-nautical-hero-padding: clamp(14px, 2.6vw, 36px);
+
         position: absolute;
         inset: 0 0 auto;
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
         gap: 12px;
-        padding: clamp(14px, 2.6vw, 36px);
+        padding: var(--west-nautical-hero-padding);
+        padding-top: calc(5.5rem + var(--west-nautical-hero-padding));
     }
 
     &__title,
@@ -88,6 +111,39 @@
         display: block;
         width: 100%;
         height: auto;
+    }
+
+    @media (min-width: 768px) and (max-width: 1200px) {
+        &__header {
+            align-items: center;
+            gap: 8px;
+        }
+
+        &__title,
+        &__detail {
+            font-size: 12px;
+            white-space: nowrap;
+        }
+
+        &__title {
+            padding: 6px 12px;
+        }
+
+        &__details {
+            flex-wrap: nowrap;
+            gap: 6px;
+        }
+
+        &__detail {
+            gap: 6px;
+            padding: 5px 8px;
+
+            img,
+            svg {
+                width: 14px;
+                height: 14px;
+            }
+        }
     }
 
     @media (max-width: 767px) {
@@ -550,9 +606,250 @@
 }
 
 .west-nautical-home-showcase__board,
-.west-nautical-equipment__board {
+.west-nautical-home-showcase__details,
+.west-nautical-equipment__board,
+.west-nautical-followup__gallery,
+.west-nautical-followup__about-board,
+.west-nautical-finish,
+.west-nautical-page .guest-house-agency {
     max-width: calc(100% - 20px);
     margin-inline: auto;
+}
+
+.west-nautical-page {
+    .guest-house-agency {
+        --font8: var(--third-family);
+
+        overflow: hidden;
+        border-radius: clamp(12px, 1.3vw, 22px);
+
+        &__service,
+        &__social-icon {
+            border-color: transparent;
+            background:
+                linear-gradient(#171717, #171717) padding-box,
+                linear-gradient(110deg, #885773, #5752c2) border-box;
+        }
+
+        @media (min-width: 1201px) {
+            &__top {
+                padding: 40px 40px 76px;
+            }
+
+            &__title {
+                font-size: clamp(44px, 3.4vw, 64px);
+            }
+
+            &__services {
+                gap: 12px 6px;
+                width: 280px;
+            }
+
+            &__service {
+                padding-inline: 13px;
+            }
+        }
+    }
+}
+
+.west-nautical-finish {
+    --west-nautical-finish-radius: clamp(12px, 1.35vw, 22px);
+    --west-nautical-finish-accent: #0077a6;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(8px, 0.85vw, 14px);
+
+    &__team,
+    &__review {
+        aspect-ratio: 1;
+        border-radius: var(--west-nautical-finish-radius);
+    }
+
+    &__team {
+        display: flex;
+        flex-direction: column;
+        padding: clamp(22px, 3.7vw, 64px);
+        background: #efefef;
+    }
+
+    &__team-title {
+        margin: 4px 0 0;
+        color:#13A9E1;
+        font-size: clamp(20px, 1.7vw, 29px);
+        font-weight: 500;
+        line-height: 1.25;
+    }
+
+    &__timing {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 14px 24px;
+        margin: clamp(24px, 3.7vw, 60px) 0 0;
+        padding-top: clamp(18px, 2.8vw, 48px);
+        border-top: 1px solid #d4d4d4;
+        color: #666;
+        font-size: clamp(12px, 1vw, 16px);
+        text-transform: uppercase;
+
+        div,
+        dd {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        dd {
+            margin: 0;
+            color: var(--west-nautical-finish-accent);
+            white-space: nowrap;
+
+            &::before {
+                width: 1em;
+                height: 1em;
+                background: url('../img/cases/west-nautical-service/project-duration-icon.svg') center / contain no-repeat;
+                content: '';
+            }
+        }
+    }
+
+    &__people {
+        display: grid;
+        gap: clamp(12px, 1.3vw, 22px);
+        margin: auto 0 0;
+        padding: clamp(22px, 4.25vw, 74px) 0 0;
+        list-style: none;
+
+        li {
+            display: flex;
+            align-items: center;
+            gap: clamp(14px, 2.2vw, 36px);
+        }
+    }
+
+    &__avatar {
+        display: grid;
+        flex: none;
+        width: clamp(52px, 5.65vw, 93px);
+        height: auto;
+        aspect-ratio: 1;
+        place-items: center;
+        border-radius: 50%;
+        object-fit: cover;
+
+        &--placeholder {
+            background: #fff;
+            color: #d9d7d7;
+        }
+    }
+
+    &__name,
+    &__role {
+        margin: 0;
+    }
+
+    &__name {
+        font-size: clamp(17px, 1.35vw, 22px);
+        font-weight: 500;
+    }
+
+    &__role {
+        margin-top: 4px;
+        color: #666;
+        font-size: clamp(14px, 1.1vw, 18px);
+    }
+
+    &__review {
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+        padding: clamp(14px, 2.5vw, 42px);
+        background: #0e6276;
+    }
+
+    &__seascape {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__review-card {
+        position: relative;
+        width: min(100%, clamp(340px, 28.2vw, 463px));
+        padding: clamp(19px, 2vw, 33px);
+        border: 1px solid rgb(255 255 255 / 24%);
+        border-radius: var(--west-nautical-finish-radius);
+        background: linear-gradient(25deg, rgb(5 94 110 / 88%), rgb(72 98 121 / 88%));
+        color: #fff;
+        backdrop-filter: blur(22px);
+
+        h2 {
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+            gap: 12px;
+            margin: 0;
+            font-size: clamp(21px, 1.65vw, 28px);
+            font-weight: 500;
+
+            &::after {
+                flex: none;
+                width: clamp(38px, 3.4vw, 56px);
+                aspect-ratio: 1;
+                border-radius: 50%;
+                background: #fff url('../img/cases/west-nautical-service/client-review-icon.svg') center / 46% no-repeat;
+                content: '';
+            }
+        }
+    }
+
+    &__quote {
+        position: relative;
+        margin: clamp(14px, 1.7vw, 28px) 0;
+        padding-top: clamp(38px, 5.2vw, 84px);
+        padding-right: 16px;
+        font-size: clamp(15px, 1.15vw, 19px);
+        line-height: 1.4;
+
+        &::before,
+        &::after {
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            background: url('../img/cases/west-nautical-service/client-review-quote.svg') center / contain no-repeat;
+            content: '';
+        }
+
+        &::before {
+            inset: 0 auto auto 0;
+        }
+
+        &::after {
+            inset: auto 0 0 auto;
+        }
+    }
+
+    &__review-link {
+        color: #d1e7ed;
+        font-size: clamp(13px, 1vw, 16px);
+        text-underline-offset: 2px;
+    }
+
+    @media (max-width: 800px) {
+        grid-template-columns: minmax(0, 1fr);
+
+        &__team,
+        &__review {
+            aspect-ratio: auto;
+        }
+
+        &__review {
+            min-height: 430px;
+        }
+    }
 }
 
 .west-nautical-home-showcase {
@@ -572,7 +869,15 @@
         row-gap: clamp(18px, 4.3vw, 64px);
         padding: clamp(16px, 4.4vw, 68px);
         border-radius: var(--west-nautical-showcase-radius);
-        background: linear-gradient(155deg, #91a7ba 0%, #376e83 40%, #2d6d74 74%, #8cb7bb 100%);
+        background: linear-gradient(
+            155deg,
+            #91a7ba 0%,
+            #376e83 40%,
+            #2d6d74 74%,
+            rgb(140 183 187 / 45%) 93%,
+            rgb(140 183 187 / 12%) 97%,
+            rgb(140 183 187 / 0%) 100%
+        );
         color: #fff;
     }
 
@@ -759,8 +1064,9 @@
             #9cb9c2 56%,
             #4f96b9 68%,
             #357da6 80%,
-            #b3cbd7 93%,
-            #f4f6f7 100%
+            rgb(179 203 215 / 45%) 93%,
+            rgb(179 203 215 / 12%) 97%,
+            rgb(179 203 215 / 0%) 100%
         );
         color: #fff;
     }
@@ -897,6 +1203,180 @@
                 padding: 4px 8px;
                 border-radius: 999px;
                 background: #224d44;
+            }
+        }
+    }
+}
+
+.west-nautical-followup {
+    --west-nautical-followup-radius: clamp(8px, 0.85vw, 14px);
+
+    padding-block: clamp(36px, 8vw, 112px) 10px;
+
+    &__cases,
+    &__gallery,
+    &__about-board {
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__cases,
+    &__about {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: start;
+        gap: clamp(16px, 4vw, 64px);
+        width: min(calc(100% - 20px), 1600px);
+        margin-inline: auto;
+        padding-inline: clamp(10px, 3vw, 48px);
+    }
+
+    &__cases {
+        grid-template-rows: auto 1fr;
+        row-gap: clamp(32px, 15vw, 240px);
+    }
+
+    &__label {
+        margin: 0 0 10px;
+        color: #666;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    &__title {
+        max-width: 20ch;
+        margin: 0;
+        color: #0077a6;
+        font-size: clamp(23px, 2.7vw, 42px);
+        font-weight: 500;
+        line-height: 1.12;
+        text-wrap: balance;
+    }
+
+    &__copy {
+        max-width: 56ch;
+        margin: 0;
+        color: #626262;
+        font-size: clamp(14px, 1.35vw, 20px);
+        line-height: 1.4;
+    }
+
+    &__intro {
+        .west-nautical-followup__copy {
+            max-width: 42ch;
+            margin-top: clamp(14px, 2.6vw, 38px);
+        }
+    }
+
+    &__desktop {
+        grid-area: 1 / 2 / span 2;
+        border-radius: var(--west-nautical-followup-radius);
+    }
+
+    &__phone {
+        align-self: start;
+        justify-self: end;
+        max-width: min(40%, 270px);
+    }
+
+    &__about {
+        margin-block: clamp(36px, 8.5vw, 132px) clamp(20px, 4.8vw, 72px);
+    }
+
+    &__gallery {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: clamp(6px, 0.8vw, 12px);
+
+        img {
+            border-radius: var(--west-nautical-followup-radius);
+        }
+    }
+
+    &__laptop {
+        grid-column: 1 / -1;
+    }
+
+    &__about-board {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        align-items: start;
+        column-gap: 6.1%;
+        margin-top: clamp(8px, 1vw, 16px);
+        padding: 9.5% 9.25% 0;
+        border-radius: clamp(10px, 1.25vw, 20px);
+        background: #afcfda;
+
+        img {
+            border-start-start-radius: var(--west-nautical-followup-radius);
+            border-start-end-radius: var(--west-nautical-followup-radius);
+        }
+    }
+
+    &__result {
+        width: min(100%, 1600px);
+        margin-inline: auto;
+        padding: clamp(36px, 6.8vw, 100px) clamp(20px, 4.3vw, 68px) clamp(28px, 4.4vw, 68px);
+
+        .west-nautical-followup__title {
+            max-width: 20em;
+        }
+    }
+
+    &__result-copy {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: clamp(14px, 7vw, 104px);
+        margin-top: clamp(20px, 4vw, 60px);
+        color: #626262;
+        font-size: clamp(15px, 1.4vw, 21px);
+        line-height: 1.4;
+
+        p {
+            max-width: 58ch;
+            margin: 0;
+        }
+    }
+
+    @media (max-width: 600px) {
+        &__cases,
+        &__about,
+        &__gallery,
+        &__result-copy {
+            grid-template-columns: minmax(0, 1fr);
+        }
+
+        &__cases {
+            grid-template-rows: auto;
+            row-gap: 20px;
+            padding-inline: 0;
+        }
+
+        &__intro {
+            padding-inline: 10px;
+        }
+
+        &__desktop {
+            grid-area: auto;
+        }
+
+        &__phone {
+            justify-self: center;
+            max-width: 160px;
+        }
+
+        &__about-board {
+            grid-template-columns: minmax(0, 320px);
+            justify-content: center;
+            gap: 12px;
+            padding: clamp(14px, 5vw, 28px);
+
+            img {
+                border-radius: var(--west-nautical-followup-radius);
             }
         }
     }
