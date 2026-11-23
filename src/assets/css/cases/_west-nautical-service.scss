@@ -423,12 +423,7 @@
     }
 
     @media (max-width: 767px) {
-        grid-template-columns: minmax(0, 1fr);
-        width: min(100%, 520px);
-
-        &__column {
-            padding-top: 0;
-        }
+        display: none;
     }
 }
 
@@ -983,13 +978,17 @@
             width: min(65%, 280px);
         }
 
+        &__intro img {
+            margin-inline: auto;
+        }
+
         &__long {
             position: static;
             align-self: center;
         }
 
         &__pair img:last-child {
-            margin-top: 20%;
+            margin-top: 0;
         }
 
         &__footer-preview {
