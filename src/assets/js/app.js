@@ -252,18 +252,46 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
+    const header = document.querySelector('.west-nautical-page .header');
+    if (!header) return;
+
+    const scrollThreshold = 4;
+    let previousScroll = Math.max(0, window.scrollY);
+    header.classList.toggle('header--scroll-dark', previousScroll > scrollThreshold);
+
+    window.addEventListener(
+        'scroll',
+        function () {
+            const currentScroll = Math.max(0, window.scrollY);
+            const delta = currentScroll - previousScroll;
+            const isNearTop = currentScroll <= scrollThreshold;
+
+            if (!isNearTop && Math.abs(delta) < scrollThreshold) return;
+
+            header.classList.toggle('header--scroll-hidden', !isNearTop && delta > 0);
+            header.classList.toggle('header--scroll-dark', !isNearTop);
+            previousScroll = currentScroll;
+        },
+        { passive: true },
+    );
+});
+
+document.addEventListener('DOMContentLoaded', function () {
     const header = document.querySelector('.header');
     const footer = document.querySelector('.footer');
     const menuBottom = document.querySelector('.menu-bottom');
 
     if (!header || !footer) return;
+    const hideHeaderAtFooter = !header.closest('.west-nautical-page');
 
     const observer = new IntersectionObserver(
         (entries) => {
             entries.forEach((entry) => {
                 const isFooterVisible = entry.isIntersecting;
 
-                header.classList.toggle('header--hidden', isFooterVisible);
+                if (hideHeaderAtFooter) {
+                    header.classList.toggle('header--hidden', isFooterVisible);
+                }
 
                 if (menuBottom) {
                     menuBottom.classList.toggle('menu-bottom--hidden', isFooterVisible);
